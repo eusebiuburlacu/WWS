@@ -248,11 +248,13 @@ void Mrf24j::interrupt_handler(void) {
  */
 void Mrf24j::check_flags(void (*rx_handler)(void), void (*tx_handler)(void)){
     // TODO - we could check whether the flags are > 1 here, indicating data was lost?
-    if (flag_got_rx) {
+    if (flag_got_rx) 
+	{
         flag_got_rx = 0;
         rx_handler();
     }
-    if (flag_got_tx) {
+    if (flag_got_tx) 
+	{
         flag_got_tx = 0;
         tx_handler();
     }

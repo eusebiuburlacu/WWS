@@ -15,8 +15,8 @@
 
 #include "SPI.h"
 
-
-#define MRF_RXMCR 0x00
+//Short adress control registers
+#define MRF_RXMCR 0x00 
 #define MRF_PANIDL 0x01
 #define MRF_PANIDH 0x02
 #define MRF_SADRL 0x03
@@ -46,7 +46,7 @@
 
 // TXNCON: TRANSMIT NORMAL FIFO CONTROL REGISTER (ADDRESS: 0x1B)
 #define MRF_TXNCON      0x1B
-#define MRF_TXNTRIG     0
+#define MRF_TXNTRIG     0 //bit 0 and so on ASC
 #define MRF_TXNSECEN    1
 #define MRF_TXNACKREQ   2
 #define MRF_INDIRECT    3
@@ -62,7 +62,7 @@
 #define MRF_FRMOFFSET 0x23
 // TXSTAT: TX MAC STATUS REGISTER (ADDRESS: 0x24)
 #define MRF_TXSTAT 0x24
-#define TXNRETRY1       7
+#define TXNRETRY1       7 //bit 7 and so on DESC
 #define TXNRETRY0       6
 #define CCAFAIL         5
 #define TXG2FNT         4
@@ -98,8 +98,8 @@
 //#define MRF_Reserved 0x3D
 #define MRF_BBREG6 0x3E
 #define MRF_CCAEDTH 0x3F
-
-#define MRF_RFCON0 0x200
+//Long adress control registers
+#define MRF_RFCON0 0x200 
 #define MRF_RFCON1 0x201
 #define MRF_RFCON2 0x202
 #define MRF_RFCON3 0x203
