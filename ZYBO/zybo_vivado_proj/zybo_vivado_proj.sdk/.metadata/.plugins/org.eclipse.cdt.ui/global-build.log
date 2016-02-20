@@ -1,0 +1,795 @@
+00:45:59 **** Incremental Build of configuration Debug for project standalone_bsp_0_xspi_polled_example_1 ****
+make all 
+make: Nothing to be done for `all'.
+00:46:17 **** Incremental Build of configuration Debug for project standalone_bsp_0_xspi_polled_example_1 ****
+make all 
+make: Nothing to be done for `all'.
+00:49:10 **** Auto Build of configuration Debug for project standalone_bsp_0_xspi_polled_example_1 ****
+make all 
+'Building file: ../src/xspi_polled_example.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xspi_polled_example.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/xspi_polled_example.d" -MT"src/xspi_polled_example.d" -o "src/xspi_polled_example.o" "../src/xspi_polled_example.c"
+'Finished building: ../src/xspi_polled_example.c'
+' '
+'Building target: standalone_bsp_0_xspi_polled_example_1.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "standalone_bsp_0_xspi_polled_example_1.elf"  ./src/xspi_polled_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: standalone_bsp_0_xspi_polled_example_1.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size standalone_bsp_0_xspi_polled_example_1.elf  |tee "standalone_bsp_0_xspi_polled_example_1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25288	   1176	  22692	  49156	   c004	standalone_bsp_0_xspi_polled_example_1.elf
+'Finished building: standalone_bsp_0_xspi_polled_example_1.elf.size'
+' '
+00:49:15 **** Incremental Build of configuration Debug for project standalone_bsp_0_xspi_polled_example_1 ****
+make all 
+make: Nothing to be done for `all'.
+00:52:44 **** Auto Build of configuration Debug for project standalone_bsp_0_xspi_polled_example_1 ****
+make all 
+'Building file: ../src/xspi_polled_example.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xspi_polled_example.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/xspi_polled_example.d" -MT"src/xspi_polled_example.d" -o "src/xspi_polled_example.o" "../src/xspi_polled_example.c"
+In file included from ../../standalone_bsp_0/ps7_cortexa9_0/include/xspi.h:305:0,
+                 from ../src/xspi_polled_example.c:67:
+../src/xspi_polled_example.c: In function 'SpiPolledExample':
+../src/xspi_polled_example.c:235:34: error: 'InstancePtr' undeclared (first use in this function)
+  Status = XSpi_SetSlaveSelectReg(InstancePtr, Mask)
+                                  ^
+../../standalone_bsp_0/ps7_cortexa9_0/include/xspi_l.h:121:14: note: in definition of macro 'XSpi_WriteReg'
+  XSpi_Out32((BaseAddress) + (RegOffset), (RegisterValue))
+              ^
+../src/xspi_polled_example.c:235:11: note: in expansion of macro 'XSpi_SetSlaveSelectReg'
+  Status = XSpi_SetSlaveSelectReg(InstancePtr, Mask)
+           ^
+../src/xspi_polled_example.c:235:34: note: each undeclared identifier is reported only once for each function it appears in
+  Status = XSpi_SetSlaveSelectReg(InstancePtr, Mask)
+                                  ^
+../../standalone_bsp_0/ps7_cortexa9_0/include/xspi_l.h:121:14: note: in definition of macro 'XSpi_WriteReg'
+  XSpi_Out32((BaseAddress) + (RegOffset), (RegisterValue))
+              ^
+../src/xspi_polled_example.c:235:11: note: in expansion of macro 'XSpi_SetSlaveSelectReg'
+  Status = XSpi_SetSlaveSelectReg(InstancePtr, Mask)
+           ^
+../src/xspi_polled_example.c:235:47: error: 'Mask' undeclared (first use in this function)
+  Status = XSpi_SetSlaveSelectReg(InstancePtr, Mask)
+                                               ^
+../../standalone_bsp_0/ps7_cortexa9_0/include/xspi_l.h:121:43: note: in definition of macro 'XSpi_WriteReg'
+  XSpi_Out32((BaseAddress) + (RegOffset), (RegisterValue))
+                                           ^
+../src/xspi_polled_example.c:235:11: note: in expansion of macro 'XSpi_SetSlaveSelectReg'
+  Status = XSpi_SetSlaveSelectReg(InstancePtr, Mask)
+           ^
+../src/xspi_polled_example.c:240:2: error: expected ';' before 'XSpi_Transfer'
+  XSpi_Transfer(SpiInstancePtr, WriteBuffer, ReadBuffer, BUFFER_SIZE);
+  ^
+../src/xspi_polled_example.c:233:6: warning: unused variable 'slaveReg' [-Wunused-variable]
+  u32 slaveReg = XSpi_GetSlaveSelectReg(SpiInstancePtr);
+      ^
+make: *** [src/xspi_polled_example.o] Error 1
+00:53:06 **** Auto Build of configuration Debug for project standalone_bsp_0_xspi_polled_example_1 ****
+make all 
+'Building file: ../src/xspi_polled_example.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xspi_polled_example.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/xspi_polled_example.d" -MT"src/xspi_polled_example.d" -o "src/xspi_polled_example.o" "../src/xspi_polled_example.c"
+In file included from ../../standalone_bsp_0/ps7_cortexa9_0/include/xspi.h:305:0,
+                 from ../src/xspi_polled_example.c:67:
+../src/xspi_polled_example.c: In function 'SpiPolledExample':
+../src/xspi_polled_example.c:235:41: error: 'ox01' undeclared (first use in this function)
+  XSpi_SetSlaveSelectReg(SpiInstancePtr, ox01);
+                                         ^
+../../standalone_bsp_0/ps7_cortexa9_0/include/xspi_l.h:121:43: note: in definition of macro 'XSpi_WriteReg'
+  XSpi_Out32((BaseAddress) + (RegOffset), (RegisterValue))
+                                           ^
+../src/xspi_polled_example.c:235:2: note: in expansion of macro 'XSpi_SetSlaveSelectReg'
+  XSpi_SetSlaveSelectReg(SpiInstancePtr, ox01);
+  ^
+../src/xspi_polled_example.c:235:41: note: each undeclared identifier is reported only once for each function it appears in
+  XSpi_SetSlaveSelectReg(SpiInstancePtr, ox01);
+                                         ^
+../../standalone_bsp_0/ps7_cortexa9_0/include/xspi_l.h:121:43: note: in definition of macro 'XSpi_WriteReg'
+  XSpi_Out32((BaseAddress) + (RegOffset), (RegisterValue))
+                                           ^
+../src/xspi_polled_example.c:235:2: note: in expansion of macro 'XSpi_SetSlaveSelectReg'
+  XSpi_SetSlaveSelectReg(SpiInstancePtr, ox01);
+  ^
+../src/xspi_polled_example.c:233:6: warning: unused variable 'slaveReg' [-Wunused-variable]
+  u32 slaveReg = XSpi_GetSlaveSelectReg(SpiInstancePtr);
+      ^
+make: *** [src/xspi_polled_example.o] Error 1
+00:53:14 **** Auto Build of configuration Debug for project standalone_bsp_0_xspi_polled_example_1 ****
+make all 
+'Building file: ../src/xspi_polled_example.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xspi_polled_example.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/xspi_polled_example.d" -MT"src/xspi_polled_example.d" -o "src/xspi_polled_example.o" "../src/xspi_polled_example.c"
+../src/xspi_polled_example.c: In function 'SpiPolledExample':
+../src/xspi_polled_example.c:233:6: warning: unused variable 'slaveReg' [-Wunused-variable]
+  u32 slaveReg = XSpi_GetSlaveSelectReg(SpiInstancePtr);
+      ^
+'Finished building: ../src/xspi_polled_example.c'
+' '
+'Building target: standalone_bsp_0_xspi_polled_example_1.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "standalone_bsp_0_xspi_polled_example_1.elf"  ./src/xspi_polled_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: standalone_bsp_0_xspi_polled_example_1.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size standalone_bsp_0_xspi_polled_example_1.elf  |tee "standalone_bsp_0_xspi_polled_example_1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25336	   1176	  22692	  49204	   c034	standalone_bsp_0_xspi_polled_example_1.elf
+'Finished building: standalone_bsp_0_xspi_polled_example_1.elf.size'
+' '
+00:53:37 **** Auto Build of configuration Debug for project standalone_bsp_0_xspi_polled_example_1 ****
+make all 
+'Building file: ../src/xspi_polled_example.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xspi_polled_example.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/xspi_polled_example.d" -MT"src/xspi_polled_example.d" -o "src/xspi_polled_example.o" "../src/xspi_polled_example.c"
+../src/xspi_polled_example.c: In function 'SpiPolledExample':
+../src/xspi_polled_example.c:233:6: warning: variable 'slaveReg' set but not used [-Wunused-but-set-variable]
+  u32 slaveReg = XSpi_GetSlaveSelectReg(SpiInstancePtr);
+      ^
+'Finished building: ../src/xspi_polled_example.c'
+' '
+'Building target: standalone_bsp_0_xspi_polled_example_1.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "standalone_bsp_0_xspi_polled_example_1.elf"  ./src/xspi_polled_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: standalone_bsp_0_xspi_polled_example_1.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size standalone_bsp_0_xspi_polled_example_1.elf  |tee "standalone_bsp_0_xspi_polled_example_1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25360	   1176	  22692	  49228	   c04c	standalone_bsp_0_xspi_polled_example_1.elf
+'Finished building: standalone_bsp_0_xspi_polled_example_1.elf.size'
+' '
+00:53:45 **** Incremental Build of configuration Debug for project standalone_bsp_0_xspi_polled_example_1 ****
+make all 
+make: Nothing to be done for `all'.
+00:58:14 **** Incremental Build of configuration Debug for project standalone_bsp_0_xspi_polled_example_1 ****
+make all 
+make: Nothing to be done for `all'.
+01:00:08 **** Auto Build of configuration Debug for project standalone_bsp_0_xspi_polled_example_1 ****
+make all 
+'Building file: ../src/xspi_polled_example.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xspi_polled_example.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/xspi_polled_example.d" -MT"src/xspi_polled_example.d" -o "src/xspi_polled_example.o" "../src/xspi_polled_example.c"
+../src/xspi_polled_example.c: In function 'SpiPolledExample':
+../src/xspi_polled_example.c:233:6: warning: variable 'slaveReg' set but not used [-Wunused-but-set-variable]
+  u32 slaveReg = XSpi_GetSlaveSelectReg(SpiInstancePtr);
+      ^
+'Finished building: ../src/xspi_polled_example.c'
+' '
+'Building target: standalone_bsp_0_xspi_polled_example_1.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "standalone_bsp_0_xspi_polled_example_1.elf"  ./src/xspi_polled_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: standalone_bsp_0_xspi_polled_example_1.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size standalone_bsp_0_xspi_polled_example_1.elf  |tee "standalone_bsp_0_xspi_polled_example_1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25360	   1176	  24676	  51212	   c80c	standalone_bsp_0_xspi_polled_example_1.elf
+'Finished building: standalone_bsp_0_xspi_polled_example_1.elf.size'
+' '
+01:00:14 **** Incremental Build of configuration Debug for project standalone_bsp_0_xspi_polled_example_1 ****
+make all 
+make: Nothing to be done for `all'.
+01:00:50 **** Incremental Build of configuration Debug for project standalone_bsp_0_xspi_polled_example_1 ****
+make all 
+make: Nothing to be done for `all'.
+01:04:51 **** Auto Build of configuration Debug for project standalone_bsp_0_xspi_polled_example_1 ****
+make all 
+'Building file: ../src/xspi_polled_example.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xspi_polled_example.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/xspi_polled_example.d" -MT"src/xspi_polled_example.d" -o "src/xspi_polled_example.o" "../src/xspi_polled_example.c"
+../src/xspi_polled_example.c: In function 'SpiPolledExample':
+../src/xspi_polled_example.c:233:6: warning: variable 'slaveReg' set but not used [-Wunused-but-set-variable]
+  u32 slaveReg = XSpi_GetSlaveSelectReg(SpiInstancePtr);
+      ^
+'Finished building: ../src/xspi_polled_example.c'
+' '
+'Building target: standalone_bsp_0_xspi_polled_example_1.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "standalone_bsp_0_xspi_polled_example_1.elf"  ./src/xspi_polled_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: standalone_bsp_0_xspi_polled_example_1.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size standalone_bsp_0_xspi_polled_example_1.elf  |tee "standalone_bsp_0_xspi_polled_example_1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25364	   1176	  24676	  51216	   c810	standalone_bsp_0_xspi_polled_example_1.elf
+'Finished building: standalone_bsp_0_xspi_polled_example_1.elf.size'
+' '
+01:05:11 **** Auto Build of configuration Debug for project standalone_bsp_0_xspi_polled_example_1 ****
+make all 
+'Building file: ../src/xspi_polled_example.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xspi_polled_example.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/xspi_polled_example.d" -MT"src/xspi_polled_example.d" -o "src/xspi_polled_example.o" "../src/xspi_polled_example.c"
+../src/xspi_polled_example.c: In function 'SpiPolledExample':
+../src/xspi_polled_example.c:233:6: warning: variable 'slaveReg' set but not used [-Wunused-but-set-variable]
+  u32 slaveReg = XSpi_GetSlaveSelectReg(SpiInstancePtr);
+      ^
+'Finished building: ../src/xspi_polled_example.c'
+' '
+'Building target: standalone_bsp_0_xspi_polled_example_1.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "standalone_bsp_0_xspi_polled_example_1.elf"  ./src/xspi_polled_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: standalone_bsp_0_xspi_polled_example_1.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size standalone_bsp_0_xspi_polled_example_1.elf  |tee "standalone_bsp_0_xspi_polled_example_1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25372	   1176	  32676	  59224	   e758	standalone_bsp_0_xspi_polled_example_1.elf
+'Finished building: standalone_bsp_0_xspi_polled_example_1.elf.size'
+' '
+01:05:48 **** Auto Build of configuration Debug for project standalone_bsp_0_xspi_polled_example_1 ****
+make all 
+'Building file: ../src/xspi_polled_example.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xspi_polled_example.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/xspi_polled_example.d" -MT"src/xspi_polled_example.d" -o "src/xspi_polled_example.o" "../src/xspi_polled_example.c"
+../src/xspi_polled_example.c: In function 'SpiPolledExample':
+../src/xspi_polled_example.c:242:2: error: 'for' loop initial declarations are only allowed in C99 or C11 mode
+  for(int i = 0; i < 10000; i++)
+  ^
+../src/xspi_polled_example.c:242:2: note: use option -std=c99, -std=gnu99, -std=c11 or -std=gnu11 to compile your code
+../src/xspi_polled_example.c:233:6: warning: variable 'slaveReg' set but not used [-Wunused-but-set-variable]
+  u32 slaveReg = XSpi_GetSlaveSelectReg(SpiInstancePtr);
+      ^
+make: *** [src/xspi_polled_example.o] Error 1
+01:05:50 **** Incremental Build of configuration Debug for project standalone_bsp_0_xspi_polled_example_1 ****
+make all 
+'Building file: ../src/xspi_polled_example.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xspi_polled_example.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/xspi_polled_example.d" -MT"src/xspi_polled_example.d" -o "src/xspi_polled_example.o" "../src/xspi_polled_example.c"
+../src/xspi_polled_example.c: In function 'SpiPolledExample':
+../src/xspi_polled_example.c:242:2: error: 'for' loop initial declarations are only allowed in C99 or C11 mode
+  for(int i = 0; i < 10000; i++)
+  ^
+../src/xspi_polled_example.c:242:2: note: use option -std=c99, -std=gnu99, -std=c11 or -std=gnu11 to compile your code
+../src/xspi_polled_example.c:233:6: warning: variable 'slaveReg' set but not used [-Wunused-but-set-variable]
+  u32 slaveReg = XSpi_GetSlaveSelectReg(SpiInstancePtr);
+      ^
+make: *** [src/xspi_polled_example.o] Error 1
+01:06:32 **** Auto Build of configuration Debug for project standalone_bsp_0_xspi_polled_example_1 ****
+make all 
+'Building file: ../src/xspi_polled_example.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xspi_polled_example.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/xspi_polled_example.d" -MT"src/xspi_polled_example.d" -o "src/xspi_polled_example.o" "../src/xspi_polled_example.c"
+../src/xspi_polled_example.c: In function 'SpiPolledExample':
+../src/xspi_polled_example.c:233:6: warning: variable 'slaveReg' set but not used [-Wunused-but-set-variable]
+  u32 slaveReg = XSpi_GetSlaveSelectReg(SpiInstancePtr);
+      ^
+'Finished building: ../src/xspi_polled_example.c'
+' '
+'Building target: standalone_bsp_0_xspi_polled_example_1.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "standalone_bsp_0_xspi_polled_example_1.elf"  ./src/xspi_polled_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: standalone_bsp_0_xspi_polled_example_1.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size standalone_bsp_0_xspi_polled_example_1.elf  |tee "standalone_bsp_0_xspi_polled_example_1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25420	   1176	  32676	  59272	   e788	standalone_bsp_0_xspi_polled_example_1.elf
+'Finished building: standalone_bsp_0_xspi_polled_example_1.elf.size'
+' '
+01:06:40 **** Incremental Build of configuration Debug for project standalone_bsp_0_xspi_polled_example_1 ****
+make all 
+make: Nothing to be done for `all'.
+01:10:02 **** Incremental Build of configuration Debug for project standalone_bsp_0_xspi_polled_example_1 ****
+make all 
+make: Nothing to be done for `all'.
+01:10:10 **** Incremental Build of configuration Debug for project standalone_bsp_0_xspi_polled_example_1 ****
+make all 
+make: Nothing to be done for `all'.
+01:10:22 **** Incremental Build of configuration Debug for project standalone_bsp_0_xspi_polled_example_1 ****
+make all 
+make: Nothing to be done for `all'.
+01:10:28 **** Incremental Build of configuration Debug for project standalone_bsp_0_xspi_polled_example_1 ****
+make all 
+make: Nothing to be done for `all'.
+01:10:43 **** Incremental Build of configuration Debug for project standalone_bsp_0_xspi_polled_example_1 ****
+make all 
+make: Nothing to be done for `all'.
+01:17:19 **** Auto Build of configuration Debug for project standalone_bsp_0_xspi_polled_example_1 ****
+make all 
+'Building file: ../src/xspi_polled_example.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xspi_polled_example.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/xspi_polled_example.d" -MT"src/xspi_polled_example.d" -o "src/xspi_polled_example.o" "../src/xspi_polled_example.c"
+../src/xspi_polled_example.c: In function 'SpiPolledExample':
+../src/xspi_polled_example.c:233:6: warning: variable 'slaveReg' set but not used [-Wunused-but-set-variable]
+  u32 slaveReg = XSpi_GetSlaveSelectReg(SpiInstancePtr);
+      ^
+'Finished building: ../src/xspi_polled_example.c'
+' '
+'Building target: standalone_bsp_0_xspi_polled_example_1.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "standalone_bsp_0_xspi_polled_example_1.elf"  ./src/xspi_polled_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: standalone_bsp_0_xspi_polled_example_1.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size standalone_bsp_0_xspi_polled_example_1.elf  |tee "standalone_bsp_0_xspi_polled_example_1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25420	   1176	  32676	  59272	   e788	standalone_bsp_0_xspi_polled_example_1.elf
+'Finished building: standalone_bsp_0_xspi_polled_example_1.elf.size'
+' '
+01:17:22 **** Incremental Build of configuration Debug for project standalone_bsp_0_xspi_polled_example_1 ****
+make all 
+make: Nothing to be done for `all'.
+01:19:20 **** Incremental Build of configuration Debug for project standalone_bsp_0_xspi_polled_example_1 ****
+make all 
+make: Nothing to be done for `all'.
+01:22:28 **** Auto Build of configuration Debug for project standalone_bsp_0_xspi_polled_example_1 ****
+make all 
+'Building file: ../src/xspi_polled_example.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xspi_polled_example.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/xspi_polled_example.d" -MT"src/xspi_polled_example.d" -o "src/xspi_polled_example.o" "../src/xspi_polled_example.c"
+../src/xspi_polled_example.c: In function 'SpiPolledExample':
+../src/xspi_polled_example.c:233:6: warning: variable 'slaveReg' set but not used [-Wunused-but-set-variable]
+  u32 slaveReg = XSpi_GetSlaveSelectReg(SpiInstancePtr);
+      ^
+'Finished building: ../src/xspi_polled_example.c'
+' '
+'Building target: standalone_bsp_0_xspi_polled_example_1.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "standalone_bsp_0_xspi_polled_example_1.elf"  ./src/xspi_polled_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: standalone_bsp_0_xspi_polled_example_1.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size standalone_bsp_0_xspi_polled_example_1.elf  |tee "standalone_bsp_0_xspi_polled_example_1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25412	   1176	  22692	  49280	   c080	standalone_bsp_0_xspi_polled_example_1.elf
+'Finished building: standalone_bsp_0_xspi_polled_example_1.elf.size'
+' '
+01:25:28 **** Auto Build of configuration Debug for project standalone_bsp_0_xspi_polled_example_1 ****
+make all 
+'Building file: ../src/xspi_polled_example.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xspi_polled_example.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/xspi_polled_example.d" -MT"src/xspi_polled_example.d" -o "src/xspi_polled_example.o" "../src/xspi_polled_example.c"
+../src/xspi_polled_example.c: In function 'SpiPolledExample':
+../src/xspi_polled_example.c:233:6: warning: variable 'slaveReg' set but not used [-Wunused-but-set-variable]
+  u32 slaveReg = XSpi_GetSlaveSelectReg(SpiInstancePtr);
+      ^
+'Finished building: ../src/xspi_polled_example.c'
+' '
+'Building target: standalone_bsp_0_xspi_polled_example_1.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "standalone_bsp_0_xspi_polled_example_1.elf"  ./src/xspi_polled_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: standalone_bsp_0_xspi_polled_example_1.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size standalone_bsp_0_xspi_polled_example_1.elf  |tee "standalone_bsp_0_xspi_polled_example_1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25412	   1176	  22676	  49264	   c070	standalone_bsp_0_xspi_polled_example_1.elf
+'Finished building: standalone_bsp_0_xspi_polled_example_1.elf.size'
+' '
+01:25:30 **** Incremental Build of configuration Debug for project standalone_bsp_0_xspi_polled_example_1 ****
+make all 
+make: Nothing to be done for `all'.
+01:27:09 **** Incremental Build of configuration Debug for project standalone_bsp_0_xspi_polled_example_1 ****
+make all 
+make: Nothing to be done for `all'.
+01:27:21 **** Incremental Build of configuration Debug for project standalone_bsp_0_xspi_polled_example_1 ****
+make all 
+make: Nothing to be done for `all'.
+01:27:25 **** Incremental Build of configuration Debug for project standalone_bsp_0_xspi_polled_example_1 ****
+make all 
+make: Nothing to be done for `all'.
+01:29:03 **** Incremental Build of configuration Debug for project standalone_bsp_0_xspi_polled_example_1 ****
+make all 
+make: Nothing to be done for `all'.
+01:33:15 **** Incremental Build of configuration Debug for project standalone_bsp_0_xspi_polled_example_1 ****
+make all 
+make: Nothing to be done for `all'.
+01:33:19 **** Incremental Build of configuration Debug for project standalone_bsp_0_xspi_polled_example_1 ****
+make all 
+make: Nothing to be done for `all'.
+01:35:35 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_2/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/spi_v4_1/src"
+make -C ps7_cortexa9_0/libsrc/spi_v4_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v5_3/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v5_3/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling coresightps_dcc"
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling emacps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling gpio"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_2/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/spi_v4_1/src"
+make -C ps7_cortexa9_0/libsrc/spi_v4_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling spi"
+In file included from xspi.h:305:0,
+                 from xspi.c:104:
+xspi.c: In function 'XSpi_Transfer':
+xspi.c:575:55: error: 'SpiInstancePtr' undeclared (first use in this function)
+  InstancePtr->SlaveSelectReg = XSpi_GetSlaveSelectReg(SpiInstancePtr);
+                                                       ^
+xspi_l.h:102:13: note: in definition of macro 'XSpi_ReadReg'
+  XSpi_In32((BaseAddress) + (RegOffset))
+             ^
+xspi.c:575:32: note: in expansion of macro 'XSpi_GetSlaveSelectReg'
+  InstancePtr->SlaveSelectReg = XSpi_GetSlaveSelectReg(SpiInstancePtr);
+                                ^
+xspi.c:575:55: note: each undeclared identifier is reported only once for each function it appears in
+  InstancePtr->SlaveSelectReg = XSpi_GetSlaveSelectReg(SpiInstancePtr);
+                                                       ^
+xspi_l.h:102:13: note: in definition of macro 'XSpi_ReadReg'
+  XSpi_In32((BaseAddress) + (RegOffset))
+             ^
+xspi.c:575:32: note: in expansion of macro 'XSpi_GetSlaveSelectReg'
+  InstancePtr->SlaveSelectReg = XSpi_GetSlaveSelectReg(SpiInstancePtr);
+                                ^
+make[1]: *** [libs] Error 1
+make: *** [ps7_cortexa9_0/libsrc/spi_v4_1/src/make.libs] Error 2
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v5_3/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v5_3/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling standalone"
+"Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling ttcps"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling xadcps"
+make: Target `all' not remade because of errors.
+01:36:04 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_2/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/spi_v4_1/src"
+make -C ps7_cortexa9_0/libsrc/spi_v4_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v5_3/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v5_3/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling coresightps_dcc"
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling emacps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling gpio"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_2/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/spi_v4_1/src"
+make -C ps7_cortexa9_0/libsrc/spi_v4_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling spi"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v5_3/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v5_3/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling standalone"
+"Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling ttcps"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling xadcps"
+'Finished building libraries'
+01:36:31 **** Auto Build of configuration Debug for project standalone_bsp_0_xspi_polled_example_1 ****
+make all 
+'Building file: ../src/xspi_polled_example.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xspi_polled_example.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/xspi_polled_example.d" -MT"src/xspi_polled_example.d" -o "src/xspi_polled_example.o" "../src/xspi_polled_example.c"
+../src/xspi_polled_example.c: In function 'SpiPolledExample':
+../src/xspi_polled_example.c:233:6: warning: variable 'slaveReg' set but not used [-Wunused-but-set-variable]
+  u32 slaveReg = XSpi_GetSlaveSelectReg(SpiInstancePtr);
+      ^
+'Finished building: ../src/xspi_polled_example.c'
+' '
+'Building target: standalone_bsp_0_xspi_polled_example_1.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "standalone_bsp_0_xspi_polled_example_1.elf"  ./src/xspi_polled_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: standalone_bsp_0_xspi_polled_example_1.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size standalone_bsp_0_xspi_polled_example_1.elf  |tee "standalone_bsp_0_xspi_polled_example_1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25428	   1176	  22676	  49280	   c080	standalone_bsp_0_xspi_polled_example_1.elf
+'Finished building: standalone_bsp_0_xspi_polled_example_1.elf.size'
+' '
+01:36:51 **** Incremental Build of configuration Debug for project standalone_bsp_0_xspi_polled_example_1 ****
+make all 
+make: Nothing to be done for `all'.
+01:36:54 **** Incremental Build of configuration Debug for project standalone_bsp_0_xspi_polled_example_1 ****
+make all 
+make: Nothing to be done for `all'.
+01:39:20 **** Incremental Build of configuration Debug for project standalone_bsp_0_xspi_polled_example_1 ****
+make all 
+make: Nothing to be done for `all'.
+01:43:00 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_2/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/spi_v4_1/src"
+make -C ps7_cortexa9_0/libsrc/spi_v4_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v5_3/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v5_3/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling coresightps_dcc"
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling emacps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling gpio"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_2/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/spi_v4_1/src"
+make -C ps7_cortexa9_0/libsrc/spi_v4_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling spi"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v5_3/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v5_3/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling standalone"
+"Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling ttcps"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling xadcps"
+'Finished building libraries'
+01:43:25 **** Auto Build of configuration Debug for project standalone_bsp_0_xspi_polled_example_1 ****
+make all 
+'Building file: ../src/xspi_polled_example.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xspi_polled_example.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/xspi_polled_example.d" -MT"src/xspi_polled_example.d" -o "src/xspi_polled_example.o" "../src/xspi_polled_example.c"
+../src/xspi_polled_example.c: In function 'SpiPolledExample':
+../src/xspi_polled_example.c:233:6: warning: variable 'slaveReg' set but not used [-Wunused-but-set-variable]
+  u32 slaveReg = XSpi_GetSlaveSelectReg(SpiInstancePtr);
+      ^
+'Finished building: ../src/xspi_polled_example.c'
+' '
+'Building target: standalone_bsp_0_xspi_polled_example_1.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "standalone_bsp_0_xspi_polled_example_1.elf"  ./src/xspi_polled_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: standalone_bsp_0_xspi_polled_example_1.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size standalone_bsp_0_xspi_polled_example_1.elf  |tee "standalone_bsp_0_xspi_polled_example_1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25412	   1176	  22676	  49264	   c070	standalone_bsp_0_xspi_polled_example_1.elf
+'Finished building: standalone_bsp_0_xspi_polled_example_1.elf.size'
+' '
+01:43:31 **** Incremental Build of configuration Debug for project standalone_bsp_0_xspi_polled_example_1 ****
+make all 
+make: Nothing to be done for `all'.
+01:44:47 **** Incremental Build of configuration Debug for project standalone_bsp_0_xspi_polled_example_1 ****
+make all 
+make: Nothing to be done for `all'.
+01:47:23 **** Incremental Build of configuration Debug for project standalone_bsp_0_xspi_polled_example_1 ****
+make all 
+make: Nothing to be done for `all'.
+01:47:50 **** Incremental Build of configuration Debug for project standalone_bsp_0_xspi_polled_example_1 ****
+make all 
+make: Nothing to be done for `all'.
+01:48:35 **** Incremental Build of configuration Debug for project standalone_bsp_0_xspi_polled_example_1 ****
+make all 
+make: Nothing to be done for `all'.
+01:50:20 **** Auto Build of configuration Debug for project standalone_bsp_0_xspi_polled_example_1 ****
+make all 
+'Building file: ../src/xspi_polled_example.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xspi_polled_example.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/xspi_polled_example.d" -MT"src/xspi_polled_example.d" -o "src/xspi_polled_example.o" "../src/xspi_polled_example.c"
+../src/xspi_polled_example.c: In function 'SpiPolledExample':
+../src/xspi_polled_example.c:233:6: warning: variable 'slaveReg' set but not used [-Wunused-but-set-variable]
+  u32 slaveReg = XSpi_GetSlaveSelectReg(SpiInstancePtr);
+      ^
+'Finished building: ../src/xspi_polled_example.c'
+' '
+'Building target: standalone_bsp_0_xspi_polled_example_1.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "standalone_bsp_0_xspi_polled_example_1.elf"  ./src/xspi_polled_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: standalone_bsp_0_xspi_polled_example_1.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size standalone_bsp_0_xspi_polled_example_1.elf  |tee "standalone_bsp_0_xspi_polled_example_1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25420	   1176	  42676	  69272	  10e98	standalone_bsp_0_xspi_polled_example_1.elf
+'Finished building: standalone_bsp_0_xspi_polled_example_1.elf.size'
+' '
+01:50:33 **** Incremental Build of configuration Debug for project standalone_bsp_0_xspi_polled_example_1 ****
+make all 
+make: Nothing to be done for `all'.
+01:55:34 **** Incremental Build of configuration Debug for project standalone_bsp_0_xspi_polled_example_1 ****
+make all 
+make: Nothing to be done for `all'.
