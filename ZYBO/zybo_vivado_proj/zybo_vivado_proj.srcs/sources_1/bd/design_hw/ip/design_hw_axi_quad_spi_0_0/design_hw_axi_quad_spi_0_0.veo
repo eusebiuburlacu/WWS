@@ -84,8 +84,8 @@ design_hw_axi_quad_spi_0_0 your_instance_name (
   .sck_i(sck_i),                  // input wire sck_i
   .sck_o(sck_o),                  // output wire sck_o
   .sck_t(sck_t),                  // output wire sck_t
-  .ss_i(ss_i),                    // input wire [1 : 0] ss_i
-  .ss_o(ss_o),                    // output wire [1 : 0] ss_o
+  .ss_i(ss_i),                    // input wire [0 : 0] ss_i
+  .ss_o(ss_o),                    // output wire [0 : 0] ss_o
   .ss_t(ss_t),                    // output wire ss_t
   .ip2intc_irpt(ip2intc_irpt)    // output wire ip2intc_irpt
 );

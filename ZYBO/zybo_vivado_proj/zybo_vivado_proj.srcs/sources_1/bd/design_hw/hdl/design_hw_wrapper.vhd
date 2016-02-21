@@ -1,7 +1,7 @@
 --Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
---Date        : Sat Feb 20 00:14:41 2016
+--Date        : Sun Feb 21 13:50:26 2016
 --Host        : DESKTOP-567HUN5 running 64-bit major release  (build 9200)
 --Command     : generate_target design_hw_wrapper.bd
 --Design      : design_hw_wrapper
@@ -35,10 +35,14 @@ entity design_hw_wrapper is
     FIXED_IO_ps_porb : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
     gpio_rtl_tri_io : inout STD_LOGIC_VECTOR ( 6 downto 0 );
+    spi_rtl_0_io0_io : inout STD_LOGIC;
+    spi_rtl_0_io1_io : inout STD_LOGIC;
+    spi_rtl_0_sck_io : inout STD_LOGIC;
+    spi_rtl_0_ss_io : inout STD_LOGIC_VECTOR ( 0 to 0 );
     spi_rtl_io0_io : inout STD_LOGIC;
     spi_rtl_io1_io : inout STD_LOGIC;
     spi_rtl_sck_io : inout STD_LOGIC;
-    spi_rtl_ss_io : inout STD_LOGIC_VECTOR ( 1 downto 0 )
+    spi_rtl_ss_io : inout STD_LOGIC_VECTOR ( 0 to 0 )
   );
 end design_hw_wrapper;
 
@@ -78,9 +82,21 @@ architecture STRUCTURE of design_hw_wrapper is
     spi_rtl_sck_i : in STD_LOGIC;
     spi_rtl_sck_o : out STD_LOGIC;
     spi_rtl_sck_t : out STD_LOGIC;
-    spi_rtl_ss_i : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    spi_rtl_ss_o : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    spi_rtl_ss_t : out STD_LOGIC
+    spi_rtl_ss_i : in STD_LOGIC_VECTOR ( 0 to 0 );
+    spi_rtl_ss_o : out STD_LOGIC_VECTOR ( 0 to 0 );
+    spi_rtl_ss_t : out STD_LOGIC;
+    spi_rtl_0_io0_i : in STD_LOGIC;
+    spi_rtl_0_io0_o : out STD_LOGIC;
+    spi_rtl_0_io0_t : out STD_LOGIC;
+    spi_rtl_0_io1_i : in STD_LOGIC;
+    spi_rtl_0_io1_o : out STD_LOGIC;
+    spi_rtl_0_io1_t : out STD_LOGIC;
+    spi_rtl_0_sck_i : in STD_LOGIC;
+    spi_rtl_0_sck_o : out STD_LOGIC;
+    spi_rtl_0_sck_t : out STD_LOGIC;
+    spi_rtl_0_ss_i : in STD_LOGIC_VECTOR ( 0 to 0 );
+    spi_rtl_0_ss_o : out STD_LOGIC_VECTOR ( 0 to 0 );
+    spi_rtl_0_ss_t : out STD_LOGIC
   );
   end component design_hw;
   component IOBUF is
@@ -119,6 +135,19 @@ architecture STRUCTURE of design_hw_wrapper is
   signal gpio_rtl_tri_t_4 : STD_LOGIC_VECTOR ( 4 to 4 );
   signal gpio_rtl_tri_t_5 : STD_LOGIC_VECTOR ( 5 to 5 );
   signal gpio_rtl_tri_t_6 : STD_LOGIC_VECTOR ( 6 to 6 );
+  signal spi_rtl_0_io0_i : STD_LOGIC;
+  signal spi_rtl_0_io0_o : STD_LOGIC;
+  signal spi_rtl_0_io0_t : STD_LOGIC;
+  signal spi_rtl_0_io1_i : STD_LOGIC;
+  signal spi_rtl_0_io1_o : STD_LOGIC;
+  signal spi_rtl_0_io1_t : STD_LOGIC;
+  signal spi_rtl_0_sck_i : STD_LOGIC;
+  signal spi_rtl_0_sck_o : STD_LOGIC;
+  signal spi_rtl_0_sck_t : STD_LOGIC;
+  signal spi_rtl_0_ss_i_0 : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal spi_rtl_0_ss_io_0 : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal spi_rtl_0_ss_o_0 : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal spi_rtl_0_ss_t : STD_LOGIC;
   signal spi_rtl_io0_i : STD_LOGIC;
   signal spi_rtl_io0_o : STD_LOGIC;
   signal spi_rtl_io0_t : STD_LOGIC;
@@ -129,11 +158,8 @@ architecture STRUCTURE of design_hw_wrapper is
   signal spi_rtl_sck_o : STD_LOGIC;
   signal spi_rtl_sck_t : STD_LOGIC;
   signal spi_rtl_ss_i_0 : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal spi_rtl_ss_i_1 : STD_LOGIC_VECTOR ( 1 to 1 );
   signal spi_rtl_ss_io_0 : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal spi_rtl_ss_io_1 : STD_LOGIC_VECTOR ( 1 to 1 );
   signal spi_rtl_ss_o_0 : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal spi_rtl_ss_o_1 : STD_LOGIC_VECTOR ( 1 to 1 );
   signal spi_rtl_ss_t : STD_LOGIC;
 begin
 design_hw_i: component design_hw
@@ -180,6 +206,18 @@ design_hw_i: component design_hw
       gpio_rtl_tri_t(2) => gpio_rtl_tri_t_2(2),
       gpio_rtl_tri_t(1) => gpio_rtl_tri_t_1(1),
       gpio_rtl_tri_t(0) => gpio_rtl_tri_t_0(0),
+      spi_rtl_0_io0_i => spi_rtl_0_io0_i,
+      spi_rtl_0_io0_o => spi_rtl_0_io0_o,
+      spi_rtl_0_io0_t => spi_rtl_0_io0_t,
+      spi_rtl_0_io1_i => spi_rtl_0_io1_i,
+      spi_rtl_0_io1_o => spi_rtl_0_io1_o,
+      spi_rtl_0_io1_t => spi_rtl_0_io1_t,
+      spi_rtl_0_sck_i => spi_rtl_0_sck_i,
+      spi_rtl_0_sck_o => spi_rtl_0_sck_o,
+      spi_rtl_0_sck_t => spi_rtl_0_sck_t,
+      spi_rtl_0_ss_i(0) => spi_rtl_0_ss_i_0(0),
+      spi_rtl_0_ss_o(0) => spi_rtl_0_ss_o_0(0),
+      spi_rtl_0_ss_t => spi_rtl_0_ss_t,
       spi_rtl_io0_i => spi_rtl_io0_i,
       spi_rtl_io0_o => spi_rtl_io0_o,
       spi_rtl_io0_t => spi_rtl_io0_t,
@@ -189,9 +227,7 @@ design_hw_i: component design_hw
       spi_rtl_sck_i => spi_rtl_sck_i,
       spi_rtl_sck_o => spi_rtl_sck_o,
       spi_rtl_sck_t => spi_rtl_sck_t,
-      spi_rtl_ss_i(1) => spi_rtl_ss_i_1(1),
       spi_rtl_ss_i(0) => spi_rtl_ss_i_0(0),
-      spi_rtl_ss_o(1) => spi_rtl_ss_o_1(1),
       spi_rtl_ss_o(0) => spi_rtl_ss_o_0(0),
       spi_rtl_ss_t => spi_rtl_ss_t
     );
@@ -244,6 +280,34 @@ gpio_rtl_tri_iobuf_6: component IOBUF
       O => gpio_rtl_tri_i_6(6),
       T => gpio_rtl_tri_t_6(6)
     );
+spi_rtl_0_io0_iobuf: component IOBUF
+     port map (
+      I => spi_rtl_0_io0_o,
+      IO => spi_rtl_0_io0_io,
+      O => spi_rtl_0_io0_i,
+      T => spi_rtl_0_io0_t
+    );
+spi_rtl_0_io1_iobuf: component IOBUF
+     port map (
+      I => spi_rtl_0_io1_o,
+      IO => spi_rtl_0_io1_io,
+      O => spi_rtl_0_io1_i,
+      T => spi_rtl_0_io1_t
+    );
+spi_rtl_0_sck_iobuf: component IOBUF
+     port map (
+      I => spi_rtl_0_sck_o,
+      IO => spi_rtl_0_sck_io,
+      O => spi_rtl_0_sck_i,
+      T => spi_rtl_0_sck_t
+    );
+spi_rtl_0_ss_iobuf_0: component IOBUF
+     port map (
+      I => spi_rtl_0_ss_o_0(0),
+      IO => spi_rtl_0_ss_io(0),
+      O => spi_rtl_0_ss_i_0(0),
+      T => spi_rtl_0_ss_t
+    );
 spi_rtl_io0_iobuf: component IOBUF
      port map (
       I => spi_rtl_io0_o,
@@ -270,13 +334,6 @@ spi_rtl_ss_iobuf_0: component IOBUF
       I => spi_rtl_ss_o_0(0),
       IO => spi_rtl_ss_io(0),
       O => spi_rtl_ss_i_0(0),
-      T => spi_rtl_ss_t
-    );
-spi_rtl_ss_iobuf_1: component IOBUF
-     port map (
-      I => spi_rtl_ss_o_1(1),
-      IO => spi_rtl_ss_io(1),
-      O => spi_rtl_ss_i_1(1),
       T => spi_rtl_ss_t
     );
 end STRUCTURE;

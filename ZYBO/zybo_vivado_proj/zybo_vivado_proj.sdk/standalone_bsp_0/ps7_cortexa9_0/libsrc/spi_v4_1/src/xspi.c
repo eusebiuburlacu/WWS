@@ -572,7 +572,8 @@ int XSpi_Transfer(XSpi *InstancePtr, u8 *SendBufPtr,
 	XSpi_IntrGlobalDisable(InstancePtr);
 
 	ControlReg = XSpi_GetControlReg(InstancePtr);
-	InstancePtr->SlaveSelectReg = XSpi_GetSlaveSelectReg(InstancePtr);
+
+
 	/*
 	 * If configured as a master, be sure there is a slave select bit set
 	 * in the slave select register. If no slaves have been selected, the
@@ -836,7 +837,7 @@ int XSpi_Transfer(XSpi *InstancePtr, u8 *SendBufPtr,
 		 * may be connected to slave select
 		 */
 		//XSpi_SetSlaveSelectReg(InstancePtr,
-		//			InstancePtr->SlaveSelectMask);
+					//InstancePtr->SlaveSelectMask);
 		InstancePtr->IsBusy = FALSE;
 	}
 

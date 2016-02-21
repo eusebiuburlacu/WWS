@@ -87,8 +87,8 @@ ENTITY design_hw_axi_quad_spi_0_0 IS
     sck_i : IN STD_LOGIC;
     sck_o : OUT STD_LOGIC;
     sck_t : OUT STD_LOGIC;
-    ss_i : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
-    ss_o : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+    ss_i : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+    ss_o : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
     ss_t : OUT STD_LOGIC;
     ip2intc_irpt : OUT STD_LOGIC
   );
@@ -199,8 +199,8 @@ ARCHITECTURE design_hw_axi_quad_spi_0_0_arch OF design_hw_axi_quad_spi_0_0 IS
       sck_i : IN STD_LOGIC;
       sck_o : OUT STD_LOGIC;
       sck_t : OUT STD_LOGIC;
-      ss_i : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
-      ss_o : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+      ss_i : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+      ss_o : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
       ss_t : OUT STD_LOGIC;
       cfgclk : OUT STD_LOGIC;
       cfgmclk : OUT STD_LOGIC;
@@ -264,7 +264,7 @@ BEGIN
       C_UC_FAMILY => 0,
       C_FIFO_DEPTH => 16,
       C_SCK_RATIO => 16,
-      C_NUM_SS_BITS => 2,
+      C_NUM_SS_BITS => 1,
       C_NUM_TRANSFER_BITS => 8,
       C_SPI_MODE => 0,
       C_USE_STARTUP => 0,

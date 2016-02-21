@@ -1,1 +1,7 @@
 1455921731478	Delete resource 'standalone_bsp_0_xspi_slave_intr_example_1'
+1456066966394	Delete resource 'standalone_bsp_0_xspi_polled_example_1'
+1456067570345	Delete resource 'zybo_app/src/OLED/documents'
+1456067596776	Delete resource 'zybo_app/src/OLED/examples'
+1456067639282	Delete resource 'zybo_app/src/OLED/keywords.txt'
+1456068691674	Delete resource 'zybo_app'
+1456068745439	Delete resource 'zyboApp/src/helloworld.c'

@@ -1152,7 +1152,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>41c46103</spirit:value>
+            <spirit:value>62c99e1b</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -1160,7 +1160,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRC</spirit:name>
-            <spirit:value>6e6bcebd</spirit:value>
+            <spirit:value>564b25db</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRCversion</spirit:name>
@@ -1168,7 +1168,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Feb 19 22:15:24 UTC 2016</spirit:value>
+            <spirit:value>Sun Feb 21 11:51:06 UTC 2016</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -1214,7 +1214,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>41c46103</spirit:value>
+            <spirit:value>62c99e1b</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -1222,7 +1222,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRC</spirit:name>
-            <spirit:value>6e6bcebd</spirit:value>
+            <spirit:value>564b25db</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRCversion</spirit:name>
@@ -1230,7 +1230,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Feb 19 22:15:28 UTC 2016</spirit:value>
+            <spirit:value>Sat Feb 20 00:03:48 UTC 2016</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -1249,7 +1249,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>41c46103</spirit:value>
+            <spirit:value>62c99e1b</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -1257,7 +1257,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRC</spirit:name>
-            <spirit:value>6e6bcebd</spirit:value>
+            <spirit:value>564b25db</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRCversion</spirit:name>
@@ -1265,7 +1265,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Feb 19 22:15:28 UTC 2016</spirit:value>
+            <spirit:value>Sun Feb 21 11:51:06 UTC 2016</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -1308,7 +1308,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>deb5cc39</spirit:value>
+            <spirit:value>09c93ae9</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -1316,7 +1316,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRC</spirit:name>
-            <spirit:value>6e6bcebd</spirit:value>
+            <spirit:value>564b25db</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRCversion</spirit:name>
@@ -1324,7 +1324,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Feb 19 22:15:28 UTC 2016</spirit:value>
+            <spirit:value>Sat Feb 20 00:03:48 UTC 2016</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -1343,7 +1343,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>deb5cc39</spirit:value>
+            <spirit:value>09c93ae9</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -1351,7 +1351,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRC</spirit:name>
-            <spirit:value>6e6bcebd</spirit:value>
+            <spirit:value>564b25db</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRCversion</spirit:name>
@@ -1359,7 +1359,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Feb 19 22:15:28 UTC 2016</spirit:value>
+            <spirit:value>Sun Feb 21 11:51:06 UTC 2016</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -1377,7 +1377,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>41c46103</spirit:value>
+            <spirit:value>62c99e1b</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -1385,7 +1385,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRC</spirit:name>
-            <spirit:value>6e6bcebd</spirit:value>
+            <spirit:value>564b25db</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRCversion</spirit:name>
@@ -1393,7 +1393,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Feb 19 22:15:28 UTC 2016</spirit:value>
+            <spirit:value>Sun Feb 21 11:51:07 UTC 2016</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -1411,7 +1411,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>41c46103</spirit:value>
+            <spirit:value>62c99e1b</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -1419,7 +1419,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRC</spirit:name>
-            <spirit:value>6e6bcebd</spirit:value>
+            <spirit:value>564b25db</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRCversion</spirit:name>
@@ -1427,7 +1427,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Feb 19 22:15:28 UTC 2016</spirit:value>
+            <spirit:value>Sun Feb 21 11:51:07 UTC 2016</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -3145,7 +3145,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;PARAM_VALUE.C_NUM_SS_BITS&apos;)) - 1)">1</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;PARAM_VALUE.C_NUM_SS_BITS&apos;)) - 1)">0</spirit:left>
             <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_LSB_STUP&apos;)))">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -3172,7 +3172,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;PARAM_VALUE.C_NUM_SS_BITS&apos;)) - 1)">1</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;PARAM_VALUE.C_NUM_SS_BITS&apos;)) - 1)">0</spirit:left>
             <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_LSB_STUP&apos;)))">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -3542,7 +3542,7 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_NUM_SS_BITS</spirit:name>
         <spirit:displayName>No. of Slave Select Bits</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_NUM_SS_BITS" spirit:minimum="1" spirit:maximum="32" spirit:rangeType="long">2</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_NUM_SS_BITS" spirit:minimum="1" spirit:maximum="32" spirit:rangeType="long">1</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_NUM_TRANSFER_BITS</spirit:name>
@@ -4529,7 +4529,7 @@
       <spirit:name>C_NUM_SS_BITS</spirit:name>
       <spirit:displayName>No. of Slave Select Bits</spirit:displayName>
       <spirit:description>This parameter should be set to choose the no. SPI slave memories in design. This parameter decides the length of Slave Select port width of the core.</spirit:description>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_NUM_SS_BITS" spirit:order="80" spirit:minimum="1" spirit:maximum="32" spirit:rangeType="long">2</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_NUM_SS_BITS" spirit:order="80" spirit:minimum="1" spirit:maximum="32" spirit:rangeType="long">1</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>

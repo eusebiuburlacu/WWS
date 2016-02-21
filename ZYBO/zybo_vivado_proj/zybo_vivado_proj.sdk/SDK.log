@@ -41,3 +41,205 @@
 01:50:34 INFO  : Processor reset is completed for ps7_cortexa9_0
 01:55:35 INFO  : Processor reset is completed for ps7_cortexa9_0
 01:57:53 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+14:07:07 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+14:07:16 INFO  : XSDB server has started successfully.
+14:07:20 INFO  : Processing command line option -hwspec F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper.hdf.
+14:07:20 INFO  : Checking for hwspec changes in the project design_hw_wrapper_hw_platform_0.
+14:07:26 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1456055943428,  Project:1455920485967
+14:07:26 INFO  : The hardware specification for project 'design_hw_wrapper_hw_platform_0' is different from F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper.hdf.
+14:07:27 INFO  : Copied contents of F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper.hdf into \design_hw_wrapper_hw_platform_0\system.hdf.
+14:08:27 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+14:08:52 INFO  : 
+14:08:53 INFO  : Updating hardware inferred compiler options for standalone_bsp_0_xspi_polled_example_1.
+14:08:53 INFO  : Clearing existing target manager status.
+14:45:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:45:31 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279772591A" && level==0} -index 1' command is executed.
+14:45:32 INFO  : FPGA configured successfully with bitstream "F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper_hw_platform_0/design_hw_wrapper.bit"
+14:46:04 INFO  : ps7_init is completed.
+14:46:04 INFO  : ps7_post_config is completed.
+14:46:04 INFO  : Processor reset is completed for ps7_cortexa9_0
+14:47:09 INFO  : Processor reset is completed for ps7_cortexa9_0
+14:49:49 INFO  : Processor reset is completed for ps7_cortexa9_0
+14:51:45 INFO  : Processor reset is completed for ps7_cortexa9_0
+14:56:34 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:00:58 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+15:01:01 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:04:23 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:07:13 INFO  : FPGA Cable Disconnected. All active launches will be terminated.
+15:07:13 WARN  : Terminating existing sessions on processor ps7_cortexa9_0
+16:40:39 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+16:40:44 INFO  : XSDB server has started successfully.
+16:40:46 INFO  : Processing command line option -hwspec F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper.hdf.
+16:40:47 INFO  : Checking for hwspec changes in the project design_hw_wrapper_hw_platform_0.
+16:42:06 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+16:42:09 INFO  : XSDB server has started successfully.
+16:42:09 INFO  : Processing command line option -hwspec F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper.hdf.
+16:42:10 INFO  : Checking for hwspec changes in the project design_hw_wrapper_hw_platform_0.
+16:42:39 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:42:41 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279760164A" && level==0} -index 1' command is executed.
+16:42:42 INFO  : FPGA configured successfully with bitstream "F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper_hw_platform_0/design_hw_wrapper.bit"
+16:42:58 INFO  : ps7_init is completed.
+16:42:58 INFO  : ps7_post_config is completed.
+16:42:58 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:43:08 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+16:43:10 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:57:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:57:10 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279760164A" && level==0} -index 1' command is executed.
+16:57:11 INFO  : FPGA configured successfully with bitstream "F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper_hw_platform_0/design_hw_wrapper.bit"
+16:57:23 INFO  : ps7_init is completed.
+16:57:23 INFO  : ps7_post_config is completed.
+16:57:24 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:58:15 INFO  : ps7_init is completed.
+16:58:15 INFO  : ps7_post_config is completed.
+16:58:15 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:59:19 ERROR : Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Failed to open Cable Node jsn-Zybo-210279760164A on TCP:127.0.0.1:3121
+
+
+16:59:19 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Connection to Board Failed
+
+
+    Failed to open Cable Node jsn-Zybo-210279760164A on TCP:127.0.0.1:3121
+
+
+	at com.xilinx.sdk.targetmanager.internal.TM.isFPGAConfigured(TM.java:374)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.isFpgaConfigured(XilinxAppLaunchConfigurationDelegate.java:409)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:303)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+16:59:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:59:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279772591A" && level==0} -index 1' command is executed.
+16:59:36 INFO  : FPGA configured successfully with bitstream "F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper_hw_platform_0/design_hw_wrapper.bit"
+16:59:44 ERROR : Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Failed to open Cable Node jsn-Zybo-210279760164A on TCP:127.0.0.1:3121
+
+
+16:59:44 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Connection to Board Failed
+
+
+    Failed to open Cable Node jsn-Zybo-210279760164A on TCP:127.0.0.1:3121
+
+
+	at com.xilinx.sdk.targetmanager.internal.TM.isFPGAConfigured(TM.java:374)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.isFpgaConfigured(XilinxAppLaunchConfigurationDelegate.java:409)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:303)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+17:00:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:00:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279772591A" && level==0} -index 1' command is executed.
+17:00:09 INFO  : FPGA configured successfully with bitstream "F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper_hw_platform_0/design_hw_wrapper.bit"
+17:00:25 ERROR : Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Failed to open Cable Node jsn-Zybo-210279760164A on TCP:127.0.0.1:3121
+
+
+17:00:25 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Connection to Board Failed
+
+
+    Failed to open Cable Node jsn-Zybo-210279760164A on TCP:127.0.0.1:3121
+
+
+	at com.xilinx.sdk.targetmanager.internal.TM.isFPGAConfigured(TM.java:374)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.isFpgaConfigured(XilinxAppLaunchConfigurationDelegate.java:409)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:303)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+17:00:49 ERROR : Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Failed to open Cable Node jsn-Zybo-210279760164A on TCP:127.0.0.1:3121
+
+
+17:00:49 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Connection to Board Failed
+
+
+    Failed to open Cable Node jsn-Zybo-210279760164A on TCP:127.0.0.1:3121
+
+
+	at com.xilinx.sdk.targetmanager.internal.TM.isFPGAConfigured(TM.java:374)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.isFpgaConfigured(XilinxAppLaunchConfigurationDelegate.java:409)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:303)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+17:01:00 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+17:01:27 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+17:01:30 INFO  : XSDB server has started successfully.
+17:01:33 INFO  : Processing command line option -hwspec F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper.hdf.
+17:01:40 INFO  : Checking for hwspec changes in the project design_hw_wrapper_hw_platform_0.
+17:02:08 INFO  : ps7_init is completed.
+17:02:08 INFO  : ps7_post_config is completed.
+17:02:08 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:23:38 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:24:26 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:24:44 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:25:18 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+17:25:22 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Error in Resetting Target
+
+    Could not stop the processor after reset
+
+
+	at com.xilinx.sdk.targetmanager.internal.TM.doProcessorReset(TM.java:1011)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runTargetSetup(XilinxAppLaunchConfigurationDelegate.java:534)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(XilinxAppLaunchConfigurationDelegate.java:701)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:311)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+17:25:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:25:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279772591A" && level==0} -index 1' command is executed.
+17:25:47 INFO  : FPGA configured successfully with bitstream "F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper_hw_platform_0/design_hw_wrapper.bit"
+17:25:57 INFO  : ps7_init is completed.
+17:25:57 INFO  : ps7_post_config is completed.
+17:25:57 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:34:54 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+17:35:19 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+17:35:22 INFO  : XSDB server has started successfully.
+17:35:23 INFO  : Processing command line option -hwspec F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper.hdf.
+17:35:23 INFO  : Checking for hwspec changes in the project design_hw_wrapper_hw_platform_0.
+20:11:40 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+20:11:46 INFO  : XSDB server has started successfully.
+20:11:48 INFO  : Processing command line option -hwspec F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper.hdf.
+20:11:48 INFO  : Checking for hwspec changes in the project design_hw_wrapper_hw_platform_0.
+20:28:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:28:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279772591A" && level==0} -index 1' command is executed.
+20:28:18 INFO  : FPGA configured successfully with bitstream "F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper_hw_platform_0/design_hw_wrapper.bit"
+20:28:40 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: The program file specified in the launch configuration does not exist
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(XilinxAppLaunchConfigurationDelegate.java:806)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:311)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+22:58:30 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 

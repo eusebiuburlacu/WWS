@@ -57,7 +57,8 @@
 design_hw_xlconcat_0_0 your_instance_name (
   .In0(In0),    // input wire [0 : 0] In0
   .In1(In1),    // input wire [0 : 0] In1
-  .dout(dout)  // output wire [1 : 0] dout
+  .In2(In2),    // input wire [0 : 0] In2
+  .dout(dout)  // output wire [2 : 0] dout
 );
 // INST_TAG_END ------ End INSTANTIATION Template ---------
 

@@ -83,8 +83,8 @@ COMPONENT design_hw_axi_quad_spi_0_0
     sck_i : IN STD_LOGIC;
     sck_o : OUT STD_LOGIC;
     sck_t : OUT STD_LOGIC;
-    ss_i : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
-    ss_o : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+    ss_i : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+    ss_o : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
     ss_t : OUT STD_LOGIC;
     ip2intc_irpt : OUT STD_LOGIC
   );

@@ -148,6 +148,7 @@ proc create_root_design { parentCell } {
   set FIXED_IO [ create_bd_intf_port -mode Master -vlnv xilinx.com:display_processing_system7:fixedio_rtl:1.0 FIXED_IO ]
   set gpio_rtl [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 gpio_rtl ]
   set spi_rtl [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:spi_rtl:1.0 spi_rtl ]
+  set spi_rtl_0 [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:spi_rtl:1.0 spi_rtl_0 ]
 
   # Create ports
 
@@ -163,11 +164,18 @@ CONFIG.USE_BOARD_FLOW {true} \
   # Create instance: axi_quad_spi_0, and set properties
   set axi_quad_spi_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_quad_spi:3.2 axi_quad_spi_0 ]
   set_property -dict [ list \
-CONFIG.C_NUM_SS_BITS {2} \
+CONFIG.C_NUM_SS_BITS {1} \
 CONFIG.C_USE_STARTUP {0} \
 CONFIG.C_USE_STARTUP_INT {0} \
 CONFIG.Master_mode {1} \
  ] $axi_quad_spi_0
+
+  # Create instance: axi_quad_spi_1, and set properties
+  set axi_quad_spi_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_quad_spi:3.2 axi_quad_spi_1 ]
+  set_property -dict [ list \
+CONFIG.C_USE_STARTUP {0} \
+CONFIG.C_USE_STARTUP_INT {0} \
+ ] $axi_quad_spi_1
 
   # Create instance: processing_system7_0, and set properties
   set processing_system7_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0 ]
@@ -310,7 +318,7 @@ CONFIG.PCW_USE_FABRIC_INTERRUPT {1} \
   # Create instance: processing_system7_0_axi_periph, and set properties
   set processing_system7_0_axi_periph [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 processing_system7_0_axi_periph ]
   set_property -dict [ list \
-CONFIG.NUM_MI {2} \
+CONFIG.NUM_MI {3} \
  ] $processing_system7_0_axi_periph
 
   # Create instance: rst_processing_system7_0_100M, and set properties
@@ -318,58 +326,70 @@ CONFIG.NUM_MI {2} \
 
   # Create instance: xlconcat_0, and set properties
   set xlconcat_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_0 ]
+  set_property -dict [ list \
+CONFIG.NUM_PORTS {3} \
+ ] $xlconcat_0
 
   # Create interface connections
   connect_bd_intf_net -intf_net axi_gpio_0_GPIO [get_bd_intf_ports gpio_rtl] [get_bd_intf_pins axi_gpio_0/GPIO]
   connect_bd_intf_net -intf_net axi_quad_spi_0_SPI_0 [get_bd_intf_ports spi_rtl] [get_bd_intf_pins axi_quad_spi_0/SPI_0]
+  connect_bd_intf_net -intf_net axi_quad_spi_1_SPI_0 [get_bd_intf_ports spi_rtl_0] [get_bd_intf_pins axi_quad_spi_1/SPI_0]
   connect_bd_intf_net -intf_net processing_system7_0_DDR [get_bd_intf_ports DDR] [get_bd_intf_pins processing_system7_0/DDR]
   connect_bd_intf_net -intf_net processing_system7_0_FIXED_IO [get_bd_intf_ports FIXED_IO] [get_bd_intf_pins processing_system7_0/FIXED_IO]
   connect_bd_intf_net -intf_net processing_system7_0_M_AXI_GP0 [get_bd_intf_pins processing_system7_0/M_AXI_GP0] [get_bd_intf_pins processing_system7_0_axi_periph/S00_AXI]
   connect_bd_intf_net -intf_net processing_system7_0_axi_periph_M00_AXI [get_bd_intf_pins axi_quad_spi_0/AXI_LITE] [get_bd_intf_pins processing_system7_0_axi_periph/M00_AXI]
   connect_bd_intf_net -intf_net processing_system7_0_axi_periph_M01_AXI [get_bd_intf_pins axi_gpio_0/S_AXI] [get_bd_intf_pins processing_system7_0_axi_periph/M01_AXI]
+  connect_bd_intf_net -intf_net processing_system7_0_axi_periph_M02_AXI [get_bd_intf_pins axi_quad_spi_1/AXI_LITE] [get_bd_intf_pins processing_system7_0_axi_periph/M02_AXI]
 
   # Create port connections
   connect_bd_net -net axi_gpio_0_ip2intc_irpt [get_bd_pins axi_gpio_0/ip2intc_irpt] [get_bd_pins xlconcat_0/In1]
   connect_bd_net -net axi_quad_spi_0_ip2intc_irpt [get_bd_pins axi_quad_spi_0/ip2intc_irpt] [get_bd_pins xlconcat_0/In0]
-  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins axi_gpio_0/s_axi_aclk] [get_bd_pins axi_quad_spi_0/ext_spi_clk] [get_bd_pins axi_quad_spi_0/s_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins processing_system7_0_axi_periph/ACLK] [get_bd_pins processing_system7_0_axi_periph/M00_ACLK] [get_bd_pins processing_system7_0_axi_periph/M01_ACLK] [get_bd_pins processing_system7_0_axi_periph/S00_ACLK] [get_bd_pins rst_processing_system7_0_100M/slowest_sync_clk]
+  connect_bd_net -net axi_quad_spi_1_ip2intc_irpt [get_bd_pins axi_quad_spi_1/ip2intc_irpt] [get_bd_pins xlconcat_0/In2]
+  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins axi_gpio_0/s_axi_aclk] [get_bd_pins axi_quad_spi_0/ext_spi_clk] [get_bd_pins axi_quad_spi_0/s_axi_aclk] [get_bd_pins axi_quad_spi_1/ext_spi_clk] [get_bd_pins axi_quad_spi_1/s_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins processing_system7_0_axi_periph/ACLK] [get_bd_pins processing_system7_0_axi_periph/M00_ACLK] [get_bd_pins processing_system7_0_axi_periph/M01_ACLK] [get_bd_pins processing_system7_0_axi_periph/M02_ACLK] [get_bd_pins processing_system7_0_axi_periph/S00_ACLK] [get_bd_pins rst_processing_system7_0_100M/slowest_sync_clk]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_processing_system7_0_100M/ext_reset_in]
   connect_bd_net -net rst_processing_system7_0_100M_interconnect_aresetn [get_bd_pins processing_system7_0_axi_periph/ARESETN] [get_bd_pins rst_processing_system7_0_100M/interconnect_aresetn]
-  connect_bd_net -net rst_processing_system7_0_100M_peripheral_aresetn [get_bd_pins axi_gpio_0/s_axi_aresetn] [get_bd_pins axi_quad_spi_0/s_axi_aresetn] [get_bd_pins processing_system7_0_axi_periph/M00_ARESETN] [get_bd_pins processing_system7_0_axi_periph/M01_ARESETN] [get_bd_pins processing_system7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_processing_system7_0_100M/peripheral_aresetn]
+  connect_bd_net -net rst_processing_system7_0_100M_peripheral_aresetn [get_bd_pins axi_gpio_0/s_axi_aresetn] [get_bd_pins axi_quad_spi_0/s_axi_aresetn] [get_bd_pins axi_quad_spi_1/s_axi_aresetn] [get_bd_pins processing_system7_0_axi_periph/M00_ARESETN] [get_bd_pins processing_system7_0_axi_periph/M01_ARESETN] [get_bd_pins processing_system7_0_axi_periph/M02_ARESETN] [get_bd_pins processing_system7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_processing_system7_0_100M/peripheral_aresetn]
   connect_bd_net -net xlconcat_0_dout [get_bd_pins processing_system7_0/IRQ_F2P] [get_bd_pins xlconcat_0/dout]
 
   # Create address segments
   create_bd_addr_seg -range 0x10000 -offset 0x41200000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_gpio_0/S_AXI/Reg] SEG_axi_gpio_0_Reg
   create_bd_addr_seg -range 0x10000 -offset 0x41E00000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_quad_spi_0/AXI_LITE/Reg] SEG_axi_quad_spi_0_Reg
+  create_bd_addr_seg -range 0x10000 -offset 0x41E10000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_quad_spi_1/AXI_LITE/Reg] SEG_axi_quad_spi_1_Reg
 
   # Perform GUI Layout
   regenerate_bd_layout -layout_string {
    guistr: "# # String gsaved with Nlview 6.5.5  2015-06-26 bk=1.3371 VDI=38 GEI=35 GUI=JA:1.6
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -y 310 -defaultsOSRD
+preplace port DDR -pg 1 -y 300 -defaultsOSRD
+preplace port spi_rtl_0 -pg 1 -y 370 -defaultsOSRD
 preplace port gpio_rtl -pg 1 -y 210 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -y 330 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -y 460 -defaultsOSRD
 preplace port spi_rtl -pg 1 -y 60 -defaultsOSRD
-preplace inst rst_processing_system7_0_100M -pg 1 -lvl 2 -y 150 -defaultsOSRD
-preplace inst xlconcat_0 -pg 1 -lvl 1 -y 190 -defaultsOSRD
+preplace inst axi_quad_spi_1 -pg 1 -lvl 4 -y 380 -defaultsOSRD
+preplace inst rst_processing_system7_0_100M -pg 1 -lvl 2 -y 220 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 1 -y 270 -defaultsOSRD
 preplace inst axi_gpio_0 -pg 1 -lvl 4 -y 220 -defaultsOSRD
-preplace inst processing_system7_0_axi_periph -pg 1 -lvl 3 -y 150 -defaultsOSRD
+preplace inst processing_system7_0_axi_periph -pg 1 -lvl 3 -y 200 -defaultsOSRD
 preplace inst axi_quad_spi_0 -pg 1 -lvl 4 -y 70 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 2 -y 400 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 2 -y 470 -defaultsOSRD
 preplace netloc axi_quad_spi_0_SPI_0 1 4 1 NJ
-preplace netloc processing_system7_0_DDR 1 2 3 NJ 310 NJ 310 NJ
-preplace netloc processing_system7_0_axi_periph_M00_AXI 1 3 1 940
-preplace netloc processing_system7_0_M_AXI_GP0 1 2 1 610
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 2 220 260 600
-preplace netloc rst_processing_system7_0_100M_peripheral_aresetn 1 2 2 640 290 970
-preplace netloc xlconcat_0_dout 1 1 1 200
-preplace netloc processing_system7_0_FIXED_IO 1 2 3 NJ 330 NJ 330 NJ
+preplace netloc processing_system7_0_DDR 1 2 3 NJ 40 NJ 300 NJ
+preplace netloc processing_system7_0_axi_periph_M00_AXI 1 3 1 980
+preplace netloc processing_system7_0_M_AXI_GP0 1 2 1 630
+preplace netloc axi_quad_spi_1_ip2intc_irpt 1 0 5 0 340 NJ 330 NJ 360 NJ 470 1250
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 2 210 130 590
+preplace netloc processing_system7_0_axi_periph_M02_AXI 1 3 1 950
+preplace netloc axi_quad_spi_1_SPI_0 1 4 1 NJ
+preplace netloc rst_processing_system7_0_100M_peripheral_aresetn 1 2 2 640 30 960
+preplace netloc xlconcat_0_dout 1 1 1 180
+preplace netloc processing_system7_0_FIXED_IO 1 2 3 NJ 400 NJ 460 NJ
 preplace netloc axi_gpio_0_GPIO 1 4 1 NJ
-preplace netloc axi_gpio_0_ip2intc_irpt 1 0 5 20 250 NJ 250 NJ 300 NJ 300 1190
-preplace netloc rst_processing_system7_0_100M_interconnect_aresetn 1 2 1 620
-preplace netloc processing_system7_0_FCLK_CLK0 1 1 3 210 240 630 340 960
-preplace netloc axi_quad_spi_0_ip2intc_irpt 1 0 5 20 10 NJ 10 NJ 10 NJ 150 1190
-preplace netloc processing_system7_0_axi_periph_M01_AXI 1 3 1 940
-levelinfo -pg 1 0 110 410 790 1080 1210 -top 0 -bot 540
+preplace netloc axi_gpio_0_ip2intc_irpt 1 0 5 -10 10 NJ 10 NJ 10 NJ 290 1250
+preplace netloc rst_processing_system7_0_100M_interconnect_aresetn 1 2 1 600
+preplace netloc processing_system7_0_FCLK_CLK0 1 1 3 200 120 610 370 990
+preplace netloc axi_quad_spi_0_ip2intc_irpt 1 0 5 0 20 NJ 20 NJ 20 NJ 150 1250
+preplace netloc processing_system7_0_axi_periph_M01_AXI 1 3 1 N
+levelinfo -pg 1 -30 90 400 790 1140 1270 -top 0 -bot 610
 ",
 }
 
