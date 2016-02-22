@@ -573,7 +573,6 @@ int XSpi_Transfer(XSpi *InstancePtr, u8 *SendBufPtr,
 
 	ControlReg = XSpi_GetControlReg(InstancePtr);
 
-
 	/*
 	 * If configured as a master, be sure there is a slave select bit set
 	 * in the slave select register. If no slaves have been selected, the

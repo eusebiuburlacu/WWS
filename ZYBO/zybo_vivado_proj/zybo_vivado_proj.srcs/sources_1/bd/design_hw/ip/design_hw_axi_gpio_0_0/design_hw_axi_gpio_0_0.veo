@@ -74,10 +74,9 @@ design_hw_axi_gpio_0_0 your_instance_name (
   .s_axi_rresp(s_axi_rresp),      // output wire [1 : 0] s_axi_rresp
   .s_axi_rvalid(s_axi_rvalid),    // output wire s_axi_rvalid
   .s_axi_rready(s_axi_rready),    // input wire s_axi_rready
-  .ip2intc_irpt(ip2intc_irpt),    // output wire ip2intc_irpt
-  .gpio_io_i(gpio_io_i),          // input wire [6 : 0] gpio_io_i
-  .gpio_io_o(gpio_io_o),          // output wire [6 : 0] gpio_io_o
-  .gpio_io_t(gpio_io_t)          // output wire [6 : 0] gpio_io_t
+  .gpio_io_i(gpio_io_i),          // input wire [3 : 0] gpio_io_i
+  .gpio_io_o(gpio_io_o),          // output wire [3 : 0] gpio_io_o
+  .gpio_io_t(gpio_io_t)          // output wire [3 : 0] gpio_io_t
 );
 // INST_TAG_END ------ End INSTANTIATION Template ---------
 

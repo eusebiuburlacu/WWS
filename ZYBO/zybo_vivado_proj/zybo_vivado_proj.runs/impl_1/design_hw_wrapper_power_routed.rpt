@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
-| Date             : Sun Feb 21 13:58:17 2016
+| Date             : Mon Feb 22 22:55:29 2016
 | Host             : DESKTOP-567HUN5 running 64-bit major release  (build 9200)
 | Command          : report_power -file design_hw_wrapper_power_routed.rpt -pb design_hw_wrapper_power_summary_routed.pb
 | Design           : design_hw_wrapper
@@ -30,8 +30,8 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 1.709 |
-| Dynamic (W)              | 1.573 |
+| Total On-Chip Power (W)  | 1.708 |
+| Dynamic (W)              | 1.572 |
 | Device Static (W)        | 0.136 |
 | Effective TJA (C/W)      | 11.5  |
 | Max Ambient (C)          | 65.3  |
@@ -50,18 +50,18 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.009 |        3 |       --- |             --- |
-| Slice Logic              |     0.002 |     3733 |       --- |             --- |
-|   LUT as Logic           |     0.002 |     1151 |     17600 |            6.54 |
-|   Register               |    <0.001 |     1847 |     35200 |            5.25 |
+| Slice Logic              |     0.002 |     3822 |       --- |             --- |
+|   LUT as Logic           |     0.002 |     1204 |     17600 |            6.84 |
+|   Register               |    <0.001 |     1866 |     35200 |            5.30 |
 |   CARRY4                 |    <0.001 |       18 |      4400 |            0.41 |
 |   LUT as Distributed RAM |    <0.001 |       32 |      6000 |            0.53 |
 |   LUT as Shift Register  |    <0.001 |       70 |      6000 |            1.17 |
-|   Others                 |     0.000 |      309 |       --- |             --- |
-| Signals                  |     0.003 |     2718 |       --- |             --- |
+|   Others                 |     0.000 |      318 |       --- |             --- |
+| Signals                  |     0.003 |     2775 |       --- |             --- |
 | I/O                      |     0.002 |       15 |       100 |           15.00 |
 | PS7                      |     1.556 |        1 |       --- |             --- |
 | Static Power             |     0.136 |          |           |                 |
-| Total                    |     1.709 |          |           |                 |
+| Total                    |     1.708 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -147,9 +147,16 @@ Table of Contents
 +------------------------------------------------------------+-----------+
 | Name                                                       | Power (W) |
 +------------------------------------------------------------+-----------+
-| design_hw_wrapper                                          |     1.573 |
-|   design_hw_i                                              |     1.570 |
+| design_hw_wrapper                                          |     1.572 |
+|   design_hw_i                                              |     1.571 |
 |     axi_gpio_0                                             |    <0.001 |
+|       U0                                                   |    <0.001 |
+|         AXI_LITE_IPIF_I                                    |    <0.001 |
+|           I_SLAVE_ATTACHMENT                               |    <0.001 |
+|             I_DECODER                                      |    <0.001 |
+|         gpio_core_1                                        |    <0.001 |
+|           Not_Dual.INPUT_DOUBLE_REGS3                      |    <0.001 |
+|     axi_gpio_1                                             |    <0.001 |
 |       U0                                                   |    <0.001 |
 |         AXI_LITE_IPIF_I                                    |    <0.001 |
 |           I_SLAVE_ATTACHMENT                               |    <0.001 |
@@ -326,13 +333,13 @@ Table of Contents
 |         SEQ                                                |    <0.001 |
 |           SEQ_COUNTER                                      |    <0.001 |
 |     xlconcat_0                                             |     0.000 |
+|   gpio_rtl_0_tri_iobuf_0                                   |     0.000 |
+|   gpio_rtl_0_tri_iobuf_1                                   |     0.000 |
+|   gpio_rtl_0_tri_iobuf_2                                   |     0.000 |
 |   gpio_rtl_tri_iobuf_0                                     |    <0.001 |
 |   gpio_rtl_tri_iobuf_1                                     |    <0.001 |
 |   gpio_rtl_tri_iobuf_2                                     |    <0.001 |
 |   gpio_rtl_tri_iobuf_3                                     |    <0.001 |
-|   gpio_rtl_tri_iobuf_4                                     |    <0.001 |
-|   gpio_rtl_tri_iobuf_5                                     |    <0.001 |
-|   gpio_rtl_tri_iobuf_6                                     |    <0.001 |
 |   spi_rtl_0_io0_iobuf                                      |    <0.001 |
 |   spi_rtl_0_io1_iobuf                                      |     0.000 |
 |   spi_rtl_0_sck_iobuf                                      |    <0.001 |

@@ -1,7 +1,7 @@
 --Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
---Date        : Sun Feb 21 13:50:26 2016
+--Date        : Mon Feb 22 22:49:47 2016
 --Host        : DESKTOP-567HUN5 running 64-bit major release  (build 9200)
 --Command     : generate_target design_hw_wrapper.bd
 --Design      : design_hw_wrapper
@@ -34,7 +34,8 @@ entity design_hw_wrapper is
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
-    gpio_rtl_tri_io : inout STD_LOGIC_VECTOR ( 6 downto 0 );
+    gpio_rtl_0_tri_io : inout STD_LOGIC_VECTOR ( 2 downto 0 );
+    gpio_rtl_tri_io : inout STD_LOGIC_VECTOR ( 3 downto 0 );
     spi_rtl_0_io0_io : inout STD_LOGIC;
     spi_rtl_0_io1_io : inout STD_LOGIC;
     spi_rtl_0_sck_io : inout STD_LOGIC;
@@ -70,9 +71,9 @@ architecture STRUCTURE of design_hw_wrapper is
     FIXED_IO_ps_srstb : inout STD_LOGIC;
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
-    gpio_rtl_tri_i : in STD_LOGIC_VECTOR ( 6 downto 0 );
-    gpio_rtl_tri_o : out STD_LOGIC_VECTOR ( 6 downto 0 );
-    gpio_rtl_tri_t : out STD_LOGIC_VECTOR ( 6 downto 0 );
+    gpio_rtl_tri_i : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    gpio_rtl_tri_o : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    gpio_rtl_tri_t : out STD_LOGIC_VECTOR ( 3 downto 0 );
     spi_rtl_io0_i : in STD_LOGIC;
     spi_rtl_io0_o : out STD_LOGIC;
     spi_rtl_io0_t : out STD_LOGIC;
@@ -96,7 +97,10 @@ architecture STRUCTURE of design_hw_wrapper is
     spi_rtl_0_sck_t : out STD_LOGIC;
     spi_rtl_0_ss_i : in STD_LOGIC_VECTOR ( 0 to 0 );
     spi_rtl_0_ss_o : out STD_LOGIC_VECTOR ( 0 to 0 );
-    spi_rtl_0_ss_t : out STD_LOGIC
+    spi_rtl_0_ss_t : out STD_LOGIC;
+    gpio_rtl_0_tri_i : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    gpio_rtl_0_tri_o : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    gpio_rtl_0_tri_t : out STD_LOGIC_VECTOR ( 2 downto 0 )
   );
   end component design_hw;
   component IOBUF is
@@ -107,34 +111,34 @@ architecture STRUCTURE of design_hw_wrapper is
     IO : inout STD_LOGIC
   );
   end component IOBUF;
+  signal gpio_rtl_0_tri_i_0 : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal gpio_rtl_0_tri_i_1 : STD_LOGIC_VECTOR ( 1 to 1 );
+  signal gpio_rtl_0_tri_i_2 : STD_LOGIC_VECTOR ( 2 to 2 );
+  signal gpio_rtl_0_tri_io_0 : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal gpio_rtl_0_tri_io_1 : STD_LOGIC_VECTOR ( 1 to 1 );
+  signal gpio_rtl_0_tri_io_2 : STD_LOGIC_VECTOR ( 2 to 2 );
+  signal gpio_rtl_0_tri_o_0 : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal gpio_rtl_0_tri_o_1 : STD_LOGIC_VECTOR ( 1 to 1 );
+  signal gpio_rtl_0_tri_o_2 : STD_LOGIC_VECTOR ( 2 to 2 );
+  signal gpio_rtl_0_tri_t_0 : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal gpio_rtl_0_tri_t_1 : STD_LOGIC_VECTOR ( 1 to 1 );
+  signal gpio_rtl_0_tri_t_2 : STD_LOGIC_VECTOR ( 2 to 2 );
   signal gpio_rtl_tri_i_0 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal gpio_rtl_tri_i_1 : STD_LOGIC_VECTOR ( 1 to 1 );
   signal gpio_rtl_tri_i_2 : STD_LOGIC_VECTOR ( 2 to 2 );
   signal gpio_rtl_tri_i_3 : STD_LOGIC_VECTOR ( 3 to 3 );
-  signal gpio_rtl_tri_i_4 : STD_LOGIC_VECTOR ( 4 to 4 );
-  signal gpio_rtl_tri_i_5 : STD_LOGIC_VECTOR ( 5 to 5 );
-  signal gpio_rtl_tri_i_6 : STD_LOGIC_VECTOR ( 6 to 6 );
   signal gpio_rtl_tri_io_0 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal gpio_rtl_tri_io_1 : STD_LOGIC_VECTOR ( 1 to 1 );
   signal gpio_rtl_tri_io_2 : STD_LOGIC_VECTOR ( 2 to 2 );
   signal gpio_rtl_tri_io_3 : STD_LOGIC_VECTOR ( 3 to 3 );
-  signal gpio_rtl_tri_io_4 : STD_LOGIC_VECTOR ( 4 to 4 );
-  signal gpio_rtl_tri_io_5 : STD_LOGIC_VECTOR ( 5 to 5 );
-  signal gpio_rtl_tri_io_6 : STD_LOGIC_VECTOR ( 6 to 6 );
   signal gpio_rtl_tri_o_0 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal gpio_rtl_tri_o_1 : STD_LOGIC_VECTOR ( 1 to 1 );
   signal gpio_rtl_tri_o_2 : STD_LOGIC_VECTOR ( 2 to 2 );
   signal gpio_rtl_tri_o_3 : STD_LOGIC_VECTOR ( 3 to 3 );
-  signal gpio_rtl_tri_o_4 : STD_LOGIC_VECTOR ( 4 to 4 );
-  signal gpio_rtl_tri_o_5 : STD_LOGIC_VECTOR ( 5 to 5 );
-  signal gpio_rtl_tri_o_6 : STD_LOGIC_VECTOR ( 6 to 6 );
   signal gpio_rtl_tri_t_0 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal gpio_rtl_tri_t_1 : STD_LOGIC_VECTOR ( 1 to 1 );
   signal gpio_rtl_tri_t_2 : STD_LOGIC_VECTOR ( 2 to 2 );
   signal gpio_rtl_tri_t_3 : STD_LOGIC_VECTOR ( 3 to 3 );
-  signal gpio_rtl_tri_t_4 : STD_LOGIC_VECTOR ( 4 to 4 );
-  signal gpio_rtl_tri_t_5 : STD_LOGIC_VECTOR ( 5 to 5 );
-  signal gpio_rtl_tri_t_6 : STD_LOGIC_VECTOR ( 6 to 6 );
   signal spi_rtl_0_io0_i : STD_LOGIC;
   signal spi_rtl_0_io0_o : STD_LOGIC;
   signal spi_rtl_0_io0_t : STD_LOGIC;
@@ -185,23 +189,23 @@ design_hw_i: component design_hw
       FIXED_IO_ps_clk => FIXED_IO_ps_clk,
       FIXED_IO_ps_porb => FIXED_IO_ps_porb,
       FIXED_IO_ps_srstb => FIXED_IO_ps_srstb,
-      gpio_rtl_tri_i(6) => gpio_rtl_tri_i_6(6),
-      gpio_rtl_tri_i(5) => gpio_rtl_tri_i_5(5),
-      gpio_rtl_tri_i(4) => gpio_rtl_tri_i_4(4),
+      gpio_rtl_0_tri_i(2) => gpio_rtl_0_tri_i_2(2),
+      gpio_rtl_0_tri_i(1) => gpio_rtl_0_tri_i_1(1),
+      gpio_rtl_0_tri_i(0) => gpio_rtl_0_tri_i_0(0),
+      gpio_rtl_0_tri_o(2) => gpio_rtl_0_tri_o_2(2),
+      gpio_rtl_0_tri_o(1) => gpio_rtl_0_tri_o_1(1),
+      gpio_rtl_0_tri_o(0) => gpio_rtl_0_tri_o_0(0),
+      gpio_rtl_0_tri_t(2) => gpio_rtl_0_tri_t_2(2),
+      gpio_rtl_0_tri_t(1) => gpio_rtl_0_tri_t_1(1),
+      gpio_rtl_0_tri_t(0) => gpio_rtl_0_tri_t_0(0),
       gpio_rtl_tri_i(3) => gpio_rtl_tri_i_3(3),
       gpio_rtl_tri_i(2) => gpio_rtl_tri_i_2(2),
       gpio_rtl_tri_i(1) => gpio_rtl_tri_i_1(1),
       gpio_rtl_tri_i(0) => gpio_rtl_tri_i_0(0),
-      gpio_rtl_tri_o(6) => gpio_rtl_tri_o_6(6),
-      gpio_rtl_tri_o(5) => gpio_rtl_tri_o_5(5),
-      gpio_rtl_tri_o(4) => gpio_rtl_tri_o_4(4),
       gpio_rtl_tri_o(3) => gpio_rtl_tri_o_3(3),
       gpio_rtl_tri_o(2) => gpio_rtl_tri_o_2(2),
       gpio_rtl_tri_o(1) => gpio_rtl_tri_o_1(1),
       gpio_rtl_tri_o(0) => gpio_rtl_tri_o_0(0),
-      gpio_rtl_tri_t(6) => gpio_rtl_tri_t_6(6),
-      gpio_rtl_tri_t(5) => gpio_rtl_tri_t_5(5),
-      gpio_rtl_tri_t(4) => gpio_rtl_tri_t_4(4),
       gpio_rtl_tri_t(3) => gpio_rtl_tri_t_3(3),
       gpio_rtl_tri_t(2) => gpio_rtl_tri_t_2(2),
       gpio_rtl_tri_t(1) => gpio_rtl_tri_t_1(1),
@@ -231,6 +235,27 @@ design_hw_i: component design_hw
       spi_rtl_ss_o(0) => spi_rtl_ss_o_0(0),
       spi_rtl_ss_t => spi_rtl_ss_t
     );
+gpio_rtl_0_tri_iobuf_0: component IOBUF
+     port map (
+      I => gpio_rtl_0_tri_o_0(0),
+      IO => gpio_rtl_0_tri_io(0),
+      O => gpio_rtl_0_tri_i_0(0),
+      T => gpio_rtl_0_tri_t_0(0)
+    );
+gpio_rtl_0_tri_iobuf_1: component IOBUF
+     port map (
+      I => gpio_rtl_0_tri_o_1(1),
+      IO => gpio_rtl_0_tri_io(1),
+      O => gpio_rtl_0_tri_i_1(1),
+      T => gpio_rtl_0_tri_t_1(1)
+    );
+gpio_rtl_0_tri_iobuf_2: component IOBUF
+     port map (
+      I => gpio_rtl_0_tri_o_2(2),
+      IO => gpio_rtl_0_tri_io(2),
+      O => gpio_rtl_0_tri_i_2(2),
+      T => gpio_rtl_0_tri_t_2(2)
+    );
 gpio_rtl_tri_iobuf_0: component IOBUF
      port map (
       I => gpio_rtl_tri_o_0(0),
@@ -258,27 +283,6 @@ gpio_rtl_tri_iobuf_3: component IOBUF
       IO => gpio_rtl_tri_io(3),
       O => gpio_rtl_tri_i_3(3),
       T => gpio_rtl_tri_t_3(3)
-    );
-gpio_rtl_tri_iobuf_4: component IOBUF
-     port map (
-      I => gpio_rtl_tri_o_4(4),
-      IO => gpio_rtl_tri_io(4),
-      O => gpio_rtl_tri_i_4(4),
-      T => gpio_rtl_tri_t_4(4)
-    );
-gpio_rtl_tri_iobuf_5: component IOBUF
-     port map (
-      I => gpio_rtl_tri_o_5(5),
-      IO => gpio_rtl_tri_io(5),
-      O => gpio_rtl_tri_i_5(5),
-      T => gpio_rtl_tri_t_5(5)
-    );
-gpio_rtl_tri_iobuf_6: component IOBUF
-     port map (
-      I => gpio_rtl_tri_o_6(6),
-      IO => gpio_rtl_tri_io(6),
-      O => gpio_rtl_tri_i_6(6),
-      T => gpio_rtl_tri_t_6(6)
     );
 spi_rtl_0_io0_iobuf: component IOBUF
      port map (

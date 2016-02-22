@@ -74,6 +74,10 @@ set rc [catch {
   set_property processing_order EARLY [get_files f:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.srcs/sources_1/bd/design_hw/ip/design_hw_axi_quad_spi_1_0/design_hw_axi_quad_spi_1_0_board.xdc]
   read_xdc -ref design_hw_axi_quad_spi_1_0 -cells U0 f:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.srcs/sources_1/bd/design_hw/ip/design_hw_axi_quad_spi_1_0/design_hw_axi_quad_spi_1_0.xdc
   set_property processing_order EARLY [get_files f:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.srcs/sources_1/bd/design_hw/ip/design_hw_axi_quad_spi_1_0/design_hw_axi_quad_spi_1_0.xdc]
+  read_xdc -prop_thru_buffers -ref design_hw_axi_gpio_1_0 -cells U0 f:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.srcs/sources_1/bd/design_hw/ip/design_hw_axi_gpio_1_0/design_hw_axi_gpio_1_0_board.xdc
+  set_property processing_order EARLY [get_files f:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.srcs/sources_1/bd/design_hw/ip/design_hw_axi_gpio_1_0/design_hw_axi_gpio_1_0_board.xdc]
+  read_xdc -ref design_hw_axi_gpio_1_0 -cells U0 f:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.srcs/sources_1/bd/design_hw/ip/design_hw_axi_gpio_1_0/design_hw_axi_gpio_1_0.xdc
+  set_property processing_order EARLY [get_files f:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.srcs/sources_1/bd/design_hw/ip/design_hw_axi_gpio_1_0/design_hw_axi_gpio_1_0.xdc]
   read_xdc F:/Proiecte_si_concursuri/WWS/zybo/exercise_1/exercise_1.srcs/constrs_1/new/my_constraints.xdc
   read_xdc -ref design_hw_axi_quad_spi_0_0 -cells U0 f:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.srcs/sources_1/bd/design_hw/ip/design_hw_axi_quad_spi_0_0/design_hw_axi_quad_spi_0_0_clocks.xdc
   set_property processing_order LATE [get_files f:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.srcs/sources_1/bd/design_hw/ip/design_hw_axi_quad_spi_0_0/design_hw_axi_quad_spi_0_0_clocks.xdc]

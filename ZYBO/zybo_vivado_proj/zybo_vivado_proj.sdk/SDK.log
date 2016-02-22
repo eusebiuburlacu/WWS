@@ -243,3 +243,83 @@ java.lang.RuntimeException: The program file specified in the launch configurati
 	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
 22:58:30 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+21:14:48 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+21:14:54 INFO  : XSDB server has started successfully.
+21:14:56 INFO  : Processing command line option -hwspec F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper.hdf.
+21:14:57 INFO  : Checking for hwspec changes in the project design_hw_wrapper_hw_platform_0.
+21:31:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:31:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279772591A" && level==0} -index 1' command is executed.
+21:31:10 INFO  : FPGA configured successfully with bitstream "F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper_hw_platform_0/design_hw_wrapper.bit"
+21:32:06 INFO  : ps7_init is completed.
+21:32:06 INFO  : ps7_post_config is completed.
+21:32:06 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:36:47 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:38:22 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:53:36 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:57:44 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:58:16 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:03:28 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:04:56 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:31:32 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+23:02:06 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+23:02:13 INFO  : XSDB server has started successfully.
+23:02:15 INFO  : Processing command line option -hwspec F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper.hdf.
+23:02:15 INFO  : Checking for hwspec changes in the project design_hw_wrapper_hw_platform_0.
+23:02:19 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1456174569424,  Project:1456055943428
+23:02:19 INFO  : The hardware specification for project 'design_hw_wrapper_hw_platform_0' is different from F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper.hdf.
+23:02:19 INFO  : Copied contents of F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper.hdf into \design_hw_wrapper_hw_platform_0\system.hdf.
+23:02:29 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+23:02:46 INFO  : 
+23:02:47 INFO  : Updating hardware inferred compiler options for zyboApp.
+23:02:47 INFO  : Clearing existing target manager status.
+23:25:01 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:25:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279772591A" && level==0} -index 1' command is executed.
+23:25:08 INFO  : FPGA configured successfully with bitstream "F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper_hw_platform_0/design_hw_wrapper.bit"
+23:25:37 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Error in Resetting Target
+
+    Could not stop the processor after reset
+
+
+	at com.xilinx.sdk.targetmanager.internal.TM.doProcessorReset(TM.java:1011)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runTargetSetup(XilinxAppLaunchConfigurationDelegate.java:534)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:616)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:309)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+23:25:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:25:57 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279772591A" && level==0} -index 1' command is executed.
+23:25:59 INFO  : FPGA configured successfully with bitstream "F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper_hw_platform_0/design_hw_wrapper.bit"
+23:26:06 INFO  : ps7_init is completed.
+23:26:06 INFO  : ps7_post_config is completed.
+23:26:06 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:27:49 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:28:12 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:29:53 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:33:42 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:38:04 INFO  : ps7_init is completed.
+23:38:04 INFO  : ps7_post_config is completed.
+23:38:04 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:39:22 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:40:07 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:40:45 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:42:16 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:42:37 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:42:53 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:43:20 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:43:51 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:46:36 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:46:46 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+23:47:21 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:49:20 INFO  : Refreshed build settings on project zyboApp
+23:50:28 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:50:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:50:41 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279772591A" && level==0} -index 1' command is executed.
+23:50:42 INFO  : FPGA configured successfully with bitstream "F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper_hw_platform_0/design_hw_wrapper.bit"
+23:50:47 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:52:23 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:52:46 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 

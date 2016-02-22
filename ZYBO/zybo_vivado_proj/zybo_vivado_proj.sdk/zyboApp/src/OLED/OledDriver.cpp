@@ -33,7 +33,8 @@
 /*																		*/
 /*	04/29/2011(GeneA): Created											*/
 /*	08/03/2011(GeneA): added functions to shut down the display and to	*/
-/*		turn the display on and off.									*/
+/*		turn the display on and off.	
+/*	22/02/2016(EusebiuB): adapted library to work on Zybo				*/
 /*																		*/
 /************************************************************************/
 
@@ -58,6 +59,7 @@ extern "C" {
 #include <xspi_l.h>
 #include <xstatus.h>
 #include <xgpio.h>
+#include "sleep.h"
 
 /* ------------------------------------------------------------ */
 /*				Local Symbol Definitions						*/
@@ -117,10 +119,10 @@ uint8_t *	pbOledFontUser;
 	const int VddCtrl	= PIN_DSPI0_SS + 7;
 #endif*/
 
-#define DATA_CMD_MASK	0x08
-#define RESET_MASK		0x10
-#define VBAT_CTRL_MASK	0x20
-#define VDD_CTRL_MASK	0x40
+#define DATA_CMD_MASK	0x01
+#define RESET_MASK		0x02
+#define VBAT_CTRL_MASK	0x04
+#define VDD_CTRL_MASK	0x08
 
 /* ------------------------------------------------------------ */
 /*				Local Variables									*/
@@ -168,9 +170,8 @@ uint8_t	Spi2PutByte(uint8_t bVal);
 **		Initialize the OLED display subsystem.
 */
 
-void
-OledInit()
-	{
+void OledInit()
+{
 
 	/* Init the PIC32 peripherals used to talk to the display.
 	*/
@@ -188,7 +189,6 @@ OledInit()
 	/* Clear the display.
 	*/
 	OledClear();
-
 }
 
 /* ------------------------------------------------------------ */
@@ -207,10 +207,8 @@ OledInit()
 **		Shut down the OLED display.
 */
 
-void
-OledTerm()
-	{
-
+void OledTerm()
+{
 	/* Shut down the OLED display hardware.
 	*/
 	OledDevTerm();
@@ -218,7 +216,6 @@ OledTerm()
 	/* Release the PIC32 peripherals being used.
 	*/
 	OledHostTerm();
-
 }
 
 /* ------------------------------------------------------------ */
@@ -252,23 +249,23 @@ void OledHostInit()
 	SPIConfigPtr = XSpi_LookupConfig(XPAR_SPI_1_DEVICE_ID);
 	if (SPIConfigPtr == NULL)
 	{
-		return XST_DEVICE_NOT_FOUND;
+		printf("OledHostInit: ERROR: SPI device not found");
 	}
 
 	status = XSpi_CfgInitialize(&SpiInstance, SPIConfigPtr, SPIConfigPtr->BaseAddress);
 	if (status != XST_SUCCESS)
 	{
-		return XST_FAILURE;
+		printf("OledHostInit: ERROR: cannot init SPI");
 	}
 
 	/*
-	 * Set the Spi device as a master and in loopback mode.
+	 * Set the Spi device as a master.
 	 */
 	status = XSpi_SetOptions( &SpiInstance, XSP_MASTER_OPTION | XSP_MANUAL_SSELECT_OPTION |
 			XSP_CLK_ACTIVE_LOW_OPTION | XSP_CLK_PHASE_1_OPTION);
 	if (status != XST_SUCCESS)
 	{
-		return XST_FAILURE;
+		printf("OledHostInit: ERROR: set SPI options");
 	}
 
 
@@ -290,16 +287,20 @@ void OledHostInit()
 
 	//GPIO config
 	GPIOConfigPtr = XGpio_LookupConfig(XPAR_GPIO_0_DEVICE_ID);
+	if (GPIOConfigPtr == NULL)
+	{
+		printf("OledHostInit: ERROR: GPIO device not found");
+	}
 
 	status = XGpio_CfgInitialize(&gpioInstance, GPIOConfigPtr, GPIOConfigPtr->BaseAddress);
 	if (status != XST_SUCCESS)
 	{
-		return XST_FAILURE;
+		printf("OledHostInit: ERROR: cannot init GPIO");
 	}
 
-	XGpio_SetDataDirection(&gpioInstance, 1, 0x00);
+	XGpio_SetDataDirection(&gpioInstance, 1, 0xf0);
 
-	XGpio_DiscreteWrite(&gpioInstance, 1, 0xf0);
+	XGpio_DiscreteWrite(&gpioInstance, 1, 0x0F);
 
 }
 
@@ -321,8 +322,8 @@ void OledHostInit()
 
 void OledHostTerm()
 {
-	XGpio_DiscreteWrite(&gpioInstance, 1, 0xf0);
-	XGpio_SetDataDirection(&gpioInstance, 1, 0xf0);
+	XGpio_DiscreteWrite(&gpioInstance, 1, 0x0f);
+	XGpio_SetDataDirection(&gpioInstance, 1, 0x0f);
 }
 
 /* ------------------------------------------------------------ */
@@ -341,9 +342,8 @@ void OledHostTerm()
 **		Initialize the OLED software system
 */
 
-void
-OledDvrInit()
-	{
+void OledDvrInit()
+{
 	int		ib;
 
 	/* Init the parameters for the default font
@@ -374,7 +374,6 @@ OledDvrInit()
 	** update the display.
 	*/
 	fOledCharUpdate = 1;
-
 }
 
 /* ------------------------------------------------------------ */
@@ -401,7 +400,9 @@ void OledDevInit()
 	gpioReg = XGpio_DiscreteRead(&gpioInstance, 1);
 
 	XGpio_DiscreteWrite(&gpioInstance, 1, gpioReg & (RESET_MASK | VBAT_CTRL_MASK));
-	delay(1);
+	gpioReg = XGpio_DiscreteRead(&gpioInstance, 1);
+	printf("OledDevInit: d/cmd, vdd set to 0, gpioReg: %X", gpioReg);
+	usleep(1000);
 
 	/* Display off command
 	*/
@@ -412,8 +413,12 @@ void OledDevInit()
 
 	gpioReg = XGpio_DiscreteRead(&gpioInstance, 1);
 	XGpio_DiscreteWrite(&gpioInstance, 1, gpioReg & ( VBAT_CTRL_MASK | VDD_CTRL_MASK | DATA_CMD_MASK));
-	delay(1);
+	gpioReg = XGpio_DiscreteRead(&gpioInstance, 1);
+	printf("OledDevInit: reset set to 0, gpioReg: %X", gpioReg);
+	usleep(1000);
 	XGpio_DiscreteWrite(&gpioInstance, 1, gpioReg | RESET_MASK);
+	gpioReg = XGpio_DiscreteRead(&gpioInstance, 1);
+	printf("OledDevInit: reset set to 1, gpioReg: %X", gpioReg);
 
 	/* Send the Set Charge Pump and Set Pre-Charge Period commands
 	*/
@@ -427,7 +432,9 @@ void OledDevInit()
 	*/
 	gpioReg = XGpio_DiscreteRead(&gpioInstance, 1);
 	XGpio_DiscreteWrite(&gpioInstance, 1, gpioReg & ( RESET_MASK | VDD_CTRL_MASK | DATA_CMD_MASK));
-	delay(100);
+	gpioReg = XGpio_DiscreteRead(&gpioInstance, 1);
+	printf("OledDevInit: vbat set to 0, gpioReg: %X", gpioReg);
+	usleep(100000);
 
 	/* Send the commands to invert the display.
 	*/
@@ -442,7 +449,6 @@ void OledDevInit()
 	/* Send Display On command
 	*/
 	Spi2PutByte(cmdOledDisplayOn);
-
 }
 
 /* ------------------------------------------------------------ */
@@ -461,22 +467,23 @@ void OledDevInit()
 **		Shut down the OLED display hardware
 */
 
-void
-OledDevTerm()
-	{
-
+void OledDevTerm()
+{
+	int gpioReg = 0;
 	/* Send the Display Off command.
 	*/
 	Spi2PutByte(cmdOledDisplayOff);
 
 	/* Turn off VCC
 	*/
-	digitalWrite(VbatCtrl, HIGH);
-	delay(100);
+	gpioReg = XGpio_DiscreteRead(&gpioInstance, 1);
+	XGpio_DiscreteWrite(&gpioInstance, 1, gpioReg | VBAT_CTRL_MASK);
+	
+	usleep(100000);
 
 	/* Turn off VDD
 	*/
-	digitalWrite(VbatCtrl, LOW);
+	XGpio_DiscreteWrite(&gpioInstance, 1, gpioReg & ( RESET_MASK | VDD_CTRL_MASK | DATA_CMD_MASK));
 }
 
 /* ------------------------------------------------------------ */
@@ -497,12 +504,12 @@ OledDevTerm()
 **		is send the display on command.
 */
 
-void
-OledDisplayOn()
-	{
-	digitalWrite(DataCmd, LOW);
+void OledDisplayOn()
+{
+	int gpioReg = 0;
+	gpioReg = XGpio_DiscreteRead(&gpioInstance, 1);
+	XGpio_DiscreteWrite(&gpioInstance, 1, gpioReg & ( RESET_MASK | VDD_CTRL_MASK | VBAT_CTRL_MASK ));
 	Spi2PutByte(cmdOledDisplayOn);
-
 }
 
 /* ------------------------------------------------------------ */
@@ -522,12 +529,12 @@ OledDisplayOn()
 **		down. All it does is send the display off command.
 */
 
-void
-OledDisplayOff()
-	{
-	digitalWrite(DataCmd, LOW);
+void OledDisplayOff()
+{
+	int gpioReg = 0;
+	gpioReg = XGpio_DiscreteRead(&gpioInstance, 1);
+	XGpio_DiscreteWrite(&gpioInstance, 1, gpioReg & ( RESET_MASK | VDD_CTRL_MASK | VBAT_CTRL_MASK ));
 	Spi2PutByte(cmdOledDisplayOff);
-
 }
 
 /* ------------------------------------------------------------ */
@@ -547,13 +554,10 @@ OledDisplayOff()
 **		updates the display.
 */
 
-void
-OledClear()
-	{
-
+void OledClear()
+{
 	OledClearBuffer();
 	OledUpdate();
-
 }
 
 /* ------------------------------------------------------------ */
@@ -572,20 +576,19 @@ OledClear()
 **		Clear the display memory buffer.
 */
 
-void
-OledClearBuffer()
-	{
+void OledClearBuffer()
+{
 	int			ib;
-	uint8_t *		pb;
+	uint8_t 	*pb;
 
 	pb = rgbOledBmp;
 
 	/* Fill the memory buffer with 0.
 	*/
-	for (ib = 0; ib < cbOledDispMax; ib++) {
+	for (ib = 0; ib < cbOledDispMax; ib++) 
+	{
 		*pb++ = 0x00;
 	}
-
 }
 
 /* ------------------------------------------------------------ */
@@ -604,18 +607,19 @@ OledClearBuffer()
 **		Update the OLED display with the contents of the memory buffer
 */
 
-void
-OledUpdate()
-	{
+void OledUpdate()
+{
+	int gpioReg = 0;
 	int		ipag;
-	int		icol;
 	uint8_t *	pb;
 
 	pb = rgbOledBmp;
+	
+	gpioReg = XGpio_DiscreteRead(&gpioInstance, 1);
 
-	for (ipag = 0; ipag < cpagOledMax; ipag++) {
-
-		digitalWrite(DataCmd, LOW);
+	for (ipag = 0; ipag < cpagOledMax; ipag++) 
+	{
+		XGpio_DiscreteWrite(&gpioInstance, 1, gpioReg & ( RESET_MASK | VDD_CTRL_MASK | VBAT_CTRL_MASK ));
 
 		/* Set the page address
 		*/
@@ -627,7 +631,7 @@ OledUpdate()
 		Spi2PutByte(0x00);		//set low nybble of column
 		Spi2PutByte(0x10);		//set high nybble of column
 
-		digitalWrite(DataCmd, HIGH);
+		XGpio_DiscreteWrite(&gpioInstance, 1, gpioReg | DATA_CMD_MASK);
 
 		/* Copy this memory page of display data.
 		*/
@@ -635,7 +639,6 @@ OledUpdate()
 		pb += ccolOledMax;
 
 	}
-
 }
 
 /* ------------------------------------------------------------ */
@@ -655,19 +658,24 @@ OledUpdate()
 **		Send the bytes specified in rgbTx to the slave and return
 **		the bytes read from the slave in rgbRx
 */
-void
-OledPutBuffer(int cb, uint8_t * rgbTx)
+void OledPutBuffer(int cb, uint8_t *rgbTx)
+{
+	int status = 0;
+	uint8_t rgbRx[cb]; //dummy read buffer
+	
+	SpiInstance.SlaveSelectReg = XSpi_GetSlaveSelectReg(&SpiInstance);
+	status = XSpi_Transfer(&SpiInstance, rgbTx, rgbRx, cb);
+	if (status != XST_SUCCESS)
 	{
-	int		ib;
-	uint8_t	bTmp;
+		printf("OledPutBuffer: ERROR: transfer failed. staus: %d", status);
+	}
 
 	/* Write/Read the data
 	*/
-	for (ib = 0; ib < cb; ib++) {
-
+	/*for (ib = 0; ib < cb; ib++) 
+	{
 		bTmp = spiCon.transfer(*rgbTx++);
-
-	}
+	}*/
 
 }
 
@@ -686,12 +694,18 @@ OledPutBuffer(int cb, uint8_t * rgbTx)
 **	Description:
 **		Write/Read a byte on SPI port 2
 */
-uint8_t
-Spi2PutByte(uint8_t bVal)
-	{
+uint8_t Spi2PutByte(uint8_t bVal)
+{
+	int status = 0;
 	uint8_t	bRx;
 
-	bRx = spiCon.transfer(bVal);
+	SpiInstance.SlaveSelectReg = XSpi_GetSlaveSelectReg(&SpiInstance);
+	status = XSpi_Transfer(&SpiInstance, &bVal, &bRx, sizeof(uint8_t) );
+	if (status != XST_SUCCESS)
+	{
+		printf("Spi2PutByte: ERROR: transfer failed. staus: %d", status);
+	}
+	//bRx = spiCon.transfer(bVal);
 	
 	return bRx;
 }

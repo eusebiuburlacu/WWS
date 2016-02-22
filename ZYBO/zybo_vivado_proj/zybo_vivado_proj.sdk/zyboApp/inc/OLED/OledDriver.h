@@ -30,6 +30,7 @@
 /*  Revision History:													*/
 /*																		*/
 /*	04/29/2011(GeneA): created											*/
+/*	22/02/2016(EusebiuB): adapted library to work on Zybo				*/
 /*																		*/
 /************************************************************************/
 

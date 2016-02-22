@@ -73,10 +73,9 @@ COMPONENT design_hw_axi_gpio_0_0
     s_axi_rresp : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
     s_axi_rvalid : OUT STD_LOGIC;
     s_axi_rready : IN STD_LOGIC;
-    ip2intc_irpt : OUT STD_LOGIC;
-    gpio_io_i : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
-    gpio_io_o : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
-    gpio_io_t : OUT STD_LOGIC_VECTOR(6 DOWNTO 0)
+    gpio_io_i : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+    gpio_io_o : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+    gpio_io_t : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
   );
 END COMPONENT;
 -- COMP_TAG_END ------ End COMPONENT Declaration ------------
@@ -106,7 +105,6 @@ your_instance_name : design_hw_axi_gpio_0_0
     s_axi_rresp => s_axi_rresp,
     s_axi_rvalid => s_axi_rvalid,
     s_axi_rready => s_axi_rready,
-    ip2intc_irpt => ip2intc_irpt,
     gpio_io_i => gpio_io_i,
     gpio_io_o => gpio_io_o,
     gpio_io_t => gpio_io_t

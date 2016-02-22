@@ -44,6 +44,7 @@ extern "C" {
 }
 
 #include "OLED/OledDriver.h"
+#include <math.h>
 
 /* ------------------------------------------------------------ */
 /*				Local Type Definitions							*/
@@ -107,6 +108,14 @@ int		OledClampYco(int yco);
 **	Description:
 **		Set the current graphics drawing position.
 */
+
+int abs(int data)
+{
+	if(data < 0)
+		return data * (-1);
+	else
+		return data;
+}
 
 void
 OledMoveTo(int xco, int yco)
@@ -388,6 +397,7 @@ OledLineTo(int xco, int yco)
 	*/
 	dxco = xco - xcoOledCur;
 	dyco = yco - ycoOledCur;
+
 	if (abs(dxco) >= abs(dyco)) {
 		/* Line is x-major
 		*/
