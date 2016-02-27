@@ -1,6 +1,25 @@
-23:52:22 **** Incremental Build of configuration Debug for project zyboApp ****
+13:49:07 **** Auto Build of configuration Debug for project zyboApp ****
 make all 
-make: Nothing to be done for `all'.
+'Building file: ../src/RF/mrf24j.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/RF/mrf24j.o" -MMD -MP -MF"src/RF/mrf24j.d" -MT"src/RF/mrf24j.d" -o "src/RF/mrf24j.o" "../src/RF/mrf24j.cpp"
+../src/RF/mrf24j.cpp: In function 'void gpioInterruptHandler(void*)':
+../src/RF/mrf24j.cpp:50:9: warning: unused variable 'gpio' [-Wunused-variable]
+  XGpio *gpio = (XGpio *) CallBackRef;
+         ^
+'Finished building: ../src/RF/mrf24j.cpp'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  95528	   3192	  23988	 122708	  1df54	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
 
-23:52:22 Build Finished (took 247ms)
+13:49:08 Build Finished (took 985ms)
 

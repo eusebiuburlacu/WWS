@@ -323,3 +323,8 @@ java.lang.RuntimeException: Error in Resetting Target
 23:50:47 INFO  : Processor reset is completed for ps7_cortexa9_0
 23:52:23 INFO  : Processor reset is completed for ps7_cortexa9_0
 23:52:46 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+11:23:36 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+11:23:40 INFO  : XSDB server has started successfully.
+11:23:45 INFO  : Processing command line option -hwspec F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper.hdf.
+11:23:45 INFO  : Checking for hwspec changes in the project design_hw_wrapper_hw_platform_0.
+13:50:07 INFO  : Example project standalone_bsp_0_xgpio_intr_example_1 has been created successfully.
