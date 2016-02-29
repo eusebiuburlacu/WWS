@@ -1,0 +1,46 @@
+#-----------------------------------------------------------
+# Webtalk v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# 
+# Start of session at: Mon Feb 22 23:52:45 2016
+# Process ID: 400
+# Current directory: F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/webtalk
+# Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
+# Log file: F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/webtalk/webtalk.log
+# Journal file: F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl
+# webtalk_init -webtalk_dir F:\\Proiecte_si_concursuri\\WWS\\WWS\\ZYBO\\zybo_vivado_proj\\zybo_vivado_proj.sdk\\webtalk
+# webtalk_register_client -client project
+# webtalk_add_data -client project -key date_generated -value "L Feb 22 23:52:44 2016" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key product_version -value "SDK v2015.4" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key build_version -value "2015.4" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key os_platform -value "amd64" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key registration_id -value "" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key tool_flow -value "SDK" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key beta -value "false" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key route_design -value "NA" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key target_family -value "NA" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key target_device -value "NA" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key target_package -value "NA" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key target_speed -value "NA" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key random_id -value "cvio5lbj1gk4hv59g7338bdu11" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key project_id -value "2015.4_8" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key project_iteration -value "8" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key os_name -value "" -context "user_environment"
+# webtalk_add_data -client project -key os_release -value "" -context "user_environment"
+# webtalk_add_data -client project -key cpu_name -value "" -context "user_environment"
+# webtalk_add_data -client project -key cpu_speed -value "" -context "user_environment"
+# webtalk_add_data -client project -key total_processors -value "" -context "user_environment"
+# webtalk_add_data -client project -key system_ram -value "" -context "user_environment"
+# webtalk_register_client -client sdk
+# webtalk_add_data -client sdk -key uid -value "1456177738347" -context "sdk\\\\bsp/1456177738347"
+# webtalk_add_data -client sdk -key hwid -value "1455921393984" -context "sdk\\\\bsp/1456177738347"
+# webtalk_add_data -client sdk -key os -value "standalone" -context "sdk\\\\bsp/1456177738347"
+# webtalk_add_data -client sdk -key apptemplate -value "null" -context "sdk\\\\bsp/1456177738347"
+# webtalk_transmit -clientid 2712883774 -regid "" -xml F:\\Proiecte_si_concursuri\\WWS\\WWS\\ZYBO\\zybo_vivado_proj\\zybo_vivado_proj.sdk\\webtalk\\usage_statistics_ext_sdk.xml -html F:\\Proiecte_si_concursuri\\WWS\\WWS\\ZYBO\\zybo_vivado_proj\\zybo_vivado_proj.sdk\\webtalk\\usage_statistics_ext_sdk.html -wdm F:\\Proiecte_si_concursuri\\WWS\\WWS\\ZYBO\\zybo_vivado_proj\\zybo_vivado_proj.sdk\\webtalk\\sdk_webtalk.wdm -intro "<H3>SDK Usage Report</H3><BR>"
+
+    while executing
+"webtalk_transmit -clientid 2712883774 -regid "" -xml F:\\Proiecte_si_concursuri\\WWS\\WWS\\ZYBO\\zybo_vivado_proj\\zybo_vivado_proj.sdk\\webtalk\\usag..."
+    (file "sdk_webtalk.tcl" line 29)
+INFO: [Common 17-206] Exiting Webtalk at Mon Feb 22 23:53:45 2016...

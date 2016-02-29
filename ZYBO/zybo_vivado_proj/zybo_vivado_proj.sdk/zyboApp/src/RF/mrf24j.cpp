@@ -47,7 +47,10 @@ static XScuGic gicInstance;
 
 static void gpioInterruptHandler(void *CallBackRef)
 {
+	Xil_ExceptionDisable();
 	XGpio *gpio = (XGpio *) CallBackRef;
+	XGpio_InterruptClear(&gpioInstance, XGPIO_IR_CH1_MASK);
+	Xil_ExceptionEnable();
 }
 
 /**
@@ -117,7 +120,7 @@ int Mrf24j::initDrivers(void)
 
 	XGpio_SetDataDirection(&gpioInstance, 1, 0x1); //check data direction
 
-	XGpio_DiscreteWrite(&gpioInstance, 1, 0x3); //check register, check wake pin if it is ok high
+	XGpio_DiscreteWrite(&gpioInstance, 1, 0x6); //check register, check wake pin if it is ok high
 
 	GicConfigPtr = XScuGic_LookupConfig(XPAR_PS7_SCUGIC_0_DEVICE_ID);
 	if (GicConfigPtr == NULL)
@@ -145,8 +148,21 @@ int Mrf24j::initDrivers(void)
 
 	XGpio_InterruptEnable(&gpioInstance, XGPIO_IR_CH1_MASK);
 
-	Xil_ExceptionEnable();
+	//
 
+	Xil_ExceptionEnable();
+	for(int i = 0; i < 20; i++)
+	{
+	u32 intr = XGpio_InterruptGetEnabled(&gpioInstance);
+
+	u32 sts = XGpio_InterruptGetStatus(&gpioInstance);
+
+	//XGpio_InterruptClear(&gpioInstance, XGPIO_IR_CH1_MASK);
+
+	 sts = XGpio_InterruptGetStatus(&gpioInstance);
+
+	u32 usts = sts;
+	}
 	/*SPI.setBitOrder(MSBFIRST) ;
 	SPI.setDataMode(SPI_MODE0);
 	SPI.begin();*/

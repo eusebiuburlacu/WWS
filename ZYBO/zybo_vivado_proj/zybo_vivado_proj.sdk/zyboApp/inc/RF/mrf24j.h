@@ -223,9 +223,7 @@ class Mrf24j
         void check_flags(void (*rx_handler)(void), void (*tx_handler)(void));
 
     private:
-        int _pin_reset;
-        int _pin_cs;
-        int _pin_int;
+
 };
 
 #endif  /* LIB_MRF24J_H */

@@ -24,9 +24,11 @@
 #include <xstatus.h>
 #include "sleep.h"
 #include "OLED/OLED.h"
+#include "RF/mrf24j.h"
 
 /************************** Object Definitions *****************************/
 OledClass OLED;
+Mrf24j RF;
 
 /*****************************************************************************/
 /**
@@ -42,6 +44,8 @@ OledClass OLED;
 ******************************************************************************/
 int main(void)
 {
+	RF.initDrivers();
+	//RF.init();
 	OLED.begin();
 	
 	while(1)
