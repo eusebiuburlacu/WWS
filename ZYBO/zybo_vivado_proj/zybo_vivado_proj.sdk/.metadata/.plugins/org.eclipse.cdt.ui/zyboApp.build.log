@@ -1,6 +1,6 @@
-15:44:46 **** Incremental Build of configuration Debug for project zyboApp ****
+23:09:15 **** Incremental Build of configuration Debug for project zyboApp ****
 make all 
 make: Nothing to be done for `all'.
 
-15:44:46 Build Finished (took 231ms)
+23:09:15 Build Finished (took 216ms)
 

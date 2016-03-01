@@ -45,11 +45,14 @@ static XScuGic gicInstance;
 #define RF_RESET_MASK		0x2
 #define RF_WAKE_MASK		0x4
 
+extern Mrf24j RF;
+
 static void gpioInterruptHandler(void *CallBackRef)
 {
 	Xil_ExceptionDisable();
 	XGpio *gpio = (XGpio *) CallBackRef;
 	XGpio_InterruptClear(&gpioInstance, XGPIO_IR_CH1_MASK);
+	RF.interrupt_handler();
 	Xil_ExceptionEnable();
 }
 
@@ -151,18 +154,18 @@ int Mrf24j::initDrivers(void)
 	//
 
 	Xil_ExceptionEnable();
-	for(int i = 0; i < 20; i++)
-	{
-	u32 intr = XGpio_InterruptGetEnabled(&gpioInstance);
+	//for(int i = 0; i < 20; i++)
+	//{
+	//u32 intr = XGpio_InterruptGetEnabled(&gpioInstance);
 
-	u32 sts = XGpio_InterruptGetStatus(&gpioInstance);
+	//u32 sts = XGpio_InterruptGetStatus(&gpioInstance);
 
 	//XGpio_InterruptClear(&gpioInstance, XGPIO_IR_CH1_MASK);
 
-	 sts = XGpio_InterruptGetStatus(&gpioInstance);
+	 ///sts = XGpio_InterruptGetStatus(&gpioInstance);
 
-	u32 usts = sts;
-	}
+	//u32 usts = sts;
+	//}
 	/*SPI.setBitOrder(MSBFIRST) ;
 	SPI.setDataMode(SPI_MODE0);
 	SPI.begin();*/
@@ -186,9 +189,10 @@ uint8_t Mrf24j::read_short(uint8_t address)
 	uint8_t rgbTx = address<<1 & 0b01111110;
     XSpi_SetSlaveSelectReg(&SpiInstance, 0x00);
 
-	
+    SpiInstance.IsStarted = XIL_COMPONENT_IS_STARTED;
 	XSpi_Transfer( &SpiInstance, &rgbTx, &rgbRx, sizeof(uint8_t) ); //transmit address
-	XSpi_Transfer( &SpiInstance, 0, &rgbRx, sizeof(uint8_t) ); //receive data
+	rgbTx = 0;
+	XSpi_Transfer( &SpiInstance, &rgbTx, &rgbRx, sizeof(uint8_t) ); //receive data
 
     XSpi_SetSlaveSelectReg(&SpiInstance, 0x01);
     return rgbRx;
@@ -202,10 +206,11 @@ uint8_t Mrf24j::read_long(word address)
     uint8_t ahigh = address >> 3;
     uint8_t alow = address << 5;
     uint8_t rgbTx = 0x80 | ahigh;
-	
+    SpiInstance.IsStarted = XIL_COMPONENT_IS_STARTED;
 	XSpi_Transfer( &SpiInstance, &rgbTx, &rgbRx, sizeof(uint8_t) );
 	XSpi_Transfer( &SpiInstance, &alow, &rgbRx, sizeof(uint8_t) );
-	XSpi_Transfer( &SpiInstance, 0, &rgbRx, sizeof(uint8_t) ); //receive data
+	rgbTx = 0;
+	XSpi_Transfer( &SpiInstance, &rgbTx, &rgbRx, sizeof(uint8_t) ); //receive data
 
     XSpi_SetSlaveSelectReg(&SpiInstance, 0x01);
     return rgbRx;
@@ -217,9 +222,10 @@ void Mrf24j::write_short(uint8_t address, uint8_t data)
 	uint8_t rgbRx = 0;
 	uint8_t rgbTx = (address<<1 & 0b01111110) | 0x01;
     XSpi_SetSlaveSelectReg(&SpiInstance, 0x00);
+    SpiInstance.IsStarted = XIL_COMPONENT_IS_STARTED;
     // 0 for top short address, 1 bottom for write
 	XSpi_Transfer( &SpiInstance, &rgbTx, &rgbRx, sizeof(uint8_t) );
-    XSpi_Transfer( &SpiInstance, &data, &rgbRx, sizeof(uint8_t) );
+    int status = XSpi_Transfer( &SpiInstance, &data, &rgbRx, sizeof(uint8_t) );
     XSpi_SetSlaveSelectReg(&SpiInstance, 0x01);
 }
 
@@ -230,7 +236,7 @@ void Mrf24j::write_long(word address, uint8_t data)
     uint8_t ahigh = address >> 3;
     uint8_t alow = address << 5;
     uint8_t rgbTx =  0x80 | ahigh;
-	
+    SpiInstance.IsStarted = XIL_COMPONENT_IS_STARTED;
 	XSpi_Transfer( &SpiInstance, &rgbTx, &rgbRx, sizeof(uint8_t) );	 // high bit for long
 	rgbTx = alow | 0x10;
 	XSpi_Transfer( &SpiInstance, &rgbTx, &rgbRx, sizeof(uint8_t) ); 	 // last bit for write
@@ -327,6 +333,8 @@ void Mrf24j::init(void) {
     write_long(MRF_RFCON7, 0x80); // – Initialize SLPCLKSEL = 0x2 (100 kHz Internal oscillator).
     write_long(MRF_RFCON8, 0x10); // – Initialize RFVCO = 1.
     write_long(MRF_SLPCON1, 0x21); // – Initialize CLKOUTEN = 1 and SLPCLKDIV = 0x01.
+    write_long(MRF_SLPCON0, 0x02);
+    uint8_t regi = read_long(MRF_SLPCON0);
 
     //  Configuration for nonbeacon-enabled devices (see Section 3.8 “Beacon-Enabled and
     //  Nonbeacon-Enabled Networks”):

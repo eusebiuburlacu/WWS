@@ -45,10 +45,14 @@ Mrf24j RF;
 int main(void)
 {
 	RF.initDrivers();
-	//RF.init();
+	RF.reset();
+	RF.init();
+	RF.set_pan(0xcafe);
+	RF.address16_write(0x4202);
 	OLED.begin();
 	
 	while(1)
+
 	{
 		int irow;
 		int ib;

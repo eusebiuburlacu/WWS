@@ -12,6 +12,8 @@
 /*
 *
 */
+void initRF();
+
 bool sendImpedance( float *samples, unsigned char numOfValues );
 
 bool sendPhase( float *samples, unsigned char numOfValues );
