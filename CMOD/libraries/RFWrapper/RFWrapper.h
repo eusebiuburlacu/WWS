@@ -20,7 +20,6 @@ typedef enum
 	RF_MESSAGE_BATTERY
 } RF_MESSAGE_TYPES;
 
-
 class RFWrapper: public Mrf24j  // mosteneste libraria rf
 {
 public:
@@ -30,19 +29,15 @@ public:
 	/*
 	*
 	*/
-	bool sendImpedance( float *samples, unsigned char numOfValues );
+	bool sendImpedance( float *samples, unsigned char numOfValues, ACKCallback callback );
 
-	bool sendPhase( float *samples, unsigned char numOfValues );
+	bool sendPhase( float *samples, unsigned char numOfValues, ACKCallback callback );
 
-	bool sendTemperature( float temperature );
+	bool sendTemperature( float temperature, ACKCallback callback );
 
-	bool sendHumidity( unsigned char humidity );
+	bool sendHumidity( unsigned char humidity, ACKCallback callback );
 
-	bool sendBatteryVoltage( float batteryVoltage );
-	
-	void tx_handler(void);
-	
-	void rx_handler(void);
+	bool sendBatteryVoltage( float batteryVoltage, ACKCallback callback );
 	
 private: //membri privati, variabile
 	

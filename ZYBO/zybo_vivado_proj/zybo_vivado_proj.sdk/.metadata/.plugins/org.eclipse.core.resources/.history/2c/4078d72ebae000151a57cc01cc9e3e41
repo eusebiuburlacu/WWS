@@ -386,7 +386,7 @@ void Mrf24j::interrupt_handler(void) {
         rx_info.lqi = read_long(0x301 + frame_length);
         // same as datasheet 0x301 + (m + n + 3) <-- frame_length + 1
         rx_info.rssi = read_long(0x301 + frame_length + 1);
-        m_rxCallback();
+
         rx_enable();
         //interrupts(); //TODO enable interrupts
     }
@@ -398,22 +398,6 @@ void Mrf24j::interrupt_handler(void) {
         tx_info.retries = tmp >> 6;
         tx_info.channel_busy = (tmp & (1 << CCAFAIL));
     }
-}
-
-bool Mrf24j::registerRXCallback(RXCallback callback)
-{
-	bool result = false;
-	if(callback != 0)
-	{
-		m_rxCallback = callback;
-		result = true;
-	}
-	else
-	{
-		printf("Mrf24j::registerRXCallback ERROR NULL callback");
-	}
-
-	return result;
 }
 
 

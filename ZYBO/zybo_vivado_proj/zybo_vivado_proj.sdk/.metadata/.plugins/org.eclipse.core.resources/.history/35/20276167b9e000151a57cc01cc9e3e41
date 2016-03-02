@@ -25,8 +25,6 @@
 #include "sleep.h"
 #include "OLED/OLED.h"
 #include "RF/mrf24j.h"
-#include <iostream>
-#include <vector>
 
 /************************** Object Definitions *****************************/
 OledClass OLED;
@@ -44,26 +42,6 @@ Mrf24j RF;
 * @note		None
 *
 ******************************************************************************/
-
-using namespace std;
-
-typedef enum
-{
-	RF_MESSAGE_IMPEDANCE = 1,
-	RF_MESSAGE_PHASE,
-	RF_MESSAGE_TEMPERATURE,
-	RF_MESSAGE_HUMIDITY,
-	RF_MESSAGE_BATTERY
-} RF_MESSAGE_TYPES;
-
-vector<float> impedanceArray;
-vector<float> phaseArray;
-float temperature;
-unsigned char humidity;
-float batteryVoltage;
-
-
-
 int main(void)
 {
 	RF.initDrivers();

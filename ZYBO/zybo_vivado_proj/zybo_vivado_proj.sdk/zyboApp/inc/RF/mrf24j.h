@@ -159,6 +159,8 @@ typedef struct _tx_info_t{
     uint8_t channel_busy:1;
 } tx_info_t;
 
+typedef void(*RXCallback)();
+
 class Mrf24j
 {
     public:
@@ -220,9 +222,13 @@ class Mrf24j
 
         void interrupt_handler(void);
 
+        bool registerRXCallback(RXCallback callback);
+
         void check_flags(void (*rx_handler)(void), void (*tx_handler)(void));
 
     private:
+
+        RXCallback m_rxCallback;
 
 };
 

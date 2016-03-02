@@ -24,14 +24,16 @@ RFWrapper::~RFWrapper()
 	
 }
 
-bool RFWrapper::sendImpedance( float *samples, unsigned char numOfValues )
+bool RFWrapper::sendImpedance( float *samples, unsigned char numOfValues, ACKCallback callback )
 {
 	bool result = false;
-	if( samples != 0 )
+	if( samples != 0 && callback != 0 )
 	{
+		registerACKCallback(callback);
 		byte *data = (byte *)(void *)samples;
 		int dataLen = numOfValues * sizeof(float);
 		sendData( dest, (byte)RF_MESSAGE_IMPEDANCE, data, dataLen );
+		Serial.println("RFWrapper::sendImpedance");
 		result = true;
 	}
 	else
@@ -41,42 +43,83 @@ bool RFWrapper::sendImpedance( float *samples, unsigned char numOfValues )
 	return result;
 }
 
-bool RFWrapper::sendPhase( float *samples, unsigned char numOfValues )
+bool RFWrapper::sendPhase( float *samples, unsigned char numOfValues, ACKCallback callback )
 {
 	bool result = false;
-	return result;
-}
-
-bool RFWrapper::sendTemperature( float temperature )
-{
-	bool result = false;
-	return result;
-}
-
-bool RFWrapper::sendHumidity( unsigned char humidity )
-{
-	bool result = false;
-	return result;
-}
-
-bool RFWrapper::sendBatteryVoltage( float batteryVoltage )
-{
-	bool result = false;
-	return result;
-}
-
-void RFWrapper::tx_handler(void) 
-{
-    if (get_txinfo()->tx_ok) 
+	if( samples != 0 && callback != 0 )
 	{
-        Serial.println("TX went ok, got ack");
-    } 
-	else 
+		registerACKCallback(callback);
+		byte *data = (byte *)(void *)samples;
+		int dataLen = numOfValues * sizeof(float);
+		sendData( dest, (byte)RF_MESSAGE_PHASE, data, dataLen );
+		Serial.println("RFWrapper::sendPhase");
+		result = true;
+	}
+	else
 	{
-        Serial.print("TX failed after ");Serial.print(get_txinfo()->retries);Serial.println(" retries\n");
-    }
+		Serial.println("RFWrapper::sendPhase: ERROR: NULL pointer");
+	}
+	return result;
 }
-void RFWrapper::rx_handler() 
+
+bool RFWrapper::sendTemperature( float temperature, ACKCallback callback )
 {
-    //nothing to receive 
+	bool result = false;
+	if( callback != 0 )
+	{
+		registerACKCallback(callback);
+		byte *data = (byte *)(void *)&temperature;
+		int dataLen = sizeof(float);
+		sendData( dest, (byte)RF_MESSAGE_TEMPERATURE, data, dataLen );
+		Serial.println("RFWrapper::sendTemperature");
+		result = true;
+	}
+	else
+	{
+		Serial.println("RFWrapper::sendTemperature: ERROR: NULL pointer");
+	}
+
+	return result;
+}
+
+bool RFWrapper::sendHumidity( unsigned char humidity, ACKCallback callback )
+{
+	bool result = false;
+	
+	if( callback != 0 )
+	{
+		registerACKCallback(callback);
+		byte *data = (byte *)(void *)&humidity;
+		int dataLen = sizeof(unsigned char);
+		sendData( dest, (byte)RF_MESSAGE_HUMIDITY, data, dataLen );
+		Serial.println("RFWrapper::sendHumidity");
+		result = true;
+	}
+	else
+	{
+		Serial.println("RFWrapper::sendHumidity: ERROR: NULL pointer");
+	}
+
+	return result;
+}
+
+bool RFWrapper::sendBatteryVoltage( float batteryVoltage, ACKCallback callback )
+{
+	bool result = false;
+
+	if( callback != 0 )
+	{
+		registerACKCallback(callback);
+		byte *data = (byte *)(void *)&batteryVoltage;
+		int dataLen = sizeof(float);
+		sendData( dest, (byte)RF_MESSAGE_BATTERY, data, dataLen );
+		Serial.println("RFWrapper::sendBatteryVoltage");
+		result = true;
+	}
+	else
+	{
+		Serial.println("RFWrapper::sendBatteryVoltage: ERROR: NULL pointer");
+	}
+
+	return result;
 }

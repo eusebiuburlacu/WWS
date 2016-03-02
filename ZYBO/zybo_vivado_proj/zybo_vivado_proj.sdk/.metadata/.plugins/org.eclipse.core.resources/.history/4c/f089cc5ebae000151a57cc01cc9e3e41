@@ -386,7 +386,7 @@ void Mrf24j::interrupt_handler(void) {
         rx_info.lqi = read_long(0x301 + frame_length);
         // same as datasheet 0x301 + (m + n + 3) <-- frame_length + 1
         rx_info.rssi = read_long(0x301 + frame_length + 1);
-        m_rxCallback();
+
         rx_enable();
         //interrupts(); //TODO enable interrupts
     }

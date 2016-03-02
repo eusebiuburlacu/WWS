@@ -7,13 +7,8 @@
 #ifndef LIB_MRF24J_H
 #define LIB_MRF24J_H
 
-#if defined(ARDUINO) && ARDUINO >= 100 // Arduino IDE version >= 1.0
-    #include "Arduino.h"
-#else // older Arduino IDE versions
-    #include "WProgram.h"
-#endif
-
-#include "SPI.h"
+typedef unsigned char uint8_t;
+typedef unsigned int word;
 
 //Short adress control registers
 #define MRF_RXMCR 0x00 
@@ -164,22 +159,19 @@ typedef struct _tx_info_t{
     uint8_t channel_busy:1;
 } tx_info_t;
 
-typedef void(*ACKCallback)(); //this callback is called when a message is successfully sent
-
-typedef void(*RXCallback)(); //who receive a notification with this callback, have to call getRXData to receive the data buffer.
-
 class Mrf24j
 {
     public:
-        Mrf24j(int pin_reset, int pin_chip_select, int pin_interrupt);
+        Mrf24j();
         void reset(void);
         void init(void);
+        int initDrivers(void);
 
-        byte read_short(byte address);
-        byte read_long(word address);
+        uint8_t read_short(uint8_t address);
+        uint8_t read_long(word address);
 
-        void write_short(byte address, byte data);
-        void write_long(word address, byte data);
+        void write_short(uint8_t address, uint8_t data);
+        void write_long(word address, uint8_t data);
 
         word get_pan(void);
         void set_pan(word panid);
@@ -189,12 +181,12 @@ class Mrf24j
 
         void set_interrupts(void);
 
-        void set_promiscuous(boolean enabled);
+        void set_promiscuous(bool enabled);
 
         /**
          * Set the channel, using 802.15.4 channel numbers (11..26)
          */
-        void set_channel(byte channel);
+        void set_channel(uint8_t channel);
 
         void rx_enable(void);
         void rx_disable(void);
@@ -202,48 +194,36 @@ class Mrf24j
         /** If you want to throw away rx data */
         void rx_flush(void);
 
-        rx_info_t * get_rxinfo(int &dataLen);
+        rx_info_t * get_rxinfo(void);
 
         tx_info_t * get_txinfo(void);
 
-        uint8_t * get_rxbuf(int &dataLen);
+        uint8_t * get_rxbuf(void);
 
         int rx_datalength(void);
 
-        void set_ignoreBytes(int ib);
+        void set_ignoreuint8_ts(int ib);
 
         /**
-         * Set bufPHY flag to buffer all bytes in PHY Payload, or not
+         * Set bufPHY flag to buffer all uint8_ts in PHY Payload, or not
          */
-        void set_bufferPHY(boolean bp);
+        void set_bufferPHY(bool bp);
 
-        boolean get_bufferPHY(void);
+        bool get_bufferPHY(void);
 
         /**
          * Set PA/LNA external control
          */
-        void set_palna(boolean enabled);
+        void set_palna(bool enabled);
 
         void send16(word dest16, char * data);
-
-		void sendData( word dest16, byte msgType, byte *data, int dataLen );
 
         void interrupt_handler(void);
 
         void check_flags(void (*rx_handler)(void), void (*tx_handler)(void));
-		
-		bool registerACKCallback(ACKCallback callback);
-		
-		bool registerRXCallback(RXCallback callback);
 
     private:
-        int _pin_reset;
-        int _pin_cs;
-        int _pin_int;
-		
-		ACKCallback m_ackCallback;
-		
-		RXCallback m_rxCallback;
+
 };
 
 #endif  /* LIB_MRF24J_H */

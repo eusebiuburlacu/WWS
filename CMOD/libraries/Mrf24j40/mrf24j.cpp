@@ -34,6 +34,10 @@ Mrf24j::Mrf24j(int pin_reset, int pin_chip_select, int pin_interrupt) {
     _pin_cs = pin_chip_select;
     _pin_int = pin_interrupt;
 
+	m_ackCallback = 0;
+	
+	m_rxCallback = 0;
+	
     pinMode(_pin_reset, OUTPUT);
     pinMode(_pin_cs, OUTPUT);
     pinMode(_pin_int, INPUT);
@@ -270,8 +274,9 @@ void Mrf24j::interrupt_handler(void) {
         rx_info.lqi = read_long(0x301 + frame_length);
         // same as datasheet 0x301 + (m + n + 3) <-- frame_length + 1
         rx_info.rssi = read_long(0x301 + frame_length + 1);
-
+		
         rx_enable();
+		m_rxCallback();
         interrupts();
     }
     if (last_interrupt & MRF_I_TXNIF) {
@@ -281,7 +286,40 @@ void Mrf24j::interrupt_handler(void) {
         tx_info.tx_ok = !(tmp & ~(1 << TXNSTAT));
         tx_info.retries = tmp >> 6;
         tx_info.channel_busy = (tmp & (1 << CCAFAIL));
+		m_ackCallback();
     }
+}
+
+bool Mrf24j::registerACKCallback(ACKCallback callback)
+{
+	bool result = false;
+	if(callback != 0)
+	{
+		m_ackCallback = callback;
+		result = true;
+	}
+	else
+	{
+		Serial.println("Mrf24j::registerACKCallback ERROR NULL callback");
+	}
+	
+	return result;
+}
+
+bool Mrf24j::registerRXCallback(RXCallback callback)
+{
+	bool result = false;
+	if(callback != 0)
+	{
+		m_rxCallback = callback;
+		result = true;
+	}
+	else
+	{
+		Serial.println("Mrf24j::registerRXCallback ERROR NULL callback");
+	}
+	
+	return result;
 }
 
 
@@ -313,7 +351,8 @@ void Mrf24j::set_promiscuous(boolean enabled) {
     }
 }
 
-rx_info_t * Mrf24j::get_rxinfo(void) {
+rx_info_t * Mrf24j::get_rxinfo(int &dataLen) {
+	dataLen = rx_info.frame_length - bytes_nodata;
     return &rx_info;
 }
 
@@ -321,7 +360,9 @@ tx_info_t * Mrf24j::get_txinfo(void) {
     return &tx_info;
 }
 
-uint8_t * Mrf24j::get_rxbuf(void) {
+uint8_t * Mrf24j::get_rxbuf(int &dataLen) 
+{
+	dataLen = rx_info.frame_length - bytes_nodata;
     return rx_buf;
 }
 
