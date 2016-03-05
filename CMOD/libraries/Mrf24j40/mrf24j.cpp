@@ -158,7 +158,7 @@ void Mrf24j::sendData( word dest16, byte msgType, byte *data, int dataLen )
     write_long(i++, bytes_MHR); // header length
     // +ignoreBytes is because some module seems to ignore 2 bytes after the header?!.
     // default: ignoreBytes = 0;
-    write_long(i++, bytes_MHR+ignoreBytes+dataLen);
+    write_long(i++, bytes_MHR+ignoreBytes+dataLen+1);
 
     // 0 | pan compression | ack | no security | no data pending | data frame[3 bits]
     write_long(i++, 0b01100001); // first byte of Frame Control

@@ -20,13 +20,14 @@
 /***************************** Include Files *********************************/
 
 #include <stddef.h>
-#include <stdio.h>
+#include "xil_printf.h"
 #include <xstatus.h>
 #include "sleep.h"
 #include "OLED/OLED.h"
 #include "RF/mrf24j.h"
 #include <iostream>
 #include <vector>
+#include <stdio.h>
 
 /************************** Object Definitions *****************************/
 OledClass OLED;
@@ -62,16 +63,115 @@ float temperature;
 unsigned char humidity;
 float batteryVoltage;
 
+void rxCallback()
+{
+	int dataLen;
+	rx_info_t *RXInfo =  RF.get_rxinfo(dataLen);
+	dataLen--;
 
+	int i = 0;
+
+	RF_MESSAGE_TYPES msgType = (RF_MESSAGE_TYPES)RXInfo->rx_data[i++];
+
+	switch( msgType )
+	{
+		case RF_MESSAGE_IMPEDANCE:
+		{
+			xil_printf("RF_MESSAGE_IMPEDANCE\n");
+			impedanceArray.clear();
+			for(; i < dataLen; i+=4)
+			{
+				float val;
+				uint8_t *valPtr = (uint8_t*)(void *)&val;
+				*valPtr++ = RXInfo->rx_data[i];
+				*valPtr++ = RXInfo->rx_data[i+1];
+				*valPtr++ = RXInfo->rx_data[i+2];
+				*valPtr++ = RXInfo->rx_data[i+3];
+				impedanceArray.push_back(val);
+				char data[5];
+				sprintf(data, "%.2f\n", val);
+				xil_printf("%s", data);
+			}
+
+			break;
+		}
+		case RF_MESSAGE_PHASE:
+		{
+			xil_printf("RF_MESSAGE_PHASE\n");
+			for(; i < dataLen; i+=4)
+			{
+				float val;
+				uint8_t *valPtr = (uint8_t*)(void *)&val;
+				*valPtr++ = RXInfo->rx_data[i];
+				*valPtr++ = RXInfo->rx_data[i+1];
+				*valPtr++ = RXInfo->rx_data[i+2];
+				*valPtr = RXInfo->rx_data[i+3];
+				impedanceArray.push_back(val);
+				char data[5];
+				sprintf(data, "%.2f\n", val);
+				xil_printf("%s", data);
+			}
+
+			break;
+		}
+		case RF_MESSAGE_TEMPERATURE:
+		{
+			xil_printf("RF_MESSAGE_TEMPERATURE\n");
+			uint8_t *valPtr = (uint8_t*)(void *)&temperature;
+			*valPtr++ = RXInfo->rx_data[1];
+			*valPtr++ = RXInfo->rx_data[2];
+			*valPtr++ = RXInfo->rx_data[3];
+			*valPtr = RXInfo->rx_data[4];
+			char data[5];
+			sprintf(data, "%.2f\n", temperature);
+			xil_printf("%s", data);
+			break;
+		}
+		case RF_MESSAGE_HUMIDITY:
+		{
+			xil_printf("RF_MESSAGE_HUMIDITY\n");
+			humidity = RXInfo->rx_data[1];
+			xil_printf("%d\n", humidity);
+			break;
+		}
+		case RF_MESSAGE_BATTERY:
+		{
+			xil_printf("RF_MESSAGE_BATTERY\n");
+			uint8_t *valPtr = (uint8_t*)(void *)&batteryVoltage;
+			*valPtr++ = RXInfo->rx_data[1];
+			*valPtr++ = RXInfo->rx_data[2];
+			*valPtr++ = RXInfo->rx_data[3];
+			*valPtr = RXInfo->rx_data[4];
+			char data[5];
+			sprintf(data, "%.2f\n", batteryVoltage);
+			xil_printf("%s", data);
+			break;
+		}
+		default:
+		{
+			xil_printf("ERROR: Invalid msg type");
+			break;
+		}
+	}
+}
 
 int main(void)
 {
+	xil_printf("Start\n");
 	RF.initDrivers();
+	xil_printf("initDrivers\n");
 	RF.reset();
+	xil_printf("reset\n");
 	RF.init();
+	xil_printf("init\n");
 	RF.set_pan(0xcafe);
+	xil_printf("set_pan\n");
+	RF.registerRXCallback(rxCallback);
+	xil_printf("registerRXCallback\n");
 	RF.address16_write(0x4202);
+	xil_printf("address16_write\n");
 	OLED.begin();
+	xil_printf("begin\n");
 	
 	while(1)
 

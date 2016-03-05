@@ -18,13 +18,13 @@
 // aMaxPHYPacketSize = 127, from the 802.15.4-2006 standard.
 static uint8_t rx_buf[127];
 
-// essential for obtaining the data frame only
-// uint8_ts_MHR = 2 Frame control + 1 sequence number + 2 panid + 2 shortAddr Destination + 2 shortAddr Source
-static int uint8_ts_MHR = 9;
-static int uint8_ts_FCS = 2; // FCS length = 2
-static int uint8_ts_nodata = uint8_ts_MHR + uint8_ts_FCS; // no_data uint8_ts in PHY payload,  header length + FCS
+/// essential for obtaining the data frame only
+// bytes_MHR = 2 Frame control + 1 sequence number + 2 panid + 2 shortAddr Destination + 2 shortAddr Source
+static int bytes_MHR = 9;
+static int bytes_FCS = 2; // FCS length = 2
+static int bytes_nodata = bytes_MHR + bytes_FCS; // no_data bytes in PHY payload,  header length + FCS
 
-static int ignoreuint8_ts = 0; // uint8_ts to ignore, some modules behaviour.
+static int ignoreBytes = 0; // bytes to ignore, some modules behaviour.
 
 static bool bufPHY = false; // flag to buffer all uint8_ts in PHY Payload, or not
 
@@ -49,11 +49,16 @@ extern Mrf24j RF;
 
 static void gpioInterruptHandler(void *CallBackRef)
 {
-	Xil_ExceptionDisable();
+	XGpio_InterruptDisable(&gpioInstance, XGPIO_IR_CH1_MASK);
 	XGpio *gpio = (XGpio *) CallBackRef;
-	XGpio_InterruptClear(&gpioInstance, XGPIO_IR_CH1_MASK);
-	RF.interrupt_handler();
-	Xil_ExceptionEnable();
+	int status = XGpio_InterruptGetStatus(&gpioInstance);
+	if( status & XGPIO_IR_CH1_MASK )
+	{
+		XGpio_InterruptClear(&gpioInstance, XGPIO_IR_CH1_MASK);
+		RF.interrupt_handler();
+	}
+	XGpio_InterruptEnable(&gpioInstance, XGPIO_IR_CH1_MASK);
+
 }
 
 /**
@@ -190,6 +195,7 @@ uint8_t Mrf24j::read_short(uint8_t address)
     XSpi_SetSlaveSelectReg(&SpiInstance, 0x00);
 
     SpiInstance.IsStarted = XIL_COMPONENT_IS_STARTED;
+    SpiInstance.SlaveSelectReg = 0;
 	XSpi_Transfer( &SpiInstance, &rgbTx, &rgbRx, sizeof(uint8_t) ); //transmit address
 	rgbTx = 0;
 	XSpi_Transfer( &SpiInstance, &rgbTx, &rgbRx, sizeof(uint8_t) ); //receive data
@@ -202,7 +208,7 @@ uint8_t Mrf24j::read_long(word address)
 {
 	uint8_t rgbRx = 0;
     XSpi_SetSlaveSelectReg(&SpiInstance, 0x00);
-	
+    SpiInstance.SlaveSelectReg = 0;
     uint8_t ahigh = address >> 3;
     uint8_t alow = address << 5;
     uint8_t rgbTx = 0x80 | ahigh;
@@ -221,7 +227,9 @@ void Mrf24j::write_short(uint8_t address, uint8_t data)
 {
 	uint8_t rgbRx = 0;
 	uint8_t rgbTx = (address<<1 & 0b01111110) | 0x01;
+
     XSpi_SetSlaveSelectReg(&SpiInstance, 0x00);
+    SpiInstance.SlaveSelectReg = 0;
     SpiInstance.IsStarted = XIL_COMPONENT_IS_STARTED;
     // 0 for top short address, 1 bottom for write
 	XSpi_Transfer( &SpiInstance, &rgbTx, &rgbRx, sizeof(uint8_t) );
@@ -233,6 +241,7 @@ void Mrf24j::write_long(word address, uint8_t data)
 {
 	uint8_t rgbRx = 0;
     XSpi_SetSlaveSelectReg(&SpiInstance, 0x00);
+    SpiInstance.SlaveSelectReg = 0;
     uint8_t ahigh = address >> 3;
     uint8_t alow = address << 5;
     uint8_t rgbTx =  0x80 | ahigh;
@@ -272,10 +281,10 @@ word Mrf24j::address16_read(void) {
 void Mrf24j::send16(word dest16, char * data) {
     uint8_t len = strlen(data); // get the length of the char* array
     int i = 0;
-    write_long(i++, uint8_ts_MHR); // header length
+    write_long(i++, bytes_MHR); // header length
     // +ignoreuint8_ts is because some module seems to ignore 2 uint8_ts after the header?!.
     // default: ignoreuint8_ts = 0;
-    write_long(i++, uint8_ts_MHR+ignoreuint8_ts+len);
+    write_long(i++, bytes_MHR+ignoreBytes+len);
 
     // 0 | pan compression | ack | no security | no data pending | data frame[3 bits]
     write_long(i++, 0b01100001); // first uint8_t of Frame Control
@@ -296,7 +305,7 @@ void Mrf24j::send16(word dest16, char * data) {
 
     // All testing seems to indicate that the next two uint8_ts are ignored.
     //2 uint8_ts on FCS appended by TXMAC
-    i+=ignoreuint8_ts;
+    i+=ignoreBytes;
     for (int q = 0; q < len; q++) {
         write_long(i++, data[q]);
     }
@@ -354,7 +363,8 @@ void Mrf24j::init(void) {
  * Call this from within an interrupt handler connected to the MRFs output
  * interrupt pin.  It handles reading in any data from the module, and letting it
  * continue working.
- * Only the most recent data is ever kept.
+ * Only the most recent data is ever kept.3\
+ *
  */
 void Mrf24j::interrupt_handler(void) {
     uint8_t last_interrupt = read_short(MRF_INTSTAT);
@@ -365,23 +375,27 @@ void Mrf24j::interrupt_handler(void) {
         rx_disable();
         // read start of rxfifo for, has 2 uint8_ts more added by FCS. frame_length = m + n + 2
         uint8_t frame_length = read_long(0x300);
+        rx_info.frame_length = frame_length;
+
+        xil_printf("frame_length: %d\n", frame_length);
 
         // buffer all uint8_ts in PHY Payload
         if(bufPHY){
             int rb_ptr = 0;
             for (int i = 0; i < frame_length; i++) { // from 0x301 to (0x301 + frame_length -1)
                 rx_buf[rb_ptr++] = read_long(0x301 + i);
+                xil_printf("%d, ", rx_buf[rb_ptr - 1]);
             }
         }
-
+        xil_printf("\n rx data:");
         // buffer data uint8_ts
         int rd_ptr = 0;
         // from (0x301 + uint8_ts_MHR) to (0x301 + frame_length - uint8_ts_nodata - 1)
         for (int i = 0; i < rx_datalength(); i++) {
-            rx_info.rx_data[rd_ptr++] = read_long(0x301 + uint8_ts_MHR + i);
+            rx_info.rx_data[rd_ptr++] = read_long(0x301 + bytes_MHR + i);
+            xil_printf("%d, ", rx_info.rx_data[rd_ptr - 1]);
         }
 
-        rx_info.frame_length = frame_length;
         // same as datasheet 0x301 + (m + n + 2) <-- frame_length
         rx_info.lqi = read_long(0x301 + frame_length);
         // same as datasheet 0x301 + (m + n + 3) <-- frame_length + 1
@@ -445,7 +459,8 @@ void Mrf24j::set_promiscuous(bool enabled) {
     }
 }
 
-rx_info_t * Mrf24j::get_rxinfo(void) {
+rx_info_t * Mrf24j::get_rxinfo(int &dataLen) {
+	dataLen = rx_info.frame_length - bytes_nodata;
     return &rx_info;
 }
 
@@ -458,12 +473,12 @@ uint8_t * Mrf24j::get_rxbuf(void) {
 }
 
 int Mrf24j::rx_datalength(void) {
-    return rx_info.frame_length - uint8_ts_nodata;
+    return rx_info.frame_length - bytes_nodata;
 }
 
 void Mrf24j::set_ignoreuint8_ts(int ib) {
     // some modules behaviour
-    ignoreuint8_ts = ib;
+	ignoreBytes = ib;
 }
 
 /**

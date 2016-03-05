@@ -196,7 +196,7 @@ class Mrf24j
         /** If you want to throw away rx data */
         void rx_flush(void);
 
-        rx_info_t * get_rxinfo(void);
+        rx_info_t * get_rxinfo(int &dataLen);
 
         tx_info_t * get_txinfo(void);
 

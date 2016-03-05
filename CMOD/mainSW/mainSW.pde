@@ -11,7 +11,9 @@ void setup()
     initRF();
 }
 
-float imp[] = {0.1, 0.2, 0.3, 0.45};
+float imp[] = {11.1, 23.2, 23.3, 24.45};
+
+float pha[] = {0.3, 12.2, 23.3, 43.45};
 
 void callback()
 {
@@ -24,5 +26,13 @@ void callback()
 void loop()
 {
   sendImpedance( imp, 4, callback );
+  delay(2);
+  sendPhase(pha, 4, callback); 
+  delay(2);
+  sendTemperature(23.21, callback);
+  delay(2);
+  sendHumidity(46, callback);
+  delay(2);
+  sendBatteryVoltage(3.76, callback);
   delay(2000);
 }

@@ -1,0 +1,171 @@
+/*****************************************************************************/
+/**
+* @file main.cc
+*
+* This is the entry point for WWS application
+*
+* @note
+*
+* None.
+*
+*<pre>
+* MODIFICATION HISTORY:
+*
+*  Who  		Date     Changes
+*  --------		---------- ---------------------------------------------------------
+*  LucianB 	22/02/2016 Created
+*
+******************************************************************************/
+
+/***************************** Include Files *********************************/
+
+#include <stddef.h>
+#include <stdio.h>
+#include <xstatus.h>
+#include "sleep.h"
+#include "OLED/OLED.h"
+#include "RF/mrf24j.h"
+#include <iostream>
+#include <vector>
+
+/************************** Object Definitions *****************************/
+OledClass OLED;
+Mrf24j RF;
+
+/*****************************************************************************/
+/**
+*
+* Main function to call the Spi Polled example.
+*
+* @param	None
+*
+* @return	XST_SUCCESS if successful, otherwise XST_FAILURE.
+*
+* @note		None
+*
+******************************************************************************/
+
+using namespace std;
+
+typedef enum
+{
+	RF_MESSAGE_IMPEDANCE = 1,
+	RF_MESSAGE_PHASE,
+	RF_MESSAGE_TEMPERATURE,
+	RF_MESSAGE_HUMIDITY,
+	RF_MESSAGE_BATTERY
+} RF_MESSAGE_TYPES;
+
+vector<float> impedanceArray;
+vector<float> phaseArray;
+float temperature;
+unsigned char humidity;
+float batteryVoltage;
+
+void rxCallback()
+{
+	int dataLen;
+	rx_info_t *RXInfo =  get_rxinfo(dataLen);
+}
+
+int main(void)
+{
+	RF.initDrivers();
+	RF.reset();
+	RF.init();
+	RF.set_pan(0xcafe);
+	RF.registerRXCallback(rxCallback);
+	RF.address16_write(0x4202);
+	OLED.begin();
+	
+	while(1)
+
+	{
+		int irow;
+		int ib;
+
+		//Clear the virtual buffer
+		OLED.clearBuffer();
+		
+		//Chosing Fill pattern 0
+		OLED.setFillPattern(OLED.getStdPattern(0));
+		//Turn automatic updating off
+		OLED.setCharUpdate(0);
+		
+		//Draw a rectangle over wrting then slide the rectagle
+		//down slowly displaying all writing
+		for (irow = 0; irow < OLED.rowMax; irow++)
+		{
+			OLED.clearBuffer();
+			OLED.setCursor(0, 0);
+			OLED.putString("PmodOLED");
+			OLED.setCursor(0, 1);
+			OLED.putString("by Digilent");
+			OLED.setCursor(0, 2);
+			OLED.putString("Simple Demo");
+			
+			OLED.moveTo(0, irow);
+			OLED.drawFillRect(127,31);
+			OLED.moveTo(0, irow);
+			OLED.drawLine(127,irow);
+			OLED.updateDisplay();
+			usleep(100000);
+		}
+		
+		usleep(1000000);
+		
+		// Blink the display a bit.
+		OLED.displayOff();
+		usleep(500000);
+		OLED.displayOn();
+		usleep(500000);
+		
+		OLED.displayOff();
+		usleep(500000);
+		OLED.displayOn();
+		usleep(500000);
+
+		OLED.displayOff();
+		usleep(500000);
+		OLED.displayOn();
+		usleep(500000);
+
+		usleep(2000000);
+		
+		// Now erase the characters from the display
+		for (irow = OLED.rowMax-1; irow >= 0; irow--)
+		{
+			OLED.setDrawColor(1);
+			OLED.setDrawMode(OLED.modeSet);
+			OLED.moveTo(0,irow);
+			OLED.drawLine(127,irow);
+			OLED.updateDisplay();
+			usleep(25000);
+			OLED.setDrawMode(OLED.modeXor);
+			OLED.moveTo(0, irow);
+			OLED.drawLine(127, irow);
+			OLED.updateDisplay();
+		}
+		
+		usleep(1000000); 
+
+		// Draw a rectangle in center of screen
+		// Display the 8 different patterns availible
+		OLED.setDrawMode(OLED.modeSet);
+
+		for(ib = 1; ib < 8; ib++)
+		{
+			OLED.clearBuffer();
+			
+			OLED.setFillPattern(OLED.getStdPattern(ib));
+			OLED.moveTo(55, 1);
+			OLED.drawFillRect(75, 27);
+			OLED.drawRect(75, 27);
+			OLED.updateDisplay();
+			
+			usleep(1000000);
+		}
+	}
+	
+	return XST_SUCCESS;
+}

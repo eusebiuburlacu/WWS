@@ -579,7 +579,7 @@ int XSpi_Transfer(XSpi *InstancePtr, u8 *SendBufPtr,
 	 * value of the register will equal the mask.  When the device is in
 	 * loopback mode, however, no slave selects need be set.
 	 */
-	InstancePtr->SlaveSelectReg = 0;
+
 	if (ControlReg & XSP_CR_MASTER_MODE_MASK) {
 		if ((ControlReg & XSP_CR_LOOPBACK_MASK) == 0) {
 			if (InstancePtr->SlaveSelectReg ==

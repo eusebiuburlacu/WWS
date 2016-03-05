@@ -1,21 +1,19 @@
-23:04:36 **** Auto Build of configuration Debug for project zyboApp ****
+19:19:30 **** Auto Build of configuration Debug for project zyboApp ****
 make all 
-'Building file: ../src/RF/mrf24j.cpp'
+'Building file: ../src/main.cc'
 'Invoking: ARM g++ compiler'
-arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/RF/mrf24j.o" -MMD -MP -MF"src/RF/mrf24j.d" -MT"src/RF/mrf24j.d" -o "src/RF/mrf24j.o" "../src/RF/mrf24j.cpp"
-../src/RF/mrf24j.cpp: In function 'void gpioInterruptHandler(void*)':
-../src/RF/mrf24j.cpp:53:9: warning: unused variable 'gpio' [-Wunused-variable]
-  XGpio *gpio = (XGpio *) CallBackRef;
-         ^
-../src/RF/mrf24j.cpp: In member function 'void Mrf24j::write_short(uint8_t, uint8_t)':
-../src/RF/mrf24j.cpp:228:9: warning: unused variable 'status' [-Wunused-variable]
-     int status = XSpi_Transfer( &SpiInstance, &data, &rgbRx, sizeof(uint8_t) );
-         ^
-../src/RF/mrf24j.cpp: In member function 'void Mrf24j::init()':
-../src/RF/mrf24j.cpp:337:13: warning: unused variable 'regi' [-Wunused-variable]
-     uint8_t regi = read_long(MRF_SLPCON0);
-             ^
-'Finished building: ../src/RF/mrf24j.cpp'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:196:29: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("PmodOLED");
+                             ^
+../src/main.cc:198:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("by Digilent");
+                                ^
+../src/main.cc:200:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Simple Demo");
+                                ^
+'Finished building: ../src/main.cc'
 ' '
 'Building target: zyboApp.elf'
 'Invoking: ARM g++ linker'
@@ -25,9 +23,9 @@ arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_co
 'Invoking: ARM Print Size'
 arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 557944	   3436	  32752	 594132	  910d4	zyboApp.elf
+ 565328	   3440	  32752	 601520	  92db0	zyboApp.elf
 'Finished building: zyboApp.elf.size'
 ' '
 
-23:04:38 Build Finished (took 1s.573ms)
+19:19:33 Build Finished (took 2s.569ms)
 

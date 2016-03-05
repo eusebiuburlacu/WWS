@@ -7318,3 +7318,3046 @@ arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
  557944	   3436	  32752	 594132	  910d4	zyboApp.elf
 'Finished building: zyboApp.elf.size'
 ' '
+23:19:10 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/RF/mrf24j.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/RF/mrf24j.o" -MMD -MP -MF"src/RF/mrf24j.d" -MT"src/RF/mrf24j.d" -o "src/RF/mrf24j.o" "../src/RF/mrf24j.cpp"
+../src/RF/mrf24j.cpp: In function 'void gpioInterruptHandler(void*)':
+../src/RF/mrf24j.cpp:53:9: warning: unused variable 'gpio' [-Wunused-variable]
+  XGpio *gpio = (XGpio *) CallBackRef;
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::write_short(uint8_t, uint8_t)':
+../src/RF/mrf24j.cpp:228:9: warning: unused variable 'status' [-Wunused-variable]
+     int status = XSpi_Transfer( &SpiInstance, &data, &rgbRx, sizeof(uint8_t) );
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::init()':
+../src/RF/mrf24j.cpp:337:13: warning: unused variable 'regi' [-Wunused-variable]
+     uint8_t regi = read_long(MRF_SLPCON0);
+             ^
+../src/RF/mrf24j.cpp: At global scope:
+../src/RF/mrf24j.cpp:448:13: error: prototype for 'rx_info_t* Mrf24j::get_rxinfo()' does not match any in class 'Mrf24j'
+ rx_info_t * Mrf24j::get_rxinfo(void) {
+             ^
+In file included from ../src/RF/mrf24j.cpp:6:0:
+../inc/RF/mrf24j.h:199:21: error: candidate is: rx_info_t* Mrf24j::get_rxinfo(int&)
+         rx_info_t * get_rxinfo(int &dataLen);
+                     ^
+make: *** [src/RF/mrf24j.o] Error 1
+23:19:25 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/RF/mrf24j.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/RF/mrf24j.o" -MMD -MP -MF"src/RF/mrf24j.d" -MT"src/RF/mrf24j.d" -o "src/RF/mrf24j.o" "../src/RF/mrf24j.cpp"
+../src/RF/mrf24j.cpp: In function 'void gpioInterruptHandler(void*)':
+../src/RF/mrf24j.cpp:53:9: warning: unused variable 'gpio' [-Wunused-variable]
+  XGpio *gpio = (XGpio *) CallBackRef;
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::write_short(uint8_t, uint8_t)':
+../src/RF/mrf24j.cpp:228:9: warning: unused variable 'status' [-Wunused-variable]
+     int status = XSpi_Transfer( &SpiInstance, &data, &rgbRx, sizeof(uint8_t) );
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::init()':
+../src/RF/mrf24j.cpp:337:13: warning: unused variable 'regi' [-Wunused-variable]
+     uint8_t regi = read_long(MRF_SLPCON0);
+             ^
+../src/RF/mrf24j.cpp: In member function 'rx_info_t* Mrf24j::get_rxinfo(int&)':
+../src/RF/mrf24j.cpp:449:35: error: 'bytes_nodata' was not declared in this scope
+  dataLen = rx_info.frame_length - bytes_nodata;
+                                   ^
+make: *** [src/RF/mrf24j.o] Error 1
+23:21:03 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/RF/mrf24j.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/RF/mrf24j.o" -MMD -MP -MF"src/RF/mrf24j.d" -MT"src/RF/mrf24j.d" -o "src/RF/mrf24j.o" "../src/RF/mrf24j.cpp"
+../src/RF/mrf24j.cpp: In function 'void gpioInterruptHandler(void*)':
+../src/RF/mrf24j.cpp:53:9: warning: unused variable 'gpio' [-Wunused-variable]
+  XGpio *gpio = (XGpio *) CallBackRef;
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::write_short(uint8_t, uint8_t)':
+../src/RF/mrf24j.cpp:228:9: warning: unused variable 'status' [-Wunused-variable]
+     int status = XSpi_Transfer( &SpiInstance, &data, &rgbRx, sizeof(uint8_t) );
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::send16(word, char*)':
+../src/RF/mrf24j.cpp:275:21: error: 'uint8_ts_MHR' was not declared in this scope
+     write_long(i++, uint8_ts_MHR); // header length
+                     ^
+../src/RF/mrf24j.cpp:278:34: error: 'ignoreuint8_ts' was not declared in this scope
+     write_long(i++, uint8_ts_MHR+ignoreuint8_ts+len);
+                                  ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::init()':
+../src/RF/mrf24j.cpp:337:13: warning: unused variable 'regi' [-Wunused-variable]
+     uint8_t regi = read_long(MRF_SLPCON0);
+             ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::interrupt_handler()':
+../src/RF/mrf24j.cpp:381:59: error: 'uint8_ts_MHR' was not declared in this scope
+             rx_info.rx_data[rd_ptr++] = read_long(0x301 + uint8_ts_MHR + i);
+                                                           ^
+../src/RF/mrf24j.cpp: In member function 'int Mrf24j::rx_datalength()':
+../src/RF/mrf24j.cpp:462:35: error: 'uint8_ts_nodata' was not declared in this scope
+     return rx_info.frame_length - uint8_ts_nodata;
+                                   ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::set_ignoreuint8_ts(int)':
+../src/RF/mrf24j.cpp:467:5: error: 'ignoreuint8_ts' was not declared in this scope
+     ignoreuint8_ts = ib;
+     ^
+../src/RF/mrf24j.cpp: In member function 'int Mrf24j::rx_datalength()':
+../src/RF/mrf24j.cpp:463:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/RF/mrf24j.cpp: At global scope:
+../src/RF/mrf24j.cpp:27:12: warning: 'ignoreBytes' defined but not used [-Wunused-variable]
+ static int ignoreBytes = 0; // bytes to ignore, some modules behaviour.
+            ^
+make: *** [src/RF/mrf24j.o] Error 1
+23:21:45 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/RF/mrf24j.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/RF/mrf24j.o" -MMD -MP -MF"src/RF/mrf24j.d" -MT"src/RF/mrf24j.d" -o "src/RF/mrf24j.o" "../src/RF/mrf24j.cpp"
+../src/RF/mrf24j.cpp: In function 'void gpioInterruptHandler(void*)':
+../src/RF/mrf24j.cpp:53:9: warning: unused variable 'gpio' [-Wunused-variable]
+  XGpio *gpio = (XGpio *) CallBackRef;
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::write_short(uint8_t, uint8_t)':
+../src/RF/mrf24j.cpp:228:9: warning: unused variable 'status' [-Wunused-variable]
+     int status = XSpi_Transfer( &SpiInstance, &data, &rgbRx, sizeof(uint8_t) );
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::send16(word, char*)':
+../src/RF/mrf24j.cpp:275:21: error: 'uint8_ts_MHR' was not declared in this scope
+     write_long(i++, uint8_ts_MHR); // header length
+                     ^
+../src/RF/mrf24j.cpp:278:34: error: 'ignoreuint8_ts' was not declared in this scope
+     write_long(i++, uint8_ts_MHR+ignoreuint8_ts+len);
+                                  ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::init()':
+../src/RF/mrf24j.cpp:337:13: warning: unused variable 'regi' [-Wunused-variable]
+     uint8_t regi = read_long(MRF_SLPCON0);
+             ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::interrupt_handler()':
+../src/RF/mrf24j.cpp:381:59: error: 'uint8_ts_MHR' was not declared in this scope
+             rx_info.rx_data[rd_ptr++] = read_long(0x301 + uint8_ts_MHR + i);
+                                                           ^
+../src/RF/mrf24j.cpp: In member function 'int Mrf24j::rx_datalength()':
+../src/RF/mrf24j.cpp:462:35: error: 'uint8_ts_nodata' was not declared in this scope
+     return rx_info.frame_length - uint8_ts_nodata;
+                                   ^
+../src/RF/mrf24j.cpp:463:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/RF/mrf24j.o] Error 1
+23:22:06 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/RF/mrf24j.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/RF/mrf24j.o" -MMD -MP -MF"src/RF/mrf24j.d" -MT"src/RF/mrf24j.d" -o "src/RF/mrf24j.o" "../src/RF/mrf24j.cpp"
+../src/RF/mrf24j.cpp: In function 'void gpioInterruptHandler(void*)':
+../src/RF/mrf24j.cpp:53:9: warning: unused variable 'gpio' [-Wunused-variable]
+  XGpio *gpio = (XGpio *) CallBackRef;
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::write_short(uint8_t, uint8_t)':
+../src/RF/mrf24j.cpp:228:9: warning: unused variable 'status' [-Wunused-variable]
+     int status = XSpi_Transfer( &SpiInstance, &data, &rgbRx, sizeof(uint8_t) );
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::send16(word, char*)':
+../src/RF/mrf24j.cpp:275:21: error: 'uint8_ts_MHR' was not declared in this scope
+     write_long(i++, uint8_ts_MHR); // header length
+                     ^
+../src/RF/mrf24j.cpp:299:8: error: 'ignoreuint8_ts' was not declared in this scope
+     i+=ignoreuint8_ts;
+        ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::init()':
+../src/RF/mrf24j.cpp:337:13: warning: unused variable 'regi' [-Wunused-variable]
+     uint8_t regi = read_long(MRF_SLPCON0);
+             ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::interrupt_handler()':
+../src/RF/mrf24j.cpp:381:59: error: 'uint8_ts_MHR' was not declared in this scope
+             rx_info.rx_data[rd_ptr++] = read_long(0x301 + uint8_ts_MHR + i);
+                                                           ^
+../src/RF/mrf24j.cpp: In member function 'int Mrf24j::rx_datalength()':
+../src/RF/mrf24j.cpp:462:35: error: 'uint8_ts_nodata' was not declared in this scope
+     return rx_info.frame_length - uint8_ts_nodata;
+                                   ^
+../src/RF/mrf24j.cpp:463:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/RF/mrf24j.o] Error 1
+23:22:31 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/RF/mrf24j.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/RF/mrf24j.o" -MMD -MP -MF"src/RF/mrf24j.d" -MT"src/RF/mrf24j.d" -o "src/RF/mrf24j.o" "../src/RF/mrf24j.cpp"
+../src/RF/mrf24j.cpp: In function 'void gpioInterruptHandler(void*)':
+../src/RF/mrf24j.cpp:53:9: warning: unused variable 'gpio' [-Wunused-variable]
+  XGpio *gpio = (XGpio *) CallBackRef;
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::write_short(uint8_t, uint8_t)':
+../src/RF/mrf24j.cpp:228:9: warning: unused variable 'status' [-Wunused-variable]
+     int status = XSpi_Transfer( &SpiInstance, &data, &rgbRx, sizeof(uint8_t) );
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::send16(word, char*)':
+../src/RF/mrf24j.cpp:299:8: error: 'ignoreuint8_ts' was not declared in this scope
+     i+=ignoreuint8_ts;
+        ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::init()':
+../src/RF/mrf24j.cpp:337:13: warning: unused variable 'regi' [-Wunused-variable]
+     uint8_t regi = read_long(MRF_SLPCON0);
+             ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::interrupt_handler()':
+../src/RF/mrf24j.cpp:381:59: error: 'uint8_ts_MHR' was not declared in this scope
+             rx_info.rx_data[rd_ptr++] = read_long(0x301 + uint8_ts_MHR + i);
+                                                           ^
+../src/RF/mrf24j.cpp: In member function 'int Mrf24j::rx_datalength()':
+../src/RF/mrf24j.cpp:462:35: error: 'uint8_ts_nodata' was not declared in this scope
+     return rx_info.frame_length - uint8_ts_nodata;
+                                   ^
+../src/RF/mrf24j.cpp:463:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/RF/mrf24j.o] Error 1
+23:22:39 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/RF/mrf24j.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/RF/mrf24j.o" -MMD -MP -MF"src/RF/mrf24j.d" -MT"src/RF/mrf24j.d" -o "src/RF/mrf24j.o" "../src/RF/mrf24j.cpp"
+../src/RF/mrf24j.cpp: In function 'void gpioInterruptHandler(void*)':
+../src/RF/mrf24j.cpp:53:9: warning: unused variable 'gpio' [-Wunused-variable]
+  XGpio *gpio = (XGpio *) CallBackRef;
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::write_short(uint8_t, uint8_t)':
+../src/RF/mrf24j.cpp:228:9: warning: unused variable 'status' [-Wunused-variable]
+     int status = XSpi_Transfer( &SpiInstance, &data, &rgbRx, sizeof(uint8_t) );
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::init()':
+../src/RF/mrf24j.cpp:337:13: warning: unused variable 'regi' [-Wunused-variable]
+     uint8_t regi = read_long(MRF_SLPCON0);
+             ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::interrupt_handler()':
+../src/RF/mrf24j.cpp:381:59: error: 'uint8_ts_MHR' was not declared in this scope
+             rx_info.rx_data[rd_ptr++] = read_long(0x301 + uint8_ts_MHR + i);
+                                                           ^
+../src/RF/mrf24j.cpp: In member function 'int Mrf24j::rx_datalength()':
+../src/RF/mrf24j.cpp:462:35: error: 'uint8_ts_nodata' was not declared in this scope
+     return rx_info.frame_length - uint8_ts_nodata;
+                                   ^
+../src/RF/mrf24j.cpp:463:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/RF/mrf24j.o] Error 1
+23:22:49 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/RF/mrf24j.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/RF/mrf24j.o" -MMD -MP -MF"src/RF/mrf24j.d" -MT"src/RF/mrf24j.d" -o "src/RF/mrf24j.o" "../src/RF/mrf24j.cpp"
+../src/RF/mrf24j.cpp: In function 'void gpioInterruptHandler(void*)':
+../src/RF/mrf24j.cpp:53:9: warning: unused variable 'gpio' [-Wunused-variable]
+  XGpio *gpio = (XGpio *) CallBackRef;
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::write_short(uint8_t, uint8_t)':
+../src/RF/mrf24j.cpp:228:9: warning: unused variable 'status' [-Wunused-variable]
+     int status = XSpi_Transfer( &SpiInstance, &data, &rgbRx, sizeof(uint8_t) );
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::init()':
+../src/RF/mrf24j.cpp:337:13: warning: unused variable 'regi' [-Wunused-variable]
+     uint8_t regi = read_long(MRF_SLPCON0);
+             ^
+../src/RF/mrf24j.cpp: In member function 'int Mrf24j::rx_datalength()':
+../src/RF/mrf24j.cpp:462:35: error: 'uint8_ts_nodata' was not declared in this scope
+     return rx_info.frame_length - uint8_ts_nodata;
+                                   ^
+../src/RF/mrf24j.cpp:463:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/RF/mrf24j.o] Error 1
+23:22:58 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/RF/mrf24j.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/RF/mrf24j.o" -MMD -MP -MF"src/RF/mrf24j.d" -MT"src/RF/mrf24j.d" -o "src/RF/mrf24j.o" "../src/RF/mrf24j.cpp"
+../src/RF/mrf24j.cpp: In function 'void gpioInterruptHandler(void*)':
+../src/RF/mrf24j.cpp:53:9: warning: unused variable 'gpio' [-Wunused-variable]
+  XGpio *gpio = (XGpio *) CallBackRef;
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::write_short(uint8_t, uint8_t)':
+../src/RF/mrf24j.cpp:228:9: warning: unused variable 'status' [-Wunused-variable]
+     int status = XSpi_Transfer( &SpiInstance, &data, &rgbRx, sizeof(uint8_t) );
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::init()':
+../src/RF/mrf24j.cpp:337:13: warning: unused variable 'regi' [-Wunused-variable]
+     uint8_t regi = read_long(MRF_SLPCON0);
+             ^
+'Finished building: ../src/RF/mrf24j.cpp'
+' '
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:96:29: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("PmodOLED");
+                             ^
+../src/main.cc:98:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("by Digilent");
+                                ^
+../src/main.cc:100:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Simple Demo");
+                                ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 558008	   3436	  32752	 594196	  91114	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+23:26:18 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:100:29: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("PmodOLED");
+                             ^
+../src/main.cc:102:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("by Digilent");
+                                ^
+../src/main.cc:104:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Simple Demo");
+                                ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 558072	   3436	  32752	 594260	  91154	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+23:27:43 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'void rxCallback()':
+../src/main.cc:68:40: error: 'get_rxinfo' was not declared in this scope
+  rx_info_t RXInfo =  get_rxinfo(dataLen);
+                                        ^
+../src/main.cc:68:12: warning: unused variable 'RXInfo' [-Wunused-variable]
+  rx_info_t RXInfo =  get_rxinfo(dataLen);
+            ^
+../src/main.cc: In function 'int main()':
+../src/main.cc:101:29: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("PmodOLED");
+                             ^
+../src/main.cc:103:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("by Digilent");
+                                ^
+../src/main.cc:105:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Simple Demo");
+                                ^
+make: *** [src/main.o] Error 1
+23:28:04 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'void rxCallback()':
+../src/main.cc:68:41: error: 'get_rxinfo' was not declared in this scope
+  rx_info_t *RXInfo =  get_rxinfo(dataLen);
+                                         ^
+../src/main.cc:68:13: warning: unused variable 'RXInfo' [-Wunused-variable]
+  rx_info_t *RXInfo =  get_rxinfo(dataLen);
+             ^
+../src/main.cc: In function 'int main()':
+../src/main.cc:101:29: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("PmodOLED");
+                             ^
+../src/main.cc:103:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("by Digilent");
+                                ^
+../src/main.cc:105:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Simple Demo");
+                                ^
+make: *** [src/main.o] Error 1
+23:28:19 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'void rxCallback()':
+../src/main.cc:68:13: warning: unused variable 'RXInfo' [-Wunused-variable]
+  rx_info_t *RXInfo =  RF.get_rxinfo(dataLen);
+             ^
+../src/main.cc: In function 'int main()':
+../src/main.cc:101:29: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("PmodOLED");
+                             ^
+../src/main.cc:103:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("by Digilent");
+                                ^
+../src/main.cc:105:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Simple Demo");
+                                ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 558092	   3436	  32760	 594288	  91170	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+23:29:21 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'void rxCallback()':
+../src/main.cc:72:46: error: invalid conversion from 'uint8_t {aka unsigned char}' to 'RF_MESSAGE_TYPES' [-fpermissive]
+  RF_MESSAGE_TYPES msgType = RXInfo->rx_data[i];
+                                              ^
+../src/main.cc:72:19: warning: unused variable 'msgType' [-Wunused-variable]
+  RF_MESSAGE_TYPES msgType = RXInfo->rx_data[i];
+                   ^
+../src/main.cc: In function 'int main()':
+../src/main.cc:105:29: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("PmodOLED");
+                             ^
+../src/main.cc:107:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("by Digilent");
+                                ^
+../src/main.cc:109:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Simple Demo");
+                                ^
+make: *** [src/main.o] Error 1
+23:29:30 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'void rxCallback()':
+../src/main.cc:72:19: warning: unused variable 'msgType' [-Wunused-variable]
+  RF_MESSAGE_TYPES msgType = (RF_MESSAGE_TYPES)RXInfo->rx_data[i];
+                   ^
+../src/main.cc: In function 'int main()':
+../src/main.cc:105:29: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("PmodOLED");
+                             ^
+../src/main.cc:107:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("by Digilent");
+                                ^
+../src/main.cc:109:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Simple Demo");
+                                ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 558092	   3436	  32760	 594288	  91170	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+23:30:51 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'void rxCallback()':
+../src/main.cc:76:7: error: expected primary-expression before ':' token
+   case: RF_MESSAGE_IMPEDANCE
+       ^
+../src/main.cc:77:3: error: expected ';' before '{' token
+   {
+   ^
+../src/main.cc:79:3: warning: statement has no effect [-Wunused-value]
+   }
+   ^
+../src/main.cc:80:7: error: expected primary-expression before ':' token
+   case: RF_MESSAGE_IMPEDANCE
+       ^
+../src/main.cc:81:3: error: expected ';' before '{' token
+   {
+   ^
+../src/main.cc:83:3: warning: statement has no effect [-Wunused-value]
+   }
+   ^
+../src/main.cc:84:7: error: expected primary-expression before ':' token
+   case: RF_MESSAGE_IMPEDANCE
+       ^
+../src/main.cc:85:3: error: expected ';' before '{' token
+   {
+   ^
+../src/main.cc:87:3: warning: statement has no effect [-Wunused-value]
+   }
+   ^
+../src/main.cc:88:7: error: expected primary-expression before ':' token
+   case: RF_MESSAGE_IMPEDANCE
+       ^
+../src/main.cc:89:3: error: expected ';' before '{' token
+   {
+   ^
+../src/main.cc:91:3: warning: statement has no effect [-Wunused-value]
+   }
+   ^
+../src/main.cc:92:7: error: expected primary-expression before ':' token
+   case: RF_MESSAGE_IMPEDANCE
+       ^
+../src/main.cc:93:3: error: expected ';' before '{' token
+   {
+   ^
+../src/main.cc:95:3: warning: statement has no effect [-Wunused-value]
+   }
+   ^
+../src/main.cc:74:8: warning: enumeration value 'RF_MESSAGE_IMPEDANCE' not handled in switch [-Wswitch]
+  switch( msgType )
+        ^
+../src/main.cc:74:8: warning: enumeration value 'RF_MESSAGE_PHASE' not handled in switch [-Wswitch]
+../src/main.cc:74:8: warning: enumeration value 'RF_MESSAGE_TEMPERATURE' not handled in switch [-Wswitch]
+../src/main.cc:74:8: warning: enumeration value 'RF_MESSAGE_HUMIDITY' not handled in switch [-Wswitch]
+../src/main.cc:74:8: warning: enumeration value 'RF_MESSAGE_BATTERY' not handled in switch [-Wswitch]
+../src/main.cc: In function 'int main()':
+../src/main.cc:129:29: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("PmodOLED");
+                             ^
+../src/main.cc:131:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("by Digilent");
+                                ^
+../src/main.cc:133:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Simple Demo");
+                                ^
+make: *** [src/main.o] Error 1
+23:31:23 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'void rxCallback()':
+../src/main.cc:80:3: error: duplicate case value
+   case RF_MESSAGE_IMPEDANCE:
+   ^
+../src/main.cc:76:3: error: previously used here
+   case RF_MESSAGE_IMPEDANCE:
+   ^
+../src/main.cc:84:3: error: duplicate case value
+   case RF_MESSAGE_IMPEDANCE:
+   ^
+../src/main.cc:76:3: error: previously used here
+   case RF_MESSAGE_IMPEDANCE:
+   ^
+../src/main.cc:88:3: error: duplicate case value
+   case RF_MESSAGE_IMPEDANCE:
+   ^
+../src/main.cc:76:3: error: previously used here
+   case RF_MESSAGE_IMPEDANCE:
+   ^
+../src/main.cc:92:3: error: duplicate case value
+   case RF_MESSAGE_IMPEDANCE:
+   ^
+../src/main.cc:76:3: error: previously used here
+   case RF_MESSAGE_IMPEDANCE:
+   ^
+../src/main.cc:74:8: warning: enumeration value 'RF_MESSAGE_PHASE' not handled in switch [-Wswitch]
+  switch( msgType )
+        ^
+../src/main.cc:74:8: warning: enumeration value 'RF_MESSAGE_TEMPERATURE' not handled in switch [-Wswitch]
+../src/main.cc:74:8: warning: enumeration value 'RF_MESSAGE_HUMIDITY' not handled in switch [-Wswitch]
+../src/main.cc:74:8: warning: enumeration value 'RF_MESSAGE_BATTERY' not handled in switch [-Wswitch]
+../src/main.cc: In function 'int main()':
+../src/main.cc:129:29: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("PmodOLED");
+                             ^
+../src/main.cc:131:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("by Digilent");
+                                ^
+../src/main.cc:133:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Simple Demo");
+                                ^
+make: *** [src/main.o] Error 1
+23:31:50 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:129:29: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("PmodOLED");
+                             ^
+../src/main.cc:131:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("by Digilent");
+                                ^
+../src/main.cc:133:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Simple Demo");
+                                ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 558156	   3436	  32760	 594352	  911b0	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+23:32:26 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'void rxCallback()':
+../src/main.cc:99:4: error: expected ';' before 'break'
+    break;
+    ^
+../src/main.cc: In function 'int main()':
+../src/main.cc:134:29: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("PmodOLED");
+                             ^
+../src/main.cc:136:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("by Digilent");
+                                ^
+../src/main.cc:138:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Simple Demo");
+                                ^
+make: *** [src/main.o] Error 1
+23:32:34 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'void rxCallback()':
+../src/main.cc:104:4: error: expected ';' before 'break'
+    break;
+    ^
+../src/main.cc: In function 'int main()':
+../src/main.cc:139:29: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("PmodOLED");
+                             ^
+../src/main.cc:141:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("by Digilent");
+                                ^
+../src/main.cc:143:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Simple Demo");
+                                ^
+make: *** [src/main.o] Error 1
+23:32:41 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:139:29: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("PmodOLED");
+                             ^
+../src/main.cc:141:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("by Digilent");
+                                ^
+../src/main.cc:143:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Simple Demo");
+                                ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 558180	   3436	  32760	 594376	  911c8	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+23:33:03 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:139:29: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("PmodOLED");
+                             ^
+../src/main.cc:141:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("by Digilent");
+                                ^
+../src/main.cc:143:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Simple Demo");
+                                ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 558308	   3436	  32760	 594504	  91248	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+23:34:29 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:140:29: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("PmodOLED");
+                             ^
+../src/main.cc:142:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("by Digilent");
+                                ^
+../src/main.cc:144:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Simple Demo");
+                                ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 558308	   3436	  32760	 594504	  91248	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+23:34:51 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:141:29: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("PmodOLED");
+                             ^
+../src/main.cc:143:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("by Digilent");
+                                ^
+../src/main.cc:145:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Simple Demo");
+                                ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 558332	   3436	  32760	 594528	  91260	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+23:35:57 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'void rxCallback()':
+../src/main.cc:82:14: warning: unused variable 'valPtr' [-Wunused-variable]
+     uint8_t *valPtr = (uint8_t*)(void *)&val;
+              ^
+../src/main.cc: In function 'int main()':
+../src/main.cc:145:29: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("PmodOLED");
+                             ^
+../src/main.cc:147:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("by Digilent");
+                                ^
+../src/main.cc:149:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Simple Demo");
+                                ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 558396	   3436	  32760	 594592	  912a0	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+23:38:05 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:149:29: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("PmodOLED");
+                             ^
+../src/main.cc:151:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("by Digilent");
+                                ^
+../src/main.cc:153:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Simple Demo");
+                                ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 558460	   3436	  32760	 594656	  912e0	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+23:38:50 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:150:29: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("PmodOLED");
+                             ^
+../src/main.cc:152:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("by Digilent");
+                                ^
+../src/main.cc:154:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Simple Demo");
+                                ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 562272	   3436	  32760	 598468	  921c4	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+23:39:36 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:151:29: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("PmodOLED");
+                             ^
+../src/main.cc:153:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("by Digilent");
+                                ^
+../src/main.cc:155:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Simple Demo");
+                                ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 562424	   3436	  32760	 598620	  9225c	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+23:42:23 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:169:29: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("PmodOLED");
+                             ^
+../src/main.cc:171:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("by Digilent");
+                                ^
+../src/main.cc:173:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Simple Demo");
+                                ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 562848	   3436	  32760	 599044	  92404	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+23:43:30 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:171:29: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("PmodOLED");
+                             ^
+../src/main.cc:173:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("by Digilent");
+                                ^
+../src/main.cc:175:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Simple Demo");
+                                ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 562856	   3436	  32760	 599052	  9240c	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+23:43:39 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:171:29: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("PmodOLED");
+                             ^
+../src/main.cc:173:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("by Digilent");
+                                ^
+../src/main.cc:175:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Simple Demo");
+                                ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 562872	   3436	  32760	 599068	  9241c	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+23:44:13 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:177:29: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("PmodOLED");
+                             ^
+../src/main.cc:179:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("by Digilent");
+                                ^
+../src/main.cc:181:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Simple Demo");
+                                ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 563024	   3436	  32760	 599220	  924b4	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+23:47:42 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:49:39 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:49:52 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:50:05 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:50:23 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:50:29 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:52:28 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:52:54 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:53:19 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:54:01 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:54:29 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:54:36 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:56:08 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:177:29: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("PmodOLED");
+                             ^
+../src/main.cc:179:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("by Digilent");
+                                ^
+../src/main.cc:181:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Simple Demo");
+                                ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 563024	   3436	  32760	 599220	  924b4	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+23:56:15 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:57:23 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:57:52 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:58:32 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:59:06 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:59:15 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:59:40 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+00:02:39 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:178:29: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("PmodOLED");
+                             ^
+../src/main.cc:180:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("by Digilent");
+                                ^
+../src/main.cc:182:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Simple Demo");
+                                ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 563096	   3436	  32760	 599292	  924fc	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+00:02:45 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+00:03:02 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+00:03:24 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+00:03:44 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+00:04:21 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+00:04:53 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+00:06:19 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'void rxCallback()':
+../src/main.cc:78:35: error: 'printf' was not declared in this scope
+    printf("RF_MESSAGE_IMPEDANCE\n");
+                                   ^
+../src/main.cc:95:31: error: 'printf' was not declared in this scope
+    printf("RF_MESSAGE_PHASE\n");
+                               ^
+../src/main.cc:112:37: error: 'printf' was not declared in this scope
+    printf("RF_MESSAGE_TEMPERATURE\n");
+                                     ^
+../src/main.cc:123:34: error: 'printf' was not declared in this scope
+    printf("RF_MESSAGE_HUMIDITY\n");
+                                  ^
+../src/main.cc:130:33: error: 'printf' was not declared in this scope
+    printf("RF_MESSAGE_BATTERY\n");
+                                 ^
+../src/main.cc:141:36: error: 'printf' was not declared in this scope
+    printf("ERROR: Invalid msg type");
+                                    ^
+../src/main.cc: In function 'int main()':
+../src/main.cc:149:16: error: 'printf' was not declared in this scope
+  printf("Start");
+                ^
+../src/main.cc:178:29: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("PmodOLED");
+                             ^
+../src/main.cc:180:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("by Digilent");
+                                ^
+../src/main.cc:182:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Simple Demo");
+                                ^
+make: *** [src/main.o] Error 1
+00:06:51 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'void rxCallback()':
+../src/main.cc:130:33: error: 'printf' was not declared in this scope
+    printf("RF_MESSAGE_BATTERY\n");
+                                 ^
+../src/main.cc: In function 'int main()':
+../src/main.cc:178:29: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("PmodOLED");
+                             ^
+../src/main.cc:180:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("by Digilent");
+                                ^
+../src/main.cc:182:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Simple Demo");
+                                ^
+make: *** [src/main.o] Error 1
+00:06:58 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:178:29: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("PmodOLED");
+                             ^
+../src/main.cc:180:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("by Digilent");
+                                ^
+../src/main.cc:182:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Simple Demo");
+                                ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 564616	   3440	  32760	 600816	  92af0	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+00:07:14 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+00:07:50 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:179:29: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("PmodOLED");
+                             ^
+../src/main.cc:181:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("by Digilent");
+                                ^
+../src/main.cc:183:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Simple Demo");
+                                ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 564680	   3440	  32760	 600880	  92b30	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+00:08:00 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+00:08:41 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+00:11:24 **** Build of project genfsbl_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_2/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/spi_v4_1/src"
+make -C ps7_cortexa9_0/libsrc/spi_v4_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v5_3/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v5_3/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling coresightps_dcc"
+arm-xilinx-eabi-ar: creating ../../../lib/libxil.a
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling emacps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling gpio"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_2/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/spi_v4_1/src"
+make -C ps7_cortexa9_0/libsrc/spi_v4_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling spi"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v5_3/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v5_3/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling standalone"
+"Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling ttcps"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling xadcps"
+'Finished building libraries'
+00:12:14 **** Build of configuration Debug for project genfsbl ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../genfsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+'Finished building: ../src/main.cc'
+' '
+'Building target: genfsbl.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../genfsbl_bsp/ps7_cortexa9_0/lib -o "genfsbl.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: genfsbl.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size genfsbl.elf  |tee "genfsbl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19388	   1152	  22572	  43112	   a868	genfsbl.elf
+'Finished building: genfsbl.elf.size'
+' '
+00:12:18 **** Auto Build of configuration Debug for project genfsbl ****
+make all 
+make: Nothing to be done for `all'.
+00:23:59 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_2/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/spi_v4_1/src"
+make -C ps7_cortexa9_0/libsrc/spi_v4_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v5_3/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v5_3/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling coresightps_dcc"
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling emacps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling gpio"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_2/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/spi_v4_1/src"
+make -C ps7_cortexa9_0/libsrc/spi_v4_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling spi"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v5_3/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v5_3/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling standalone"
+"Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling ttcps"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling xadcps"
+'Finished building libraries'
+00:24:39 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/RF/mrf24j.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/RF/mrf24j.o" -MMD -MP -MF"src/RF/mrf24j.d" -MT"src/RF/mrf24j.d" -o "src/RF/mrf24j.o" "../src/RF/mrf24j.cpp"
+../src/RF/mrf24j.cpp: In function 'void gpioInterruptHandler(void*)':
+../src/RF/mrf24j.cpp:53:9: warning: unused variable 'gpio' [-Wunused-variable]
+  XGpio *gpio = (XGpio *) CallBackRef;
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::write_short(uint8_t, uint8_t)':
+../src/RF/mrf24j.cpp:228:9: warning: unused variable 'status' [-Wunused-variable]
+     int status = XSpi_Transfer( &SpiInstance, &data, &rgbRx, sizeof(uint8_t) );
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::init()':
+../src/RF/mrf24j.cpp:337:13: warning: unused variable 'regi' [-Wunused-variable]
+     uint8_t regi = read_long(MRF_SLPCON0);
+             ^
+'Finished building: ../src/RF/mrf24j.cpp'
+' '
+'Building file: ../src/OLED/OledDriver.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/OLED/OledDriver.o" -MMD -MP -MF"src/OLED/OledDriver.d" -MT"src/OLED/OledDriver.d" -o "src/OLED/OledDriver.o" "../src/OLED/OledDriver.cpp"
+../src/OLED/OledDriver.cpp:37:1: warning: "/*" within comment [-Wcomment]
+ /* 22/02/2016(EusebiuB): adapted library to work on Zybo    */
+ ^
+../src/OLED/OledDriver.cpp: In function 'void OledHostInit()':
+../src/OLED/OledDriver.cpp:282:6: warning: variable 'slaveReg' set but not used [-Wunused-but-set-variable]
+  u32 slaveReg = XSpi_GetSlaveSelectReg(&SpiInstance);
+      ^
+'Finished building: ../src/OLED/OledDriver.cpp'
+' '
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:179:29: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("PmodOLED");
+                             ^
+../src/main.cc:181:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("by Digilent");
+                                ^
+../src/main.cc:183:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Simple Demo");
+                                ^
+'Finished building: ../src/main.cc'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/platform.o" -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 564680	   3440	  32760	 600880	  92b30	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+00:25:51 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/RF/mrf24j.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/RF/mrf24j.o" -MMD -MP -MF"src/RF/mrf24j.d" -MT"src/RF/mrf24j.d" -o "src/RF/mrf24j.o" "../src/RF/mrf24j.cpp"
+../src/RF/mrf24j.cpp: In function 'void gpioInterruptHandler(void*)':
+../src/RF/mrf24j.cpp:53:9: warning: unused variable 'gpio' [-Wunused-variable]
+  XGpio *gpio = (XGpio *) CallBackRef;
+         ^
+../src/RF/mrf24j.cpp: In member function 'uint8_t Mrf24j::read_short(uint8_t)':
+../src/RF/mrf24j.cpp:193:16: error: base operand of '->' has non-pointer type 'XSpi'
+     SpiInstance->SlaveSelectReg = 0;
+                ^
+../src/RF/mrf24j.cpp: In member function 'uint8_t Mrf24j::read_long(word)':
+../src/RF/mrf24j.cpp:206:16: error: base operand of '->' has non-pointer type 'XSpi'
+     SpiInstance->SlaveSelectReg = 0;
+                ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::write_short(uint8_t, uint8_t)':
+../src/RF/mrf24j.cpp:227:16: error: base operand of '->' has non-pointer type 'XSpi'
+     SpiInstance->SlaveSelectReg = 0;
+                ^
+../src/RF/mrf24j.cpp:231:9: warning: unused variable 'status' [-Wunused-variable]
+     int status = XSpi_Transfer( &SpiInstance, &data, &rgbRx, sizeof(uint8_t) );
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::write_long(word, uint8_t)':
+../src/RF/mrf24j.cpp:239:16: error: base operand of '->' has non-pointer type 'XSpi'
+     SpiInstance->SlaveSelectReg = 0;
+                ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::init()':
+../src/RF/mrf24j.cpp:341:13: warning: unused variable 'regi' [-Wunused-variable]
+     uint8_t regi = read_long(MRF_SLPCON0);
+             ^
+make: *** [src/RF/mrf24j.o] Error 1
+00:26:13 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/RF/mrf24j.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/RF/mrf24j.o" -MMD -MP -MF"src/RF/mrf24j.d" -MT"src/RF/mrf24j.d" -o "src/RF/mrf24j.o" "../src/RF/mrf24j.cpp"
+../src/RF/mrf24j.cpp: In function 'void gpioInterruptHandler(void*)':
+../src/RF/mrf24j.cpp:53:9: warning: unused variable 'gpio' [-Wunused-variable]
+  XGpio *gpio = (XGpio *) CallBackRef;
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::write_short(uint8_t, uint8_t)':
+../src/RF/mrf24j.cpp:231:9: warning: unused variable 'status' [-Wunused-variable]
+     int status = XSpi_Transfer( &SpiInstance, &data, &rgbRx, sizeof(uint8_t) );
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::init()':
+../src/RF/mrf24j.cpp:341:13: warning: unused variable 'regi' [-Wunused-variable]
+     uint8_t regi = read_long(MRF_SLPCON0);
+             ^
+'Finished building: ../src/RF/mrf24j.cpp'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 564744	   3440	  32760	 600944	  92b70	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+00:26:33 **** Incremental Build of configuration Debug for project genfsbl ****
+make all 
+make: Nothing to be done for `all'.
+00:26:34 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+00:28:32 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'void rxCallback()':
+../src/main.cc:79:25: error: no matching function for call to 'std::vector<float>::erase()'
+    impedanceArray.erase();
+                         ^
+../src/main.cc:79:25: note: candidates are:
+In file included from c:\xilinx\sdk\2015.4\gnu\arm\nt\arm-xilinx-eabi\include\c++\4.9.2\vector:64:0,
+                 from ../src/main.cc:29:
+c:\xilinx\sdk\2015.4\gnu\arm\nt\arm-xilinx-eabi\include\c++\4.9.2\bits\stl_vector.h:1149:7: note: std::vector<_Tp, _Alloc>::iterator std::vector<_Tp, _Alloc>::erase(std::vector<_Tp, _Alloc>::iterator) [with _Tp = float; _Alloc = std::allocator<float>; std::vector<_Tp, _Alloc>::iterator = __gnu_cxx::__normal_iterator<float*, std::vector<float> >; typename std::_Vector_base<_Tp, _Alloc>::pointer = float*]
+       erase(iterator __position)
+       ^
+c:\xilinx\sdk\2015.4\gnu\arm\nt\arm-xilinx-eabi\include\c++\4.9.2\bits\stl_vector.h:1149:7: note:   candidate expects 1 argument, 0 provided
+c:\xilinx\sdk\2015.4\gnu\arm\nt\arm-xilinx-eabi\include\c++\4.9.2\bits\stl_vector.h:1180:7: note: std::vector<_Tp, _Alloc>::iterator std::vector<_Tp, _Alloc>::erase(std::vector<_Tp, _Alloc>::iterator, std::vector<_Tp, _Alloc>::iterator) [with _Tp = float; _Alloc = std::allocator<float>; std::vector<_Tp, _Alloc>::iterator = __gnu_cxx::__normal_iterator<float*, std::vector<float> >; typename std::_Vector_base<_Tp, _Alloc>::pointer = float*]
+       erase(iterator __first, iterator __last)
+       ^
+c:\xilinx\sdk\2015.4\gnu\arm\nt\arm-xilinx-eabi\include\c++\4.9.2\bits\stl_vector.h:1180:7: note:   candidate expects 2 arguments, 0 provided
+../src/main.cc: In function 'int main()':
+../src/main.cc:180:29: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("PmodOLED");
+                             ^
+../src/main.cc:182:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("by Digilent");
+                                ^
+../src/main.cc:184:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Simple Demo");
+                                ^
+make: *** [src/main.o] Error 1
+00:28:39 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:180:29: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("PmodOLED");
+                             ^
+../src/main.cc:182:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("by Digilent");
+                                ^
+../src/main.cc:184:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Simple Demo");
+                                ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 565148	   3440	  32752	 601340	  92cfc	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+00:29:05 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:180:29: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("PmodOLED");
+                             ^
+../src/main.cc:182:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("by Digilent");
+                                ^
+../src/main.cc:184:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Simple Demo");
+                                ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 564896	   3440	  32752	 601088	  92c00	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+00:30:21 **** Build of project fsblapp_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_2/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/spi_v4_1/src"
+make -C ps7_cortexa9_0/libsrc/spi_v4_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v5_3/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v5_3/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/xilffs_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/xilffs_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/xilrsa_v1_1/src"
+make -C ps7_cortexa9_0/libsrc/xilrsa_v1_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling coresightps_dcc"
+arm-xilinx-eabi-ar: creating ../../../lib/libxil.a
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling emacps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling gpio"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_2/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/spi_v4_1/src"
+make -C ps7_cortexa9_0/libsrc/spi_v4_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling spi"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v5_3/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v5_3/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling standalone"
+"Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling ttcps"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling xadcps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xilffs_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/xilffs_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling XilFFs Library"
+"Running Make libs in ps7_cortexa9_0/libsrc/xilrsa_v1_1/src"
+make -C ps7_cortexa9_0/libsrc/xilrsa_v1_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+'Finished building libraries'
+00:31:02 **** Build of configuration Debug for project fsblapp ****
+make all 
+'Building file: ../src/fsbl_handoff.S'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/fsbl_handoff.o" -I../../fsblapp_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/fsbl_handoff.d" -MT"src/fsbl_handoff.d" -o "src/fsbl_handoff.o" "../src/fsbl_handoff.S"
+'Finished building: ../src/fsbl_handoff.S'
+' '
+'Building file: ../src/fsbl_hooks.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/fsbl_hooks.o" -I../../fsblapp_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/fsbl_hooks.d" -MT"src/fsbl_hooks.d" -o "src/fsbl_hooks.o" "../src/fsbl_hooks.c"
+'Finished building: ../src/fsbl_hooks.c'
+' '
+'Building file: ../src/image_mover.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/image_mover.o" -I../../fsblapp_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/image_mover.d" -MT"src/image_mover.d" -o "src/image_mover.o" "../src/image_mover.c"
+'Finished building: ../src/image_mover.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/main.o" -I../../fsblapp_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/md5.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/md5.o" -I../../fsblapp_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/md5.d" -MT"src/md5.d" -o "src/md5.o" "../src/md5.c"
+'Finished building: ../src/md5.c'
+' '
+'Building file: ../src/nand.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/nand.o" -I../../fsblapp_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/nand.d" -MT"src/nand.d" -o "src/nand.o" "../src/nand.c"
+'Finished building: ../src/nand.c'
+' '
+'Building file: ../src/nor.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/nor.o" -I../../fsblapp_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/nor.d" -MT"src/nor.d" -o "src/nor.o" "../src/nor.c"
+'Finished building: ../src/nor.c'
+' '
+'Building file: ../src/pcap.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/pcap.o" -I../../fsblapp_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/pcap.d" -MT"src/pcap.d" -o "src/pcap.o" "../src/pcap.c"
+'Finished building: ../src/pcap.c'
+' '
+'Building file: F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper_hw_platform_0/ps7_init.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/ps7_init.o" -I../../fsblapp_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/ps7_init.d" -MT"src/ps7_init.d" -o "src/ps7_init.o" "F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper_hw_platform_0/ps7_init.c"
+'Finished building: F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper_hw_platform_0/ps7_init.c'
+' '
+'Building file: ../src/qspi.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/qspi.o" -I../../fsblapp_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/qspi.d" -MT"src/qspi.d" -o "src/qspi.o" "../src/qspi.c"
+'Finished building: ../src/qspi.c'
+' '
+'Building file: ../src/rsa.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/rsa.o" -I../../fsblapp_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/rsa.d" -MT"src/rsa.d" -o "src/rsa.o" "../src/rsa.c"
+'Finished building: ../src/rsa.c'
+' '
+'Building file: ../src/sd.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/sd.o" -I../../fsblapp_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sd.d" -MT"src/sd.d" -o "src/sd.o" "../src/sd.c"
+'Finished building: ../src/sd.c'
+' '
+'Building target: fsblapp.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -L"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\fsblapp\src" -Wl,-T -Wl,../src/lscript.ld -L../../fsblapp_bsp/ps7_cortexa9_0/lib -o "fsblapp.elf"  ./src/fsbl_handoff.o ./src/fsbl_hooks.o ./src/image_mover.o ./src/main.o ./src/md5.o ./src/nand.o ./src/nor.o ./src/pcap.o ./src/ps7_init.o ./src/qspi.o ./src/rsa.o ./src/sd.o   -lrsa -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lrsa,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fsblapp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size fsblapp.elf  |tee "fsblapp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  77120	  11860	  74308	 163288	  27dd8	fsblapp.elf
+'Finished building: fsblapp.elf.size'
+' '
+00:31:07 **** Auto Build of configuration Debug for project fsblapp ****
+make all 
+make: Nothing to be done for `all'.
+21:26:48 **** Clean-only build of configuration Debug for project fsblapp ****
+make clean 
+rm -rf  ./src/fsbl_handoff.o ./src/fsbl_hooks.o ./src/image_mover.o ./src/main.o ./src/md5.o ./src/nand.o ./src/nor.o ./src/pcap.o ./src/ps7_init.o ./src/qspi.o ./src/rsa.o ./src/sd.o  ./src/fsbl_handoff.d  ./src/fsbl_hooks.d ./src/image_mover.d ./src/main.d ./src/md5.d ./src/nand.d ./src/nor.d ./src/pcap.d ./src/ps7_init.d ./src/qspi.d ./src/rsa.d ./src/sd.d  fsblapp.elf.size  fsblapp.elf
+' '
+21:26:50 **** Auto Build of configuration Debug for project fsblapp ****
+make all 
+'Building file: ../src/fsbl_handoff.S'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/fsbl_handoff.o" -I../../fsblapp_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/fsbl_handoff.d" -MT"src/fsbl_handoff.d" -o "src/fsbl_handoff.o" "../src/fsbl_handoff.S"
+'Finished building: ../src/fsbl_handoff.S'
+' '
+'Building file: ../src/fsbl_hooks.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/fsbl_hooks.o" -I../../fsblapp_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/fsbl_hooks.d" -MT"src/fsbl_hooks.d" -o "src/fsbl_hooks.o" "../src/fsbl_hooks.c"
+In file included from ../src/fsbl_hooks.c:54:0:
+../src/fsbl.h:299:20: fatal error: xil_io.h: No such file or directory
+ #include "xil_io.h"
+                    ^
+compilation terminated.
+make: *** [src/fsbl_hooks.o] Error 1
+21:28:42 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/RF/mrf24j.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/RF/mrf24j.o" -MMD -MP -MF"src/RF/mrf24j.d" -MT"src/RF/mrf24j.d" -o "src/RF/mrf24j.o" "../src/RF/mrf24j.cpp"
+../src/RF/mrf24j.cpp: In function 'void gpioInterruptHandler(void*)':
+../src/RF/mrf24j.cpp:52:40: error: expected primary-expression before ')' token
+  XGpio_InterruptDisable(&gpioInstance, )
+                                        ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::write_short(uint8_t, uint8_t)':
+../src/RF/mrf24j.cpp:231:9: warning: unused variable 'status' [-Wunused-variable]
+     int status = XSpi_Transfer( &SpiInstance, &data, &rgbRx, sizeof(uint8_t) );
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::init()':
+../src/RF/mrf24j.cpp:341:13: warning: unused variable 'regi' [-Wunused-variable]
+     uint8_t regi = read_long(MRF_SLPCON0);
+             ^
+make: *** [src/RF/mrf24j.o] Error 1
+21:29:26 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/RF/mrf24j.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/RF/mrf24j.o" -MMD -MP -MF"src/RF/mrf24j.d" -MT"src/RF/mrf24j.d" -o "src/RF/mrf24j.o" "../src/RF/mrf24j.cpp"
+../src/RF/mrf24j.cpp: In function 'void gpioInterruptHandler(void*)':
+../src/RF/mrf24j.cpp:53:9: warning: unused variable 'gpio' [-Wunused-variable]
+  XGpio *gpio = (XGpio *) CallBackRef;
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::write_short(uint8_t, uint8_t)':
+../src/RF/mrf24j.cpp:231:9: warning: unused variable 'status' [-Wunused-variable]
+     int status = XSpi_Transfer( &SpiInstance, &data, &rgbRx, sizeof(uint8_t) );
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::init()':
+../src/RF/mrf24j.cpp:341:13: warning: unused variable 'regi' [-Wunused-variable]
+     uint8_t regi = read_long(MRF_SLPCON0);
+             ^
+'Finished building: ../src/RF/mrf24j.cpp'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 564832	   3440	  32752	 601024	  92bc0	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+21:30:21 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/RF/mrf24j.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/RF/mrf24j.o" -MMD -MP -MF"src/RF/mrf24j.d" -MT"src/RF/mrf24j.d" -o "src/RF/mrf24j.o" "../src/RF/mrf24j.cpp"
+../src/RF/mrf24j.cpp: In function 'void gpioInterruptHandler(void*)':
+../src/RF/mrf24j.cpp:53:9: warning: unused variable 'gpio' [-Wunused-variable]
+  XGpio *gpio = (XGpio *) CallBackRef;
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::write_short(uint8_t, uint8_t)':
+../src/RF/mrf24j.cpp:232:9: warning: unused variable 'status' [-Wunused-variable]
+     int status = XSpi_Transfer( &SpiInstance, &data, &rgbRx, sizeof(uint8_t) );
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::init()':
+../src/RF/mrf24j.cpp:342:13: warning: unused variable 'regi' [-Wunused-variable]
+     uint8_t regi = read_long(MRF_SLPCON0);
+             ^
+'Finished building: ../src/RF/mrf24j.cpp'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 564896	   3440	  32752	 601088	  92c00	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+21:34:17 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/RF/mrf24j.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/RF/mrf24j.o" -MMD -MP -MF"src/RF/mrf24j.d" -MT"src/RF/mrf24j.d" -o "src/RF/mrf24j.o" "../src/RF/mrf24j.cpp"
+../src/RF/mrf24j.cpp: In function 'void gpioInterruptHandler(void*)':
+../src/RF/mrf24j.cpp:55:2: error: expected ';' before 'XGpio_InterruptClear'
+  XGpio_InterruptClear(&gpioInstance, XGPIO_IR_CH1_MASK);
+  ^
+../src/RF/mrf24j.cpp:53:9: warning: unused variable 'gpio' [-Wunused-variable]
+  XGpio *gpio = (XGpio *) CallBackRef;
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::write_short(uint8_t, uint8_t)':
+../src/RF/mrf24j.cpp:233:9: warning: unused variable 'status' [-Wunused-variable]
+     int status = XSpi_Transfer( &SpiInstance, &data, &rgbRx, sizeof(uint8_t) );
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::init()':
+../src/RF/mrf24j.cpp:343:13: warning: unused variable 'regi' [-Wunused-variable]
+     uint8_t regi = read_long(MRF_SLPCON0);
+             ^
+make: *** [src/RF/mrf24j.o] Error 1
+21:34:20 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/RF/mrf24j.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/RF/mrf24j.o" -MMD -MP -MF"src/RF/mrf24j.d" -MT"src/RF/mrf24j.d" -o "src/RF/mrf24j.o" "../src/RF/mrf24j.cpp"
+../src/RF/mrf24j.cpp: In function 'void gpioInterruptHandler(void*)':
+../src/RF/mrf24j.cpp:53:9: warning: unused variable 'gpio' [-Wunused-variable]
+  XGpio *gpio = (XGpio *) CallBackRef;
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::write_short(uint8_t, uint8_t)':
+../src/RF/mrf24j.cpp:233:9: warning: unused variable 'status' [-Wunused-variable]
+     int status = XSpi_Transfer( &SpiInstance, &data, &rgbRx, sizeof(uint8_t) );
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::init()':
+../src/RF/mrf24j.cpp:343:13: warning: unused variable 'regi' [-Wunused-variable]
+     uint8_t regi = read_long(MRF_SLPCON0);
+             ^
+'Finished building: ../src/RF/mrf24j.cpp'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 564896	   3440	  32752	 601088	  92c00	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+21:34:30 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/RF/mrf24j.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/RF/mrf24j.o" -MMD -MP -MF"src/RF/mrf24j.d" -MT"src/RF/mrf24j.d" -o "src/RF/mrf24j.o" "../src/RF/mrf24j.cpp"
+../src/RF/mrf24j.cpp: In function 'void gpioInterruptHandler(void*)':
+../src/RF/mrf24j.cpp:53:9: warning: unused variable 'gpio' [-Wunused-variable]
+  XGpio *gpio = (XGpio *) CallBackRef;
+         ^
+../src/RF/mrf24j.cpp:54:6: warning: unused variable 'status' [-Wunused-variable]
+  int status = XGpio_InterruptGetStatus(&gpioInstance);
+      ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::write_short(uint8_t, uint8_t)':
+../src/RF/mrf24j.cpp:233:9: warning: unused variable 'status' [-Wunused-variable]
+     int status = XSpi_Transfer( &SpiInstance, &data, &rgbRx, sizeof(uint8_t) );
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::init()':
+../src/RF/mrf24j.cpp:343:13: warning: unused variable 'regi' [-Wunused-variable]
+     uint8_t regi = read_long(MRF_SLPCON0);
+             ^
+'Finished building: ../src/RF/mrf24j.cpp'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 564896	   3440	  32752	 601088	  92c00	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+21:35:56 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/RF/mrf24j.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/RF/mrf24j.o" -MMD -MP -MF"src/RF/mrf24j.d" -MT"src/RF/mrf24j.d" -o "src/RF/mrf24j.o" "../src/RF/mrf24j.cpp"
+../src/RF/mrf24j.cpp: In function 'void gpioInterruptHandler(void*)':
+../src/RF/mrf24j.cpp:53:9: warning: unused variable 'gpio' [-Wunused-variable]
+  XGpio *gpio = (XGpio *) CallBackRef;
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::write_short(uint8_t, uint8_t)':
+../src/RF/mrf24j.cpp:236:9: warning: unused variable 'status' [-Wunused-variable]
+     int status = XSpi_Transfer( &SpiInstance, &data, &rgbRx, sizeof(uint8_t) );
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::init()':
+../src/RF/mrf24j.cpp:346:13: warning: unused variable 'regi' [-Wunused-variable]
+     uint8_t regi = read_long(MRF_SLPCON0);
+             ^
+'Finished building: ../src/RF/mrf24j.cpp'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 564896	   3440	  32752	 601088	  92c00	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+21:38:13 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/RF/mrf24j.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/RF/mrf24j.o" -MMD -MP -MF"src/RF/mrf24j.d" -MT"src/RF/mrf24j.d" -o "src/RF/mrf24j.o" "../src/RF/mrf24j.cpp"
+../src/RF/mrf24j.cpp: In function 'void gpioInterruptHandler(void*)':
+../src/RF/mrf24j.cpp:53:9: warning: unused variable 'gpio' [-Wunused-variable]
+  XGpio *gpio = (XGpio *) CallBackRef;
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::write_short(uint8_t, uint8_t)':
+../src/RF/mrf24j.cpp:236:9: warning: unused variable 'status' [-Wunused-variable]
+     int status = XSpi_Transfer( &SpiInstance, &data, &rgbRx, sizeof(uint8_t) );
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::init()':
+../src/RF/mrf24j.cpp:346:13: warning: unused variable 'regi' [-Wunused-variable]
+     uint8_t regi = read_long(MRF_SLPCON0);
+             ^
+'Finished building: ../src/RF/mrf24j.cpp'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 564976	   3440	  32752	 601168	  92c50	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+21:39:35 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/RF/mrf24j.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/RF/mrf24j.o" -MMD -MP -MF"src/RF/mrf24j.d" -MT"src/RF/mrf24j.d" -o "src/RF/mrf24j.o" "../src/RF/mrf24j.cpp"
+../src/RF/mrf24j.cpp: In function 'void gpioInterruptHandler(void*)':
+../src/RF/mrf24j.cpp:53:9: warning: unused variable 'gpio' [-Wunused-variable]
+  XGpio *gpio = (XGpio *) CallBackRef;
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::write_short(uint8_t, uint8_t)':
+../src/RF/mrf24j.cpp:236:9: warning: unused variable 'status' [-Wunused-variable]
+     int status = XSpi_Transfer( &SpiInstance, &data, &rgbRx, sizeof(uint8_t) );
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::init()':
+../src/RF/mrf24j.cpp:346:13: warning: unused variable 'regi' [-Wunused-variable]
+     uint8_t regi = read_long(MRF_SLPCON0);
+             ^
+'Finished building: ../src/RF/mrf24j.cpp'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 564984	   3440	  32752	 601176	  92c58	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+21:39:48 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/RF/mrf24j.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/RF/mrf24j.o" -MMD -MP -MF"src/RF/mrf24j.d" -MT"src/RF/mrf24j.d" -o "src/RF/mrf24j.o" "../src/RF/mrf24j.cpp"
+../src/RF/mrf24j.cpp: In function 'void gpioInterruptHandler(void*)':
+../src/RF/mrf24j.cpp:53:9: warning: unused variable 'gpio' [-Wunused-variable]
+  XGpio *gpio = (XGpio *) CallBackRef;
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::write_short(uint8_t, uint8_t)':
+../src/RF/mrf24j.cpp:236:9: warning: unused variable 'status' [-Wunused-variable]
+     int status = XSpi_Transfer( &SpiInstance, &data, &rgbRx, sizeof(uint8_t) );
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::init()':
+../src/RF/mrf24j.cpp:346:13: warning: unused variable 'regi' [-Wunused-variable]
+     uint8_t regi = read_long(MRF_SLPCON0);
+             ^
+'Finished building: ../src/RF/mrf24j.cpp'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 564984	   3440	  32752	 601176	  92c58	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+21:40:06 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/RF/mrf24j.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/RF/mrf24j.o" -MMD -MP -MF"src/RF/mrf24j.d" -MT"src/RF/mrf24j.d" -o "src/RF/mrf24j.o" "../src/RF/mrf24j.cpp"
+../src/RF/mrf24j.cpp: In function 'void gpioInterruptHandler(void*)':
+../src/RF/mrf24j.cpp:53:9: warning: unused variable 'gpio' [-Wunused-variable]
+  XGpio *gpio = (XGpio *) CallBackRef;
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::write_short(uint8_t, uint8_t)':
+../src/RF/mrf24j.cpp:236:9: warning: unused variable 'status' [-Wunused-variable]
+     int status = XSpi_Transfer( &SpiInstance, &data, &rgbRx, sizeof(uint8_t) );
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::init()':
+../src/RF/mrf24j.cpp:346:13: warning: unused variable 'regi' [-Wunused-variable]
+     uint8_t regi = read_long(MRF_SLPCON0);
+             ^
+'Finished building: ../src/RF/mrf24j.cpp'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 564992	   3440	  32752	 601184	  92c60	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+21:40:52 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/RF/mrf24j.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/RF/mrf24j.o" -MMD -MP -MF"src/RF/mrf24j.d" -MT"src/RF/mrf24j.d" -o "src/RF/mrf24j.o" "../src/RF/mrf24j.cpp"
+../src/RF/mrf24j.cpp: In function 'void gpioInterruptHandler(void*)':
+../src/RF/mrf24j.cpp:53:9: warning: unused variable 'gpio' [-Wunused-variable]
+  XGpio *gpio = (XGpio *) CallBackRef;
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::write_short(uint8_t, uint8_t)':
+../src/RF/mrf24j.cpp:236:9: warning: unused variable 'status' [-Wunused-variable]
+     int status = XSpi_Transfer( &SpiInstance, &data, &rgbRx, sizeof(uint8_t) );
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::init()':
+../src/RF/mrf24j.cpp:346:13: warning: unused variable 'regi' [-Wunused-variable]
+     uint8_t regi = read_long(MRF_SLPCON0);
+             ^
+'Finished building: ../src/RF/mrf24j.cpp'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 565064	   3440	  32752	 601256	  92ca8	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+21:43:20 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+21:43:47 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+21:44:23 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+21:44:47 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+21:50:57 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/RF/mrf24j.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/RF/mrf24j.o" -MMD -MP -MF"src/RF/mrf24j.d" -MT"src/RF/mrf24j.d" -o "src/RF/mrf24j.o" "../src/RF/mrf24j.cpp"
+../src/RF/mrf24j.cpp: In function 'void gpioInterruptHandler(void*)':
+../src/RF/mrf24j.cpp:53:9: warning: unused variable 'gpio' [-Wunused-variable]
+  XGpio *gpio = (XGpio *) CallBackRef;
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::write_short(uint8_t, uint8_t)':
+../src/RF/mrf24j.cpp:236:9: warning: unused variable 'status' [-Wunused-variable]
+     int status = XSpi_Transfer( &SpiInstance, &data, &rgbRx, sizeof(uint8_t) );
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::init()':
+../src/RF/mrf24j.cpp:346:13: warning: unused variable 'regi' [-Wunused-variable]
+     uint8_t regi = read_long(MRF_SLPCON0);
+             ^
+'Finished building: ../src/RF/mrf24j.cpp'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 565064	   3440	  32752	 601256	  92ca8	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+21:51:04 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+21:51:36 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+21:52:18 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:179:29: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("PmodOLED");
+                             ^
+../src/main.cc:181:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("by Digilent");
+                                ^
+../src/main.cc:183:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Simple Demo");
+                                ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 565000	   3440	  32752	 601192	  92c68	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+21:53:05 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:186:29: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("PmodOLED");
+                             ^
+../src/main.cc:188:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("by Digilent");
+                                ^
+../src/main.cc:190:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Simple Demo");
+                                ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 565208	   3440	  32752	 601400	  92d38	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+21:53:11 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+21:53:15 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+21:53:20 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+21:53:23 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+21:54:16 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:186:29: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("PmodOLED");
+                             ^
+../src/main.cc:188:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("by Digilent");
+                                ^
+../src/main.cc:190:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Simple Demo");
+                                ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 565216	   3440	  32752	 601408	  92d40	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+21:54:51 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+21:56:55 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+21:57:03 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+21:57:29 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+21:58:54 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 564216	   3440	  32752	 600408	  92958	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+21:58:58 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+21:59:40 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+10:38:50 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+10:39:17 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+10:47:30 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'void rxCallback()':
+../src/main.cc:90:32: error: 'sprintf' was not declared in this scope
+     sprintf(data, "%.2f\n", val);
+                                ^
+../src/main.cc:109:32: error: 'sprintf' was not declared in this scope
+     sprintf(data, "%.2f\n", val);
+                                ^
+../src/main.cc:124:39: error: 'sprintf' was not declared in this scope
+    sprintf(data, "%.2f\n", temperature);
+                                       ^
+../src/main.cc:144:42: error: 'sprintf' was not declared in this scope
+    sprintf(data, "%.2f\n", batteryVoltage);
+                                          ^
+make: *** [src/main.o] Error 1
+10:47:46 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 564320	   3440	  32752	 600512	  929c0	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+10:47:52 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+10:48:24 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+10:53:10 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 564320	   3440	  32752	 600512	  929c0	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+10:53:18 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+11:02:57 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+11:03:21 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+11:08:43 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+11:08:59 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+11:09:01 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+11:09:25 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+11:11:02 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/RF/mrf24j.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/RF/mrf24j.o" -MMD -MP -MF"src/RF/mrf24j.d" -MT"src/RF/mrf24j.d" -o "src/RF/mrf24j.o" "../src/RF/mrf24j.cpp"
+../src/RF/mrf24j.cpp: In function 'void gpioInterruptHandler(void*)':
+../src/RF/mrf24j.cpp:53:9: warning: unused variable 'gpio' [-Wunused-variable]
+  XGpio *gpio = (XGpio *) CallBackRef;
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::write_short(uint8_t, uint8_t)':
+../src/RF/mrf24j.cpp:236:9: warning: unused variable 'status' [-Wunused-variable]
+     int status = XSpi_Transfer( &SpiInstance, &data, &rgbRx, sizeof(uint8_t) );
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::init()':
+../src/RF/mrf24j.cpp:346:13: warning: unused variable 'regi' [-Wunused-variable]
+     uint8_t regi = read_long(MRF_SLPCON0);
+             ^
+'Finished building: ../src/RF/mrf24j.cpp'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 564320	   3440	  32752	 600512	  929c0	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+11:11:14 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+11:11:29 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+11:11:42 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+11:12:41 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+11:13:12 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+11:13:24 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+11:13:39 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+11:15:19 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/RF/mrf24j.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/RF/mrf24j.o" -MMD -MP -MF"src/RF/mrf24j.d" -MT"src/RF/mrf24j.d" -o "src/RF/mrf24j.o" "../src/RF/mrf24j.cpp"
+../src/RF/mrf24j.cpp: In function 'void gpioInterruptHandler(void*)':
+../src/RF/mrf24j.cpp:53:9: warning: unused variable 'gpio' [-Wunused-variable]
+  XGpio *gpio = (XGpio *) CallBackRef;
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::write_short(uint8_t, uint8_t)':
+../src/RF/mrf24j.cpp:236:9: warning: unused variable 'status' [-Wunused-variable]
+     int status = XSpi_Transfer( &SpiInstance, &data, &rgbRx, sizeof(uint8_t) );
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::init()':
+../src/RF/mrf24j.cpp:346:13: warning: unused variable 'regi' [-Wunused-variable]
+     uint8_t regi = read_long(MRF_SLPCON0);
+             ^
+'Finished building: ../src/RF/mrf24j.cpp'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 564320	   3440	  32752	 600512	  929c0	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+11:16:54 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+11:18:27 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/RF/mrf24j.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/RF/mrf24j.o" -MMD -MP -MF"src/RF/mrf24j.d" -MT"src/RF/mrf24j.d" -o "src/RF/mrf24j.o" "../src/RF/mrf24j.cpp"
+../src/RF/mrf24j.cpp: In function 'void gpioInterruptHandler(void*)':
+../src/RF/mrf24j.cpp:53:9: warning: unused variable 'gpio' [-Wunused-variable]
+  XGpio *gpio = (XGpio *) CallBackRef;
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::write_short(uint8_t, uint8_t)':
+../src/RF/mrf24j.cpp:236:9: warning: unused variable 'status' [-Wunused-variable]
+     int status = XSpi_Transfer( &SpiInstance, &data, &rgbRx, sizeof(uint8_t) );
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::init()':
+../src/RF/mrf24j.cpp:346:13: warning: unused variable 'regi' [-Wunused-variable]
+     uint8_t regi = read_long(MRF_SLPCON0);
+             ^
+'Finished building: ../src/RF/mrf24j.cpp'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 564320	   3440	  32752	 600512	  929c0	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+11:18:44 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+11:18:59 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+11:19:11 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+11:19:25 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+11:19:38 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+11:19:39 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+11:25:57 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/RF/mrf24j.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/RF/mrf24j.o" -MMD -MP -MF"src/RF/mrf24j.d" -MT"src/RF/mrf24j.d" -o "src/RF/mrf24j.o" "../src/RF/mrf24j.cpp"
+../src/RF/mrf24j.cpp: In function 'void gpioInterruptHandler(void*)':
+../src/RF/mrf24j.cpp:53:9: warning: unused variable 'gpio' [-Wunused-variable]
+  XGpio *gpio = (XGpio *) CallBackRef;
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::write_short(uint8_t, uint8_t)':
+../src/RF/mrf24j.cpp:236:9: warning: unused variable 'status' [-Wunused-variable]
+     int status = XSpi_Transfer( &SpiInstance, &data, &rgbRx, sizeof(uint8_t) );
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::init()':
+../src/RF/mrf24j.cpp:346:13: warning: unused variable 'regi' [-Wunused-variable]
+     uint8_t regi = read_long(MRF_SLPCON0);
+             ^
+'Finished building: ../src/RF/mrf24j.cpp'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 564384	   3440	  32752	 600576	  92a00	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+11:26:24 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+11:26:39 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+11:26:52 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+11:27:16 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+11:27:33 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+11:27:52 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+11:27:59 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+11:28:28 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+11:28:38 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+11:28:41 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+11:28:45 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+11:28:58 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+11:29:15 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+11:29:35 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 564384	   3440	  32752	 600576	  92a00	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+11:29:44 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+11:29:49 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+11:30:18 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+11:31:48 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/RF/mrf24j.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/RF/mrf24j.o" -MMD -MP -MF"src/RF/mrf24j.d" -MT"src/RF/mrf24j.d" -o "src/RF/mrf24j.o" "../src/RF/mrf24j.cpp"
+../src/RF/mrf24j.cpp: In function 'void gpioInterruptHandler(void*)':
+../src/RF/mrf24j.cpp:53:9: warning: unused variable 'gpio' [-Wunused-variable]
+  XGpio *gpio = (XGpio *) CallBackRef;
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::write_short(uint8_t, uint8_t)':
+../src/RF/mrf24j.cpp:236:9: warning: unused variable 'status' [-Wunused-variable]
+     int status = XSpi_Transfer( &SpiInstance, &data, &rgbRx, sizeof(uint8_t) );
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::init()':
+../src/RF/mrf24j.cpp:346:13: warning: unused variable 'regi' [-Wunused-variable]
+     uint8_t regi = read_long(MRF_SLPCON0);
+             ^
+'Finished building: ../src/RF/mrf24j.cpp'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 564384	   3440	  32752	 600576	  92a00	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+11:32:13 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+11:32:20 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+11:32:36 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+11:33:03 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+11:33:50 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+11:34:11 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+11:38:27 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 564384	   3440	  32752	 600576	  92a00	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+11:38:41 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+11:40:25 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/RF/mrf24j.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/RF/mrf24j.o" -MMD -MP -MF"src/RF/mrf24j.d" -MT"src/RF/mrf24j.d" -o "src/RF/mrf24j.o" "../src/RF/mrf24j.cpp"
+../src/RF/mrf24j.cpp: In function 'void gpioInterruptHandler(void*)':
+../src/RF/mrf24j.cpp:53:9: warning: unused variable 'gpio' [-Wunused-variable]
+  XGpio *gpio = (XGpio *) CallBackRef;
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::write_short(uint8_t, uint8_t)':
+../src/RF/mrf24j.cpp:236:9: warning: unused variable 'status' [-Wunused-variable]
+     int status = XSpi_Transfer( &SpiInstance, &data, &rgbRx, sizeof(uint8_t) );
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::init()':
+../src/RF/mrf24j.cpp:346:13: warning: unused variable 'regi' [-Wunused-variable]
+     uint8_t regi = read_long(MRF_SLPCON0);
+             ^
+'Finished building: ../src/RF/mrf24j.cpp'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 564384	   3440	  32752	 600576	  92a00	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+11:41:15 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/RF/mrf24j.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/RF/mrf24j.o" -MMD -MP -MF"src/RF/mrf24j.d" -MT"src/RF/mrf24j.d" -o "src/RF/mrf24j.o" "../src/RF/mrf24j.cpp"
+../src/RF/mrf24j.cpp: In function 'void gpioInterruptHandler(void*)':
+../src/RF/mrf24j.cpp:53:9: warning: unused variable 'gpio' [-Wunused-variable]
+  XGpio *gpio = (XGpio *) CallBackRef;
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::write_short(uint8_t, uint8_t)':
+../src/RF/mrf24j.cpp:236:9: warning: unused variable 'status' [-Wunused-variable]
+     int status = XSpi_Transfer( &SpiInstance, &data, &rgbRx, sizeof(uint8_t) );
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::init()':
+../src/RF/mrf24j.cpp:346:13: warning: unused variable 'regi' [-Wunused-variable]
+     uint8_t regi = read_long(MRF_SLPCON0);
+             ^
+'Finished building: ../src/RF/mrf24j.cpp'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 564320	   3440	  32752	 600512	  929c0	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+11:43:08 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+11:43:13 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+11:43:33 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+11:43:45 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+11:44:00 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+11:44:12 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+11:44:18 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+11:44:29 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+11:44:42 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+11:44:54 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+11:45:19 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+11:45:25 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/RF/mrf24j.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/RF/mrf24j.o" -MMD -MP -MF"src/RF/mrf24j.d" -MT"src/RF/mrf24j.d" -o "src/RF/mrf24j.o" "../src/RF/mrf24j.cpp"
+../src/RF/mrf24j.cpp: In function 'void gpioInterruptHandler(void*)':
+../src/RF/mrf24j.cpp:53:9: warning: unused variable 'gpio' [-Wunused-variable]
+  XGpio *gpio = (XGpio *) CallBackRef;
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::write_short(uint8_t, uint8_t)':
+../src/RF/mrf24j.cpp:236:9: warning: unused variable 'status' [-Wunused-variable]
+     int status = XSpi_Transfer( &SpiInstance, &data, &rgbRx, sizeof(uint8_t) );
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::init()':
+../src/RF/mrf24j.cpp:346:13: warning: unused variable 'regi' [-Wunused-variable]
+     uint8_t regi = read_long(MRF_SLPCON0);
+             ^
+'Finished building: ../src/RF/mrf24j.cpp'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 564320	   3440	  32752	 600512	  929c0	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+11:46:16 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+11:46:33 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+11:47:13 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+11:48:12 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+12:25:25 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+12:26:15 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+12:27:00 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+12:32:02 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/RF/mrf24j.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/RF/mrf24j.o" -MMD -MP -MF"src/RF/mrf24j.d" -MT"src/RF/mrf24j.d" -o "src/RF/mrf24j.o" "../src/RF/mrf24j.cpp"
+../src/RF/mrf24j.cpp: In function 'void gpioInterruptHandler(void*)':
+../src/RF/mrf24j.cpp:53:9: warning: unused variable 'gpio' [-Wunused-variable]
+  XGpio *gpio = (XGpio *) CallBackRef;
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::write_short(uint8_t, uint8_t)':
+../src/RF/mrf24j.cpp:236:9: warning: unused variable 'status' [-Wunused-variable]
+     int status = XSpi_Transfer( &SpiInstance, &data, &rgbRx, sizeof(uint8_t) );
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::init()':
+../src/RF/mrf24j.cpp:346:13: warning: unused variable 'regi' [-Wunused-variable]
+     uint8_t regi = read_long(MRF_SLPCON0);
+             ^
+'Finished building: ../src/RF/mrf24j.cpp'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 564320	   3440	  32752	 600512	  929c0	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+12:32:08 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+12:32:34 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+12:34:13 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/RF/mrf24j.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/RF/mrf24j.o" -MMD -MP -MF"src/RF/mrf24j.d" -MT"src/RF/mrf24j.d" -o "src/RF/mrf24j.o" "../src/RF/mrf24j.cpp"
+../src/RF/mrf24j.cpp: In function 'void gpioInterruptHandler(void*)':
+../src/RF/mrf24j.cpp:53:9: warning: unused variable 'gpio' [-Wunused-variable]
+  XGpio *gpio = (XGpio *) CallBackRef;
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::write_short(uint8_t, uint8_t)':
+../src/RF/mrf24j.cpp:236:9: warning: unused variable 'status' [-Wunused-variable]
+     int status = XSpi_Transfer( &SpiInstance, &data, &rgbRx, sizeof(uint8_t) );
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::init()':
+../src/RF/mrf24j.cpp:346:13: warning: unused variable 'regi' [-Wunused-variable]
+     uint8_t regi = read_long(MRF_SLPCON0);
+             ^
+'Finished building: ../src/RF/mrf24j.cpp'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 564320	   3440	  32752	 600512	  929c0	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+12:34:25 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+12:34:59 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+13:52:19 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+13:52:35 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+19:19:06 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:173:2: error: 'OLED' was not declared in this scope
+  OLED.begin();
+  ^
+make: *** [src/main.o] Error 1
+19:19:30 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:196:29: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("PmodOLED");
+                             ^
+../src/main.cc:198:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("by Digilent");
+                                ^
+../src/main.cc:200:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Simple Demo");
+                                ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 565328	   3440	  32752	 601520	  92db0	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
