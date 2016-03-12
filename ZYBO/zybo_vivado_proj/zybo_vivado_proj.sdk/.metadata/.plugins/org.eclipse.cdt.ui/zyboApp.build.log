@@ -1,31 +1,6 @@
-19:19:30 **** Auto Build of configuration Debug for project zyboApp ****
+21:07:22 **** Auto Build of configuration Debug for project zyboApp ****
 make all 
-'Building file: ../src/main.cc'
-'Invoking: ARM g++ compiler'
-arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
-../src/main.cc: In function 'int main()':
-../src/main.cc:196:29: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
-    OLED.putString("PmodOLED");
-                             ^
-../src/main.cc:198:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
-    OLED.putString("by Digilent");
-                                ^
-../src/main.cc:200:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
-    OLED.putString("Simple Demo");
-                                ^
-'Finished building: ../src/main.cc'
-' '
-'Building target: zyboApp.elf'
-'Invoking: ARM g++ linker'
-arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
-'Finished building target: zyboApp.elf'
-' '
-'Invoking: ARM Print Size'
-arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 565328	   3440	  32752	 601520	  92db0	zyboApp.elf
-'Finished building: zyboApp.elf.size'
-' '
+make: Nothing to be done for `all'.
 
-19:19:33 Build Finished (took 2s.569ms)
+21:07:22 Build Finished (took 363ms)
 

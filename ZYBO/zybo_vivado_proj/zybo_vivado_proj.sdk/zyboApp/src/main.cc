@@ -28,6 +28,7 @@
 #include <iostream>
 #include <vector>
 #include <stdio.h>
+#include <algorithm>
 
 /************************** Object Definitions *****************************/
 OledClass OLED;
@@ -62,6 +63,7 @@ vector<float> phaseArray;
 float temperature;
 unsigned char humidity;
 float batteryVoltage;
+bool impedanceUpdated = false;
 
 void rxCallback()
 {
@@ -79,6 +81,7 @@ void rxCallback()
 		{
 			xil_printf("RF_MESSAGE_IMPEDANCE\n");
 			impedanceArray.clear();
+			impedanceUpdated = true;
 			for(; i < dataLen; i+=4)
 			{
 				float val;
@@ -155,6 +158,11 @@ void rxCallback()
 	}
 }
 
+long map(long x, long in_min, long in_max, long out_min, long out_max)
+{
+  return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+}
+
 int main(void)
 {
 	xil_printf("Start\n");
@@ -172,13 +180,13 @@ int main(void)
 	xil_printf("address16_write\n");
 	OLED.begin();
 	xil_printf("begin\n");
-	
+
 	while(1)
 
 	{
 		int irow;
 		int ib;
-
+		RF.checkIntFlag();
 		//Clear the virtual buffer
 		OLED.clearBuffer();
 		
@@ -186,10 +194,11 @@ int main(void)
 		OLED.setFillPattern(OLED.getStdPattern(0));
 		//Turn automatic updating off
 		OLED.setCharUpdate(0);
-		
+		usleep(100000);
+		RF.checkIntFlag();
 		//Draw a rectangle over wrting then slide the rectagle
 		//down slowly displaying all writing
-		for (irow = 0; irow < OLED.rowMax; irow++)
+		/*for (irow = 0; irow < OLED.rowMax; irow++)
 		{
 			OLED.clearBuffer();
 			OLED.setCursor(0, 0);
@@ -205,61 +214,50 @@ int main(void)
 			OLED.drawLine(127,irow);
 			OLED.updateDisplay();
 			usleep(100000);
-		}
-		
-		usleep(1000000);
-		
-		// Blink the display a bit.
-		OLED.displayOff();
-		usleep(500000);
-		OLED.displayOn();
-		usleep(500000);
-		
-		OLED.displayOff();
-		usleep(500000);
-		OLED.displayOn();
-		usleep(500000);
+			RF.checkIntFlag();
+		}*/
 
-		OLED.displayOff();
-		usleep(500000);
-		OLED.displayOn();
-		usleep(500000);
+		//draw impedance chart
+		OLED.clearBuffer();
 
-		usleep(2000000);
-		
-		// Now erase the characters from the display
-		for (irow = OLED.rowMax-1; irow >= 0; irow--)
+		if(impedanceArray.size() != 0 && impedanceUpdated)
 		{
-			OLED.setDrawColor(1);
-			OLED.setDrawMode(OLED.modeSet);
-			OLED.moveTo(0,irow);
-			OLED.drawLine(127,irow);
-			OLED.updateDisplay();
-			usleep(25000);
-			OLED.setDrawMode(OLED.modeXor);
-			OLED.moveTo(0, irow);
-			OLED.drawLine(127, irow);
-			OLED.updateDisplay();
+			impedanceUpdated = false;
+			std::vector<float>::iterator max = std::max_element(impedanceArray.begin(), impedanceArray.end());
+			std::vector<float>::iterator min = std::min_element(impedanceArray.begin(), impedanceArray.end());
+
+			//char data[5];
+			//OLED.setCursor(0, 0);
+
+			/*sprintf(data, "%.2f", *max);
+			OLED.putString(data);
+			OLED.setCursor(4, 12);
+			sprintf(data, "%.2f", *min);
+			OLED.putString(data);
+			OLED.updateDisplay();*/
+			if( *max > 700 && *min > 700 )
+			{
+				OLED.setCursor(0, 1);
+				OLED.putString("Error impedance");
+				OLED.setCursor(0, 3);
+				OLED.putString("Check the sensor");
+				OLED.updateDisplay();
+			}
+			else
+			{
+				int step = 128 / (impedanceArray.size() - 1);
+				for(int i = 0; i < impedanceArray.size()-1; i++)
+				{
+					long mappedVal = map((long)impedanceArray[i],(long)*min, (long)*max, 32, 0 );
+					OLED.moveTo(i * step, mappedVal );
+					mappedVal = map((long)impedanceArray[i+1],(long)*min, (long)*max, 32, 0 );
+					OLED.drawLine((i+1)*step, mappedVal);
+					OLED.updateDisplay();
+					usleep(50000);
+				}
+			}
 		}
 		
-		usleep(1000000); 
-
-		// Draw a rectangle in center of screen
-		// Display the 8 different patterns availible
-		OLED.setDrawMode(OLED.modeSet);
-
-		for(ib = 1; ib < 8; ib++)
-		{
-			OLED.clearBuffer();
-			
-			OLED.setFillPattern(OLED.getStdPattern(ib));
-			OLED.moveTo(55, 1);
-			OLED.drawFillRect(75, 27);
-			OLED.drawRect(75, 27);
-			OLED.updateDisplay();
-			
-			usleep(1000000);
-		}
 	}
 	
 	return XST_SUCCESS;

@@ -225,6 +225,7 @@ class Mrf24j
         bool registerRXCallback(RXCallback callback);
 
         void check_flags(void (*rx_handler)(void), void (*tx_handler)(void));
+        bool checkIntFlag();
 
     private:
 

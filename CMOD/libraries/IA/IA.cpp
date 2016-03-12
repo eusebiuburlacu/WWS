@@ -15,11 +15,11 @@ IA::IA()
 {
 	m_gainFactor = 0;
 	m_impedanceArray = { 0 };
-	m_startFreq = 5000;
+	m_startFreq = 3000;
 	m_incFreq = 1000;
-	m_incNum = 10;
+	m_incNum = 20;
 	m_cyclesNum = 25;
-	m_calibImpedance = 98200;
+	m_calibImpedance = 10000;
 	m_range = AD5933_RANGE_200mVpp;
 	m_pga = AD5933_PGA_1;
 	m_clock = AD5933_CONTROL_INT_SYSCLK;
@@ -83,9 +83,8 @@ void IA::readImpedanceSamples()
 	
 	do
 	{
-        status = m_AD5933.GetRegisterValue(AD5933_REG_STATUS,1);
         impedance = m_AD5933.CalculateImpedance(m_gainFactor, AD5933_FUNCTION_INC_FREQ);
-		m_impedanceArray[idx++] = impedance / 1000;
+		m_impedanceArray[idx++] = (float)impedance / 1000;
         //! Send the requested value to user 
         sprintf(tempString, "%.3f", (double)impedance / 1000);
         Serial.print("impedance=");
@@ -103,6 +102,7 @@ void IA::readImpedanceSamples()
               
         //! Update the currentFrequency 
         currentFreq = currentFreq + m_incFreq;
+		status = m_AD5933.GetRegisterValue(AD5933_REG_STATUS,1);
     }
 	while((status & AD5933_STAT_SWEEP_DONE) == 0 && idx < MAX_IMPEDANCE_SAMPLES);
 	

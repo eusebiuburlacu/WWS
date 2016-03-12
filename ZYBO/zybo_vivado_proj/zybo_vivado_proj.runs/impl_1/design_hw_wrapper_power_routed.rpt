@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
-| Date             : Mon Feb 22 22:55:29 2016
+| Date             : Sat Mar 12 18:16:02 2016
 | Host             : DESKTOP-567HUN5 running 64-bit major release  (build 9200)
 | Command          : report_power -file design_hw_wrapper_power_routed.rpt -pb design_hw_wrapper_power_summary_routed.pb
 | Design           : design_hw_wrapper
@@ -30,8 +30,8 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 1.708 |
-| Dynamic (W)              | 1.572 |
+| Total On-Chip Power (W)  | 1.710 |
+| Dynamic (W)              | 1.574 |
 | Device Static (W)        | 0.136 |
 | Effective TJA (C/W)      | 11.5  |
 | Max Ambient (C)          | 65.3  |
@@ -50,18 +50,18 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.009 |        3 |       --- |             --- |
-| Slice Logic              |     0.002 |     3822 |       --- |             --- |
-|   LUT as Logic           |     0.002 |     1204 |     17600 |            6.84 |
-|   Register               |    <0.001 |     1866 |     35200 |            5.30 |
+| Slice Logic              |     0.002 |     4031 |       --- |             --- |
+|   LUT as Logic           |     0.002 |     1296 |     17600 |            7.36 |
+|   Register               |    <0.001 |     1970 |     35200 |            5.60 |
 |   CARRY4                 |    <0.001 |       18 |      4400 |            0.41 |
 |   LUT as Distributed RAM |    <0.001 |       32 |      6000 |            0.53 |
 |   LUT as Shift Register  |    <0.001 |       70 |      6000 |            1.17 |
-|   Others                 |     0.000 |      318 |       --- |             --- |
-| Signals                  |     0.003 |     2775 |       --- |             --- |
-| I/O                      |     0.002 |       15 |       100 |           15.00 |
+|   Others                 |     0.000 |      328 |       --- |             --- |
+| Signals                  |     0.003 |     2915 |       --- |             --- |
+| I/O                      |     0.003 |       19 |       100 |           19.00 |
 | PS7                      |     1.556 |        1 |       --- |             --- |
 | Static Power             |     0.136 |          |           |                 |
-| Total                    |     1.708 |          |           |                 |
+| Total                    |     1.710 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,7 +71,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.021 |       0.014 |      0.007 |
+| Vccint    |       1.000 |     0.022 |       0.015 |      0.007 |
 | Vccaux    |       1.800 |     0.012 |       0.000 |      0.012 |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
 | Vcco25    |       2.500 |     0.002 |       0.001 |      0.001 |
@@ -147,8 +147,8 @@ Table of Contents
 +------------------------------------------------------------+-----------+
 | Name                                                       | Power (W) |
 +------------------------------------------------------------+-----------+
-| design_hw_wrapper                                          |     1.572 |
-|   design_hw_i                                              |     1.571 |
+| design_hw_wrapper                                          |     1.574 |
+|   design_hw_i                                              |     1.572 |
 |     axi_gpio_0                                             |    <0.001 |
 |       U0                                                   |    <0.001 |
 |         AXI_LITE_IPIF_I                                    |    <0.001 |
@@ -157,6 +157,14 @@ Table of Contents
 |         gpio_core_1                                        |    <0.001 |
 |           Not_Dual.INPUT_DOUBLE_REGS3                      |    <0.001 |
 |     axi_gpio_1                                             |    <0.001 |
+|       U0                                                   |    <0.001 |
+|         AXI_LITE_IPIF_I                                    |    <0.001 |
+|           I_SLAVE_ATTACHMENT                               |    <0.001 |
+|             I_DECODER                                      |    <0.001 |
+|         INTR_CTRLR_GEN.INTERRUPT_CONTROL_I                 |    <0.001 |
+|         gpio_core_1                                        |    <0.001 |
+|           Not_Dual.INPUT_DOUBLE_REGS3                      |    <0.001 |
+|     axi_gpio_2                                             |    <0.001 |
 |       U0                                                   |    <0.001 |
 |         AXI_LITE_IPIF_I                                    |    <0.001 |
 |           I_SLAVE_ATTACHMENT                               |    <0.001 |
@@ -292,12 +300,12 @@ Table of Contents
 |       inst                                                 |     1.557 |
 |         xlnx_axi_wrshim_unwrap_inst_gp0                    |     0.000 |
 |         xlnx_axi_wrshim_unwrap_inst_gp1                    |     0.000 |
-|     processing_system7_0_axi_periph                        |     0.005 |
+|     processing_system7_0_axi_periph                        |     0.006 |
 |       s00_couplers                                         |     0.005 |
 |         auto_pc                                            |     0.005 |
 |           inst                                             |     0.005 |
 |             gen_axilite.gen_b2s_conv.axilite_b2s           |     0.005 |
-|               RD.ar_channel_0                              |    <0.001 |
+|               RD.ar_channel_0                              |     0.001 |
 |                 ar_cmd_fsm_0                               |    <0.001 |
 |                 cmd_translator_0                           |    <0.001 |
 |                   incr_cmd_0                               |    <0.001 |
@@ -336,6 +344,10 @@ Table of Contents
 |   gpio_rtl_0_tri_iobuf_0                                   |     0.000 |
 |   gpio_rtl_0_tri_iobuf_1                                   |     0.000 |
 |   gpio_rtl_0_tri_iobuf_2                                   |     0.000 |
+|   gpio_rtl_1_tri_iobuf_0                                   |    <0.001 |
+|   gpio_rtl_1_tri_iobuf_1                                   |    <0.001 |
+|   gpio_rtl_1_tri_iobuf_2                                   |    <0.001 |
+|   gpio_rtl_1_tri_iobuf_3                                   |    <0.001 |
 |   gpio_rtl_tri_iobuf_0                                     |    <0.001 |
 |   gpio_rtl_tri_iobuf_1                                     |    <0.001 |
 |   gpio_rtl_tri_iobuf_2                                     |    <0.001 |

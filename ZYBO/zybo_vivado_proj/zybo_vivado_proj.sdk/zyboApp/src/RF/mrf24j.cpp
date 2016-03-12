@@ -34,7 +34,7 @@ volatile uint8_t flag_got_tx;
 static rx_info_t rx_info;
 static tx_info_t tx_info;
 
-static XSpi SpiInstance;
+static XSpi MSpiInstance;
 
 static XGpio gpioInstance;
 
@@ -45,20 +45,23 @@ static XScuGic gicInstance;
 #define RF_RESET_MASK		0x2
 #define RF_WAKE_MASK		0x4
 
+bool dataRec = false;
+
 extern Mrf24j RF;
 
 static void gpioInterruptHandler(void *CallBackRef)
 {
 	XGpio_InterruptDisable(&gpioInstance, XGPIO_IR_CH1_MASK);
 	XGpio *gpio = (XGpio *) CallBackRef;
-	int status = XGpio_InterruptGetStatus(&gpioInstance);
+	int status = XGpio_InterruptGetStatus(gpio);
 	if( status & XGPIO_IR_CH1_MASK )
 	{
 		XGpio_InterruptClear(&gpioInstance, XGPIO_IR_CH1_MASK);
-		RF.interrupt_handler();
+		int gpioReg = XGpio_DiscreteRead(&gpioInstance, 1);
+		if((gpioReg & RF_INTERRUPT_MASK) == 1)
+			dataRec = true;
 	}
 	XGpio_InterruptEnable(&gpioInstance, XGPIO_IR_CH1_MASK);
-
 }
 
 /**
@@ -70,6 +73,21 @@ Mrf24j::Mrf24j()
 
 }
 
+bool Mrf24j::checkIntFlag()
+{
+	int gpioReg = XGpio_DiscreteRead(&gpioInstance, 1);
+
+	//if((gpioReg & RF_INTERRUPT_MASK) == 1)
+		//RF.interrupt_handler();
+	if(dataRec)
+	{
+		RF.interrupt_handler();
+		dataRec = false;
+	}
+
+	return false;
+}
+
 int Mrf24j::initDrivers(void)
 {
 	// TODO: check pin direction
@@ -79,7 +97,6 @@ int Mrf24j::initDrivers(void)
 
 	XSpi_Config *SPIConfigPtr;
 	XGpio_Config *GPIOConfigPtr;
-	XScuGic_Config *GicConfigPtr;
 
 	int status;
 
@@ -92,7 +109,7 @@ int Mrf24j::initDrivers(void)
 		return XST_DEVICE_NOT_FOUND;
 	}
 
-	status = XSpi_CfgInitialize(&SpiInstance, SPIConfigPtr, SPIConfigPtr->BaseAddress);
+	status = XSpi_CfgInitialize(&MSpiInstance, SPIConfigPtr, SPIConfigPtr->BaseAddress);
 	if (status != XST_SUCCESS)
 	{
 		return XST_FAILURE;
@@ -101,7 +118,7 @@ int Mrf24j::initDrivers(void)
 	/*
 	 * Set the Spi device as a master.
 	 */
-	status = XSpi_SetOptions( &SpiInstance, XSP_MASTER_OPTION | XSP_MANUAL_SSELECT_OPTION ); //TO DO, add msb first config
+	status = XSpi_SetOptions( &MSpiInstance, XSP_MASTER_OPTION | XSP_MANUAL_SSELECT_OPTION ); //TO DO, add msb first config
 	if (status != XST_SUCCESS)
 	{
 		return XST_FAILURE;
@@ -110,12 +127,12 @@ int Mrf24j::initDrivers(void)
 	/*
 	* Start the SPI driver so that the device is enabled.
 	*/
-	XSpi_Start(&SpiInstance);
+	XSpi_Start(&MSpiInstance);
 
 	/*
 	* Disable Global interrupt to use polled mode operation
 	*/
-	XSpi_IntrGlobalDisable(&SpiInstance);
+	XSpi_IntrGlobalDisable(&MSpiInstance);
 
 	//GPIO config
 	GPIOConfigPtr = XGpio_LookupConfig(XPAR_GPIO_1_DEVICE_ID);
@@ -130,35 +147,7 @@ int Mrf24j::initDrivers(void)
 
 	XGpio_DiscreteWrite(&gpioInstance, 1, 0x6); //check register, check wake pin if it is ok high
 
-	GicConfigPtr = XScuGic_LookupConfig(XPAR_PS7_SCUGIC_0_DEVICE_ID);
-	if (GicConfigPtr == NULL)
-	{
-		return XST_DEVICE_NOT_FOUND;
-	}
 
-	status = XScuGic_CfgInitialize(&gicInstance, GicConfigPtr, GicConfigPtr->CpuBaseAddress);
-	if (status != XST_SUCCESS)
-	{
-		return XST_FAILURE;
-	}
-
-	Xil_ExceptionInit();
-
-	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_IRQ_INT,
-	(Xil_ExceptionHandler)XScuGic_InterruptHandler, &gicInstance);
-
-	XScuGic_Connect(&gicInstance, XPAR_FABRIC_AXI_GPIO_1_IP2INTC_IRPT_INTR,
-	(Xil_ExceptionHandler)gpioInterruptHandler, (void *)&gpioInstance);
-
-	XScuGic_Enable(&gicInstance, XPAR_FABRIC_AXI_GPIO_1_IP2INTC_IRPT_INTR);
-
-	XGpio_InterruptGlobalEnable(&gpioInstance);
-
-	XGpio_InterruptEnable(&gpioInstance, XGPIO_IR_CH1_MASK);
-
-	//
-
-	Xil_ExceptionEnable();
 	//for(int i = 0; i < 20; i++)
 	//{
 	//u32 intr = XGpio_InterruptGetEnabled(&gpioInstance);
@@ -192,33 +181,33 @@ uint8_t Mrf24j::read_short(uint8_t address)
 {
 	uint8_t rgbRx = 0;
 	uint8_t rgbTx = address<<1 & 0b01111110;
-    XSpi_SetSlaveSelectReg(&SpiInstance, 0x00);
+    XSpi_SetSlaveSelectReg(&MSpiInstance, 0x00);
 
-    SpiInstance.IsStarted = XIL_COMPONENT_IS_STARTED;
-    SpiInstance.SlaveSelectReg = 0;
-	XSpi_Transfer( &SpiInstance, &rgbTx, &rgbRx, sizeof(uint8_t) ); //transmit address
+    MSpiInstance.IsStarted = XIL_COMPONENT_IS_STARTED;
+    MSpiInstance.SlaveSelectReg = 0;
+	XSpi_Transfer( &MSpiInstance, &rgbTx, &rgbRx, sizeof(uint8_t) ); //transmit address
 	rgbTx = 0;
-	XSpi_Transfer( &SpiInstance, &rgbTx, &rgbRx, sizeof(uint8_t) ); //receive data
+	XSpi_Transfer( &MSpiInstance, &rgbTx, &rgbRx, sizeof(uint8_t) ); //receive data
 
-    XSpi_SetSlaveSelectReg(&SpiInstance, 0x01);
+    XSpi_SetSlaveSelectReg(&MSpiInstance, 0x01);
     return rgbRx;
 }
 
 uint8_t Mrf24j::read_long(word address) 
 {
 	uint8_t rgbRx = 0;
-    XSpi_SetSlaveSelectReg(&SpiInstance, 0x00);
-    SpiInstance.SlaveSelectReg = 0;
+    XSpi_SetSlaveSelectReg(&MSpiInstance, 0x00);
+    MSpiInstance.SlaveSelectReg = 0;
     uint8_t ahigh = address >> 3;
     uint8_t alow = address << 5;
     uint8_t rgbTx = 0x80 | ahigh;
-    SpiInstance.IsStarted = XIL_COMPONENT_IS_STARTED;
-	XSpi_Transfer( &SpiInstance, &rgbTx, &rgbRx, sizeof(uint8_t) );
-	XSpi_Transfer( &SpiInstance, &alow, &rgbRx, sizeof(uint8_t) );
+    MSpiInstance.IsStarted = XIL_COMPONENT_IS_STARTED;
+	XSpi_Transfer( &MSpiInstance, &rgbTx, &rgbRx, sizeof(uint8_t) );
+	XSpi_Transfer( &MSpiInstance, &alow, &rgbRx, sizeof(uint8_t) );
 	rgbTx = 0;
-	XSpi_Transfer( &SpiInstance, &rgbTx, &rgbRx, sizeof(uint8_t) ); //receive data
+	XSpi_Transfer( &MSpiInstance, &rgbTx, &rgbRx, sizeof(uint8_t) ); //receive data
 
-    XSpi_SetSlaveSelectReg(&SpiInstance, 0x01);
+    XSpi_SetSlaveSelectReg(&MSpiInstance, 0x01);
     return rgbRx;
 }
 
@@ -228,30 +217,30 @@ void Mrf24j::write_short(uint8_t address, uint8_t data)
 	uint8_t rgbRx = 0;
 	uint8_t rgbTx = (address<<1 & 0b01111110) | 0x01;
 
-    XSpi_SetSlaveSelectReg(&SpiInstance, 0x00);
-    SpiInstance.SlaveSelectReg = 0;
-    SpiInstance.IsStarted = XIL_COMPONENT_IS_STARTED;
+    XSpi_SetSlaveSelectReg(&MSpiInstance, 0x00);
+    MSpiInstance.SlaveSelectReg = 0;
+    MSpiInstance.IsStarted = XIL_COMPONENT_IS_STARTED;
     // 0 for top short address, 1 bottom for write
-	XSpi_Transfer( &SpiInstance, &rgbTx, &rgbRx, sizeof(uint8_t) );
-    int status = XSpi_Transfer( &SpiInstance, &data, &rgbRx, sizeof(uint8_t) );
-    XSpi_SetSlaveSelectReg(&SpiInstance, 0x01);
+	XSpi_Transfer( &MSpiInstance, &rgbTx, &rgbRx, sizeof(uint8_t) );
+    int status = XSpi_Transfer( &MSpiInstance, &data, &rgbRx, sizeof(uint8_t) );
+    XSpi_SetSlaveSelectReg(&MSpiInstance, 0x01);
 }
 
 void Mrf24j::write_long(word address, uint8_t data) 
 {
 	uint8_t rgbRx = 0;
-    XSpi_SetSlaveSelectReg(&SpiInstance, 0x00);
-    SpiInstance.SlaveSelectReg = 0;
+    XSpi_SetSlaveSelectReg(&MSpiInstance, 0x00);
+    MSpiInstance.SlaveSelectReg = 0;
     uint8_t ahigh = address >> 3;
     uint8_t alow = address << 5;
     uint8_t rgbTx =  0x80 | ahigh;
-    SpiInstance.IsStarted = XIL_COMPONENT_IS_STARTED;
-	XSpi_Transfer( &SpiInstance, &rgbTx, &rgbRx, sizeof(uint8_t) );	 // high bit for long
+    MSpiInstance.IsStarted = XIL_COMPONENT_IS_STARTED;
+	XSpi_Transfer( &MSpiInstance, &rgbTx, &rgbRx, sizeof(uint8_t) );	 // high bit for long
 	rgbTx = alow | 0x10;
-	XSpi_Transfer( &SpiInstance, &rgbTx, &rgbRx, sizeof(uint8_t) ); 	 // last bit for write
-	XSpi_Transfer( &SpiInstance, &data, &rgbRx, sizeof(uint8_t) ); 			 //write data
+	XSpi_Transfer( &MSpiInstance, &rgbTx, &rgbRx, sizeof(uint8_t) ); 	 // last bit for write
+	XSpi_Transfer( &MSpiInstance, &data, &rgbRx, sizeof(uint8_t) ); 			 //write data
 
-    XSpi_SetSlaveSelectReg(&SpiInstance, 0x01);
+    XSpi_SetSlaveSelectReg(&MSpiInstance, 0x01);
 }
 
 word Mrf24j::get_pan(void) {
@@ -332,6 +321,8 @@ void Mrf24j::init(void) {
         ; // wait for soft reset to finish
     }
     */
+
+	XScuGic_Config *GicConfigPtr;
     write_short(MRF_PACON2, 0x98); // – Initialize FIFOEN = 1 and TXONTS = 0x6.
     write_short(MRF_TXSTBL, 0x95); // – Initialize RFSTBL = 0x9.
 
@@ -357,6 +348,36 @@ void Mrf24j::init(void) {
     write_short(MRF_RFCTL, 0x04); //  – Reset RF state machine.
     write_short(MRF_RFCTL, 0x00); // part 2
     usleep(1000); // delay at least 192usec
+
+    GicConfigPtr = XScuGic_LookupConfig(XPAR_PS7_SCUGIC_0_DEVICE_ID);
+    	if (GicConfigPtr == NULL)
+    	{
+    		//return XST_DEVICE_NOT_FOUND;
+    	}
+
+    	int status = XScuGic_CfgInitialize(&gicInstance, GicConfigPtr, GicConfigPtr->CpuBaseAddress);
+    	if (status != XST_SUCCESS)
+    	{
+    		//return XST_FAILURE;
+    	}
+
+    	Xil_ExceptionInit();
+
+    	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_IRQ_INT,
+    	(Xil_ExceptionHandler)XScuGic_InterruptHandler, &gicInstance);
+
+    	XScuGic_Connect(&gicInstance, XPAR_FABRIC_AXI_GPIO_1_IP2INTC_IRPT_INTR,
+    	(Xil_ExceptionHandler)gpioInterruptHandler, (void *)&gpioInstance);
+
+    	XScuGic_Enable(&gicInstance, XPAR_FABRIC_AXI_GPIO_1_IP2INTC_IRPT_INTR);
+
+    	XGpio_InterruptGlobalEnable(&gpioInstance);
+
+    	XGpio_InterruptEnable(&gpioInstance, XGPIO_IR_CH1_MASK);
+
+    	//
+
+    	Xil_ExceptionEnable();
 }
 
 /**

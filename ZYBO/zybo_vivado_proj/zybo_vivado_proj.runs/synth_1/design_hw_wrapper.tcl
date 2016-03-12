@@ -35,13 +35,16 @@ set_property used_in_implementation false [get_files -all f:/Proiecte_si_concurs
 set_property used_in_implementation false [get_files -all f:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.srcs/sources_1/bd/design_hw/ip/design_hw_axi_gpio_1_0/design_hw_axi_gpio_1_0_board.xdc]
 set_property used_in_implementation false [get_files -all f:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.srcs/sources_1/bd/design_hw/ip/design_hw_axi_gpio_1_0/design_hw_axi_gpio_1_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all f:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.srcs/sources_1/bd/design_hw/ip/design_hw_axi_gpio_1_0/design_hw_axi_gpio_1_0.xdc]
+set_property used_in_implementation false [get_files -all f:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.srcs/sources_1/bd/design_hw/ip/design_hw_axi_gpio_2_2/design_hw_axi_gpio_2_2_board.xdc]
+set_property used_in_implementation false [get_files -all f:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.srcs/sources_1/bd/design_hw/ip/design_hw_axi_gpio_2_2/design_hw_axi_gpio_2_2_ooc.xdc]
+set_property used_in_implementation false [get_files -all f:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.srcs/sources_1/bd/design_hw/ip/design_hw_axi_gpio_2_2/design_hw_axi_gpio_2_2.xdc]
 set_property used_in_implementation false [get_files -all f:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.srcs/sources_1/bd/design_hw/ip/design_hw_auto_pc_0/design_hw_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.srcs/sources_1/bd/design_hw/design_hw_ooc.xdc]
 set_property is_locked true [get_files F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.srcs/sources_1/bd/design_hw/design_hw.bd]
 
 read_vhdl -library xil_defaultlib F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.srcs/sources_1/bd/design_hw/hdl/design_hw_wrapper.vhd
-read_xdc F:/Proiecte_si_concursuri/WWS/zybo/exercise_1/exercise_1.srcs/constrs_1/new/my_constraints.xdc
-set_property used_in_implementation false [get_files F:/Proiecte_si_concursuri/WWS/zybo/exercise_1/exercise_1.srcs/constrs_1/new/my_constraints.xdc]
+read_xdc F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.srcs/constrs_1/new/my_constraints.xdc
+set_property used_in_implementation false [get_files F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.srcs/constrs_1/new/my_constraints.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]

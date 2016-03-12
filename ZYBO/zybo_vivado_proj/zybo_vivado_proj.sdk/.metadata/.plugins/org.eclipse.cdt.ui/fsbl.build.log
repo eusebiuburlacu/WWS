@@ -1,6 +1,14 @@
-14:47:42 **** Auto Build of configuration Debug for project fsbl ****
+18:50:19 **** Auto Build of configuration Debug for project fsbl ****
 make all 
-make: Nothing to be done for `all'.
+'Building file: ../src/fsbl_hooks.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/fsbl_hooks.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/fsbl_hooks.d" -MT"src/fsbl_hooks.d" -o "src/fsbl_hooks.o" "../src/fsbl_hooks.c"
+In file included from ../src/fsbl_hooks.c:54:0:
+../src/fsbl.h:299:20: fatal error: xil_io.h: No such file or directory
+ #include "xil_io.h"
+                    ^
+compilation terminated.
+make: *** [src/fsbl_hooks.o] Error 1
 
-14:47:42 Build Finished (took 286ms)
+18:50:19 Build Finished (took 448ms)
 

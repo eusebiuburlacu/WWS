@@ -135,7 +135,7 @@ uint8_t *	pbOledFontUser;
 */
 uint8_t	rgbOledBmp[cbOledDispMax];
 
-static XSpi SpiInstance;
+ XSpi SpiInstance;
 
 static XGpio gpioInstance;
 

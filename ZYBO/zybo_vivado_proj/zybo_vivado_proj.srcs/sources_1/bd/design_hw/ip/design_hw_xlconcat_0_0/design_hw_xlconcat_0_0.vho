@@ -57,7 +57,8 @@ COMPONENT design_hw_xlconcat_0_0
     In0 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
     In1 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
     In2 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-    dout : OUT STD_LOGIC_VECTOR(2 DOWNTO 0)
+    In3 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+    dout : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
   );
 END COMPONENT;
 -- COMP_TAG_END ------ End COMPONENT Declaration ------------
@@ -71,6 +72,7 @@ your_instance_name : design_hw_xlconcat_0_0
     In0 => In0,
     In1 => In1,
     In2 => In2,
+    In3 => In3,
     dout => dout
   );
 -- INST_TAG_END ------ End INSTANTIATION Template ---------

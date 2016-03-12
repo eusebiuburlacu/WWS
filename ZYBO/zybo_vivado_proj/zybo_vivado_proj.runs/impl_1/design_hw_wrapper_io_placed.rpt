@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
-| Date         : Mon Feb 22 22:54:41 2016
+| Date         : Sat Mar 12 18:15:15 2016
 | Host         :  running 64-bit major release  (build 9200)
 | Command      : report_io -file design_hw_wrapper_io_placed.rpt
 | Design       : design_hw_wrapper
@@ -23,7 +23,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|           145 |
+|           149 |
 +---------------+
 
 
@@ -308,7 +308,7 @@ Table of Contents
 | P13        |                      |            | GND                     | GND           |                   |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |
 | P14        | spi_rtl_0_io1_io     | High Range | IO_L6P_T0_34            | BIDIR         | LVCMOS25          |      34 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      | PULLDOWN  |          |      | NONE             |
 | P15        |                      | High Range | IO_L24P_T3_34           | User IO       |                   |      34 |            |      |                     |                      |         |            |           |          |      |                  |
-| P16        |                      | High Range | IO_L24N_T3_34           | User IO       |                   |      34 |            |      |                     |                      |         |            |           |          |      |                  |
+| P16        | gpio_rtl_1_tri_io[2] | High Range | IO_L24N_T3_34           | BIDIR         | LVCMOS25          |      34 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      | PULLDOWN  |          |      | NONE             |
 | P17        |                      |            | GND                     | GND           |                   |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |
 | P18        |                      | High Range | IO_L23N_T3_34           | User IO       |                   |      34 |            |      |                     |                      |         |            |           |          |      |                  |
 | P19        |                      | High Range | IO_L13N_T2_MRCC_34      | User IO       |                   |      34 |            |      |                     |                      |         |            |           |          |      |                  |
@@ -330,7 +330,7 @@ Table of Contents
 | R15        |                      | High Range | VCCO_34                 | VCCO          |                   |      34 |            |      |                     |                      |    2.50 |            |           |          |      |                  |
 | R16        |                      | High Range | IO_L19P_T3_34           | User IO       |                   |      34 |            |      |                     |                      |         |            |           |          |      |                  |
 | R17        |                      | High Range | IO_L19N_T3_VREF_34      | User IO       |                   |      34 |            |      |                     |                      |         |            |           |          |      |                  |
-| R18        |                      | High Range | IO_L20N_T3_34           | User IO       |                   |      34 |            |      |                     |                      |         |            |           |          |      |                  |
+| R18        | gpio_rtl_1_tri_io[3] | High Range | IO_L20N_T3_34           | BIDIR         | LVCMOS25          |      34 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      | PULLDOWN  |          |      | NONE             |
 | R19        |                      | High Range | IO_0_34                 | User IO       |                   |      34 |            |      |                     |                      |         |            |           |          |      |                  |
 | R20        |                      |            | GND                     | GND           |                   |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |
 | T1         | DDR_dm[2]            |            | PS_DDR_DM2_502          | BIDIR         | SSTL15_T_DCI      |         |            | FAST |           DCI SPLIT |            FP_VTT_50 |         | FIXED      |           |          |      | SPLIT            |
@@ -388,7 +388,7 @@ Table of Contents
 | V13        | gpio_rtl_0_tri_io[0] | High Range | IO_L3N_T0_DQS_34        | BIDIR         | LVCMOS25          |      34 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      | PULLDOWN  |          |      | NONE             |
 | V14        |                      | High Range | VCCO_34                 | VCCO          |                   |      34 |            |      |                     |                      |    2.50 |            |           |          |      |                  |
 | V15        |                      | High Range | IO_L10P_T1_34           | User IO       |                   |      34 |            |      |                     |                      |         |            |           |          |      |                  |
-| V16        |                      | High Range | IO_L18P_T2_34           | User IO       |                   |      34 |            |      |                     |                      |         |            |           |          |      |                  |
+| V16        | gpio_rtl_1_tri_io[1] | High Range | IO_L18P_T2_34           | BIDIR         | LVCMOS25          |      34 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      | PULLDOWN  |          |      | NONE             |
 | V17        | gpio_rtl_tri_io[2]   | High Range | IO_L21P_T3_DQS_34       | BIDIR         | LVCMOS25          |      34 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      | PULLDOWN  |          |      | NONE             |
 | V18        | gpio_rtl_tri_io[3]   | High Range | IO_L21N_T3_DQS_34       | BIDIR         | LVCMOS25          |      34 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      | PULLDOWN  |          |      | NONE             |
 | V19        |                      |            | GND                     | GND           |                   |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |
@@ -428,7 +428,7 @@ Table of Contents
 | Y13        |                      |            | NC                      | Not Connected |                   |         |            |      |                     |                      |         |            |           |          |      |                  |
 | Y14        |                      | High Range | IO_L8N_T1_34            | User IO       |                   |      34 |            |      |                     |                      |         |            |           |          |      |                  |
 | Y15        |                      |            | GND                     | GND           |                   |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |
-| Y16        |                      | High Range | IO_L7P_T1_34            | User IO       |                   |      34 |            |      |                     |                      |         |            |           |          |      |                  |
+| Y16        | gpio_rtl_1_tri_io[0] | High Range | IO_L7P_T1_34            | BIDIR         | LVCMOS25          |      34 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      | PULLDOWN  |          |      | NONE             |
 | Y17        |                      | High Range | IO_L7N_T1_34            | User IO       |                   |      34 |            |      |                     |                      |         |            |           |          |      |                  |
 | Y18        |                      | High Range | IO_L17P_T2_34           | User IO       |                   |      34 |            |      |                     |                      |         |            |           |          |      |                  |
 | Y19        |                      | High Range | IO_L17N_T2_34           | User IO       |                   |      34 |            |      |                     |                      |         |            |           |          |      |                  |

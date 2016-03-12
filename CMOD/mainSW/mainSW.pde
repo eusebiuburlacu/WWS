@@ -16,6 +16,8 @@ void setup()
 {
     Serial.begin(9600);
     Serial.println("word");
+    pinMode(10, OUTPUT);
+    digitalWrite(10, LOW);
     initRF();
     ia.initIA();
 }
@@ -35,7 +37,7 @@ void callback()
 void loop()
 {
   ia.readImpedanceSamples();
-  sendImpedance( imp, 4, callback );
+  //sendImpedance( imp, 4, callback );
   delay(2);
   sendPhase(pha, 4, callback);
   delay(2);
