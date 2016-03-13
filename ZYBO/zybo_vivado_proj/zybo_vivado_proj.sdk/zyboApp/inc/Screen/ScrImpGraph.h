@@ -10,8 +10,9 @@
 
 #include "ScreenInterface.h"
 
-class ScrImpGraph : IScreen
+class ScrImpGraph : public IScreen
 {
+public:
 	ScrImpGraph();
 	~ScrImpGraph();
 	virtual void sendIncCmd();

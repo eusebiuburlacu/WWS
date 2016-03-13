@@ -4,12 +4,39 @@
  *  Created on: 12.03.2016
  *      Author: Sebi
  */
+#include "Screen/ScrSweepSettings.h"
 
-#ifndef SCRSWEEPSETTINGS_H_
-#define SCRSWEEPSETTINGS_H_
+ScrSweepSettings::ScrSweepSettings()
+{
 
+}
 
+ScrSweepSettings::~ScrSweepSettings()
+{
 
+}
 
+void ScrSweepSettings::sendIncCmd()
+{
 
-#endif /* SCRSWEEPSETTINGS_H_ */
+}
+
+void ScrSweepSettings::sendDecrCmd()
+{
+
+}
+
+void ScrSweepSettings::sendChScrCmd()
+{
+
+}
+
+void ScrSweepSettings::sendConfirmCmd()
+{
+
+}
+
+void ScrSweepSettings::printData()
+{
+
+}

@@ -1,0 +1,43 @@
+/*
+ * ScrIncFrecSett.h
+ *
+ *  Created on: 12.03.2016
+ *      Author: Sebi
+ */
+
+#include "Screen/ScrIncFrecSett.h"
+
+ScrIncFrecSett::ScrIncFrecSett()
+{
+
+}
+
+ScrIncFrecSett::~ScrIncFrecSett()
+{
+
+}
+
+void ScrIncFrecSett::sendIncCmd()
+{
+
+}
+
+void ScrIncFrecSett::sendDecrCmd()
+{
+
+}
+
+void ScrIncFrecSett::sendChScrCmd()
+{
+
+}
+
+void ScrIncFrecSett::sendConfirmCmd()
+{
+
+}
+
+void ScrIncFrecSett::printData()
+{
+
+}

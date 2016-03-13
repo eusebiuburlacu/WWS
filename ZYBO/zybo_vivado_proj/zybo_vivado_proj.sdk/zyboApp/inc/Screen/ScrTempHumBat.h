@@ -10,8 +10,9 @@
 
 #include "ScreenInterface.h"
 
-class ScrTempHumBat : IScreen
+class ScrTempHumBat : public IScreen
 {
+public:
 	ScrTempHumBat();
 	~ScrTempHumBat();
 	virtual void sendIncCmd();

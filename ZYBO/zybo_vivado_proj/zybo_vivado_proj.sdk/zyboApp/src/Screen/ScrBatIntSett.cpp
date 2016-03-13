@@ -1,15 +1,43 @@
 /*
- * ScrBatIntSett.h
+ * ScrBatIntSett.cpp
  *
  *  Created on: 12.03.2016
  *      Author: Sebi
  */
 
-#ifndef SCRBATINTSETT_H_
-#define SCRBATINTSETT_H_
+#include "Screen/ScrBatIntSett.h"
 
+ScrBatIntSett::ScrBatIntSett()
+{
 
+}
 
+ScrBatIntSett::~ScrBatIntSett()
+{
 
+}
 
-#endif /* SCRBATINTSETT_H_ */
+void ScrBatIntSett::sendIncCmd()
+{
+
+}
+
+void ScrBatIntSett::sendDecrCmd()
+{
+
+}
+
+void ScrBatIntSett::sendChScrCmd()
+{
+
+}
+
+void ScrBatIntSett::sendConfirmCmd()
+{
+
+}
+
+void ScrBatIntSett::printData()
+{
+
+}

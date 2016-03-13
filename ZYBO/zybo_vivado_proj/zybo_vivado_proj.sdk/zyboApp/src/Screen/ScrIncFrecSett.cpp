@@ -5,11 +5,39 @@
  *      Author: Sebi
  */
 
-#ifndef SCRINCFRECSETT_H_
-#define SCRINCFRECSETT_H_
+#include "Screen/ScrIncFreqSett.h"
 
+ScrIncFreqSett::ScrIncFreqSett()
+{
 
+}
 
+ScrIncFreqSett::~ScrIncFreqSett()
+{
 
+}
 
-#endif /* SCRINCFRECSETT_H_ */
+void ScrIncFreqSett::sendIncCmd()
+{
+
+}
+
+void ScrIncFreqSett::sendDecrCmd()
+{
+
+}
+
+void ScrIncFreqSett::sendChScrCmd()
+{
+
+}
+
+void ScrIncFreqSett::sendConfirmCmd()
+{
+
+}
+
+void ScrIncFreqSett::printData()
+{
+
+}

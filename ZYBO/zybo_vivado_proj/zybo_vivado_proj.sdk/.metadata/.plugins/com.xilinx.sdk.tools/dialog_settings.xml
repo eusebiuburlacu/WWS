@@ -7,6 +7,6 @@
 	<item value="qspi_single" key="design_hw_wrapper_hw_platform_0-flashType"/>
 	<item value="false" key="design_hw_wrapper_hw_platform_0-verifyFlash"/>
 	<item value="Auto Detect" key="design_hw_wrapper_hw_platform_0-device"/>
-	<item value="C:\Users\Sebi\Desktop\Newfolder\BOOT.bin" key="design_hw_wrapper_hw_platform_0-imgFile"/>
+	<item value="F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\boot\BOOT.bin" key="design_hw_wrapper_hw_platform_0-imgFile"/>
 	<item value="" key="design_hw_wrapper_hw_platform_0-offSet"/>
 </section>

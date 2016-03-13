@@ -10,8 +10,9 @@
 
 #include "ScreenInterface.h"
 
-class ScrStartFreqSett : IScreen
+class ScrStartFreqSett : public IScreen
 {
+public:
 	ScrStartFreqSett();
 	~ScrStartFreqSett();
 	virtual void sendIncCmd();

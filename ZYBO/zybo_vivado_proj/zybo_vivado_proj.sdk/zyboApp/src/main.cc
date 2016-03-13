@@ -29,6 +29,8 @@
 #include <vector>
 #include <stdio.h>
 #include <algorithm>
+#include "Screen/ScreenInterface.h"
+#include "Screen/Screens.h"
 
 /************************** Object Definitions *****************************/
 OledClass OLED;
@@ -60,6 +62,8 @@ typedef enum
 
 vector<float> impedanceArray;
 vector<float> phaseArray;
+vector<IScreen*> screens;
+
 float temperature;
 unsigned char humidity;
 float batteryVoltage;
@@ -158,11 +162,6 @@ void rxCallback()
 	}
 }
 
-long map(long x, long in_min, long in_max, long out_min, long out_max)
-{
-  return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
-}
-
 int main(void)
 {
 	xil_printf("Start\n");
@@ -180,6 +179,8 @@ int main(void)
 	xil_printf("address16_write\n");
 	OLED.begin();
 	xil_printf("begin\n");
+
+	screens = getMenuScreens();
 
 	while(1)
 
@@ -219,44 +220,13 @@ int main(void)
 
 		//draw impedance chart
 		OLED.clearBuffer();
+		screens[0]->printData();
 
-		if(impedanceArray.size() != 0 && impedanceUpdated)
+		/*for(int i = 0; i < screens.size(); i++)
 		{
-			impedanceUpdated = false;
-			std::vector<float>::iterator max = std::max_element(impedanceArray.begin(), impedanceArray.end());
-			std::vector<float>::iterator min = std::min_element(impedanceArray.begin(), impedanceArray.end());
-
-			//char data[5];
-			//OLED.setCursor(0, 0);
-
-			/*sprintf(data, "%.2f", *max);
-			OLED.putString(data);
-			OLED.setCursor(4, 12);
-			sprintf(data, "%.2f", *min);
-			OLED.putString(data);
-			OLED.updateDisplay();*/
-			if( *max > 700 && *min > 700 )
-			{
-				OLED.setCursor(0, 1);
-				OLED.putString("Error impedance");
-				OLED.setCursor(0, 3);
-				OLED.putString("Check the sensor");
-				OLED.updateDisplay();
-			}
-			else
-			{
-				int step = 128 / (impedanceArray.size() - 1);
-				for(int i = 0; i < impedanceArray.size()-1; i++)
-				{
-					long mappedVal = map((long)impedanceArray[i],(long)*min, (long)*max, 32, 0 );
-					OLED.moveTo(i * step, mappedVal );
-					mappedVal = map((long)impedanceArray[i+1],(long)*min, (long)*max, 32, 0 );
-					OLED.drawLine((i+1)*step, mappedVal);
-					OLED.updateDisplay();
-					usleep(50000);
-				}
-			}
-		}
+			screens[i]->printData();
+			usleep(1000000);
+		}*/
 		
 	}
 	

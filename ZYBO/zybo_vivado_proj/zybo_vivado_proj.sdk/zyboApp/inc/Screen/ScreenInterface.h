@@ -8,8 +8,11 @@
 #ifndef SCREENINTERFACE_H_
 #define SCREENINTERFACE_H_
 
+#include "OLED/OLED.h"
+extern OledClass OLED;
 class IScreen
 {
+public:
 	IScreen(){};
 	virtual ~IScreen(){};
 

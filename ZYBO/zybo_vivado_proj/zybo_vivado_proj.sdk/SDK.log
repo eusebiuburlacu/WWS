@@ -3322,3 +3322,38 @@ Debug Operation Not Supported on the Target, Current Processor State is not "Sto
 19:55:12 INFO  : Processor reset is completed for ps7_cortexa9_0
 19:56:19 INFO  : Processor reset is completed for ps7_cortexa9_0
 21:09:06 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+13:01:48 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+13:01:58 INFO  : XSDB server has started successfully.
+13:02:16 INFO  : Processing command line option -hwspec F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper.hdf.
+13:02:28 INFO  : Checking for hwspec changes in the project design_hw_wrapper_hw_platform_0.
+13:02:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:02:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279760164A" && level==0} -index 1' command is executed.
+13:02:38 INFO  : FPGA configured successfully with bitstream "F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper_hw_platform_0/design_hw_wrapper.bit"
+13:04:13 INFO  : ps7_init is completed.
+13:04:13 INFO  : ps7_post_config is completed.
+13:04:13 INFO  : Processor reset is completed for ps7_cortexa9_0
+13:04:35 INFO  : Processor reset is completed for ps7_cortexa9_0
+13:04:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:04:38 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279760164A" && level==0} -index 1' command is executed.
+13:04:40 INFO  : FPGA configured successfully with bitstream "F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper_hw_platform_0/design_hw_wrapper.bit"
+13:05:19 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:05:19 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279760164A" && level==0} -index 1' command is executed.
+13:05:21 INFO  : FPGA configured successfully with bitstream "F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper_hw_platform_0/design_hw_wrapper.bit"
+13:05:37 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:57:58 INFO  : ps7_init is completed.
+15:57:58 INFO  : ps7_post_config is completed.
+15:57:58 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:58:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:58:03 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279760164A" && level==0} -index 1' command is executed.
+15:58:04 INFO  : FPGA configured successfully with bitstream "F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper_hw_platform_0/design_hw_wrapper.bit"
+00:02:40 INFO  : ps7_init is completed.
+00:02:40 INFO  : ps7_post_config is completed.
+00:02:40 INFO  : Processor reset is completed for ps7_cortexa9_0
+00:02:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:02:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279760164A" && level==0} -index 1' command is executed.
+00:02:46 INFO  : FPGA configured successfully with bitstream "F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper_hw_platform_0/design_hw_wrapper.bit"
+00:05:25 INFO  : Processor reset is completed for ps7_cortexa9_0
+00:11:36 INFO  : Invoking Bootgen: bootgen -image boot.bif -o F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\boot\BOOT.bin
+00:11:36 INFO  : Creating new bif file F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\boot\boot.bif
+00:11:38 INFO  : Bootgen command execution is done.
+00:13:41 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 

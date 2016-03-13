@@ -8,8 +8,11 @@
 #ifndef SCRTEMPHUMSETT_H_
 #define SCRTEMPHUMSETT_H_
 
-class ScrTempHumSett : IScreen
+#include "ScreenInterface.h"
+
+class ScrTempHumSett : public IScreen
 {
+public:
 	ScrTempHumSett();
 	~ScrTempHumSett();
 	virtual void sendIncCmd();

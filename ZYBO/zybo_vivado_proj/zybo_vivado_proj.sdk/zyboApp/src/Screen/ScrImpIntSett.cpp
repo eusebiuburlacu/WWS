@@ -5,11 +5,39 @@
  *      Author: Sebi
  */
 
-#ifndef SCRIMPINTSETT_H_
-#define SCRIMPINTSETT_H_
+#include "Screen/ScrImpIntSett.h"
 
+ScrImpIntSett::ScrImpIntSett()
+{
 
+}
 
+ScrImpIntSett::~ScrImpIntSett()
+{
 
+}
 
-#endif /* SCRIMPINTSETT_H_ */
+void ScrImpIntSett::sendIncCmd()
+{
+
+}
+
+void ScrImpIntSett::sendDecrCmd()
+{
+
+}
+
+void ScrImpIntSett::sendChScrCmd()
+{
+
+}
+
+void ScrImpIntSett::sendConfirmCmd()
+{
+
+}
+
+void ScrImpIntSett::printData()
+{
+
+}

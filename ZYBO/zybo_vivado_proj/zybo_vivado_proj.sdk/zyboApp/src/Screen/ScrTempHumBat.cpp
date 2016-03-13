@@ -4,12 +4,41 @@
  *  Created on: 12.03.2016
  *      Author: Sebi
  */
+#include "Screen/ScrTempHumBat.h"
 
-#ifndef SCRTEMPHUMBAT_H_
-#define SCRTEMPHUMBAT_H_
+ScrTempHumBat::ScrTempHumBat()
+{
 
+}
 
+ScrTempHumBat::~ScrTempHumBat()
+{
 
+}
 
+void ScrTempHumBat::sendIncCmd()
+{
 
-#endif /* SCRTEMPHUMBAT_H_ */
+}
+
+void ScrTempHumBat::sendDecrCmd()
+{
+
+}
+
+void ScrTempHumBat::sendChScrCmd()
+{
+
+}
+
+void ScrTempHumBat::sendConfirmCmd()
+{
+
+}
+
+void ScrTempHumBat::printData()
+{
+	OLED.setCursor(4, 12);
+		OLED.putString("temp screen");
+		OLED.updateDisplay();
+}

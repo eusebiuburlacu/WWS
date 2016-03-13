@@ -1,15 +1,44 @@
 /*
- * ScrImpCurSett.h
+ * ScrImpCurSett.cpp
  *
  *  Created on: 12.03.2016
  *      Author: Sebi
  */
+#include "Screen/ScrImpCurSett.h"
 
-#ifndef SCRIMPCURSETT_H_
-#define SCRIMPCURSETT_H_
+ScrImpCurSett::ScrImpCurSett()
+{
 
+}
 
+ScrImpCurSett::~ScrImpCurSett()
+{
 
+}
 
+void ScrImpCurSett::sendIncCmd()
+{
 
-#endif /* SCRIMPCURSETT_H_ */
+}
+
+void ScrImpCurSett::sendDecrCmd()
+{
+
+}
+
+void ScrImpCurSett::sendChScrCmd()
+{
+
+}
+
+void ScrImpCurSett::sendConfirmCmd()
+{
+
+}
+
+void ScrImpCurSett::printData()
+{
+	OLED.setCursor(4, 12);
+	OLED.putString("Curr seT");
+	OLED.updateDisplay();
+}

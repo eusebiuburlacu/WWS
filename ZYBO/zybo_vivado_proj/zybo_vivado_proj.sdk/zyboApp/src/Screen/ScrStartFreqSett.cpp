@@ -5,11 +5,39 @@
  *      Author: Sebi
  */
 
-#ifndef SCRSTARTFREQSETT_H_
-#define SCRSTARTFREQSETT_H_
+#include "Screen/ScrStartFreqSett.h"
 
+ScrStartFreqSett::ScrStartFreqSett()
+{
 
+}
 
+ScrStartFreqSett::~ScrStartFreqSett()
+{
 
+}
 
-#endif /* SCRSTARTFREQSETT_H_ */
+void ScrStartFreqSett::sendIncCmd()
+{
+
+}
+
+void ScrStartFreqSett::sendDecrCmd()
+{
+
+}
+
+void ScrStartFreqSett::sendChScrCmd()
+{
+
+}
+
+void ScrStartFreqSett::sendConfirmCmd()
+{
+
+}
+
+void ScrStartFreqSett::printData()
+{
+
+}

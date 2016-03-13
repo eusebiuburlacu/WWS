@@ -5,11 +5,39 @@
  *      Author: Sebi
  */
 
-#ifndef SCRINCNUMSETT_H_
-#define SCRINCNUMSETT_H_
+#include "Screen/ScrIncNumSett.h"
 
+ScrIncNumSett::ScrIncNumSett()
+{
 
+}
 
+ScrIncNumSett::~ScrIncNumSett()
+{
 
+}
 
-#endif /* SCRINCNUMSETT_H_ */
+void ScrIncNumSett::sendIncCmd()
+{
+
+}
+
+void ScrIncNumSett::sendDecrCmd()
+{
+
+}
+
+void ScrIncNumSett::sendChScrCmd()
+{
+
+}
+
+void ScrIncNumSett::sendConfirmCmd()
+{
+
+}
+
+void ScrIncNumSett::printData()
+{
+
+}

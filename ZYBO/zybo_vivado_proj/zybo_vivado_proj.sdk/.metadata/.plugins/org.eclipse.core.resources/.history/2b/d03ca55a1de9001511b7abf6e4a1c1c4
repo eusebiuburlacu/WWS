@@ -1,0 +1,14 @@
+/*
+ * ScrImpCurSett.cpp
+ *
+ *  Created on: 12.03.2016
+ *      Author: Sebi
+ */
+
+ScrImpCurSett()
+~ScrImpCurSett()
+virtual void sendIncCmd()
+virtual void sendDecrCmd()
+virtual void sendChScrCmd()
+virtual void sendConfirmCmd()
+virtual void printData()

@@ -10,8 +10,9 @@
 
 #include "ScreenInterface.h"
 
-class ScrImpCurSett : IScreen
+class ScrImpCurSett : public IScreen
 {
+public:
 	ScrImpCurSett();
 	~ScrImpCurSett();
 	virtual void sendIncCmd();

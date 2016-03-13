@@ -1,0 +1,52 @@
+/*
+ * ScrImpGraph.h
+ *
+ *  Created on: 12.03.2016
+ *      Author: Sebi
+ */
+
+/*
+ * ScrImpCurSett.cpp
+ *
+ *  Created on: 12.03.2016
+ *      Author: Sebi
+ */
+#include "Screen/ScrImpGraph.h"
+extern vector<float> impedanceArray;
+
+ScrImpGraph::ScrImpGraph()
+{
+
+}
+
+ScrImpGraph::~ScrImpGraph()
+{
+
+}
+
+void ScrImpGraph::sendIncCmd()
+{
+
+}
+
+void ScrImpGraph::sendDecrCmd()
+{
+
+}
+
+void ScrImpGraph::sendChScrCmd()
+{
+
+}
+
+void ScrImpGraph::sendConfirmCmd()
+{
+
+}
+
+void ScrImpGraph::printData()
+{
+	OLED.setCursor(4, 12);
+	OLED.putString("Graph screen");
+	OLED.updateDisplay();
+}

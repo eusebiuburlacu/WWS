@@ -4783,3 +4783,2592 @@ make: Nothing to be done for `all'.
 21:07:22 **** Auto Build of configuration Debug for project zyboApp ****
 make all 
 make: Nothing to be done for `all'.
+13:03:59 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+13:04:13 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+13:04:34 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+13:05:36 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+15:01:43 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrBatIntSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrBatIntSett.o" -MMD -MP -MF"src/Screen/ScrBatIntSett.d" -MT"src/Screen/ScrBatIntSett.d" -o "src/Screen/ScrBatIntSett.o" "../src/Screen/ScrBatIntSett.cpp"
+../src/Screen/ScrBatIntSett.cpp:10:27: fatal error: ScrBatIntSett.h: No such file or directory
+ #include "ScrBatIntSett.h"
+                           ^
+compilation terminated.
+make: *** [src/Screen/ScrBatIntSett.o] Error 1
+15:02:39 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrBatIntSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrBatIntSett.o" -MMD -MP -MF"src/Screen/ScrBatIntSett.d" -MT"src/Screen/ScrBatIntSett.d" -o "src/Screen/ScrBatIntSett.o" "../src/Screen/ScrBatIntSett.cpp"
+../src/Screen/ScrBatIntSett.cpp:13:1: error: expected class-name before '{' token
+ {
+ ^
+make: *** [src/Screen/ScrBatIntSett.o] Error 1
+15:02:40 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrBatIntSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrBatIntSett.o" -MMD -MP -MF"src/Screen/ScrBatIntSett.d" -MT"src/Screen/ScrBatIntSett.d" -o "src/Screen/ScrBatIntSett.o" "../src/Screen/ScrBatIntSett.cpp"
+../src/Screen/ScrBatIntSett.cpp:13:1: error: expected class-name before '{' token
+ {
+ ^
+make: *** [src/Screen/ScrBatIntSett.o] Error 1
+15:03:32 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrBatIntSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrBatIntSett.o" -MMD -MP -MF"src/Screen/ScrBatIntSett.d" -MT"src/Screen/ScrBatIntSett.d" -o "src/Screen/ScrBatIntSett.o" "../src/Screen/ScrBatIntSett.cpp"
+../src/Screen/ScrBatIntSett.cpp:12:15: error: ISO C++ forbids declaration of 'ScrBatIntSett' with no type [-fpermissive]
+ ScrBatIntSett()
+               ^
+../src/Screen/ScrBatIntSett.cpp: In function 'int ScrBatIntSett()':
+../src/Screen/ScrBatIntSett.cpp:15:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/Screen/ScrBatIntSett.cpp: At global scope:
+../src/Screen/ScrBatIntSett.cpp:17:15: error: expected class-name before '(' token
+ ~ScrBatIntSett()
+               ^
+../src/Screen/ScrBatIntSett.cpp:22:25: error: 'virtual' outside class declaration
+ virtual void sendIncCmd()
+                         ^
+../src/Screen/ScrBatIntSett.cpp:27:26: error: 'virtual' outside class declaration
+ virtual void sendDecrCmd()
+                          ^
+../src/Screen/ScrBatIntSett.cpp:32:27: error: 'virtual' outside class declaration
+ virtual void sendChScrCmd()
+                           ^
+../src/Screen/ScrBatIntSett.cpp:37:29: error: 'virtual' outside class declaration
+ virtual void sendConfirmCmd()
+                             ^
+../src/Screen/ScrBatIntSett.cpp:42:24: error: 'virtual' outside class declaration
+ virtual void printData()
+                        ^
+make: *** [src/Screen/ScrBatIntSett.o] Error 1
+15:04:03 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrBatIntSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrBatIntSett.o" -MMD -MP -MF"src/Screen/ScrBatIntSett.d" -MT"src/Screen/ScrBatIntSett.d" -o "src/Screen/ScrBatIntSett.o" "../src/Screen/ScrBatIntSett.cpp"
+../src/Screen/ScrBatIntSett.cpp:12:1: error: 'ScrBatIntSett' does not name a type
+ ScrBatIntSett::ScrBatIntSett()
+ ^
+../src/Screen/ScrBatIntSett.cpp:17:1: error: 'ScrBatIntSett' does not name a type
+ ScrBatIntSett::~ScrBatIntSett()
+ ^
+../src/Screen/ScrBatIntSett.cpp:22:6: error: 'ScrBatIntSett' has not been declared
+ void ScrBatIntSett::sendIncCmd()
+      ^
+../src/Screen/ScrBatIntSett.cpp:27:6: error: 'ScrBatIntSett' has not been declared
+ void ScrBatIntSett::sendDecrCmd()
+      ^
+../src/Screen/ScrBatIntSett.cpp:32:6: error: 'ScrBatIntSett' has not been declared
+ void ScrBatIntSett::sendChScrCmd()
+      ^
+../src/Screen/ScrBatIntSett.cpp:37:6: error: 'ScrBatIntSett' has not been declared
+ void ScrBatIntSett::sendConfirmCmd()
+      ^
+../src/Screen/ScrBatIntSett.cpp:42:6: error: 'ScrBatIntSett' has not been declared
+ void ScrBatIntSett::printData()
+      ^
+make: *** [src/Screen/ScrBatIntSett.o] Error 1
+15:04:39 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrBatIntSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrBatIntSett.o" -MMD -MP -MF"src/Screen/ScrBatIntSett.d" -MT"src/Screen/ScrBatIntSett.d" -o "src/Screen/ScrBatIntSett.o" "../src/Screen/ScrBatIntSett.cpp"
+../src/Screen/ScrBatIntSett.cpp:12:1: error: 'ScrBatIntSett' does not name a type
+ ScrBatIntSett::ScrBatIntSett()
+ ^
+../src/Screen/ScrBatIntSett.cpp:17:1: error: 'ScrBatIntSett' does not name a type
+ ScrBatIntSett::~ScrBatIntSett()
+ ^
+../src/Screen/ScrBatIntSett.cpp:22:6: error: 'ScrBatIntSett' has not been declared
+ void ScrBatIntSett::sendIncCmd()
+      ^
+../src/Screen/ScrBatIntSett.cpp:27:6: error: 'ScrBatIntSett' has not been declared
+ void ScrBatIntSett::sendDecrCmd()
+      ^
+../src/Screen/ScrBatIntSett.cpp:32:6: error: 'ScrBatIntSett' has not been declared
+ void ScrBatIntSett::sendChScrCmd()
+      ^
+../src/Screen/ScrBatIntSett.cpp:37:6: error: 'ScrBatIntSett' has not been declared
+ void ScrBatIntSett::sendConfirmCmd()
+      ^
+../src/Screen/ScrBatIntSett.cpp:42:6: error: 'ScrBatIntSett' has not been declared
+ void ScrBatIntSett::printData()
+      ^
+make: *** [src/Screen/ScrBatIntSett.o] Error 1
+15:06:09 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrBatIntSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrBatIntSett.o" -MMD -MP -MF"src/Screen/ScrBatIntSett.d" -MT"src/Screen/ScrBatIntSett.d" -o "src/Screen/ScrBatIntSett.o" "../src/Screen/ScrBatIntSett.cpp"
+../src/Screen/ScrBatIntSett.cpp:12:1: error: 'ScrBatIntSett' does not name a type
+ ScrBatIntSett::ScrBatIntSett()
+ ^
+../src/Screen/ScrBatIntSett.cpp:17:1: error: 'ScrBatIntSett' does not name a type
+ ScrBatIntSett::~ScrBatIntSett()
+ ^
+../src/Screen/ScrBatIntSett.cpp:22:6: error: 'ScrBatIntSett' has not been declared
+ void ScrBatIntSett::sendIncCmd()
+      ^
+../src/Screen/ScrBatIntSett.cpp:27:6: error: 'ScrBatIntSett' has not been declared
+ void ScrBatIntSett::sendDecrCmd()
+      ^
+../src/Screen/ScrBatIntSett.cpp:32:6: error: 'ScrBatIntSett' has not been declared
+ void ScrBatIntSett::sendChScrCmd()
+      ^
+../src/Screen/ScrBatIntSett.cpp:37:6: error: 'ScrBatIntSett' has not been declared
+ void ScrBatIntSett::sendConfirmCmd()
+      ^
+../src/Screen/ScrBatIntSett.cpp:42:6: error: 'ScrBatIntSett' has not been declared
+ void ScrBatIntSett::printData()
+      ^
+make: *** [src/Screen/ScrBatIntSett.o] Error 1
+15:06:20 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrBatIntSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrBatIntSett.o" -MMD -MP -MF"src/Screen/ScrBatIntSett.d" -MT"src/Screen/ScrBatIntSett.d" -o "src/Screen/ScrBatIntSett.o" "../src/Screen/ScrBatIntSett.cpp"
+../src/Screen/ScrBatIntSett.cpp:12:1: error: 'ScrBatIntSett' does not name a type
+ ScrBatIntSett::ScrBatIntSett()
+ ^
+../src/Screen/ScrBatIntSett.cpp:17:1: error: 'ScrBatIntSett' does not name a type
+ ScrBatIntSett::~ScrBatIntSett()
+ ^
+../src/Screen/ScrBatIntSett.cpp:22:6: error: 'ScrBatIntSett' has not been declared
+ void ScrBatIntSett::sendIncCmd()
+      ^
+../src/Screen/ScrBatIntSett.cpp:27:6: error: 'ScrBatIntSett' has not been declared
+ void ScrBatIntSett::sendDecrCmd()
+      ^
+../src/Screen/ScrBatIntSett.cpp:32:6: error: 'ScrBatIntSett' has not been declared
+ void ScrBatIntSett::sendChScrCmd()
+      ^
+../src/Screen/ScrBatIntSett.cpp:37:6: error: 'ScrBatIntSett' has not been declared
+ void ScrBatIntSett::sendConfirmCmd()
+      ^
+../src/Screen/ScrBatIntSett.cpp:42:6: error: 'ScrBatIntSett' has not been declared
+ void ScrBatIntSett::printData()
+      ^
+make: *** [src/Screen/ScrBatIntSett.o] Error 1
+15:06:47 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrBatIntSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrBatIntSett.o" -MMD -MP -MF"src/Screen/ScrBatIntSett.d" -MT"src/Screen/ScrBatIntSett.d" -o "src/Screen/ScrBatIntSett.o" "../src/Screen/ScrBatIntSett.cpp"
+../src/Screen/ScrBatIntSett.cpp:12:1: error: 'ScrBatIntSett' does not name a type
+ ScrBatIntSett::ScrBatIntSett()
+ ^
+../src/Screen/ScrBatIntSett.cpp:17:1: error: 'ScrBatIntSett' does not name a type
+ ScrBatIntSett::~ScrBatIntSett()
+ ^
+../src/Screen/ScrBatIntSett.cpp:22:6: error: 'ScrBatIntSett' has not been declared
+ void ScrBatIntSett::sendIncCmd()
+      ^
+../src/Screen/ScrBatIntSett.cpp:27:6: error: 'ScrBatIntSett' has not been declared
+ void ScrBatIntSett::sendDecrCmd()
+      ^
+../src/Screen/ScrBatIntSett.cpp:32:6: error: 'ScrBatIntSett' has not been declared
+ void ScrBatIntSett::sendChScrCmd()
+      ^
+../src/Screen/ScrBatIntSett.cpp:37:6: error: 'ScrBatIntSett' has not been declared
+ void ScrBatIntSett::sendConfirmCmd()
+      ^
+../src/Screen/ScrBatIntSett.cpp:42:6: error: 'ScrBatIntSett' has not been declared
+ void ScrBatIntSett::printData()
+      ^
+make: *** [src/Screen/ScrBatIntSett.o] Error 1
+15:06:52 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrBatIntSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrBatIntSett.o" -MMD -MP -MF"src/Screen/ScrBatIntSett.d" -MT"src/Screen/ScrBatIntSett.d" -o "src/Screen/ScrBatIntSett.o" "../src/Screen/ScrBatIntSett.cpp"
+../src/Screen/ScrBatIntSett.cpp:12:1: error: 'ScrBatIntSett' does not name a type
+ ScrBatIntSett::ScrBatIntSett()
+ ^
+../src/Screen/ScrBatIntSett.cpp:17:1: error: 'ScrBatIntSett' does not name a type
+ ScrBatIntSett::~ScrBatIntSett()
+ ^
+../src/Screen/ScrBatIntSett.cpp:22:6: error: 'ScrBatIntSett' has not been declared
+ void ScrBatIntSett::sendIncCmd()
+      ^
+../src/Screen/ScrBatIntSett.cpp:27:6: error: 'ScrBatIntSett' has not been declared
+ void ScrBatIntSett::sendDecrCmd()
+      ^
+../src/Screen/ScrBatIntSett.cpp:32:6: error: 'ScrBatIntSett' has not been declared
+ void ScrBatIntSett::sendChScrCmd()
+      ^
+../src/Screen/ScrBatIntSett.cpp:37:6: error: 'ScrBatIntSett' has not been declared
+ void ScrBatIntSett::sendConfirmCmd()
+      ^
+../src/Screen/ScrBatIntSett.cpp:42:6: error: 'ScrBatIntSett' has not been declared
+ void ScrBatIntSett::printData()
+      ^
+make: *** [src/Screen/ScrBatIntSett.o] Error 1
+15:08:42 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrBatIntSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrBatIntSett.o" -MMD -MP -MF"src/Screen/ScrBatIntSett.d" -MT"src/Screen/ScrBatIntSett.d" -o "src/Screen/ScrBatIntSett.o" "../src/Screen/ScrBatIntSett.cpp"
+../src/Screen/ScrBatIntSett.cpp:12:1: error: 'ScrBatIntSett' does not name a type
+ ScrBatIntSett::ScrBatIntSett()
+ ^
+../src/Screen/ScrBatIntSett.cpp:17:1: error: 'ScrBatIntSett' does not name a type
+ ScrBatIntSett::~ScrBatIntSett()
+ ^
+../src/Screen/ScrBatIntSett.cpp:22:6: error: 'ScrBatIntSett' has not been declared
+ void ScrBatIntSett::sendIncCmd()
+      ^
+../src/Screen/ScrBatIntSett.cpp:27:6: error: 'ScrBatIntSett' has not been declared
+ void ScrBatIntSett::sendDecrCmd()
+      ^
+../src/Screen/ScrBatIntSett.cpp:32:6: error: 'ScrBatIntSett' has not been declared
+ void ScrBatIntSett::sendChScrCmd()
+      ^
+../src/Screen/ScrBatIntSett.cpp:37:6: error: 'ScrBatIntSett' has not been declared
+ void ScrBatIntSett::sendConfirmCmd()
+      ^
+../src/Screen/ScrBatIntSett.cpp:42:6: error: 'ScrBatIntSett' has not been declared
+ void ScrBatIntSett::printData()
+      ^
+make: *** [src/Screen/ScrBatIntSett.o] Error 1
+15:08:50 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrBatIntSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrBatIntSett.o" -MMD -MP -MF"src/Screen/ScrBatIntSett.d" -MT"src/Screen/ScrBatIntSett.d" -o "src/Screen/ScrBatIntSett.o" "../src/Screen/ScrBatIntSett.cpp"
+../src/Screen/ScrBatIntSett.cpp:12:1: error: 'ScrBatIntSett' does not name a type
+ ScrBatIntSett::ScrBatIntSett()
+ ^
+../src/Screen/ScrBatIntSett.cpp:17:1: error: 'ScrBatIntSett' does not name a type
+ ScrBatIntSett::~ScrBatIntSett()
+ ^
+../src/Screen/ScrBatIntSett.cpp:22:6: error: 'ScrBatIntSett' has not been declared
+ void ScrBatIntSett::sendIncCmd()
+      ^
+../src/Screen/ScrBatIntSett.cpp:27:6: error: 'ScrBatIntSett' has not been declared
+ void ScrBatIntSett::sendDecrCmd()
+      ^
+../src/Screen/ScrBatIntSett.cpp:32:6: error: 'ScrBatIntSett' has not been declared
+ void ScrBatIntSett::sendChScrCmd()
+      ^
+../src/Screen/ScrBatIntSett.cpp:37:6: error: 'ScrBatIntSett' has not been declared
+ void ScrBatIntSett::sendConfirmCmd()
+      ^
+../src/Screen/ScrBatIntSett.cpp:42:6: error: 'ScrBatIntSett' has not been declared
+ void ScrBatIntSett::printData()
+      ^
+make: *** [src/Screen/ScrBatIntSett.o] Error 1
+15:09:08 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrBatIntSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrBatIntSett.o" -MMD -MP -MF"src/Screen/ScrBatIntSett.d" -MT"src/Screen/ScrBatIntSett.d" -o "src/Screen/ScrBatIntSett.o" "../src/Screen/ScrBatIntSett.cpp"
+../src/Screen/ScrBatIntSett.cpp:12:1: error: 'ScrBatIntSett' does not name a type
+ ScrBatIntSett::ScrBatIntSett()
+ ^
+../src/Screen/ScrBatIntSett.cpp:17:1: error: 'ScrBatIntSett' does not name a type
+ ScrBatIntSett::~ScrBatIntSett()
+ ^
+../src/Screen/ScrBatIntSett.cpp:22:6: error: 'ScrBatIntSett' has not been declared
+ void ScrBatIntSett::sendIncCmd()
+      ^
+../src/Screen/ScrBatIntSett.cpp:27:6: error: 'ScrBatIntSett' has not been declared
+ void ScrBatIntSett::sendDecrCmd()
+      ^
+../src/Screen/ScrBatIntSett.cpp:32:6: error: 'ScrBatIntSett' has not been declared
+ void ScrBatIntSett::sendChScrCmd()
+      ^
+../src/Screen/ScrBatIntSett.cpp:37:6: error: 'ScrBatIntSett' has not been declared
+ void ScrBatIntSett::sendConfirmCmd()
+      ^
+../src/Screen/ScrBatIntSett.cpp:42:6: error: 'ScrBatIntSett' has not been declared
+ void ScrBatIntSett::printData()
+      ^
+make: *** [src/Screen/ScrBatIntSett.o] Error 1
+15:09:54 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrBatIntSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrBatIntSett.o" -MMD -MP -MF"src/Screen/ScrBatIntSett.d" -MT"src/Screen/ScrBatIntSett.d" -o "src/Screen/ScrBatIntSett.o" "../src/Screen/ScrBatIntSett.cpp"
+../src/Screen/ScrBatIntSett.cpp:22:6: error: 'ScrBatIntSett' has not been declared
+ void ScrBatIntSett::sendIncCmd()
+      ^
+../src/Screen/ScrBatIntSett.cpp:27:6: error: 'ScrBatIntSett' has not been declared
+ void ScrBatIntSett::sendDecrCmd()
+      ^
+../src/Screen/ScrBatIntSett.cpp:32:6: error: 'ScrBatIntSett' has not been declared
+ void ScrBatIntSett::sendChScrCmd()
+      ^
+../src/Screen/ScrBatIntSett.cpp:37:6: error: 'ScrBatIntSett' has not been declared
+ void ScrBatIntSett::sendConfirmCmd()
+      ^
+../src/Screen/ScrBatIntSett.cpp:42:6: error: 'ScrBatIntSett' has not been declared
+ void ScrBatIntSett::printData()
+      ^
+make: *** [src/Screen/ScrBatIntSett.o] Error 1
+15:10:01 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrBatIntSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrBatIntSett.o" -MMD -MP -MF"src/Screen/ScrBatIntSett.d" -MT"src/Screen/ScrBatIntSett.d" -o "src/Screen/ScrBatIntSett.o" "../src/Screen/ScrBatIntSett.cpp"
+../src/Screen/ScrBatIntSett.cpp:12:1: error: 'ScrBatIntSett' does not name a type
+ ScrBatIntSett::ScrBatIntSett()
+ ^
+../src/Screen/ScrBatIntSett.cpp:17:1: error: 'ScrBatIntSett' does not name a type
+ ScrBatIntSett::~ScrBatIntSett()
+ ^
+../src/Screen/ScrBatIntSett.cpp:22:6: error: 'ScrBatIntSett' has not been declared
+ void ScrBatIntSett::sendIncCmd()
+      ^
+../src/Screen/ScrBatIntSett.cpp:27:6: error: 'ScrBatIntSett' has not been declared
+ void ScrBatIntSett::sendDecrCmd()
+      ^
+../src/Screen/ScrBatIntSett.cpp:32:6: error: 'ScrBatIntSett' has not been declared
+ void ScrBatIntSett::sendChScrCmd()
+      ^
+../src/Screen/ScrBatIntSett.cpp:37:6: error: 'ScrBatIntSett' has not been declared
+ void ScrBatIntSett::sendConfirmCmd()
+      ^
+../src/Screen/ScrBatIntSett.cpp:42:6: error: 'ScrBatIntSett' has not been declared
+ void ScrBatIntSett::printData()
+      ^
+make: *** [src/Screen/ScrBatIntSett.o] Error 1
+15:10:24 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrBatIntSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrBatIntSett.o" -MMD -MP -MF"src/Screen/ScrBatIntSett.d" -MT"src/Screen/ScrBatIntSett.d" -o "src/Screen/ScrBatIntSett.o" "../src/Screen/ScrBatIntSett.cpp"
+../src/Screen/ScrBatIntSett.cpp:12:1: error: 'ScrBatIntSett' does not name a type
+ ScrBatIntSett::ScrBatIntSett()
+ ^
+../src/Screen/ScrBatIntSett.cpp:17:1: error: 'ScrBatIntSett' does not name a type
+ ScrBatIntSett::~ScrBatIntSett()
+ ^
+../src/Screen/ScrBatIntSett.cpp:22:6: error: 'ScrBatIntSett' has not been declared
+ void ScrBatIntSett::sendIncCmd()
+      ^
+../src/Screen/ScrBatIntSett.cpp:27:6: error: 'ScrBatIntSett' has not been declared
+ void ScrBatIntSett::sendDecrCmd()
+      ^
+../src/Screen/ScrBatIntSett.cpp:32:6: error: 'ScrBatIntSett' has not been declared
+ void ScrBatIntSett::sendChScrCmd()
+      ^
+../src/Screen/ScrBatIntSett.cpp:37:6: error: 'ScrBatIntSett' has not been declared
+ void ScrBatIntSett::sendConfirmCmd()
+      ^
+../src/Screen/ScrBatIntSett.cpp:42:6: error: 'ScrBatIntSett' has not been declared
+ void ScrBatIntSett::printData()
+      ^
+make: *** [src/Screen/ScrBatIntSett.o] Error 1
+15:10:35 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrBatIntSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrBatIntSett.o" -MMD -MP -MF"src/Screen/ScrBatIntSett.d" -MT"src/Screen/ScrBatIntSett.d" -o "src/Screen/ScrBatIntSett.o" "../src/Screen/ScrBatIntSett.cpp"
+In file included from ../inc/Screen/ScrBatIntSett.h:11:0,
+                 from ../src/Screen/ScrBatIntSett.cpp:8:
+../inc/Screen/ScreenInterface.h: In constructor 'ScrBatIntSett::ScrBatIntSett()':
+../inc/Screen/ScreenInterface.h:13:2: error: 'IScreen::IScreen()' is private
+  IScreen(){};
+  ^
+../src/Screen/ScrBatIntSett.cpp:10:30: error: within this context
+ ScrBatIntSett::ScrBatIntSett()
+                              ^
+In file included from ../inc/Screen/ScrBatIntSett.h:11:0,
+                 from ../src/Screen/ScrBatIntSett.cpp:8:
+../inc/Screen/ScreenInterface.h:14:10: error: 'IScreen::~IScreen()' is private
+  virtual ~IScreen(){};
+          ^
+../src/Screen/ScrBatIntSett.cpp:10:30: error: within this context
+ ScrBatIntSett::ScrBatIntSett()
+                              ^
+In file included from ../inc/Screen/ScrBatIntSett.h:11:0,
+                 from ../src/Screen/ScrBatIntSett.cpp:8:
+../inc/Screen/ScreenInterface.h: In destructor 'virtual ScrBatIntSett::~ScrBatIntSett()':
+../inc/Screen/ScreenInterface.h:14:10: error: 'IScreen::~IScreen()' is private
+  virtual ~IScreen(){};
+          ^
+../src/Screen/ScrBatIntSett.cpp:15:31: error: within this context
+ ScrBatIntSett::~ScrBatIntSett()
+                               ^
+make: *** [src/Screen/ScrBatIntSett.o] Error 1
+15:10:53 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrBatIntSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrBatIntSett.o" -MMD -MP -MF"src/Screen/ScrBatIntSett.d" -MT"src/Screen/ScrBatIntSett.d" -o "src/Screen/ScrBatIntSett.o" "../src/Screen/ScrBatIntSett.cpp"
+'Finished building: ../src/Screen/ScrBatIntSett.cpp'
+' '
+'Building file: ../src/Screen/ScrImpCurSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrImpCurSett.o" -MMD -MP -MF"src/Screen/ScrImpCurSett.d" -MT"src/Screen/ScrImpCurSett.d" -o "src/Screen/ScrImpCurSett.o" "../src/Screen/ScrImpCurSett.cpp"
+'Finished building: ../src/Screen/ScrImpCurSett.cpp'
+' '
+'Building file: ../src/Screen/ScrImpGraph.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrImpGraph.o" -MMD -MP -MF"src/Screen/ScrImpGraph.d" -MT"src/Screen/ScrImpGraph.d" -o "src/Screen/ScrImpGraph.o" "../src/Screen/ScrImpGraph.cpp"
+'Finished building: ../src/Screen/ScrImpGraph.cpp'
+' '
+'Building file: ../src/Screen/ScrImpIntSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrImpIntSett.o" -MMD -MP -MF"src/Screen/ScrImpIntSett.d" -MT"src/Screen/ScrImpIntSett.d" -o "src/Screen/ScrImpIntSett.o" "../src/Screen/ScrImpIntSett.cpp"
+'Finished building: ../src/Screen/ScrImpIntSett.cpp'
+' '
+'Building file: ../src/Screen/ScrIncFrecSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrIncFrecSett.o" -MMD -MP -MF"src/Screen/ScrIncFrecSett.d" -MT"src/Screen/ScrIncFrecSett.d" -o "src/Screen/ScrIncFrecSett.o" "../src/Screen/ScrIncFrecSett.cpp"
+'Finished building: ../src/Screen/ScrIncFrecSett.cpp'
+' '
+'Building file: ../src/Screen/ScrIncNumSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrIncNumSett.o" -MMD -MP -MF"src/Screen/ScrIncNumSett.d" -MT"src/Screen/ScrIncNumSett.d" -o "src/Screen/ScrIncNumSett.o" "../src/Screen/ScrIncNumSett.cpp"
+'Finished building: ../src/Screen/ScrIncNumSett.cpp'
+' '
+'Building file: ../src/Screen/ScrSettings.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrSettings.o" -MMD -MP -MF"src/Screen/ScrSettings.d" -MT"src/Screen/ScrSettings.d" -o "src/Screen/ScrSettings.o" "../src/Screen/ScrSettings.cpp"
+'Finished building: ../src/Screen/ScrSettings.cpp'
+' '
+'Building file: ../src/Screen/ScrStartFreqSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrStartFreqSett.o" -MMD -MP -MF"src/Screen/ScrStartFreqSett.d" -MT"src/Screen/ScrStartFreqSett.d" -o "src/Screen/ScrStartFreqSett.o" "../src/Screen/ScrStartFreqSett.cpp"
+'Finished building: ../src/Screen/ScrStartFreqSett.cpp'
+' '
+'Building file: ../src/Screen/ScrSweepSettings.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrSweepSettings.o" -MMD -MP -MF"src/Screen/ScrSweepSettings.d" -MT"src/Screen/ScrSweepSettings.d" -o "src/Screen/ScrSweepSettings.o" "../src/Screen/ScrSweepSettings.cpp"
+'Finished building: ../src/Screen/ScrSweepSettings.cpp'
+' '
+'Building file: ../src/Screen/ScrTempHumBat.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrTempHumBat.o" -MMD -MP -MF"src/Screen/ScrTempHumBat.d" -MT"src/Screen/ScrTempHumBat.d" -o "src/Screen/ScrTempHumBat.o" "../src/Screen/ScrTempHumBat.cpp"
+'Finished building: ../src/Screen/ScrTempHumBat.cpp'
+' '
+'Building file: ../src/Screen/ScrTempHumSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrTempHumSett.o" -MMD -MP -MF"src/Screen/ScrTempHumSett.d" -MT"src/Screen/ScrTempHumSett.d" -o "src/Screen/ScrTempHumSett.o" "../src/Screen/ScrTempHumSett.cpp"
+'Finished building: ../src/Screen/ScrTempHumSett.cpp'
+' '
+'Building file: ../src/RF/mrf24j.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/RF/mrf24j.o" -MMD -MP -MF"src/RF/mrf24j.d" -MT"src/RF/mrf24j.d" -o "src/RF/mrf24j.o" "../src/RF/mrf24j.cpp"
+../src/RF/mrf24j.cpp: In member function 'bool Mrf24j::checkIntFlag()':
+../src/RF/mrf24j.cpp:78:6: warning: unused variable 'gpioReg' [-Wunused-variable]
+  int gpioReg = XGpio_DiscreteRead(&gpioInstance, 1);
+      ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::write_short(uint8_t, uint8_t)':
+../src/RF/mrf24j.cpp:225:9: warning: unused variable 'status' [-Wunused-variable]
+     int status = XSpi_Transfer( &MSpiInstance, &data, &rgbRx, sizeof(uint8_t) );
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::init()':
+../src/RF/mrf24j.cpp:337:13: warning: unused variable 'regi' [-Wunused-variable]
+     uint8_t regi = read_long(MRF_SLPCON0);
+             ^
+'Finished building: ../src/RF/mrf24j.cpp'
+' '
+'Building file: ../src/OLED/ChrFont0.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/OLED/ChrFont0.o" -MMD -MP -MF"src/OLED/ChrFont0.d" -MT"src/OLED/ChrFont0.d" -o "src/OLED/ChrFont0.o" "../src/OLED/ChrFont0.cpp"
+'Finished building: ../src/OLED/ChrFont0.cpp'
+' '
+'Building file: ../src/OLED/FillPat.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/OLED/FillPat.o" -MMD -MP -MF"src/OLED/FillPat.d" -MT"src/OLED/FillPat.d" -o "src/OLED/FillPat.o" "../src/OLED/FillPat.cpp"
+'Finished building: ../src/OLED/FillPat.cpp'
+' '
+'Building file: ../src/OLED/OLED.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/OLED/OLED.o" -MMD -MP -MF"src/OLED/OLED.d" -MT"src/OLED/OLED.d" -o "src/OLED/OLED.o" "../src/OLED/OLED.cpp"
+'Finished building: ../src/OLED/OLED.cpp'
+' '
+'Building file: ../src/OLED/OledChar.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/OLED/OledChar.o" -MMD -MP -MF"src/OLED/OledChar.d" -MT"src/OLED/OledChar.d" -o "src/OLED/OledChar.o" "../src/OLED/OledChar.cpp"
+'Finished building: ../src/OLED/OledChar.cpp'
+' '
+'Building file: ../src/OLED/OledDriver.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/OLED/OledDriver.o" -MMD -MP -MF"src/OLED/OledDriver.d" -MT"src/OLED/OledDriver.d" -o "src/OLED/OledDriver.o" "../src/OLED/OledDriver.cpp"
+../src/OLED/OledDriver.cpp:37:1: warning: "/*" within comment [-Wcomment]
+ /* 22/02/2016(EusebiuB): adapted library to work on Zybo    */
+ ^
+../src/OLED/OledDriver.cpp: In function 'void OledHostInit()':
+../src/OLED/OledDriver.cpp:282:6: warning: variable 'slaveReg' set but not used [-Wunused-but-set-variable]
+  u32 slaveReg = XSpi_GetSlaveSelectReg(&SpiInstance);
+      ^
+'Finished building: ../src/OLED/OledDriver.cpp'
+' '
+'Building file: ../src/OLED/OledGrph.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/OLED/OledGrph.o" -MMD -MP -MF"src/OLED/OledGrph.d" -MT"src/OLED/OledGrph.d" -o "src/OLED/OledGrph.o" "../src/OLED/OledGrph.cpp"
+../src/OLED/OledGrph.cpp: In function 'void OledFillRect(int, int)':
+../src/OLED/OledGrph.cpp:534:10: warning: unused variable 'bTmp' [-Wunused-variable]
+  uint8_t bTmp;
+          ^
+../src/OLED/OledGrph.cpp: In function 'void OledGetBmp(int, int, uint8_t*)':
+../src/OLED/OledGrph.cpp:643:10: warning: variable 'bTmp' set but not used [-Wunused-but-set-variable]
+  uint8_t bTmp;
+          ^
+../src/OLED/OledGrph.cpp: In function 'void OledPutBmp(int, int, uint8_t*)':
+../src/OLED/OledGrph.cpp:740:10: warning: unused variable 'bDsp' [-Wunused-variable]
+  uint8_t bDsp;
+          ^
+../src/OLED/OledGrph.cpp:747:10: warning: unused variable 'bTmp' [-Wunused-variable]
+  uint8_t bTmp;
+          ^
+../src/OLED/OledGrph.cpp: In function 'void OledDrawChar(char)':
+../src/OLED/OledGrph.cpp:847:12: warning: variable 'pbBmp' set but not used [-Wunused-but-set-variable]
+  uint8_t * pbBmp;
+            ^
+../src/OLED/OledGrph.cpp:848:7: warning: unused variable 'ib' [-Wunused-variable]
+  int  ib;
+       ^
+'Finished building: ../src/OLED/OledGrph.cpp'
+' '
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:241:37: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+     OLED.putString("Error impedance");
+                                     ^
+../src/main.cc:243:38: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+     OLED.putString("Check the sensor");
+                                      ^
+../src/main.cc:249:22: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(int i = 0; i < impedanceArray.size()-1; i++)
+                      ^
+../src/main.cc:187:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:188:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+'Finished building: ../src/main.cc'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/platform.o" -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 567204	   3456	  32760	 603420	  9351c	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+15:11:10 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrBatIntSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrBatIntSett.o" -MMD -MP -MF"src/Screen/ScrBatIntSett.d" -MT"src/Screen/ScrBatIntSett.d" -o "src/Screen/ScrBatIntSett.o" "../src/Screen/ScrBatIntSett.cpp"
+'Finished building: ../src/Screen/ScrBatIntSett.cpp'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 567204	   3456	  32760	 603420	  9351c	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+15:11:37 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+15:12:23 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrImpCurSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrImpCurSett.o" -MMD -MP -MF"src/Screen/ScrImpCurSett.d" -MT"src/Screen/ScrImpCurSett.d" -o "src/Screen/ScrImpCurSett.o" "../src/Screen/ScrImpCurSett.cpp"
+../src/Screen/ScrImpCurSett.cpp:9:1: error: expected constructor, destructor, or type conversion before '~' token
+ ~ScrImpCurSett()
+ ^
+make: *** [src/Screen/ScrImpCurSett.o] Error 1
+15:13:19 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrImpCurSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrImpCurSett.o" -MMD -MP -MF"src/Screen/ScrImpCurSett.d" -MT"src/Screen/ScrImpCurSett.d" -o "src/Screen/ScrImpCurSett.o" "../src/Screen/ScrImpCurSett.cpp"
+../src/Screen/ScrImpCurSett.cpp:8:1: error: 'ScrImpCurSett' does not name a type
+ ScrImpCurSett::ScrImpCurSett()
+ ^
+../src/Screen/ScrImpCurSett.cpp:13:1: error: 'ScrImpCurSett' does not name a type
+ ScrImpCurSett::~ScrImpCurSett()
+ ^
+../src/Screen/ScrImpCurSett.cpp:18:1: error: 'ScrImpCurSett' does not name a type
+ ScrImpCurSett::virtual void sendIncCmd()
+ ^
+../src/Screen/ScrImpCurSett.cpp:23:1: error: 'ScrImpCurSett' does not name a type
+ ScrImpCurSett::virtual void sendDecrCmd()
+ ^
+../src/Screen/ScrImpCurSett.cpp:28:1: error: 'ScrImpCurSett' does not name a type
+ ScrImpCurSett::virtual void sendChScrCmd()
+ ^
+../src/Screen/ScrImpCurSett.cpp:33:1: error: 'ScrImpCurSett' does not name a type
+ ScrImpCurSett::virtual void sendConfirmCmd()
+ ^
+../src/Screen/ScrImpCurSett.cpp:38:1: error: 'ScrImpCurSett' does not name a type
+ ScrImpCurSett::virtual void printData()
+ ^
+make: *** [src/Screen/ScrImpCurSett.o] Error 1
+15:13:34 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrImpCurSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrImpCurSett.o" -MMD -MP -MF"src/Screen/ScrImpCurSett.d" -MT"src/Screen/ScrImpCurSett.d" -o "src/Screen/ScrImpCurSett.o" "../src/Screen/ScrImpCurSett.cpp"
+../src/Screen/ScrImpCurSett.cpp:19:16: error: expected unqualified-id before 'virtual'
+ ScrImpCurSett::virtual void sendIncCmd()
+                ^
+../src/Screen/ScrImpCurSett.cpp:24:16: error: expected unqualified-id before 'virtual'
+ ScrImpCurSett::virtual void sendDecrCmd()
+                ^
+../src/Screen/ScrImpCurSett.cpp:29:16: error: expected unqualified-id before 'virtual'
+ ScrImpCurSett::virtual void sendChScrCmd()
+                ^
+../src/Screen/ScrImpCurSett.cpp:34:16: error: expected unqualified-id before 'virtual'
+ ScrImpCurSett::virtual void sendConfirmCmd()
+                ^
+../src/Screen/ScrImpCurSett.cpp:39:16: error: expected unqualified-id before 'virtual'
+ ScrImpCurSett::virtual void printData()
+                ^
+make: *** [src/Screen/ScrImpCurSett.o] Error 1
+15:14:26 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrImpCurSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrImpCurSett.o" -MMD -MP -MF"src/Screen/ScrImpCurSett.d" -MT"src/Screen/ScrImpCurSett.d" -o "src/Screen/ScrImpCurSett.o" "../src/Screen/ScrImpCurSett.cpp"
+'Finished building: ../src/Screen/ScrImpCurSett.cpp'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 567588	   3456	  32760	 603804	  9369c	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+15:16:38 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrImpGraph.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrImpGraph.o" -MMD -MP -MF"src/Screen/ScrImpGraph.d" -MT"src/Screen/ScrImpGraph.d" -o "src/Screen/ScrImpGraph.o" "../src/Screen/ScrImpGraph.cpp"
+../src/Screen/ScrImpGraph.cpp:16:28: error: ISO C++ forbids declaration of 'ScrImpCurSett' with no type [-fpermissive]
+ ScrImpGraph::ScrImpCurSett()
+                            ^
+../src/Screen/ScrImpGraph.cpp:16:28: error: no 'int ScrImpGraph::ScrImpCurSett()' member function declared in class 'ScrImpGraph'
+../src/Screen/ScrImpGraph.cpp:21:28: error: expected class-name before '(' token
+ ScrImpGraph::~ScrImpCurSett()
+                            ^
+make: *** [src/Screen/ScrImpGraph.o] Error 1
+15:16:47 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrImpGraph.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrImpGraph.o" -MMD -MP -MF"src/Screen/ScrImpGraph.d" -MT"src/Screen/ScrImpGraph.d" -o "src/Screen/ScrImpGraph.o" "../src/Screen/ScrImpGraph.cpp"
+'Finished building: ../src/Screen/ScrImpGraph.cpp'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 567980	   3456	  32760	 604196	  93824	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+15:17:35 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrImpIntSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrImpIntSett.o" -MMD -MP -MF"src/Screen/ScrImpIntSett.d" -MT"src/Screen/ScrImpIntSett.d" -o "src/Screen/ScrImpIntSett.o" "../src/Screen/ScrImpIntSett.cpp"
+'Finished building: ../src/Screen/ScrImpIntSett.cpp'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 568380	   3456	  32760	 604596	  939b4	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+15:18:02 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrIncFrecSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrIncFrecSett.o" -MMD -MP -MF"src/Screen/ScrIncFrecSett.d" -MT"src/Screen/ScrIncFrecSett.d" -o "src/Screen/ScrIncFrecSett.o" "../src/Screen/ScrIncFrecSett.cpp"
+../src/Screen/ScrIncFrecSett.cpp:8:35: fatal error: Screen/ScrIncFrecSett.h: No such file or directory
+ #include "Screen/ScrIncFrecSett.h"
+                                   ^
+compilation terminated.
+make: *** [src/Screen/ScrIncFrecSett.o] Error 1
+15:18:41 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrIncFrecSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrIncFrecSett.o" -MMD -MP -MF"src/Screen/ScrIncFrecSett.d" -MT"src/Screen/ScrIncFrecSett.d" -o "src/Screen/ScrIncFrecSett.o" "../src/Screen/ScrIncFrecSett.cpp"
+../src/Screen/ScrIncFrecSett.cpp:8:35: fatal error: Screen/ScrIncFrecSett.h: No such file or directory
+ #include "Screen/ScrIncFrecSett.h"
+                                   ^
+compilation terminated.
+make: *** [src/Screen/ScrIncFrecSett.o] Error 1
+15:19:06 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrIncFrecSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrIncFrecSett.o" -MMD -MP -MF"src/Screen/ScrIncFrecSett.d" -MT"src/Screen/ScrIncFrecSett.d" -o "src/Screen/ScrIncFrecSett.o" "../src/Screen/ScrIncFrecSett.cpp"
+../src/Screen/ScrIncFrecSett.cpp:10:1: error: 'ScrIncFrecSett' does not name a type
+ ScrIncFrecSett::ScrIncFrecSett()
+ ^
+../src/Screen/ScrIncFrecSett.cpp:15:1: error: 'ScrIncFrecSett' does not name a type
+ ScrIncFrecSett::~ScrIncFrecSett()
+ ^
+../src/Screen/ScrIncFrecSett.cpp:20:6: error: 'ScrIncFrecSett' has not been declared
+ void ScrIncFrecSett::sendIncCmd()
+      ^
+../src/Screen/ScrIncFrecSett.cpp:25:6: error: 'ScrIncFrecSett' has not been declared
+ void ScrIncFrecSett::sendDecrCmd()
+      ^
+../src/Screen/ScrIncFrecSett.cpp:30:6: error: 'ScrIncFrecSett' has not been declared
+ void ScrIncFrecSett::sendChScrCmd()
+      ^
+../src/Screen/ScrIncFrecSett.cpp:35:6: error: 'ScrIncFrecSett' has not been declared
+ void ScrIncFrecSett::sendConfirmCmd()
+      ^
+../src/Screen/ScrIncFrecSett.cpp:40:6: error: 'ScrIncFrecSett' has not been declared
+ void ScrIncFrecSett::printData()
+      ^
+make: *** [src/Screen/ScrIncFrecSett.o] Error 1
+15:19:23 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrIncFrecSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrIncFrecSett.o" -MMD -MP -MF"src/Screen/ScrIncFrecSett.d" -MT"src/Screen/ScrIncFrecSett.d" -o "src/Screen/ScrIncFrecSett.o" "../src/Screen/ScrIncFrecSett.cpp"
+'Finished building: ../src/Screen/ScrIncFrecSett.cpp'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 568780	   3456	  32760	 604996	  93b44	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+15:19:59 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrIncNumSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrIncNumSett.o" -MMD -MP -MF"src/Screen/ScrIncNumSett.d" -MT"src/Screen/ScrIncNumSett.d" -o "src/Screen/ScrIncNumSett.o" "../src/Screen/ScrIncNumSett.cpp"
+'Finished building: ../src/Screen/ScrIncNumSett.cpp'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 569180	   3456	  32760	 605396	  93cd4	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+15:20:35 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrSettings.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrSettings.o" -MMD -MP -MF"src/Screen/ScrSettings.d" -MT"src/Screen/ScrSettings.d" -o "src/Screen/ScrSettings.o" "../src/Screen/ScrSettings.cpp"
+'Finished building: ../src/Screen/ScrSettings.cpp'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 569580	   3456	  32760	 605796	  93e64	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+15:21:11 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrStartFreqSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrStartFreqSett.o" -MMD -MP -MF"src/Screen/ScrStartFreqSett.d" -MT"src/Screen/ScrStartFreqSett.d" -o "src/Screen/ScrStartFreqSett.o" "../src/Screen/ScrStartFreqSett.cpp"
+'Finished building: ../src/Screen/ScrStartFreqSett.cpp'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 570044	   3456	  32760	 606260	  94034	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+15:21:33 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrSweepSettings.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrSweepSettings.o" -MMD -MP -MF"src/Screen/ScrSweepSettings.d" -MT"src/Screen/ScrSweepSettings.d" -o "src/Screen/ScrSweepSettings.o" "../src/Screen/ScrSweepSettings.cpp"
+'Finished building: ../src/Screen/ScrSweepSettings.cpp'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 570444	   3456	  32760	 606660	  941c4	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+15:21:53 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrTempHumBat.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrTempHumBat.o" -MMD -MP -MF"src/Screen/ScrTempHumBat.d" -MT"src/Screen/ScrTempHumBat.d" -o "src/Screen/ScrTempHumBat.o" "../src/Screen/ScrTempHumBat.cpp"
+'Finished building: ../src/Screen/ScrTempHumBat.cpp'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 570844	   3456	  32760	 607060	  94354	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+15:22:16 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrTempHumSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrTempHumSett.o" -MMD -MP -MF"src/Screen/ScrTempHumSett.d" -MT"src/Screen/ScrTempHumSett.d" -o "src/Screen/ScrTempHumSett.o" "../src/Screen/ScrTempHumSett.cpp"
+In file included from ../src/Screen/ScrTempHumSett.cpp:7:0:
+../inc/Screen/ScrTempHumSett.h:12:1: error: expected class-name before '{' token
+ {
+ ^
+make: *** [src/Screen/ScrTempHumSett.o] Error 1
+15:22:32 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrTempHumSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrTempHumSett.o" -MMD -MP -MF"src/Screen/ScrTempHumSett.d" -MT"src/Screen/ScrTempHumSett.d" -o "src/Screen/ScrTempHumSett.o" "../src/Screen/ScrTempHumSett.cpp"
+In file included from ../src/Screen/ScrTempHumSett.cpp:7:0:
+../inc/Screen/ScrTempHumSett.h:12:1: error: expected class-name before '{' token
+ {
+ ^
+make: *** [src/Screen/ScrTempHumSett.o] Error 1
+15:22:48 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrTempHumSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrTempHumSett.o" -MMD -MP -MF"src/Screen/ScrTempHumSett.d" -MT"src/Screen/ScrTempHumSett.d" -o "src/Screen/ScrTempHumSett.o" "../src/Screen/ScrTempHumSett.cpp"
+In file included from ../src/Screen/ScrTempHumSett.cpp:7:0:
+../inc/Screen/ScrTempHumSett.h:12:1: error: expected class-name before '{' token
+ {
+ ^
+make: *** [src/Screen/ScrTempHumSett.o] Error 1
+15:23:57 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrTempHumSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrTempHumSett.o" -MMD -MP -MF"src/Screen/ScrTempHumSett.d" -MT"src/Screen/ScrTempHumSett.d" -o "src/Screen/ScrTempHumSett.o" "../src/Screen/ScrTempHumSett.cpp"
+In file included from ../src/Screen/ScrTempHumSett.cpp:7:0:
+../inc/Screen/ScrTempHumSett.h:12:1: error: expected class-name before '{' token
+ {
+ ^
+make: *** [src/Screen/ScrTempHumSett.o] Error 1
+15:29:19 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrTempHumSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrTempHumSett.o" -MMD -MP -MF"src/Screen/ScrTempHumSett.d" -MT"src/Screen/ScrTempHumSett.d" -o "src/Screen/ScrTempHumSett.o" "../src/Screen/ScrTempHumSett.cpp"
+In file included from ../src/Screen/ScrTempHumSett.cpp:7:0:
+../inc/Screen/ScrTempHumSett.h:12:1: error: expected class-name before '{' token
+ {
+ ^
+make: *** [src/Screen/ScrTempHumSett.o] Error 1
+15:29:38 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrTempHumSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrTempHumSett.o" -MMD -MP -MF"src/Screen/ScrTempHumSett.d" -MT"src/Screen/ScrTempHumSett.d" -o "src/Screen/ScrTempHumSett.o" "../src/Screen/ScrTempHumSett.cpp"
+'Finished building: ../src/Screen/ScrTempHumSett.cpp'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 571236	   3456	  32760	 607452	  944dc	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+15:29:54 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrTempHumBat.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrTempHumBat.o" -MMD -MP -MF"src/Screen/ScrTempHumBat.d" -MT"src/Screen/ScrTempHumBat.d" -o "src/Screen/ScrTempHumBat.o" "../src/Screen/ScrTempHumBat.cpp"
+'Finished building: ../src/Screen/ScrTempHumBat.cpp'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 571220	   3456	  32760	 607436	  944cc	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+15:30:00 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrSweepSettings.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrSweepSettings.o" -MMD -MP -MF"src/Screen/ScrSweepSettings.d" -MT"src/Screen/ScrSweepSettings.d" -o "src/Screen/ScrSweepSettings.o" "../src/Screen/ScrSweepSettings.cpp"
+'Finished building: ../src/Screen/ScrSweepSettings.cpp'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 571212	   3456	  32760	 607428	  944c4	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+15:30:06 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrStartFreqSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrStartFreqSett.o" -MMD -MP -MF"src/Screen/ScrStartFreqSett.d" -MT"src/Screen/ScrStartFreqSett.d" -o "src/Screen/ScrStartFreqSett.o" "../src/Screen/ScrStartFreqSett.cpp"
+'Finished building: ../src/Screen/ScrStartFreqSett.cpp'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 571204	   3456	  32760	 607420	  944bc	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+15:30:11 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrSettings.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrSettings.o" -MMD -MP -MF"src/Screen/ScrSettings.d" -MT"src/Screen/ScrSettings.d" -o "src/Screen/ScrSettings.o" "../src/Screen/ScrSettings.cpp"
+'Finished building: ../src/Screen/ScrSettings.cpp'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 571188	   3456	  32760	 607404	  944ac	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+15:30:16 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrIncNumSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrIncNumSett.o" -MMD -MP -MF"src/Screen/ScrIncNumSett.d" -MT"src/Screen/ScrIncNumSett.d" -o "src/Screen/ScrIncNumSett.o" "../src/Screen/ScrIncNumSett.cpp"
+'Finished building: ../src/Screen/ScrIncNumSett.cpp'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 571172	   3456	  32760	 607388	  9449c	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+15:30:20 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrIncFrecSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrIncFrecSett.o" -MMD -MP -MF"src/Screen/ScrIncFrecSett.d" -MT"src/Screen/ScrIncFrecSett.d" -o "src/Screen/ScrIncFrecSett.o" "../src/Screen/ScrIncFrecSett.cpp"
+'Finished building: ../src/Screen/ScrIncFrecSett.cpp'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 571164	   3456	  32760	 607380	  94494	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+15:30:25 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrImpIntSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrImpIntSett.o" -MMD -MP -MF"src/Screen/ScrImpIntSett.d" -MT"src/Screen/ScrImpIntSett.d" -o "src/Screen/ScrImpIntSett.o" "../src/Screen/ScrImpIntSett.cpp"
+'Finished building: ../src/Screen/ScrImpIntSett.cpp'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 571148	   3456	  32760	 607364	  94484	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+15:30:29 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrImpGraph.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrImpGraph.o" -MMD -MP -MF"src/Screen/ScrImpGraph.d" -MT"src/Screen/ScrImpGraph.d" -o "src/Screen/ScrImpGraph.o" "../src/Screen/ScrImpGraph.cpp"
+'Finished building: ../src/Screen/ScrImpGraph.cpp'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 571140	   3456	  32760	 607356	  9447c	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+15:31:05 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:242:37: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+     OLED.putString("Error impedance");
+                                     ^
+../src/main.cc:244:38: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+     OLED.putString("Check the sensor");
+                                      ^
+../src/main.cc:250:22: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(int i = 0; i < impedanceArray.size()-1; i++)
+                      ^
+../src/main.cc:188:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:189:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 571140	   3456	  32760	 607356	  9447c	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+15:31:56 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc:64:9: error: '*' cannot appear in a constant-expression
+ vector<*IScreen> screens;
+         ^
+../src/main.cc:64:16: error: template argument 1 is invalid
+ vector<*IScreen> screens;
+                ^
+../src/main.cc:64:16: error: template argument 2 is invalid
+../src/main.cc:64:25: error: invalid type in declaration before ';' token
+ vector<*IScreen> screens;
+                         ^
+../src/main.cc: In function 'int main()':
+../src/main.cc:243:37: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+     OLED.putString("Error impedance");
+                                     ^
+../src/main.cc:245:38: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+     OLED.putString("Check the sensor");
+                                      ^
+../src/main.cc:251:22: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(int i = 0; i < impedanceArray.size()-1; i++)
+                      ^
+../src/main.cc:189:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:190:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+make: *** [src/main.o] Error 1
+15:32:54 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+In file included from c:\xilinx\sdk\2015.4\gnu\arm\nt\arm-xilinx-eabi\include\c++\4.9.2\vector:64:0,
+                 from ../src/main.cc:29:
+c:\xilinx\sdk\2015.4\gnu\arm\nt\arm-xilinx-eabi\include\c++\4.9.2\bits\stl_vector.h: In instantiation of 'class std::vector<IScreen>':
+../src/main.cc:64:17:   required from here
+c:\xilinx\sdk\2015.4\gnu\arm\nt\arm-xilinx-eabi\include\c++\4.9.2\bits\stl_vector.h:713:7: error: invalid abstract parameter type 'IScreen'
+       resize(size_type __new_size, value_type __x = value_type())
+       ^
+In file included from ../src/main.cc:32:0:
+../inc/Screen/ScreenInterface.h:11:7: note:   because the following virtual functions are pure within 'IScreen':
+ class IScreen
+       ^
+../inc/Screen/ScreenInterface.h:17:15: note: 	virtual void IScreen::sendIncCmd()
+  virtual void sendIncCmd() = 0;
+               ^
+../inc/Screen/ScreenInterface.h:18:15: note: 	virtual void IScreen::sendDecrCmd()
+  virtual void sendDecrCmd() = 0;
+               ^
+../inc/Screen/ScreenInterface.h:19:15: note: 	virtual void IScreen::sendChScrCmd()
+  virtual void sendChScrCmd() = 0;
+               ^
+../inc/Screen/ScreenInterface.h:20:15: note: 	virtual void IScreen::sendConfirmCmd()
+  virtual void sendConfirmCmd() = 0;
+               ^
+../inc/Screen/ScreenInterface.h:21:15: note: 	virtual void IScreen::printData()
+  virtual void printData() = 0;
+               ^
+../src/main.cc: In function 'int main()':
+../src/main.cc:243:37: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+     OLED.putString("Error impedance");
+                                     ^
+../src/main.cc:245:38: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+     OLED.putString("Check the sensor");
+                                      ^
+../src/main.cc:251:22: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(int i = 0; i < impedanceArray.size()-1; i++)
+                      ^
+../src/main.cc:189:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:190:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+make: *** [src/main.o] Error 1
+15:33:33 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc:64:9: error: '*' cannot appear in a constant-expression
+ vector<*IScreen> screens;
+         ^
+../src/main.cc:64:16: error: template argument 1 is invalid
+ vector<*IScreen> screens;
+                ^
+../src/main.cc:64:16: error: template argument 2 is invalid
+../src/main.cc:64:25: error: invalid type in declaration before ';' token
+ vector<*IScreen> screens;
+                         ^
+../src/main.cc: In function 'int main()':
+../src/main.cc:244:37: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+     OLED.putString("Error impedance");
+                                     ^
+../src/main.cc:246:38: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+     OLED.putString("Check the sensor");
+                                      ^
+../src/main.cc:252:22: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(int i = 0; i < impedanceArray.size()-1; i++)
+                      ^
+../src/main.cc:190:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:191:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+make: *** [src/main.o] Error 1
+15:34:45 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:244:37: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+     OLED.putString("Error impedance");
+                                     ^
+../src/main.cc:246:38: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+     OLED.putString("Check the sensor");
+                                      ^
+../src/main.cc:252:22: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(int i = 0; i < impedanceArray.size()-1; i++)
+                      ^
+../src/main.cc:190:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:191:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 572244	   3456	  32776	 608476	  948dc	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+15:36:04 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+15:36:34 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+15:38:53 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+15:39:30 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+15:39:57 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+15:40:13 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+15:40:26 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+15:40:29 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+15:43:13 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+15:45:03 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+15:46:34 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+15:47:54 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+15:48:19 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+15:48:41 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc:33:21: fatal error: Screens.h: No such file or directory
+ #include "Screens.h"
+                     ^
+compilation terminated.
+make: *** [src/main.o] Error 1
+15:49:02 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+In file included from ../src/main.cc:33:0:
+../inc/Screen/Screens.h:24:1: error: 'vector' does not name a type
+ vector<IScreen*> getMenuScreens()
+ ^
+../inc/Screen/Screens.h:36:1: error: 'vector' does not name a type
+ vector<IScreen*> getSettingsScreens()
+ ^
+../inc/Screen/Screens.h:47:1: error: 'vector' does not name a type
+ vector<IScreen*> getSweepScreens()
+ ^
+../src/main.cc: In function 'int main()':
+../src/main.cc:245:37: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+     OLED.putString("Error impedance");
+                                     ^
+../src/main.cc:247:38: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+     OLED.putString("Check the sensor");
+                                      ^
+../src/main.cc:253:22: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(int i = 0; i < impedanceArray.size()-1; i++)
+                      ^
+../src/main.cc:191:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:192:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+make: *** [src/main.o] Error 1
+15:49:41 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+In file included from ../src/main.cc:33:0:
+../inc/Screen/Screens.h:24:1: error: 'vector' does not name a type
+ vector<IScreen*> getMenuScreens()
+ ^
+../inc/Screen/Screens.h:36:1: error: 'vector' does not name a type
+ vector<IScreen*> getSettingsScreens()
+ ^
+../inc/Screen/Screens.h:47:1: error: 'vector' does not name a type
+ vector<IScreen*> getSweepScreens()
+ ^
+../src/main.cc: In function 'int main()':
+../src/main.cc:188:28: error: 'getMenuScreens' was not declared in this scope
+  screens =  getMenuScreens();
+                            ^
+../src/main.cc:247:37: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+     OLED.putString("Error impedance");
+                                     ^
+../src/main.cc:249:38: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+     OLED.putString("Check the sensor");
+                                      ^
+../src/main.cc:255:22: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(int i = 0; i < impedanceArray.size()-1; i++)
+                      ^
+../src/main.cc:193:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:194:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+make: *** [src/main.o] Error 1
+15:49:44 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+In file included from ../src/main.cc:33:0:
+../inc/Screen/Screens.h:24:1: error: 'vector' does not name a type
+ vector<IScreen*> getMenuScreens()
+ ^
+../inc/Screen/Screens.h:36:1: error: 'vector' does not name a type
+ vector<IScreen*> getSettingsScreens()
+ ^
+../inc/Screen/Screens.h:47:1: error: 'vector' does not name a type
+ vector<IScreen*> getSweepScreens()
+ ^
+../src/main.cc: In function 'int main()':
+../src/main.cc:188:27: error: 'getMenuScreens' was not declared in this scope
+  screens = getMenuScreens();
+                           ^
+../src/main.cc:247:37: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+     OLED.putString("Error impedance");
+                                     ^
+../src/main.cc:249:38: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+     OLED.putString("Check the sensor");
+                                      ^
+../src/main.cc:255:22: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(int i = 0; i < impedanceArray.size()-1; i++)
+                      ^
+../src/main.cc:193:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:194:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+make: *** [src/main.o] Error 1
+15:50:14 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+In file included from ../src/main.cc:33:0:
+../inc/Screen/Screens.h: In function 'std::vector<IScreen*> getMenuScreens()':
+../inc/Screen/Screens.h:27:10: error: 'class std::vector<IScreen*>' has no member named 'pushBack'
+  screens.pushBack(new ScrImpGraph());
+          ^
+../inc/Screen/Screens.h:29:10: error: 'class std::vector<IScreen*>' has no member named 'pushBack'
+  screens.pushBack(new ScrImpCurSett());
+          ^
+../inc/Screen/Screens.h:30:10: error: 'class std::vector<IScreen*>' has no member named 'pushBack'
+  screens.pushBack(new ScrTempHumBat());
+          ^
+../inc/Screen/Screens.h:31:10: error: 'class std::vector<IScreen*>' has no member named 'pushBack'
+  screens.pushBack(new ScrSettings());
+          ^
+../inc/Screen/Screens.h: In function 'std::vector<IScreen*> getSettingsScreens()':
+../inc/Screen/Screens.h:39:10: error: 'class std::vector<IScreen*>' has no member named 'pushBack'
+  screens.pushBack(new ScrSweepSettings());
+          ^
+../inc/Screen/Screens.h:40:10: error: 'class std::vector<IScreen*>' has no member named 'pushBack'
+  screens.pushBack(new ScrImpIntSett());
+          ^
+../inc/Screen/Screens.h:41:10: error: 'class std::vector<IScreen*>' has no member named 'pushBack'
+  screens.pushBack(new ScrTempHumSett());
+          ^
+../inc/Screen/Screens.h:42:10: error: 'class std::vector<IScreen*>' has no member named 'pushBack'
+  screens.pushBack(new ScrBatIntSett());
+          ^
+../inc/Screen/Screens.h: In function 'std::vector<IScreen*> getSweepScreens()':
+../inc/Screen/Screens.h:50:10: error: 'class std::vector<IScreen*>' has no member named 'pushBack'
+  screens.pushBack(new ScrStartFreqSett());
+          ^
+../inc/Screen/Screens.h:51:10: error: 'class std::vector<IScreen*>' has no member named 'pushBack'
+  screens.pushBack(new ScrIncFreqSett());
+          ^
+../inc/Screen/Screens.h:52:10: error: 'class std::vector<IScreen*>' has no member named 'pushBack'
+  screens.pushBack(new ScrIncNumSett());
+          ^
+../src/main.cc: In function 'int main()':
+../src/main.cc:247:37: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+     OLED.putString("Error impedance");
+                                     ^
+../src/main.cc:249:38: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+     OLED.putString("Check the sensor");
+                                      ^
+../src/main.cc:255:22: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(int i = 0; i < impedanceArray.size()-1; i++)
+                      ^
+../src/main.cc:193:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:194:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+make: *** [src/main.o] Error 1
+15:50:55 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:247:37: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+     OLED.putString("Error impedance");
+                                     ^
+../src/main.cc:249:38: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+     OLED.putString("Check the sensor");
+                                      ^
+../src/main.cc:255:22: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(int i = 0; i < impedanceArray.size()-1; i++)
+                      ^
+../src/main.cc:193:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:194:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 579192	   3456	  32768	 615416	  963f8	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+15:51:47 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc:238:4: warning: "/*" within comment [-Wcomment]
+    /*sprintf(data, "%.2f", *max);
+ ^
+../src/main.cc: In function 'int main()':
+../src/main.cc:244:9: error: overloaded function with no contextual type information
+    if( *max > 700 && *min > 700 )
+         ^
+../src/main.cc:244:23: error: overloaded function with no contextual type information
+    if( *max > 700 && *min > 700 )
+                       ^
+../src/main.cc:247:37: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+     OLED.putString("Error impedance");
+                                     ^
+../src/main.cc:249:38: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+     OLED.putString("Check the sensor");
+                                      ^
+../src/main.cc:255:22: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(int i = 0; i < impedanceArray.size()-1; i++)
+                      ^
+../src/main.cc:257:58: error: overloaded function with no contextual type information
+      long mappedVal = map((long)impedanceArray[i],(long)*min, (long)*max, 32, 0 );
+                                                          ^
+../src/main.cc:257:70: error: overloaded function with no contextual type information
+      long mappedVal = map((long)impedanceArray[i],(long)*min, (long)*max, 32, 0 );
+                                                                      ^
+../src/main.cc:259:55: error: overloaded function with no contextual type information
+      mappedVal = map((long)impedanceArray[i+1],(long)*min, (long)*max, 32, 0 );
+                                                       ^
+../src/main.cc:259:67: error: overloaded function with no contextual type information
+      mappedVal = map((long)impedanceArray[i+1],(long)*min, (long)*max, 32, 0 );
+                                                                   ^
+../src/main.cc:193:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:194:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+../src/main.cc:265:5: error: expected primary-expression before '/' token
+   }*/
+     ^
+../src/main.cc:267:2: error: expected primary-expression before '}' token
+  }
+  ^
+../src/main.cc: At global scope:
+../src/main.cc:269:2: error: expected unqualified-id before 'return'
+  return XST_SUCCESS;
+  ^
+../src/main.cc:270:1: error: expected declaration before '}' token
+ }
+ ^
+make: *** [src/main.o] Error 1
+15:51:55 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc:238:4: warning: "/*" within comment [-Wcomment]
+    /*sprintf(data, "%.2f", *max);
+ ^
+../src/main.cc: In function 'int main()':
+../src/main.cc:244:9: error: overloaded function with no contextual type information
+    if( *max > 700 && *min > 700 )
+         ^
+../src/main.cc:244:23: error: overloaded function with no contextual type information
+    if( *max > 700 && *min > 700 )
+                       ^
+../src/main.cc:247:37: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+     OLED.putString("Error impedance");
+                                     ^
+../src/main.cc:249:38: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+     OLED.putString("Check the sensor");
+                                      ^
+../src/main.cc:255:22: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(int i = 0; i < impedanceArray.size()-1; i++)
+                      ^
+../src/main.cc:257:58: error: overloaded function with no contextual type information
+      long mappedVal = map((long)impedanceArray[i],(long)*min, (long)*max, 32, 0 );
+                                                          ^
+../src/main.cc:257:70: error: overloaded function with no contextual type information
+      long mappedVal = map((long)impedanceArray[i],(long)*min, (long)*max, 32, 0 );
+                                                                      ^
+../src/main.cc:259:55: error: overloaded function with no contextual type information
+      mappedVal = map((long)impedanceArray[i+1],(long)*min, (long)*max, 32, 0 );
+                                                       ^
+../src/main.cc:259:67: error: overloaded function with no contextual type information
+      mappedVal = map((long)impedanceArray[i+1],(long)*min, (long)*max, 32, 0 );
+                                                                   ^
+../src/main.cc:264:6: error: expected primary-expression before '/' token
+    }*/
+      ^
+../src/main.cc:265:3: error: expected primary-expression before '}' token
+   }
+   ^
+../src/main.cc:193:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:194:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+../src/main.cc: At global scope:
+../src/main.cc:269:2: error: expected unqualified-id before 'return'
+  return XST_SUCCESS;
+  ^
+../src/main.cc:270:1: error: expected declaration before '}' token
+ }
+ ^
+make: *** [src/main.o] Error 1
+15:52:14 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc:238:4: warning: "/*" within comment [-Wcomment]
+    /*sprintf(data, "%.2f", *max);
+ ^
+../src/main.cc: In function 'int main()':
+../src/main.cc:193:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:194:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+../src/main.cc: At global scope:
+../src/main.cc:269:2: error: expected unqualified-id before 'return'
+  return XST_SUCCESS;
+  ^
+../src/main.cc:270:1: error: expected declaration before '}' token
+ }
+ ^
+make: *** [src/main.o] Error 1
+15:52:22 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc:238:4: warning: "/*" within comment [-Wcomment]
+    /*sprintf(data, "%.2f", *max);
+ ^
+../src/main.cc: In function 'int main()':
+../src/main.cc:193:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:194:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 577416	   3456	  32768	 613640	  95d08	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+15:53:11 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrImpGraph.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrImpGraph.o" -MMD -MP -MF"src/Screen/ScrImpGraph.d" -MT"src/Screen/ScrImpGraph.d" -o "src/Screen/ScrImpGraph.o" "../src/Screen/ScrImpGraph.cpp"
+../src/Screen/ScrImpGraph.cpp: In member function 'virtual void ScrImpGraph::printData()':
+../src/Screen/ScrImpGraph.cpp:48:2: error: 'OLED' was not declared in this scope
+  OLED.setCursor(4, 12);
+  ^
+make: *** [src/Screen/ScrImpGraph.o] Error 1
+15:53:51 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrBatIntSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrBatIntSett.o" -MMD -MP -MF"src/Screen/ScrBatIntSett.d" -MT"src/Screen/ScrBatIntSett.d" -o "src/Screen/ScrBatIntSett.o" "../src/Screen/ScrBatIntSett.cpp"
+'Finished building: ../src/Screen/ScrBatIntSett.cpp'
+' '
+'Building file: ../src/Screen/ScrImpCurSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrImpCurSett.o" -MMD -MP -MF"src/Screen/ScrImpCurSett.d" -MT"src/Screen/ScrImpCurSett.d" -o "src/Screen/ScrImpCurSett.o" "../src/Screen/ScrImpCurSett.cpp"
+'Finished building: ../src/Screen/ScrImpCurSett.cpp'
+' '
+'Building file: ../src/Screen/ScrImpGraph.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrImpGraph.o" -MMD -MP -MF"src/Screen/ScrImpGraph.d" -MT"src/Screen/ScrImpGraph.d" -o "src/Screen/ScrImpGraph.o" "../src/Screen/ScrImpGraph.cpp"
+../src/Screen/ScrImpGraph.cpp: In member function 'virtual void ScrImpGraph::printData()':
+../src/Screen/ScrImpGraph.cpp:48:2: error: 'OLED' was not declared in this scope
+  OLED.setCursor(4, 12);
+  ^
+make: *** [src/Screen/ScrImpGraph.o] Error 1
+15:54:25 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrBatIntSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrBatIntSett.o" -MMD -MP -MF"src/Screen/ScrBatIntSett.d" -MT"src/Screen/ScrBatIntSett.d" -o "src/Screen/ScrBatIntSett.o" "../src/Screen/ScrBatIntSett.cpp"
+'Finished building: ../src/Screen/ScrBatIntSett.cpp'
+' '
+'Building file: ../src/Screen/ScrImpCurSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrImpCurSett.o" -MMD -MP -MF"src/Screen/ScrImpCurSett.d" -MT"src/Screen/ScrImpCurSett.d" -o "src/Screen/ScrImpCurSett.o" "../src/Screen/ScrImpCurSett.cpp"
+'Finished building: ../src/Screen/ScrImpCurSett.cpp'
+' '
+'Building file: ../src/Screen/ScrImpGraph.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrImpGraph.o" -MMD -MP -MF"src/Screen/ScrImpGraph.d" -MT"src/Screen/ScrImpGraph.d" -o "src/Screen/ScrImpGraph.o" "../src/Screen/ScrImpGraph.cpp"
+../src/Screen/ScrImpGraph.cpp: In member function 'virtual void ScrImpGraph::printData()':
+../src/Screen/ScrImpGraph.cpp:49:31: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+  OLED.putString("Graph screen");
+                               ^
+'Finished building: ../src/Screen/ScrImpGraph.cpp'
+' '
+'Building file: ../src/Screen/ScrImpIntSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrImpIntSett.o" -MMD -MP -MF"src/Screen/ScrImpIntSett.d" -MT"src/Screen/ScrImpIntSett.d" -o "src/Screen/ScrImpIntSett.o" "../src/Screen/ScrImpIntSett.cpp"
+'Finished building: ../src/Screen/ScrImpIntSett.cpp'
+' '
+'Building file: ../src/Screen/ScrIncFrecSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrIncFrecSett.o" -MMD -MP -MF"src/Screen/ScrIncFrecSett.d" -MT"src/Screen/ScrIncFrecSett.d" -o "src/Screen/ScrIncFrecSett.o" "../src/Screen/ScrIncFrecSett.cpp"
+'Finished building: ../src/Screen/ScrIncFrecSett.cpp'
+' '
+'Building file: ../src/Screen/ScrIncNumSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrIncNumSett.o" -MMD -MP -MF"src/Screen/ScrIncNumSett.d" -MT"src/Screen/ScrIncNumSett.d" -o "src/Screen/ScrIncNumSett.o" "../src/Screen/ScrIncNumSett.cpp"
+'Finished building: ../src/Screen/ScrIncNumSett.cpp'
+' '
+'Building file: ../src/Screen/ScrSettings.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrSettings.o" -MMD -MP -MF"src/Screen/ScrSettings.d" -MT"src/Screen/ScrSettings.d" -o "src/Screen/ScrSettings.o" "../src/Screen/ScrSettings.cpp"
+'Finished building: ../src/Screen/ScrSettings.cpp'
+' '
+'Building file: ../src/Screen/ScrStartFreqSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrStartFreqSett.o" -MMD -MP -MF"src/Screen/ScrStartFreqSett.d" -MT"src/Screen/ScrStartFreqSett.d" -o "src/Screen/ScrStartFreqSett.o" "../src/Screen/ScrStartFreqSett.cpp"
+'Finished building: ../src/Screen/ScrStartFreqSett.cpp'
+' '
+'Building file: ../src/Screen/ScrSweepSettings.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrSweepSettings.o" -MMD -MP -MF"src/Screen/ScrSweepSettings.d" -MT"src/Screen/ScrSweepSettings.d" -o "src/Screen/ScrSweepSettings.o" "../src/Screen/ScrSweepSettings.cpp"
+'Finished building: ../src/Screen/ScrSweepSettings.cpp'
+' '
+'Building file: ../src/Screen/ScrTempHumBat.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrTempHumBat.o" -MMD -MP -MF"src/Screen/ScrTempHumBat.d" -MT"src/Screen/ScrTempHumBat.d" -o "src/Screen/ScrTempHumBat.o" "../src/Screen/ScrTempHumBat.cpp"
+'Finished building: ../src/Screen/ScrTempHumBat.cpp'
+' '
+'Building file: ../src/Screen/ScrTempHumSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrTempHumSett.o" -MMD -MP -MF"src/Screen/ScrTempHumSett.d" -MT"src/Screen/ScrTempHumSett.d" -o "src/Screen/ScrTempHumSett.o" "../src/Screen/ScrTempHumSett.cpp"
+'Finished building: ../src/Screen/ScrTempHumSett.cpp'
+' '
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc:238:4: warning: "/*" within comment [-Wcomment]
+    /*sprintf(data, "%.2f", *max);
+ ^
+../src/main.cc: In function 'int main()':
+../src/main.cc:193:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:194:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 577524	   3456	  32768	 613748	  95d74	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+15:54:59 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrImpCurSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrImpCurSett.o" -MMD -MP -MF"src/Screen/ScrImpCurSett.d" -MT"src/Screen/ScrImpCurSett.d" -o "src/Screen/ScrImpCurSett.o" "../src/Screen/ScrImpCurSett.cpp"
+../src/Screen/ScrImpCurSett.cpp: In member function 'virtual void ScrImpCurSett::printData()':
+../src/Screen/ScrImpCurSett.cpp:42:27: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+  OLED.putString("Curr seT");
+                           ^
+'Finished building: ../src/Screen/ScrImpCurSett.cpp'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 577632	   3456	  32768	 613856	  95de0	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+15:55:24 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrTempHumBat.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrTempHumBat.o" -MMD -MP -MF"src/Screen/ScrTempHumBat.d" -MT"src/Screen/ScrTempHumBat.d" -o "src/Screen/ScrTempHumBat.o" "../src/Screen/ScrTempHumBat.cpp"
+../src/Screen/ScrTempHumBat.cpp: In member function 'virtual void ScrTempHumBat::printData()':
+../src/Screen/ScrTempHumBat.cpp:42:31: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+   OLED.putString("temp screen");
+                               ^
+'Finished building: ../src/Screen/ScrTempHumBat.cpp'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 577740	   3456	  32768	 613964	  95e4c	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+15:55:36 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrSettings.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrSettings.o" -MMD -MP -MF"src/Screen/ScrSettings.d" -MT"src/Screen/ScrSettings.d" -o "src/Screen/ScrSettings.o" "../src/Screen/ScrSettings.cpp"
+../src/Screen/ScrSettings.cpp: In member function 'virtual void ScrSettings::printData()':
+../src/Screen/ScrSettings.cpp:43:35: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+   OLED.putString("settings screen");
+                                   ^
+'Finished building: ../src/Screen/ScrSettings.cpp'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 577784	   3456	  32768	 614008	  95e78	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+15:56:29 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc:243:4: warning: "/*" within comment [-Wcomment]
+    /*sprintf(data, "%.2f", *max);
+ ^
+../src/main.cc: In function 'int main()':
+../src/main.cc:229:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for(int i = 0; i < screens.size(), i++)
+                    ^
+../src/main.cc:229:20: warning: value computed is not used [-Wunused-value]
+../src/main.cc:229:41: error: expected ';' before ')' token
+   for(int i = 0; i < screens.size(), i++)
+                                         ^
+../src/main.cc:193:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:194:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+make: *** [src/main.o] Error 1
+15:56:56 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc:243:4: warning: "/*" within comment [-Wcomment]
+    /*sprintf(data, "%.2f", *max);
+ ^
+../src/main.cc: In function 'int main()':
+../src/main.cc:229:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for(int i = 0; i < screens.size(), i++)
+                    ^
+../src/main.cc:229:20: warning: value computed is not used [-Wunused-value]
+../src/main.cc:229:41: error: expected ';' before ')' token
+   for(int i = 0; i < screens.size(), i++)
+                                         ^
+../src/main.cc:231:15: error: request for member 'pri' in 'screens.std::vector<_Tp, _Alloc>::operator[]<IScreen*, std::allocator<IScreen*> >(((std::vector<IScreen*>::size_type)i))', which is of pointer type 'IScreen*' (maybe you meant to use '->' ?)
+    screens[i].pri
+               ^
+../src/main.cc:193:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:194:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+make: *** [src/main.o] Error 1
+15:57:05 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc:243:4: warning: "/*" within comment [-Wcomment]
+    /*sprintf(data, "%.2f", *max);
+ ^
+../src/main.cc: In function 'int main()':
+../src/main.cc:229:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for(int i = 0; i < screens.size(), i++)
+                    ^
+../src/main.cc:229:20: warning: value computed is not used [-Wunused-value]
+../src/main.cc:229:41: error: expected ';' before ')' token
+   for(int i = 0; i < screens.size(), i++)
+                                         ^
+../src/main.cc:231:15: error: request for member 'printData' in 'screens.std::vector<_Tp, _Alloc>::operator[]<IScreen*, std::allocator<IScreen*> >(((std::vector<IScreen*>::size_type)i))', which is of pointer type 'IScreen*' (maybe you meant to use '->' ?)
+    screens[i].printData
+               ^
+../src/main.cc:193:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:194:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+make: *** [src/main.o] Error 1
+15:57:09 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc:243:4: warning: "/*" within comment [-Wcomment]
+    /*sprintf(data, "%.2f", *max);
+ ^
+../src/main.cc: In function 'int main()':
+../src/main.cc:229:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for(int i = 0; i < screens.size(), i++)
+                    ^
+../src/main.cc:229:20: warning: value computed is not used [-Wunused-value]
+../src/main.cc:229:41: error: expected ';' before ')' token
+   for(int i = 0; i < screens.size(), i++)
+                                         ^
+../src/main.cc:231:15: error: request for member 'printData' in 'screens.std::vector<_Tp, _Alloc>::operator[]<IScreen*, std::allocator<IScreen*> >(((std::vector<IScreen*>::size_type)i))', which is of pointer type 'IScreen*' (maybe you meant to use '->' ?)
+    screens[i].printData();
+               ^
+../src/main.cc:193:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:194:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+make: *** [src/main.o] Error 1
+15:57:13 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc:243:4: warning: "/*" within comment [-Wcomment]
+    /*sprintf(data, "%.2f", *max);
+ ^
+../src/main.cc: In function 'int main()':
+../src/main.cc:229:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for(int i = 0; i < screens.size(), i++)
+                    ^
+../src/main.cc:229:20: warning: value computed is not used [-Wunused-value]
+../src/main.cc:229:41: error: expected ';' before ')' token
+   for(int i = 0; i < screens.size(), i++)
+                                         ^
+../src/main.cc:193:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:194:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+make: *** [src/main.o] Error 1
+15:57:32 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc:243:4: warning: "/*" within comment [-Wcomment]
+    /*sprintf(data, "%.2f", *max);
+ ^
+../src/main.cc: In function 'int main()':
+../src/main.cc:229:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for(int i = 0; i < screens.size(); i++)
+                    ^
+../src/main.cc:193:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:194:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 577968	   3456	  32768	 614192	  95f30	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+15:57:55 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+17:51:05 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrImpGraph.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrImpGraph.o" -MMD -MP -MF"src/Screen/ScrImpGraph.d" -MT"src/Screen/ScrImpGraph.d" -o "src/Screen/ScrImpGraph.o" "../src/Screen/ScrImpGraph.cpp"
+../src/Screen/ScrImpGraph.cpp:15:8: error: 'vector' does not name a type
+ extern vector<float> impedanceArray;
+        ^
+../src/Screen/ScrImpGraph.cpp: In member function 'virtual void ScrImpGraph::printData()':
+../src/Screen/ScrImpGraph.cpp:50:31: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+  OLED.putString("Graph screen");
+                               ^
+make: *** [src/Screen/ScrImpGraph.o] Error 1
+17:51:26 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrImpGraph.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrImpGraph.o" -MMD -MP -MF"src/Screen/ScrImpGraph.d" -MT"src/Screen/ScrImpGraph.d" -o "src/Screen/ScrImpGraph.o" "../src/Screen/ScrImpGraph.cpp"
+../src/Screen/ScrImpGraph.cpp:15:18: warning: extra tokens at end of #include directive
+ #include <vector>;
+                  ^
+../src/Screen/ScrImpGraph.cpp:17:8: error: 'vector' does not name a type
+ extern vector<float> impedanceArray;
+        ^
+../src/Screen/ScrImpGraph.cpp: In member function 'virtual void ScrImpGraph::printData()':
+../src/Screen/ScrImpGraph.cpp:52:31: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+  OLED.putString("Graph screen");
+                               ^
+make: *** [src/Screen/ScrImpGraph.o] Error 1
+17:51:39 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrImpGraph.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrImpGraph.o" -MMD -MP -MF"src/Screen/ScrImpGraph.d" -MT"src/Screen/ScrImpGraph.d" -o "src/Screen/ScrImpGraph.o" "../src/Screen/ScrImpGraph.cpp"
+../src/Screen/ScrImpGraph.cpp:15:18: warning: extra tokens at end of #include directive
+ #include <vector>;
+                  ^
+../src/Screen/ScrImpGraph.cpp: In member function 'virtual void ScrImpGraph::printData()':
+../src/Screen/ScrImpGraph.cpp:52:31: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+  OLED.putString("Graph screen");
+                               ^
+'Finished building: ../src/Screen/ScrImpGraph.cpp'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 577968	   3456	  32768	 614192	  95f30	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+17:52:35 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:229:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for(int i = 0; i < screens.size(); i++)
+                    ^
+../src/main.cc:193:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:194:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 577968	   3456	  32768	 614192	  95f30	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+17:54:44 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrImpGraph.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrImpGraph.o" -MMD -MP -MF"src/Screen/ScrImpGraph.d" -MT"src/Screen/ScrImpGraph.d" -o "src/Screen/ScrImpGraph.o" "../src/Screen/ScrImpGraph.cpp"
+../src/Screen/ScrImpGraph.cpp:15:18: warning: extra tokens at end of #include directive
+ #include <vector>;
+                  ^
+../src/Screen/ScrImpGraph.cpp: In member function 'virtual void ScrImpGraph::printData()':
+../src/Screen/ScrImpGraph.cpp:51:35: error: 'impedanceUpdated' was not declared in this scope
+  if(impedanceArray.size() != 0 && impedanceUpdated)
+                                   ^
+../src/Screen/ScrImpGraph.cpp:54:38: error: 'max_element' is not a member of 'std'
+   std::vector<float>::iterator max = std::max_element(impedanceArray.begin(), impedanceArray.end());
+                                      ^
+../src/Screen/ScrImpGraph.cpp:55:38: error: 'min_element' is not a member of 'std'
+   std::vector<float>::iterator min = std::min_element(impedanceArray.begin(), impedanceArray.end());
+                                      ^
+../src/Screen/ScrImpGraph.cpp:60:36: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Error impedance");
+                                    ^
+../src/Screen/ScrImpGraph.cpp:62:37: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Check the sensor");
+                                     ^
+../src/Screen/ScrImpGraph.cpp:68:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i = 0; i < impedanceArray.size()-1; i++)
+                     ^
+../src/Screen/ScrImpGraph.cpp:70:80: error: 'map' was not declared in this scope
+     long mappedVal = map((long)impedanceArray[i],(long)*min, (long)*max, 32, 0 );
+                                                                                ^
+../src/Screen/ScrImpGraph.cpp:75:17: error: 'usleep' was not declared in this scope
+     usleep(50000);
+                 ^
+make: *** [src/Screen/ScrImpGraph.o] Error 1
+17:55:40 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrImpGraph.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrImpGraph.o" -MMD -MP -MF"src/Screen/ScrImpGraph.d" -MT"src/Screen/ScrImpGraph.d" -o "src/Screen/ScrImpGraph.o" "../src/Screen/ScrImpGraph.cpp"
+../src/Screen/ScrImpGraph.cpp:15:18: warning: extra tokens at end of #include directive
+ #include <vector>;
+                  ^
+../src/Screen/ScrImpGraph.cpp: In member function 'virtual void ScrImpGraph::printData()':
+../src/Screen/ScrImpGraph.cpp:56:38: error: 'max_element' is not a member of 'std'
+   std::vector<float>::iterator max = std::max_element(impedanceArray.begin(), impedanceArray.end());
+                                      ^
+../src/Screen/ScrImpGraph.cpp:57:38: error: 'min_element' is not a member of 'std'
+   std::vector<float>::iterator min = std::min_element(impedanceArray.begin(), impedanceArray.end());
+                                      ^
+../src/Screen/ScrImpGraph.cpp:62:36: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Error impedance");
+                                    ^
+../src/Screen/ScrImpGraph.cpp:64:37: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Check the sensor");
+                                     ^
+../src/Screen/ScrImpGraph.cpp:70:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i = 0; i < impedanceArray.size()-1; i++)
+                     ^
+../src/Screen/ScrImpGraph.cpp:72:80: error: 'map' was not declared in this scope
+     long mappedVal = map((long)impedanceArray[i],(long)*min, (long)*max, 32, 0 );
+                                                                                ^
+../src/Screen/ScrImpGraph.cpp:77:17: error: 'usleep' was not declared in this scope
+     usleep(50000);
+                 ^
+make: *** [src/Screen/ScrImpGraph.o] Error 1
+17:56:00 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrImpGraph.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrImpGraph.o" -MMD -MP -MF"src/Screen/ScrImpGraph.d" -MT"src/Screen/ScrImpGraph.d" -o "src/Screen/ScrImpGraph.o" "../src/Screen/ScrImpGraph.cpp"
+../src/Screen/ScrImpGraph.cpp:15:18: warning: extra tokens at end of #include directive
+ #include <vector>;
+                  ^
+../src/Screen/ScrImpGraph.cpp: In member function 'virtual void ScrImpGraph::printData()':
+../src/Screen/ScrImpGraph.cpp:56:38: error: 'max_element' is not a member of 'std'
+   std::vector<float>::iterator max = std::max_element(impedanceArray.begin(), impedanceArray.end());
+                                      ^
+../src/Screen/ScrImpGraph.cpp:57:38: error: 'min_element' is not a member of 'std'
+   std::vector<float>::iterator min = std::min_element(impedanceArray.begin(), impedanceArray.end());
+                                      ^
+../src/Screen/ScrImpGraph.cpp:62:36: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Error impedance");
+                                    ^
+../src/Screen/ScrImpGraph.cpp:64:37: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Check the sensor");
+                                     ^
+../src/Screen/ScrImpGraph.cpp:70:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i = 0; i < impedanceArray.size()-1; i++)
+                     ^
+../src/Screen/ScrImpGraph.cpp:72:80: error: 'map' was not declared in this scope
+     long mappedVal = map((long)impedanceArray[i],(long)*min, (long)*max, 32, 0 );
+                                                                                ^
+../src/Screen/ScrImpGraph.cpp:77:17: error: 'usleep' was not declared in this scope
+     usleep(50000);
+                 ^
+make: *** [src/Screen/ScrImpGraph.o] Error 1
+17:56:18 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrImpGraph.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrImpGraph.o" -MMD -MP -MF"src/Screen/ScrImpGraph.d" -MT"src/Screen/ScrImpGraph.d" -o "src/Screen/ScrImpGraph.o" "../src/Screen/ScrImpGraph.cpp"
+../src/Screen/ScrImpGraph.cpp:15:18: warning: extra tokens at end of #include directive
+ #include <vector>;
+                  ^
+../src/Screen/ScrImpGraph.cpp: In member function 'virtual void ScrImpGraph::printData()':
+../src/Screen/ScrImpGraph.cpp:61:38: error: 'max_element' is not a member of 'std'
+   std::vector<float>::iterator max = std::max_element(impedanceArray.begin(), impedanceArray.end());
+                                      ^
+../src/Screen/ScrImpGraph.cpp:62:38: error: 'min_element' is not a member of 'std'
+   std::vector<float>::iterator min = std::min_element(impedanceArray.begin(), impedanceArray.end());
+                                      ^
+../src/Screen/ScrImpGraph.cpp:67:36: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Error impedance");
+                                    ^
+../src/Screen/ScrImpGraph.cpp:69:37: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Check the sensor");
+                                     ^
+../src/Screen/ScrImpGraph.cpp:75:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i = 0; i < impedanceArray.size()-1; i++)
+                     ^
+../src/Screen/ScrImpGraph.cpp:82:17: error: 'usleep' was not declared in this scope
+     usleep(50000);
+                 ^
+make: *** [src/Screen/ScrImpGraph.o] Error 1
+17:56:40 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrImpGraph.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrImpGraph.o" -MMD -MP -MF"src/Screen/ScrImpGraph.d" -MT"src/Screen/ScrImpGraph.d" -o "src/Screen/ScrImpGraph.o" "../src/Screen/ScrImpGraph.cpp"
+../src/Screen/ScrImpGraph.cpp:15:18: warning: extra tokens at end of #include directive
+ #include <vector>;
+                  ^
+../src/Screen/ScrImpGraph.cpp: In member function 'virtual void ScrImpGraph::printData()':
+../src/Screen/ScrImpGraph.cpp:68:36: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Error impedance");
+                                    ^
+../src/Screen/ScrImpGraph.cpp:70:37: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Check the sensor");
+                                     ^
+../src/Screen/ScrImpGraph.cpp:76:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i = 0; i < impedanceArray.size()-1; i++)
+                     ^
+../src/Screen/ScrImpGraph.cpp:83:17: error: 'usleep' was not declared in this scope
+     usleep(50000);
+                 ^
+make: *** [src/Screen/ScrImpGraph.o] Error 1
+17:56:59 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrImpGraph.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrImpGraph.o" -MMD -MP -MF"src/Screen/ScrImpGraph.d" -MT"src/Screen/ScrImpGraph.d" -o "src/Screen/ScrImpGraph.o" "../src/Screen/ScrImpGraph.cpp"
+../src/Screen/ScrImpGraph.cpp:15:18: warning: extra tokens at end of #include directive
+ #include <vector>;
+                  ^
+../src/Screen/ScrImpGraph.cpp: In member function 'virtual void ScrImpGraph::printData()':
+../src/Screen/ScrImpGraph.cpp:69:36: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Error impedance");
+                                    ^
+../src/Screen/ScrImpGraph.cpp:71:37: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Check the sensor");
+                                     ^
+../src/Screen/ScrImpGraph.cpp:77:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i = 0; i < impedanceArray.size()-1; i++)
+                     ^
+'Finished building: ../src/Screen/ScrImpGraph.cpp'
+' '
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:224:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for(int i = 0; i < screens.size(); i++)
+                    ^
+../src/main.cc:188:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:189:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 579704	   3456	  32768	 615928	  965f8	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+17:58:11 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrImpGraph.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrImpGraph.o" -MMD -MP -MF"src/Screen/ScrImpGraph.d" -MT"src/Screen/ScrImpGraph.d" -o "src/Screen/ScrImpGraph.o" "../src/Screen/ScrImpGraph.cpp"
+../src/Screen/ScrImpGraph.cpp:15:18: warning: extra tokens at end of #include directive
+ #include <vector>;
+                  ^
+../src/Screen/ScrImpGraph.cpp: In member function 'virtual void ScrImpGraph::printData()':
+../src/Screen/ScrImpGraph.cpp:69:36: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Error impedance");
+                                    ^
+../src/Screen/ScrImpGraph.cpp:71:37: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Check the sensor");
+                                     ^
+../src/Screen/ScrImpGraph.cpp:77:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i = 0; i < impedanceArray.size()-1; i++)
+                     ^
+../src/Screen/ScrImpGraph.cpp:91:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+   OLED.putString("No impedance");
+                                ^
+'Finished building: ../src/Screen/ScrImpGraph.cpp'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 579784	   3456	  32768	 616008	  96648	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+00:00:29 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:188:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:189:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 579720	   3456	  32768	 615944	  96608	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+00:02:37 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+00:05:18 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrImpGraph.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrImpGraph.o" -MMD -MP -MF"src/Screen/ScrImpGraph.d" -MT"src/Screen/ScrImpGraph.d" -o "src/Screen/ScrImpGraph.o" "../src/Screen/ScrImpGraph.cpp"
+../src/Screen/ScrImpGraph.cpp:15:18: warning: extra tokens at end of #include directive
+ #include <vector>;
+                  ^
+../src/Screen/ScrImpGraph.cpp: In member function 'virtual void ScrImpGraph::printData()':
+../src/Screen/ScrImpGraph.cpp:69:36: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Error impedance");
+                                    ^
+../src/Screen/ScrImpGraph.cpp:71:37: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Check the sensor");
+                                     ^
+../src/Screen/ScrImpGraph.cpp:77:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i = 0; i < impedanceArray.size()-1; i++)
+                     ^
+../src/Screen/ScrImpGraph.cpp:92:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+   OLED.putString("No impedance");
+                                ^
+'Finished building: ../src/Screen/ScrImpGraph.cpp'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 579720	   3456	  32768	 615944	  96608	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+00:05:23 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+00:08:06 **** Build of project fsbl_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_2/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/spi_v4_1/src"
+make -C ps7_cortexa9_0/libsrc/spi_v4_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v5_3/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v5_3/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/xilffs_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/xilffs_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/xilrsa_v1_1/src"
+make -C ps7_cortexa9_0/libsrc/xilrsa_v1_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling coresightps_dcc"
+arm-xilinx-eabi-ar: creating ../../../lib/libxil.a
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling emacps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling gpio"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_2/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/spi_v4_1/src"
+make -C ps7_cortexa9_0/libsrc/spi_v4_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling spi"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v5_3/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v5_3/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling standalone"
+"Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling ttcps"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling xadcps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xilffs_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/xilffs_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling XilFFs Library"
+"Running Make libs in ps7_cortexa9_0/libsrc/xilrsa_v1_1/src"
+make -C ps7_cortexa9_0/libsrc/xilrsa_v1_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+'Finished building libraries'
+00:08:46 **** Build of configuration Debug for project fsbl ****
+make all 
+'Building file: ../src/fsbl_handoff.S'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/fsbl_handoff.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/fsbl_handoff.d" -MT"src/fsbl_handoff.d" -o "src/fsbl_handoff.o" "../src/fsbl_handoff.S"
+'Finished building: ../src/fsbl_handoff.S'
+' '
+'Building file: ../src/fsbl_hooks.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/fsbl_hooks.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/fsbl_hooks.d" -MT"src/fsbl_hooks.d" -o "src/fsbl_hooks.o" "../src/fsbl_hooks.c"
+'Finished building: ../src/fsbl_hooks.c'
+' '
+'Building file: ../src/image_mover.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/image_mover.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/image_mover.d" -MT"src/image_mover.d" -o "src/image_mover.o" "../src/image_mover.c"
+'Finished building: ../src/image_mover.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/main.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/md5.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/md5.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/md5.d" -MT"src/md5.d" -o "src/md5.o" "../src/md5.c"
+'Finished building: ../src/md5.c'
+' '
+'Building file: ../src/nand.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/nand.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/nand.d" -MT"src/nand.d" -o "src/nand.o" "../src/nand.c"
+'Finished building: ../src/nand.c'
+' '
+'Building file: ../src/nor.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/nor.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/nor.d" -MT"src/nor.d" -o "src/nor.o" "../src/nor.c"
+'Finished building: ../src/nor.c'
+' '
+'Building file: ../src/pcap.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/pcap.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/pcap.d" -MT"src/pcap.d" -o "src/pcap.o" "../src/pcap.c"
+'Finished building: ../src/pcap.c'
+' '
+'Building file: F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper_hw_platform_0/ps7_init.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/ps7_init.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/ps7_init.d" -MT"src/ps7_init.d" -o "src/ps7_init.o" "F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper_hw_platform_0/ps7_init.c"
+'Finished building: F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper_hw_platform_0/ps7_init.c'
+' '
+'Building file: ../src/qspi.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/qspi.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/qspi.d" -MT"src/qspi.d" -o "src/qspi.o" "../src/qspi.c"
+'Finished building: ../src/qspi.c'
+' '
+'Building file: ../src/rsa.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/rsa.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/rsa.d" -MT"src/rsa.d" -o "src/rsa.o" "../src/rsa.c"
+'Finished building: ../src/rsa.c'
+' '
+'Building file: ../src/sd.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/sd.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sd.d" -MT"src/sd.d" -o "src/sd.o" "../src/sd.c"
+'Finished building: ../src/sd.c'
+' '
+'Building target: fsbl.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -L"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\fsbl\src" -Wl,-T -Wl,../src/lscript.ld -L../../fsbl_bsp/ps7_cortexa9_0/lib -o "fsbl.elf"  ./src/fsbl_handoff.o ./src/fsbl_hooks.o ./src/image_mover.o ./src/main.o ./src/md5.o ./src/nand.o ./src/nor.o ./src/pcap.o ./src/ps7_init.o ./src/qspi.o ./src/rsa.o ./src/sd.o   -lrsa -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lrsa,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fsbl.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size fsbl.elf  |tee "fsbl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  77120	  11860	  74308	 163288	  27dd8	fsbl.elf
+'Finished building: fsbl.elf.size'
+' '
+00:08:52 **** Auto Build of configuration Debug for project fsbl ****
+make all 
+make: Nothing to be done for `all'.
