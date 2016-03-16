@@ -2,5 +2,5 @@
 <section name="Workbench">
 	<item value="F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\zyboApp\Debug" key="bootgen_files_selection"/>
 	<item value="F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\boot" key="zynq_flash_files_selection"/>
-	<item value="F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\boot" key="last_stored_selection"/>
+	<item value="F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\zyboApp\Debug" key="last_stored_selection"/>
 </section>

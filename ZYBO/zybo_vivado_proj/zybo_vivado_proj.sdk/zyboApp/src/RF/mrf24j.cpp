@@ -38,7 +38,7 @@ static XSpi MSpiInstance;
 
 static XGpio gpioInstance;
 
-static XScuGic gicInstance;
+XScuGic gicInstance;
 
 
 #define RF_INTERRUPT_MASK	0x1	//TODO: assign mask values; input, not needed

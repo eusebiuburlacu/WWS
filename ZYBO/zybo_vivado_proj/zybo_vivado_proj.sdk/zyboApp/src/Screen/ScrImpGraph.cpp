@@ -69,7 +69,6 @@ void ScrImpGraph::printData()
 			OLED.putString("Error impedance");
 			OLED.setCursor(0, 3);
 			OLED.putString("Check the sensor");
-			OLED.updateDisplay();
 		}
 		else
 		{
@@ -80,10 +79,9 @@ void ScrImpGraph::printData()
 				OLED.moveTo(i * step, mappedVal );
 				mappedVal = map((long)impedanceArray[i+1],(long)*min, (long)*max, 32, 0 );
 				OLED.drawLine((i+1)*step, mappedVal);
-				OLED.updateDisplay();
-				usleep(50000);
 			}
 		}
+		OLED.updateDisplay();
 	}
 
 	if(impedanceArray.size() == 0)

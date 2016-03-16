@@ -31,10 +31,16 @@
 #include <algorithm>
 #include "Screen/ScreenInterface.h"
 #include "Screen/Screens.h"
+#include "xparameters.h"
+#include <xgpio.h>
+#include <xscugic.h>
 
 /************************** Object Definitions *****************************/
 OledClass OLED;
 Mrf24j RF;
+static XGpio bGpioInstance;
+
+extern XScuGic gicInstance;
 
 /*****************************************************************************/
 /**
@@ -68,6 +74,10 @@ float temperature;
 unsigned char humidity;
 float batteryVoltage;
 bool impedanceUpdated = false;
+volatile int currentScreen;
+
+int initButtonsGpio();
+void bgpioInterruptHandler(void *CallBackRef);
 
 void rxCallback()
 {
@@ -84,7 +94,6 @@ void rxCallback()
 		case RF_MESSAGE_IMPEDANCE:
 		{
 			xil_printf("RF_MESSAGE_IMPEDANCE\n");
-			impedanceArray.clear();
 			impedanceUpdated = true;
 			for(; i < dataLen; i+=4)
 			{
@@ -94,6 +103,10 @@ void rxCallback()
 				*valPtr++ = RXInfo->rx_data[i+1];
 				*valPtr++ = RXInfo->rx_data[i+2];
 				*valPtr++ = RXInfo->rx_data[i+3];
+				if(impedanceArray.size() >= 128 )
+				{
+					impedanceArray.erase(impedanceArray.begin());
+				}
 				impedanceArray.push_back(val);
 				char data[5];
 				sprintf(data, "%.2f\n", val);
@@ -180,13 +193,15 @@ int main(void)
 	OLED.begin();
 	xil_printf("begin\n");
 
+	currentScreen = 0;
+
+	initButtonsGpio();
+
 	screens = getMenuScreens();
 
 	while(1)
 
 	{
-		int irow;
-		int ib;
 		RF.checkIntFlag();
 		//Clear the virtual buffer
 		OLED.clearBuffer();
@@ -197,38 +212,110 @@ int main(void)
 		OLED.setCharUpdate(0);
 		usleep(100000);
 		RF.checkIntFlag();
-		//Draw a rectangle over wrting then slide the rectagle
-		//down slowly displaying all writing
-		/*for (irow = 0; irow < OLED.rowMax; irow++)
-		{
-			OLED.clearBuffer();
-			OLED.setCursor(0, 0);
-			OLED.putString("PmodOLED");
-			OLED.setCursor(0, 1);
-			OLED.putString("by Digilent");
-			OLED.setCursor(0, 2);
-			OLED.putString("Simple Demo");
-			
-			OLED.moveTo(0, irow);
-			OLED.drawFillRect(127,31);
-			OLED.moveTo(0, irow);
-			OLED.drawLine(127,irow);
-			OLED.updateDisplay();
-			usleep(100000);
-			RF.checkIntFlag();
-		}*/
 
 		//draw impedance chart
 		OLED.clearBuffer();
-		screens[0]->printData();
+		screens[currentScreen]->printData();
 
-		/*for(int i = 0; i < screens.size(); i++)
-		{
-			screens[i]->printData();
-			usleep(1000000);
-		}*/
-		
 	}
 	
 	return XST_SUCCESS;
+}
+
+volatile int gpioReg = 0;
+#define UP_BTN_MASK		 0X01
+#define DOWN_BTN_MASK	 0X02
+#define BACK_BTN_MASK 	 0X04
+#define ENTER_BTN_MASK 	 0X08
+
+void bgpioInterruptHandler(void *CallBackRef)
+{
+	/*XGpio_InterruptDisable(&bGpioInstance, XGPIO_IR_CH1_MASK);
+	XGpio *gpio = (XGpio *) CallBackRef;
+	int status = XGpio_InterruptGetStatus(gpio);
+	if( status & XGPIO_IR_CH1_MASK )
+	{
+		XGpio_InterruptClear(&bGpioInstance, XGPIO_IR_CH1_MASK);
+		int gpioReg = XGpio_DiscreteRead(&bGpioInstance, 1);
+		if((gpioReg & 0x01) == 1)
+			bool dataRec = true;
+	}
+	XGpio_InterruptEnable(&bGpioInstance, XGPIO_IR_CH1_MASK);*/
+	XGpio_InterruptClear(&bGpioInstance, XGPIO_IR_CH1_MASK);
+	gpioReg = XGpio_DiscreteRead(&bGpioInstance, 1);
+
+	if(gpioReg & UP_BTN_MASK)
+	{
+		++currentScreen;
+		if(currentScreen >= (int)screens.size())
+		{
+			currentScreen = 0;
+		}
+	}
+	else if(gpioReg & DOWN_BTN_MASK)
+	{
+		--currentScreen;
+		if(currentScreen <= 0)
+		{
+			currentScreen = screens.size() - 1;
+		}
+	}
+	else if(gpioReg & BACK_BTN_MASK)
+	{
+
+	}
+	else if(gpioReg & ENTER_BTN_MASK)
+	{
+
+	}
+
+}
+
+int initButtonsGpio()
+{
+
+	//XScuGic_Config *GicConfigPtr;
+	XGpio_Config *GPIOConfigPtr;
+	int status;
+	//GPIO config
+	GPIOConfigPtr = XGpio_LookupConfig(XPAR_AXI_GPIO_2_DEVICE_ID);
+
+	status = XGpio_CfgInitialize(&bGpioInstance, GPIOConfigPtr, GPIOConfigPtr->BaseAddress);
+	if (status != XST_SUCCESS)
+	{
+		return XST_FAILURE;
+	}
+
+	XGpio_SetDataDirection(&bGpioInstance, 1, 0x0F); //check data direction
+
+	 //GicConfigPtr = XScuGic_LookupConfig(XPAR_PS7_SCUGIC_0_DEVICE_ID);
+	//if (GicConfigPtr == NULL)
+	//{
+		//return XST_DEVICE_NOT_FOUND;
+	//}
+
+	//status = XScuGic_CfgInitialize(&bGicInstance, GicConfigPtr, GicConfigPtr->CpuBaseAddress);
+   	//if (status != XST_SUCCESS)
+   	//{
+   		//return XST_FAILURE;
+   	//}
+
+   	//Xil_ExceptionInit();
+
+   	//Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_IRQ_INT,
+   	//(Xil_ExceptionHandler)XScuGic_InterruptHandler, &bGicInstance);
+   	Xil_ExceptionDisable();
+
+   	XScuGic_Connect(&gicInstance, XPAR_FABRIC_AXI_GPIO_2_IP2INTC_IRPT_INTR,
+   			(Xil_ExceptionHandler)bgpioInterruptHandler, (void *)&bGpioInstance);
+
+	XScuGic_Enable(&gicInstance, XPAR_FABRIC_AXI_GPIO_2_IP2INTC_IRPT_INTR);
+
+   	XGpio_InterruptGlobalEnable(&bGpioInstance);
+
+   	XGpio_InterruptEnable(&bGpioInstance, XGPIO_IR_CH1_MASK);
+
+   	Xil_ExceptionEnable();
+
+   	return 0;
 }

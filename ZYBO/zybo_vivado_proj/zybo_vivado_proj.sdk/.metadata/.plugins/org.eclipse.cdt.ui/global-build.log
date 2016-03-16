@@ -7372,3 +7372,2370 @@ arm-xilinx-eabi-size fsbl.elf  |tee "fsbl.elf.size"
 00:08:52 **** Auto Build of configuration Debug for project fsbl ****
 make all 
 make: Nothing to be done for `all'.
+23:01:47 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:192:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:193:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 580556	   3456	  32776	 616788	  96954	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+23:02:24 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:191:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:192:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 580388	   3456	  32776	 616620	  968ac	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+23:04:00 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrImpGraph.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrImpGraph.o" -MMD -MP -MF"src/Screen/ScrImpGraph.d" -MT"src/Screen/ScrImpGraph.d" -o "src/Screen/ScrImpGraph.o" "../src/Screen/ScrImpGraph.cpp"
+../src/Screen/ScrImpGraph.cpp:15:18: warning: extra tokens at end of #include directive
+ #include <vector>;
+                  ^
+../src/Screen/ScrImpGraph.cpp: In member function 'virtual void ScrImpGraph::printData()':
+../src/Screen/ScrImpGraph.cpp:69:36: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Error impedance");
+                                    ^
+../src/Screen/ScrImpGraph.cpp:71:37: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Check the sensor");
+                                     ^
+../src/Screen/ScrImpGraph.cpp:77:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i = 0; i < impedanceArray.size()-1; i++)
+                     ^
+../src/Screen/ScrImpGraph.cpp:91:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+   OLED.putString("No impedance");
+                                ^
+'Finished building: ../src/Screen/ScrImpGraph.cpp'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 580388	   3456	  32776	 616620	  968ac	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+23:04:17 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrImpGraph.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrImpGraph.o" -MMD -MP -MF"src/Screen/ScrImpGraph.d" -MT"src/Screen/ScrImpGraph.d" -o "src/Screen/ScrImpGraph.o" "../src/Screen/ScrImpGraph.cpp"
+../src/Screen/ScrImpGraph.cpp:15:18: warning: extra tokens at end of #include directive
+ #include <vector>;
+                  ^
+../src/Screen/ScrImpGraph.cpp: In member function 'virtual void ScrImpGraph::printData()':
+../src/Screen/ScrImpGraph.cpp:69:36: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Error impedance");
+                                    ^
+../src/Screen/ScrImpGraph.cpp:71:37: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Check the sensor");
+                                     ^
+../src/Screen/ScrImpGraph.cpp:76:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i = 0; i < impedanceArray.size()-1; i++)
+                     ^
+../src/Screen/ScrImpGraph.cpp:90:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+   OLED.putString("No impedance");
+                                ^
+'Finished building: ../src/Screen/ScrImpGraph.cpp'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 580388	   3456	  32776	 616620	  968ac	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+23:06:24 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:193:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:194:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+../src/main.cc: In function 'int initButtonsGpio()':
+../src/main.cc:244:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 580388	   3456	  32776	 616620	  968ac	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+23:09:49 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:195:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:196:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+../src/main.cc: In function 'int initButtonsGpio()':
+../src/main.cc:246:2: error: 'GPIOConfigPtr' was not declared in this scope
+  GPIOConfigPtr = XGpio_LookupConfig(XPAR_GPIO_1_DEVICE_ID);
+  ^
+../src/main.cc:248:2: error: 'status' was not declared in this scope
+  status = XGpio_CfgInitialize(&gpioInstance, GPIOConfigPtr, GPIOConfigPtr->BaseAddress);
+  ^
+../src/main.cc:248:32: error: 'gpioInstance' was not declared in this scope
+  status = XGpio_CfgInitialize(&gpioInstance, GPIOConfigPtr, GPIOConfigPtr->BaseAddress);
+                                ^
+../src/main.cc:257:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/main.o] Error 1
+23:13:24 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:198:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:199:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+../src/main.cc: In function 'int initButtonsGpio()':
+../src/main.cc:254:2: error: 'status' was not declared in this scope
+  status = XGpio_CfgInitialize(&bGpioInstance, GPIOConfigPtr, GPIOConfigPtr->BaseAddress);
+  ^
+../src/main.cc:268:38: error: 'gicInstance' was not declared in this scope
+  int status = XScuGic_CfgInitialize(&gicInstance, GicConfigPtr, GicConfigPtr->CpuBaseAddress);
+                                      ^
+../src/main.cc:281:27: error: 'gpioInterruptHandler' was not declared in this scope
+     (Xil_ExceptionHandler)gpioInterruptHandler, (void *)&gpioInstance);
+                           ^
+../src/main.cc:281:58: error: 'gpioInstance' was not declared in this scope
+     (Xil_ExceptionHandler)gpioInterruptHandler, (void *)&gpioInstance);
+                                                          ^
+../src/main.cc:290:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/main.cc: At global scope:
+../src/main.cc:42:16: warning: 'bGicInstance' defined but not used [-Wunused-variable]
+ static XScuGic bGicInstance;
+                ^
+make: *** [src/main.o] Error 1
+23:13:45 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:198:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:199:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+../src/main.cc: In function 'int initButtonsGpio()':
+../src/main.cc:269:6: error: redeclaration of 'int status'
+  int status = XScuGic_CfgInitialize(&gicInstance, GicConfigPtr, GicConfigPtr->CpuBaseAddress);
+      ^
+../src/main.cc:251:6: note: 'int status' previously declared here
+  int status;
+      ^
+../src/main.cc:269:38: error: 'gicInstance' was not declared in this scope
+  int status = XScuGic_CfgInitialize(&gicInstance, GicConfigPtr, GicConfigPtr->CpuBaseAddress);
+                                      ^
+../src/main.cc:282:27: error: 'gpioInterruptHandler' was not declared in this scope
+     (Xil_ExceptionHandler)gpioInterruptHandler, (void *)&gpioInstance);
+                           ^
+../src/main.cc:282:58: error: 'gpioInstance' was not declared in this scope
+     (Xil_ExceptionHandler)gpioInterruptHandler, (void *)&gpioInstance);
+                                                          ^
+../src/main.cc:291:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/main.cc: At global scope:
+../src/main.cc:42:16: warning: 'bGicInstance' defined but not used [-Wunused-variable]
+ static XScuGic bGicInstance;
+                ^
+make: *** [src/main.o] Error 1
+23:13:56 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:198:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:199:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+../src/main.cc: In function 'int initButtonsGpio()':
+../src/main.cc:269:6: error: redeclaration of 'int status'
+  int status = XScuGic_CfgInitialize(&bGicInstance, GicConfigPtr, GicConfigPtr->CpuBaseAddress);
+      ^
+../src/main.cc:251:6: note: 'int status' previously declared here
+  int status;
+      ^
+../src/main.cc:278:54: error: 'gicInstance' was not declared in this scope
+     (Xil_ExceptionHandler)XScuGic_InterruptHandler, &gicInstance);
+                                                      ^
+../src/main.cc:282:27: error: 'gpioInterruptHandler' was not declared in this scope
+     (Xil_ExceptionHandler)gpioInterruptHandler, (void *)&gpioInstance);
+                           ^
+../src/main.cc:282:58: error: 'gpioInstance' was not declared in this scope
+     (Xil_ExceptionHandler)gpioInterruptHandler, (void *)&gpioInstance);
+                                                          ^
+../src/main.cc:291:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/main.o] Error 1
+23:14:04 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:198:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:199:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+../src/main.cc: In function 'int initButtonsGpio()':
+../src/main.cc:278:54: error: 'gicInstance' was not declared in this scope
+     (Xil_ExceptionHandler)XScuGic_InterruptHandler, &gicInstance);
+                                                      ^
+../src/main.cc:282:27: error: 'gpioInterruptHandler' was not declared in this scope
+     (Xil_ExceptionHandler)gpioInterruptHandler, (void *)&gpioInstance);
+                           ^
+../src/main.cc:282:58: error: 'gpioInstance' was not declared in this scope
+     (Xil_ExceptionHandler)gpioInterruptHandler, (void *)&gpioInstance);
+                                                          ^
+../src/main.cc:291:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/main.o] Error 1
+23:14:24 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:198:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:199:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+../src/main.cc: In function 'int initButtonsGpio()':
+../src/main.cc:280:22: error: 'gicInstance' was not declared in this scope
+     XScuGic_Connect(&gicInstance, XPAR_FABRIC_AXI_GPIO_1_IP2INTC_IRPT_INTR,
+                      ^
+../src/main.cc:282:27: error: 'gpioInterruptHandler' was not declared in this scope
+     (Xil_ExceptionHandler)gpioInterruptHandler, (void *)&bGpioInstance);
+                           ^
+../src/main.cc:286:34: error: 'gpioInstance' was not declared in this scope
+     XGpio_InterruptGlobalEnable(&gpioInstance);
+                                  ^
+../src/main.cc:291:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/main.o] Error 1
+23:14:37 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:198:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:199:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+../src/main.cc: In function 'int initButtonsGpio()':
+../src/main.cc:282:27: error: 'gpioInterruptHandler' was not declared in this scope
+     (Xil_ExceptionHandler)gpioInterruptHandler, (void *)&bGpioInstance);
+                           ^
+../src/main.cc:284:18: error: 'gicInstance' was not declared in this scope
+  XScuGic_Enable(&gicInstance, XPAR_FABRIC_AXI_GPIO_1_IP2INTC_IRPT_INTR);
+                  ^
+../src/main.cc:286:34: error: 'gpioInstance' was not declared in this scope
+     XGpio_InterruptGlobalEnable(&gpioInstance);
+                                  ^
+../src/main.cc:291:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/main.o] Error 1
+23:14:42 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:198:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:199:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+../src/main.cc: In function 'int initButtonsGpio()':
+../src/main.cc:282:27: error: 'gpioInterruptHandler' was not declared in this scope
+     (Xil_ExceptionHandler)gpioInterruptHandler, (void *)&bGpioInstance);
+                           ^
+../src/main.cc:284:18: error: 'gicInstance' was not declared in this scope
+  XScuGic_Enable(&gicInstance, XPAR_FABRIC_AXI_GPIO_1_IP2INTC_IRPT_INTR);
+                  ^
+../src/main.cc:288:28: error: 'gpioInstance' was not declared in this scope
+     XGpio_InterruptEnable(&gpioInstance, XGPIO_IR_CH1_MASK);
+                            ^
+../src/main.cc:291:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/main.o] Error 1
+23:14:51 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:198:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:199:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+../src/main.cc: In function 'int initButtonsGpio()':
+../src/main.cc:282:27: error: 'gpioInterruptHandler' was not declared in this scope
+     (Xil_ExceptionHandler)gpioInterruptHandler, (void *)&bGpioInstance);
+                           ^
+../src/main.cc:284:18: error: 'gicInstance' was not declared in this scope
+  XScuGic_Enable(&gicInstance, XPAR_FABRIC_AXI_GPIO_1_IP2INTC_IRPT_INTR);
+                  ^
+../src/main.cc:291:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/main.o] Error 1
+23:14:55 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:198:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:199:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+../src/main.cc: In function 'int initButtonsGpio()':
+../src/main.cc:282:27: error: 'gpioInterruptHandler' was not declared in this scope
+     (Xil_ExceptionHandler)gpioInterruptHandler, (void *)&bGpioInstance);
+                           ^
+../src/main.cc:291:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/main.o] Error 1
+23:15:45 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:198:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:199:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+../src/main.cc: In function 'void gpioInterruptHandler(void*)':
+../src/main.cc:248:26: error: 'gpioInstance' was not declared in this scope
+  XGpio_InterruptDisable(&gpioInstance, XGPIO_IR_CH1_MASK);
+                          ^
+../src/main.cc:255:17: error: 'RF_INTERRUPT_MASK' was not declared in this scope
+   if((gpioReg & RF_INTERRUPT_MASK) == 1)
+                 ^
+../src/main.cc:256:4: error: 'dataRec' was not declared in this scope
+    dataRec = true;
+    ^
+../src/main.cc: In function 'int initButtonsGpio()':
+../src/main.cc:306:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/main.o] Error 1
+23:16:07 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:198:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:199:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+../src/main.cc: In function 'void gpioInterruptHandler(void*)':
+../src/main.cc:253:25: error: 'gpioInstance' was not declared in this scope
+   XGpio_InterruptClear(&gpioInstance, XGPIO_IR_CH1_MASK);
+                         ^
+../src/main.cc:255:17: error: 'RF_INTERRUPT_MASK' was not declared in this scope
+   if((gpioReg & RF_INTERRUPT_MASK) == 1)
+                 ^
+../src/main.cc:256:4: error: 'dataRec' was not declared in this scope
+    dataRec = true;
+    ^
+../src/main.cc:258:25: error: 'gpioInstance' was not declared in this scope
+  XGpio_InterruptEnable(&gpioInstance, XGPIO_IR_CH1_MASK);
+                         ^
+../src/main.cc: In function 'int initButtonsGpio()':
+../src/main.cc:306:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/main.o] Error 1
+23:16:15 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:198:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:199:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+../src/main.cc: In function 'void gpioInterruptHandler(void*)':
+../src/main.cc:255:17: error: 'RF_INTERRUPT_MASK' was not declared in this scope
+   if((gpioReg & RF_INTERRUPT_MASK) == 1)
+                 ^
+../src/main.cc:256:4: error: 'dataRec' was not declared in this scope
+    dataRec = true;
+    ^
+../src/main.cc:258:25: error: 'gpioInstance' was not declared in this scope
+  XGpio_InterruptEnable(&gpioInstance, XGPIO_IR_CH1_MASK);
+                         ^
+../src/main.cc: In function 'int initButtonsGpio()':
+../src/main.cc:306:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/main.o] Error 1
+23:16:26 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:198:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:199:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+../src/main.cc: In function 'void gpioInterruptHandler(void*)':
+../src/main.cc:255:17: error: 'RF_INTERRUPT_MASK' was not declared in this scope
+   if((gpioReg & RF_INTERRUPT_MASK) == 1)
+                 ^
+../src/main.cc:256:4: error: 'dataRec' was not declared in this scope
+    dataRec = true;
+    ^
+../src/main.cc: In function 'int initButtonsGpio()':
+../src/main.cc:306:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/main.o] Error 1
+23:16:45 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:198:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:199:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+../src/main.cc: In function 'void gpioInterruptHandler(void*)':
+../src/main.cc:255:17: error: 'RF_INTERRUPT_MASK' was not declared in this scope
+   if((gpioReg & RF_INTERRUPT_MASK) == 1)
+                 ^
+../src/main.cc:256:9: warning: unused variable 'dataRec' [-Wunused-variable]
+    bool dataRec = true;
+         ^
+../src/main.cc: In function 'int initButtonsGpio()':
+../src/main.cc:306:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/main.o] Error 1
+23:16:57 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:198:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:199:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+../src/main.cc: In function 'void gpioInterruptHandler(void*)':
+../src/main.cc:256:9: warning: unused variable 'dataRec' [-Wunused-variable]
+    bool dataRec = true;
+         ^
+../src/main.cc: In function 'int initButtonsGpio()':
+../src/main.cc:306:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 580876	   3456	  32808	 617140	  96ab4	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+23:17:19 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:198:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:199:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+../src/main.cc: In function 'void gpioInterruptHandler(void*)':
+../src/main.cc:256:9: warning: unused variable 'dataRec' [-Wunused-variable]
+    bool dataRec = true;
+         ^
+../src/main.cc: In function 'int initButtonsGpio()':
+../src/main.cc:306:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 580876	   3456	  32808	 617140	  96ab4	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+23:19:37 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:19:59 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:20:09 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:21:32 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:195:2: error: expected ';' before 'screens'
+  screens = getMenuScreens();
+  ^
+../src/main.cc:200:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:201:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+../src/main.cc: In function 'void gpioInterruptHandler(void*)':
+../src/main.cc:258:9: warning: unused variable 'dataRec' [-Wunused-variable]
+    bool dataRec = true;
+         ^
+../src/main.cc: In function 'int initButtonsGpio()':
+../src/main.cc:308:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/main.o] Error 1
+23:21:35 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:200:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:201:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+../src/main.cc: In function 'void gpioInterruptHandler(void*)':
+../src/main.cc:258:9: warning: unused variable 'dataRec' [-Wunused-variable]
+    bool dataRec = true;
+         ^
+../src/main.cc: In function 'int initButtonsGpio()':
+../src/main.cc:308:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 580876	   3456	  32808	 617140	  96ab4	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+23:21:39 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:23:18 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:26:02 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:200:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:201:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+../src/main.cc: In function 'void gpioInterruptHandler(void*)':
+../src/main.cc:258:9: warning: unused variable 'dataRec' [-Wunused-variable]
+    bool dataRec = true;
+         ^
+../src/main.cc: In function 'int initButtonsGpio()':
+../src/main.cc:308:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 580876	   3456	  32808	 617140	  96ab4	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+23:26:27 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:200:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:201:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+../src/main.cc: At global scope:
+../src/main.cc:40:14: warning: 'bGpioInstance' defined but not used [-Wunused-variable]
+ static XGpio bGpioInstance;
+              ^
+../src/main.cc:42:16: warning: 'bGicInstance' defined but not used [-Wunused-variable]
+ static XScuGic bGicInstance;
+                ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 580388	   3456	  32808	 616652	  968cc	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+23:26:35 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:27:09 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:200:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:201:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+../src/main.cc: In function 'void gpioInterruptHandler(void*)':
+../src/main.cc:258:9: warning: unused variable 'dataRec' [-Wunused-variable]
+    bool dataRec = true;
+         ^
+../src/main.cc: In function 'int initButtonsGpio()':
+../src/main.cc:308:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 580876	   3456	  32808	 617140	  96ab4	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+23:27:19 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:27:52 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:200:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:201:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+../src/main.cc: In function 'int initButtonsGpio()':
+../src/main.cc:308:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 580736	   3456	  32808	 617000	  96a28	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+23:27:56 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:28:56 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:200:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:201:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+../src/main.cc: In function 'int initButtonsGpio()':
+../src/main.cc:311:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 580736	   3456	  32808	 617000	  96a28	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+23:29:09 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:200:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:201:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+../src/main.cc: In function 'int initButtonsGpio()':
+../src/main.cc:311:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 580736	   3456	  32808	 617000	  96a28	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+23:29:12 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:29:49 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:31:07 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:31:25 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:33:22 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:200:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:201:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+../src/main.cc: In function 'int initButtonsGpio()':
+../src/main.cc:310:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 580736	   3456	  32808	 617000	  96a28	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+23:34:40 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:200:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:201:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+../src/main.cc: In function 'int initButtonsGpio()':
+../src/main.cc:310:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 580736	   3456	  32808	 617000	  96a28	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+23:34:53 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:36:12 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:200:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:201:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+../src/main.cc: In function 'int initButtonsGpio()':
+../src/main.cc:310:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 580748	   3456	  32808	 617012	  96a34	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+23:36:23 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:200:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:201:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+../src/main.cc: In function 'void gpioInterruptHandler(void*)':
+../src/main.cc:262:6: warning: unused variable 'gpioReg' [-Wunused-variable]
+  int gpioReg = XGpio_DiscreteRead(&bGpioInstance, 1);
+      ^
+../src/main.cc: In function 'int initButtonsGpio()':
+../src/main.cc:311:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 580812	   3456	  32808	 617076	  96a74	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+23:36:28 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:37:46 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:201:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:202:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+../src/main.cc: In function 'void gpioInterruptHandler(void*)':
+../src/main.cc:263:6: warning: unused variable 'gpioReg' [-Wunused-variable]
+  int gpioReg = XGpio_DiscreteRead(&bGpioInstance, 1);
+      ^
+../src/main.cc: In function 'int initButtonsGpio()':
+../src/main.cc:312:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 580812	   3456	  32808	 617076	  96a74	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+23:37:54 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:38:22 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:38:29 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:38:39 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:39:08 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:201:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:202:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+../src/main.cc: In function 'int initButtonsGpio()':
+../src/main.cc:312:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 580748	   3456	  32808	 617012	  96a34	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+23:39:17 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:40:33 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:201:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:202:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+../src/main.cc: In function 'int initButtonsGpio()':
+../src/main.cc:313:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 580836	   3456	  32808	 617100	  96a8c	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+23:40:48 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:201:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:202:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+../src/main.cc: In function 'void gpioInterruptHandler(void*)':
+../src/main.cc:263:6: warning: unused variable 'gpioReg' [-Wunused-variable]
+  int gpioReg = XGpio_DiscreteRead(&bGpioInstance, 1);
+      ^
+../src/main.cc: In function 'int initButtonsGpio()':
+../src/main.cc:313:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 580836	   3456	  32808	 617100	  96a8c	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+23:41:50 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:202:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:203:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+../src/main.cc: In function 'void gpioInterruptHandler(void*)':
+../src/main.cc:264:6: warning: unused variable 'gpioReg' [-Wunused-variable]
+  int gpioReg = XGpio_DiscreteRead(&bGpioInstance, 1);
+      ^
+../src/main.cc: In function 'int initButtonsGpio()':
+../src/main.cc:314:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 580836	   3456	  32808	 617100	  96a8c	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+23:42:11 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:43:13 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:202:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:203:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+../src/main.cc: In function 'int initButtonsGpio()':
+../src/main.cc:316:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 580836	   3456	  32808	 617100	  96a8c	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+23:43:18 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:44:22 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:202:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:203:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+../src/main.cc: In function 'int initButtonsGpio()':
+../src/main.cc:307:29: error: 'gpioInterruptHandler' was not declared in this scope
+       (Xil_ExceptionHandler)gpioInterruptHandler, (void *)&bGpioInstance);
+                             ^
+../src/main.cc:316:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/main.cc: At global scope:
+../src/main.cc:252:13: warning: 'void bgpioInterruptHandler(void*)' defined but not used [-Wunused-function]
+ static void bgpioInterruptHandler(void *CallBackRef)
+             ^
+make: *** [src/main.o] Error 1
+23:44:30 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:202:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:203:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+../src/main.cc: In function 'int initButtonsGpio()':
+../src/main.cc:316:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 580836	   3456	  32808	 617100	  96a8c	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+23:45:24 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:202:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:203:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+../src/main.cc: In function 'int initButtonsGpio()':
+../src/main.cc:316:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 580836	   3456	  32808	 617100	  96a8c	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+23:45:29 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:46:03 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:202:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:203:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+../src/main.cc: In function 'int initButtonsGpio()':
+../src/main.cc:317:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 580836	   3456	  32808	 617100	  96a8c	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+23:46:26 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:202:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:203:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 580836	   3456	  32808	 617100	  96a8c	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+23:46:31 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:202:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:203:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 580836	   3456	  32808	 617100	  96a8c	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+23:46:40 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:47:27 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:202:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:203:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 580836	   3456	  32808	 617100	  96a8c	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+23:47:32 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:47:53 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:48:30 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:202:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:203:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 580836	   3456	  32808	 617100	  96a8c	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+23:48:42 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:49:24 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:49:50 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:202:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:203:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 580772	   3456	  32808	 617036	  96a4c	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+23:50:00 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:50:18 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:51:00 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:202:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:203:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 580736	   3456	  32808	 617000	  96a28	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+23:51:14 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:51:49 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:52:14 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:202:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:203:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 580836	   3456	  32808	 617100	  96a8c	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+23:52:17 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:52:41 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:53:37 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:202:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:203:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 580836	   3456	  32808	 617100	  96a8c	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+23:53:47 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:54:08 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:202:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:203:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 580772	   3456	  32808	 617036	  96a4c	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+23:54:15 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:54:32 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:56:13 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:202:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:203:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+../src/main.cc: In function 'int initButtonsGpio()':
+../src/main.cc:307:22: error: 'bGicInstance' was not declared in this scope
+     XScuGic_Connect(&bGicInstance, XPAR_FABRIC_AXI_GPIO_2_IP2INTC_IRPT_INTR,
+                      ^
+make: *** [src/main.o] Error 1
+23:56:36 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/RF/mrf24j.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/RF/mrf24j.o" -MMD -MP -MF"src/RF/mrf24j.d" -MT"src/RF/mrf24j.d" -o "src/RF/mrf24j.o" "../src/RF/mrf24j.cpp"
+../src/RF/mrf24j.cpp: In member function 'bool Mrf24j::checkIntFlag()':
+../src/RF/mrf24j.cpp:78:6: warning: unused variable 'gpioReg' [-Wunused-variable]
+  int gpioReg = XGpio_DiscreteRead(&gpioInstance, 1);
+      ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::write_short(uint8_t, uint8_t)':
+../src/RF/mrf24j.cpp:225:9: warning: unused variable 'status' [-Wunused-variable]
+     int status = XSpi_Transfer( &MSpiInstance, &data, &rgbRx, sizeof(uint8_t) );
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::init()':
+../src/RF/mrf24j.cpp:337:13: warning: unused variable 'regi' [-Wunused-variable]
+     uint8_t regi = read_long(MRF_SLPCON0);
+             ^
+'Finished building: ../src/RF/mrf24j.cpp'
+' '
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:202:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:203:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+../src/main.cc: In function 'int initButtonsGpio()':
+../src/main.cc:307:22: error: 'bGicInstance' was not declared in this scope
+     XScuGic_Connect(&bGicInstance, XPAR_FABRIC_AXI_GPIO_2_IP2INTC_IRPT_INTR,
+                      ^
+make: *** [src/main.o] Error 1
+23:56:43 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:202:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:203:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+../src/main.cc: In function 'int initButtonsGpio()':
+../src/main.cc:307:22: error: 'bGicInstance' was not declared in this scope
+     XScuGic_Connect(&bGicInstance, XPAR_FABRIC_AXI_GPIO_2_IP2INTC_IRPT_INTR,
+                      ^
+make: *** [src/main.o] Error 1
+23:56:55 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:202:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:203:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 580772	   3456	  32792	 617020	  96a3c	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+23:57:06 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:57:32 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:202:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:203:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 580772	   3456	  32792	 617020	  96a3c	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+23:58:05 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:202:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:203:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+../src/main.cc: In function 'int initButtonsGpio()':
+../src/main.cc:275:18: warning: unused variable 'GicConfigPtr' [-Wunused-variable]
+  XScuGic_Config *GicConfigPtr;
+                  ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 580772	   3456	  32792	 617020	  96a3c	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+23:58:14 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:202:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:203:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 580772	   3456	  32792	 617020	  96a3c	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+23:58:29 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:58:47 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:202:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:203:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 580672	   3456	  32792	 616920	  969d8	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+23:58:53 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:59:31 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:202:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:203:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 580748	   3456	  32792	 616996	  96a24	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+23:59:39 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+00:00:20 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+00:00:28 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+00:01:09 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:202:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:203:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 580748	   3456	  32792	 616996	  96a24	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+00:01:15 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+00:01:51 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+00:04:12 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:202:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:203:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 580772	   3456	  32792	 617020	  96a3c	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+00:04:16 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+00:04:38 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+00:05:01 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+00:05:18 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:202:7: warning: unused variable 'irow' [-Wunused-variable]
+   int irow;
+       ^
+../src/main.cc:203:7: warning: unused variable 'ib' [-Wunused-variable]
+   int ib;
+       ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 580748	   3456	  32792	 616996	  96a24	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+00:05:22 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+00:08:56 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+22:42:04 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 580748	   3456	  32792	 616996	  96a24	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+22:42:15 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 580748	   3456	  32792	 616996	  96a24	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+22:46:30 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 580748	   3456	  32792	 616996	  96a24	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+22:48:44 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'void bgpioInterruptHandler(void*)':
+../src/main.cc:249:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   if(currentScreen > screens.size())
+                    ^
+../src/main.cc:250:2: error: expected primary-expression before '}' token
+  }
+  ^
+make: *** [src/main.o] Error 1
+22:49:11 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 580940	   3456	  32792	 617188	  96ae4	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+22:49:38 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 581004	   3456	  32792	 617252	  96b24	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+22:51:09 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 581068	   3456	  32792	 617316	  96b64	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+22:51:37 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'void bgpioInterruptHandler(void*)':
+../src/main.cc:250:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   if(currentScreen >= screens.size())
+                    ^
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 581068	   3456	  32792	 617316	  96b64	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+22:51:54 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 581068	   3456	  32792	 617316	  96b64	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+22:52:58 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 581068	   3456	  32792	 617316	  96b64	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+22:56:49 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+22:57:26 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+22:58:02 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+22:58:20 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+22:59:20 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 581132	   3456	  32792	 617380	  96ba4	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+22:59:41 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+22:59:47 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:00:27 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:00:50 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:00:58 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:01:19 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:01:50 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:02:59 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:03:58 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+23:05:29 **** Build of project fsbl_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_2/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/spi_v4_1/src"
+make -C ps7_cortexa9_0/libsrc/spi_v4_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v5_3/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v5_3/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/xilffs_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/xilffs_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/xilrsa_v1_1/src"
+make -C ps7_cortexa9_0/libsrc/xilrsa_v1_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling coresightps_dcc"
+arm-xilinx-eabi-ar: creating ../../../lib/libxil.a
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling emacps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling gpio"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_2/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/spi_v4_1/src"
+make -C ps7_cortexa9_0/libsrc/spi_v4_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling spi"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v5_3/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v5_3/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling standalone"
+"Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling ttcps"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling xadcps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xilffs_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/xilffs_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling XilFFs Library"
+"Running Make libs in ps7_cortexa9_0/libsrc/xilrsa_v1_1/src"
+make -C ps7_cortexa9_0/libsrc/xilrsa_v1_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+'Finished building libraries'
+23:06:09 **** Build of configuration Debug for project fsbl ****
+make all 
+'Building file: ../src/fsbl_handoff.S'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/fsbl_handoff.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/fsbl_handoff.d" -MT"src/fsbl_handoff.d" -o "src/fsbl_handoff.o" "../src/fsbl_handoff.S"
+'Finished building: ../src/fsbl_handoff.S'
+' '
+'Building file: ../src/fsbl_hooks.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/fsbl_hooks.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/fsbl_hooks.d" -MT"src/fsbl_hooks.d" -o "src/fsbl_hooks.o" "../src/fsbl_hooks.c"
+'Finished building: ../src/fsbl_hooks.c'
+' '
+'Building file: ../src/image_mover.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/image_mover.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/image_mover.d" -MT"src/image_mover.d" -o "src/image_mover.o" "../src/image_mover.c"
+'Finished building: ../src/image_mover.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/main.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/md5.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/md5.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/md5.d" -MT"src/md5.d" -o "src/md5.o" "../src/md5.c"
+'Finished building: ../src/md5.c'
+' '
+'Building file: ../src/nand.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/nand.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/nand.d" -MT"src/nand.d" -o "src/nand.o" "../src/nand.c"
+'Finished building: ../src/nand.c'
+' '
+'Building file: ../src/nor.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/nor.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/nor.d" -MT"src/nor.d" -o "src/nor.o" "../src/nor.c"
+'Finished building: ../src/nor.c'
+' '
+'Building file: ../src/pcap.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/pcap.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/pcap.d" -MT"src/pcap.d" -o "src/pcap.o" "../src/pcap.c"
+'Finished building: ../src/pcap.c'
+' '
+'Building file: F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper_hw_platform_0/ps7_init.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/ps7_init.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/ps7_init.d" -MT"src/ps7_init.d" -o "src/ps7_init.o" "F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper_hw_platform_0/ps7_init.c"
+'Finished building: F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper_hw_platform_0/ps7_init.c'
+' '
+'Building file: ../src/qspi.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/qspi.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/qspi.d" -MT"src/qspi.d" -o "src/qspi.o" "../src/qspi.c"
+'Finished building: ../src/qspi.c'
+' '
+'Building file: ../src/rsa.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/rsa.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/rsa.d" -MT"src/rsa.d" -o "src/rsa.o" "../src/rsa.c"
+'Finished building: ../src/rsa.c'
+' '
+'Building file: ../src/sd.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/sd.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sd.d" -MT"src/sd.d" -o "src/sd.o" "../src/sd.c"
+'Finished building: ../src/sd.c'
+' '
+'Building target: fsbl.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -L"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\fsbl\src" -Wl,-T -Wl,../src/lscript.ld -L../../fsbl_bsp/ps7_cortexa9_0/lib -o "fsbl.elf"  ./src/fsbl_handoff.o ./src/fsbl_hooks.o ./src/image_mover.o ./src/main.o ./src/md5.o ./src/nand.o ./src/nor.o ./src/pcap.o ./src/ps7_init.o ./src/qspi.o ./src/rsa.o ./src/sd.o   -lrsa -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lrsa,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fsbl.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size fsbl.elf  |tee "fsbl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  77120	  11860	  74308	 163288	  27dd8	fsbl.elf
+'Finished building: fsbl.elf.size'
+' '
+23:06:13 **** Auto Build of configuration Debug for project fsbl ****
+make all 
+make: Nothing to be done for `all'.
