@@ -3734,3 +3734,78 @@ Debug Operation Not Supported on the Target, Current Processor State is not "Sto
 23:07:44 INFO  : Creating new bif file F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\boot\boot.bif
 23:07:45 INFO  : Bootgen command execution is done.
 23:11:50 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+15:19:50 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+15:19:54 INFO  : XSDB server has started successfully.
+15:20:23 INFO  : Processing command line option -hwspec F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper.hdf.
+15:20:27 INFO  : Checking for hwspec changes in the project design_hw_wrapper_hw_platform_0.
+16:10:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:10:44 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279760164A" && level==0} -index 1' command is executed.
+16:10:46 INFO  : FPGA configured successfully with bitstream "F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper_hw_platform_0/design_hw_wrapper.bit"
+16:11:16 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: 
+    Could not find a ARM device on the board. Please check if the target is in:
+     1. Split JTAG mode - No operations are possible with ARM DAP
+     2. Non Jtag bootmode - Bootrom may need time to enable DAP. Please try again
+
+
+	at com.xilinx.sdk.targetmanager.internal.TM.connectToProcessor(TM.java:484)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runTargetSetup(XilinxAppLaunchConfigurationDelegate.java:503)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(XilinxAppLaunchConfigurationDelegate.java:701)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:311)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+16:11:28 INFO  : ps7_init is completed.
+16:11:28 INFO  : ps7_post_config is completed.
+16:11:28 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:11:36 ERROR : Port COM21 is already in use.
+16:11:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:11:43 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279760164A" && level==0} -index 1' command is executed.
+16:11:44 INFO  : FPGA configured successfully with bitstream "F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper_hw_platform_0/design_hw_wrapper.bit"
+16:21:49 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:21:55 ERROR : Port COM21 is already in use.
+16:25:33 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:27:36 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:31:29 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:32:50 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:34:42 INFO  : FPGA Cable Disconnected. All active launches will be terminated.
+16:34:42 WARN  : Terminating existing sessions on processor ps7_cortexa9_0
+22:16:47 ERROR : Unexpected error while fetching XMD's response: 
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:209)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+	at java.io.InputStreamReader.read(InputStreamReader.java:184)
+	at java.io.BufferedReader.fill(BufferedReader.java:161)
+	at java.io.BufferedReader.read(BufferedReader.java:182)
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess$CommandResultsReader.run(XMDJSONProcess.java:332)
+	at java.lang.Thread.run(Thread.java:745)
+22:16:47 ERROR : Zero sized response read from XMD. This indicates a communication error or a programming error.
+22:16:49 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+18:37:38 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+18:37:43 INFO  : XSDB server has started successfully.
+18:38:07 INFO  : Processing command line option -hwspec F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper.hdf.
+18:38:08 INFO  : Checking for hwspec changes in the project design_hw_wrapper_hw_platform_0.
+18:39:04 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+18:39:07 INFO  : XSDB server has started successfully.
+18:39:08 INFO  : Processing command line option -hwspec F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper.hdf.
+18:39:09 INFO  : Checking for hwspec changes in the project design_hw_wrapper_hw_platform_0.
+20:20:21 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+20:20:30 INFO  : XSDB server has started successfully.
+20:20:34 INFO  : Processing command line option -hwspec F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper.hdf.
+20:20:34 INFO  : Checking for hwspec changes in the project design_hw_wrapper_hw_platform_0.
+20:20:39 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1459185468910,  Project:1457799410267
+20:20:39 INFO  : The hardware specification for project 'design_hw_wrapper_hw_platform_0' is different from F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper.hdf.
+20:20:39 INFO  : Copied contents of F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper.hdf into \design_hw_wrapper_hw_platform_0\system.hdf.
+20:21:26 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+20:21:47 INFO  : 
+20:21:50 INFO  : 
+20:22:19 INFO  : Updating hardware inferred compiler options for fsbl.
+20:22:20 INFO  : Updating hardware inferred compiler options for zyboApp.
+20:22:20 INFO  : Clearing existing target manager status.
+22:50:46 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 

@@ -18,7 +18,7 @@
 using namespace std;
 
 extern bool impedanceUpdated;
-extern vector<float> impedanceArray;
+extern vector<float> firstImpedanceValues;
 
 long map(long x, long in_min, long in_max, long out_min, long out_max)
 {
@@ -57,34 +57,35 @@ void ScrImpGraph::sendConfirmCmd()
 
 void ScrImpGraph::printData()
 {
-	if(impedanceArray.size() != 0 && impedanceUpdated)
+	if(firstImpedanceValues.size() != 0 && impedanceUpdated)
 	{
 		impedanceUpdated = false;
-		std::vector<float>::iterator max = std::max_element(impedanceArray.begin(), impedanceArray.end());
-		std::vector<float>::iterator min = std::min_element(impedanceArray.begin(), impedanceArray.end());
+		std::vector<float>::iterator max = std::max_element(firstImpedanceValues.begin(), firstImpedanceValues.end());
+		std::vector<float>::iterator min = std::min_element(firstImpedanceValues.begin(), firstImpedanceValues.end());
 
-		if( *max > 700 && *min > 700 )
+		if( *max > 700 )
 		{
 			OLED.setCursor(0, 1);
 			OLED.putString("Error impedance");
 			OLED.setCursor(0, 3);
 			OLED.putString("Check the sensor");
+			firstImpedanceValues.clear();
 		}
 		else
 		{
-			int step = 128 / (impedanceArray.size() - 1);
-			for(int i = 0; i < impedanceArray.size()-1; i++)
+			int step = 1; //128 / (firstImpedanceValues.size() - 1);
+			for(int i = 0; i < firstImpedanceValues.size()-1; i++)
 			{
-				long mappedVal = map((long)impedanceArray[i],(long)*min, (long)*max, 32, 0 );
+				long mappedVal = map((long)firstImpedanceValues[i],0, (long)*max, 32, 0 );
 				OLED.moveTo(i * step, mappedVal );
-				mappedVal = map((long)impedanceArray[i+1],(long)*min, (long)*max, 32, 0 );
+				mappedVal = map((long)firstImpedanceValues[i+1],0, (long)*max, 32, 0 );
 				OLED.drawLine((i+1)*step, mappedVal);
 			}
 		}
 		OLED.updateDisplay();
 	}
 
-	if(impedanceArray.size() == 0)
+	if(firstImpedanceValues.size() == 0)
 	{
 		OLED.setCursor(0, 1);
 		OLED.putString("No impedance");

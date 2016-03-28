@@ -15,9 +15,9 @@ IA::IA()
 {
 	m_gainFactor = 0;
 	m_impedanceArray = { 0 };
-	m_startFreq = 3000;
+	m_startFreq = 5000;
 	m_incFreq = 1000;
-	m_incNum = 20;
+	m_incNum = 5;
 	m_cyclesNum = 25;
 	m_calibImpedance = 10000;
 	m_range = AD5933_RANGE_200mVpp;

@@ -9,6 +9,7 @@
 #include <WProgram.h>
 #include "IA.h"
 #include "eepromanything.h"
+#include <SHT2x.h>
 
 IA ia;
 
@@ -37,14 +38,17 @@ void callback()
 void loop()
 {
   ia.readImpedanceSamples();
-  //sendImpedance( imp, 4, callback );
+  
   delay(2);
-  sendPhase(pha, 4, callback);
+  float temperature = SHT2x.GetTemperature();
+  Serial.print("Temperature(C): ");
+  Serial.println(temperature);
+  sendTemperature(temperature, callback);
   delay(2);
-  sendTemperature(23.21, callback);
-  delay(2);
-  sendHumidity(46, callback);
-  delay(2);
-  sendBatteryVoltage(3.76, callback);
-  delay(2000);
+  float humidity = SHT2x.GetHumidity();
+  Serial.print("Humidity(%RH): ");
+  Serial.println(humidity);
+  sendHumidity((unsigned char)humidity, callback);
+
+  delay(1000);
 }

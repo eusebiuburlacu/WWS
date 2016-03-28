@@ -9739,3 +9739,2482 @@ arm-xilinx-eabi-size fsbl.elf  |tee "fsbl.elf.size"
 23:06:13 **** Auto Build of configuration Debug for project fsbl ****
 make all 
 make: Nothing to be done for `all'.
+15:27:39 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 581364	   3456	  32808	 617628	  96c9c	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+15:29:55 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrImpGraph.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrImpGraph.o" -MMD -MP -MF"src/Screen/ScrImpGraph.d" -MT"src/Screen/ScrImpGraph.d" -o "src/Screen/ScrImpGraph.o" "../src/Screen/ScrImpGraph.cpp"
+../src/Screen/ScrImpGraph.cpp:15:18: warning: extra tokens at end of #include directive
+ #include <vector>;
+                  ^
+../src/Screen/ScrImpGraph.cpp: In member function 'virtual void ScrImpGraph::printData()':
+../src/Screen/ScrImpGraph.cpp:60:5: error: 'impedanceArray' was not declared in this scope
+  if(impedanceArray.size() != 0 && impedanceUpdated)
+     ^
+../src/Screen/ScrImpGraph.cpp:69:36: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Error impedance");
+                                    ^
+../src/Screen/ScrImpGraph.cpp:71:37: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Check the sensor");
+                                     ^
+../src/Screen/ScrImpGraph.cpp:76:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i = 0; i < firstImpedanceValues.size()-1; i++)
+                     ^
+../src/Screen/ScrImpGraph.cpp:90:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+   OLED.putString("No impedance");
+                                ^
+make: *** [src/Screen/ScrImpGraph.o] Error 1
+15:30:09 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrImpGraph.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrImpGraph.o" -MMD -MP -MF"src/Screen/ScrImpGraph.d" -MT"src/Screen/ScrImpGraph.d" -o "src/Screen/ScrImpGraph.o" "../src/Screen/ScrImpGraph.cpp"
+../src/Screen/ScrImpGraph.cpp:15:18: warning: extra tokens at end of #include directive
+ #include <vector>;
+                  ^
+../src/Screen/ScrImpGraph.cpp: In member function 'virtual void ScrImpGraph::printData()':
+../src/Screen/ScrImpGraph.cpp:69:36: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Error impedance");
+                                    ^
+../src/Screen/ScrImpGraph.cpp:71:37: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Check the sensor");
+                                     ^
+../src/Screen/ScrImpGraph.cpp:76:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i = 0; i < firstImpedanceValues.size()-1; i++)
+                     ^
+../src/Screen/ScrImpGraph.cpp:90:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+   OLED.putString("No impedance");
+                                ^
+'Finished building: ../src/Screen/ScrImpGraph.cpp'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 581364	   3456	  32808	 617628	  96c9c	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+16:10:49 **** Clean-only build of configuration Debug for project fsbl ****
+make clean 
+rm -rf  ./src/fsbl_handoff.o ./src/fsbl_hooks.o ./src/image_mover.o ./src/main.o ./src/md5.o ./src/nand.o ./src/nor.o ./src/pcap.o ./src/ps7_init.o ./src/qspi.o ./src/rsa.o ./src/sd.o  ./src/fsbl_handoff.d  ./src/fsbl_hooks.d ./src/image_mover.d ./src/main.d ./src/md5.d ./src/nand.d ./src/nor.d ./src/pcap.d ./src/ps7_init.d ./src/qspi.d ./src/rsa.d ./src/sd.d  fsbl.elf.size  fsbl.elf
+' '
+16:10:49 **** Incremental Build of configuration Debug for project fsbl ****
+make all 
+'Building file: ../src/fsbl_handoff.S'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/fsbl_handoff.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/fsbl_handoff.d" -MT"src/fsbl_handoff.d" -o "src/fsbl_handoff.o" "../src/fsbl_handoff.S"
+'Finished building: ../src/fsbl_handoff.S'
+' '
+'Building file: ../src/fsbl_hooks.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/fsbl_hooks.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/fsbl_hooks.d" -MT"src/fsbl_hooks.d" -o "src/fsbl_hooks.o" "../src/fsbl_hooks.c"
+'Finished building: ../src/fsbl_hooks.c'
+' '
+'Building file: ../src/image_mover.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/image_mover.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/image_mover.d" -MT"src/image_mover.d" -o "src/image_mover.o" "../src/image_mover.c"
+'Finished building: ../src/image_mover.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/main.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/md5.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/md5.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/md5.d" -MT"src/md5.d" -o "src/md5.o" "../src/md5.c"
+'Finished building: ../src/md5.c'
+' '
+'Building file: ../src/nand.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/nand.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/nand.d" -MT"src/nand.d" -o "src/nand.o" "../src/nand.c"
+'Finished building: ../src/nand.c'
+' '
+'Building file: ../src/nor.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/nor.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/nor.d" -MT"src/nor.d" -o "src/nor.o" "../src/nor.c"
+'Finished building: ../src/nor.c'
+' '
+'Building file: ../src/pcap.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/pcap.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/pcap.d" -MT"src/pcap.d" -o "src/pcap.o" "../src/pcap.c"
+'Finished building: ../src/pcap.c'
+' '
+'Building file: F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper_hw_platform_0/ps7_init.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/ps7_init.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/ps7_init.d" -MT"src/ps7_init.d" -o "src/ps7_init.o" "F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper_hw_platform_0/ps7_init.c"
+'Finished building: F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper_hw_platform_0/ps7_init.c'
+' '
+'Building file: ../src/qspi.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/qspi.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/qspi.d" -MT"src/qspi.d" -o "src/qspi.o" "../src/qspi.c"
+'Finished building: ../src/qspi.c'
+' '
+'Building file: ../src/rsa.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/rsa.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/rsa.d" -MT"src/rsa.d" -o "src/rsa.o" "../src/rsa.c"
+'Finished building: ../src/rsa.c'
+' '
+'Building file: ../src/sd.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/sd.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sd.d" -MT"src/sd.d" -o "src/sd.o" "../src/sd.c"
+'Finished building: ../src/sd.c'
+' '
+'Building target: fsbl.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -L"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\fsbl\src" -Wl,-T -Wl,../src/lscript.ld -L../../fsbl_bsp/ps7_cortexa9_0/lib -o "fsbl.elf"  ./src/fsbl_handoff.o ./src/fsbl_hooks.o ./src/image_mover.o ./src/main.o ./src/md5.o ./src/nand.o ./src/nor.o ./src/pcap.o ./src/ps7_init.o ./src/qspi.o ./src/rsa.o ./src/sd.o   -lrsa -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lrsa,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fsbl.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size fsbl.elf  |tee "fsbl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  77120	  11860	  74308	 163288	  27dd8	fsbl.elf
+'Finished building: fsbl.elf.size'
+' '
+16:11:00 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+16:11:21 **** Incremental Build of configuration Debug for project fsbl ****
+make all 
+'Building file: ../src/fsbl_hooks.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/fsbl_hooks.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/fsbl_hooks.d" -MT"src/fsbl_hooks.d" -o "src/fsbl_hooks.o" "../src/fsbl_hooks.c"
+'Finished building: ../src/fsbl_hooks.c'
+' '
+'Building file: ../src/image_mover.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/image_mover.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/image_mover.d" -MT"src/image_mover.d" -o "src/image_mover.o" "../src/image_mover.c"
+'Finished building: ../src/image_mover.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/main.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/nand.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/nand.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/nand.d" -MT"src/nand.d" -o "src/nand.o" "../src/nand.c"
+'Finished building: ../src/nand.c'
+' '
+'Building file: ../src/nor.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/nor.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/nor.d" -MT"src/nor.d" -o "src/nor.o" "../src/nor.c"
+'Finished building: ../src/nor.c'
+' '
+'Building file: ../src/pcap.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/pcap.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/pcap.d" -MT"src/pcap.d" -o "src/pcap.o" "../src/pcap.c"
+'Finished building: ../src/pcap.c'
+' '
+'Building file: F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper_hw_platform_0/ps7_init.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/ps7_init.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/ps7_init.d" -MT"src/ps7_init.d" -o "src/ps7_init.o" "F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper_hw_platform_0/ps7_init.c"
+'Finished building: F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper_hw_platform_0/ps7_init.c'
+' '
+'Building file: ../src/qspi.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/qspi.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/qspi.d" -MT"src/qspi.d" -o "src/qspi.o" "../src/qspi.c"
+'Finished building: ../src/qspi.c'
+' '
+'Building file: ../src/rsa.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/rsa.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/rsa.d" -MT"src/rsa.d" -o "src/rsa.o" "../src/rsa.c"
+'Finished building: ../src/rsa.c'
+' '
+'Building file: ../src/sd.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/sd.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sd.d" -MT"src/sd.d" -o "src/sd.o" "../src/sd.c"
+'Finished building: ../src/sd.c'
+' '
+'Building target: fsbl.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -L"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\fsbl\src" -Wl,-T -Wl,../src/lscript.ld -L../../fsbl_bsp/ps7_cortexa9_0/lib -o "fsbl.elf"  ./src/fsbl_handoff.o ./src/fsbl_hooks.o ./src/image_mover.o ./src/main.o ./src/md5.o ./src/nand.o ./src/nor.o ./src/pcap.o ./src/ps7_init.o ./src/qspi.o ./src/rsa.o ./src/sd.o   -lrsa -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lrsa,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fsbl.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size fsbl.elf  |tee "fsbl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  77120	  11860	  74308	 163288	  27dd8	fsbl.elf
+'Finished building: fsbl.elf.size'
+' '
+16:11:26 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+16:21:44 **** Incremental Build of configuration Debug for project fsbl ****
+make all 
+make: Nothing to be done for `all'.
+16:21:46 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+16:24:18 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrImpGraph.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrImpGraph.o" -MMD -MP -MF"src/Screen/ScrImpGraph.d" -MT"src/Screen/ScrImpGraph.d" -o "src/Screen/ScrImpGraph.o" "../src/Screen/ScrImpGraph.cpp"
+../src/Screen/ScrImpGraph.cpp:15:18: warning: extra tokens at end of #include directive
+ #include <vector>;
+                  ^
+../src/Screen/ScrImpGraph.cpp: In member function 'virtual void ScrImpGraph::printData()':
+../src/Screen/ScrImpGraph.cpp:69:36: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Error impedance");
+                                    ^
+../src/Screen/ScrImpGraph.cpp:71:37: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Check the sensor");
+                                     ^
+../src/Screen/ScrImpGraph.cpp:76:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i = 0; i < firstImpedanceValues.size()-1; i++)
+                     ^
+../src/Screen/ScrImpGraph.cpp:90:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+   OLED.putString("No impedance");
+                                ^
+'Finished building: ../src/Screen/ScrImpGraph.cpp'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 581300	   3456	  32808	 617564	  96c5c	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+16:25:17 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrImpGraph.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrImpGraph.o" -MMD -MP -MF"src/Screen/ScrImpGraph.d" -MT"src/Screen/ScrImpGraph.d" -o "src/Screen/ScrImpGraph.o" "../src/Screen/ScrImpGraph.cpp"
+../src/Screen/ScrImpGraph.cpp:15:18: warning: extra tokens at end of #include directive
+ #include <vector>;
+                  ^
+../src/Screen/ScrImpGraph.cpp: In member function 'virtual void ScrImpGraph::printData()':
+../src/Screen/ScrImpGraph.cpp:69:36: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Error impedance");
+                                    ^
+../src/Screen/ScrImpGraph.cpp:71:37: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Check the sensor");
+                                     ^
+../src/Screen/ScrImpGraph.cpp:72:25: error: 'class std::vector<float>' has no member named 'crear'
+    firstImpedanceValues.crear();
+                         ^
+../src/Screen/ScrImpGraph.cpp:77:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i = 0; i < firstImpedanceValues.size()-1; i++)
+                     ^
+../src/Screen/ScrImpGraph.cpp:91:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+   OLED.putString("No impedance");
+                                ^
+make: *** [src/Screen/ScrImpGraph.o] Error 1
+16:25:23 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrImpGraph.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrImpGraph.o" -MMD -MP -MF"src/Screen/ScrImpGraph.d" -MT"src/Screen/ScrImpGraph.d" -o "src/Screen/ScrImpGraph.o" "../src/Screen/ScrImpGraph.cpp"
+../src/Screen/ScrImpGraph.cpp:15:18: warning: extra tokens at end of #include directive
+ #include <vector>;
+                  ^
+../src/Screen/ScrImpGraph.cpp: In member function 'virtual void ScrImpGraph::printData()':
+../src/Screen/ScrImpGraph.cpp:69:36: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Error impedance");
+                                    ^
+../src/Screen/ScrImpGraph.cpp:71:37: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Check the sensor");
+                                     ^
+../src/Screen/ScrImpGraph.cpp:72:31: error: void value not ignored as it ought to be
+    firstImpedanceValues.clear()();
+                               ^
+../src/Screen/ScrImpGraph.cpp:77:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i = 0; i < firstImpedanceValues.size()-1; i++)
+                     ^
+../src/Screen/ScrImpGraph.cpp:91:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+   OLED.putString("No impedance");
+                                ^
+make: *** [src/Screen/ScrImpGraph.o] Error 1
+16:25:25 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrImpGraph.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrImpGraph.o" -MMD -MP -MF"src/Screen/ScrImpGraph.d" -MT"src/Screen/ScrImpGraph.d" -o "src/Screen/ScrImpGraph.o" "../src/Screen/ScrImpGraph.cpp"
+../src/Screen/ScrImpGraph.cpp:15:18: warning: extra tokens at end of #include directive
+ #include <vector>;
+                  ^
+../src/Screen/ScrImpGraph.cpp: In member function 'virtual void ScrImpGraph::printData()':
+../src/Screen/ScrImpGraph.cpp:69:36: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Error impedance");
+                                    ^
+../src/Screen/ScrImpGraph.cpp:71:37: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Check the sensor");
+                                     ^
+../src/Screen/ScrImpGraph.cpp:77:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i = 0; i < firstImpedanceValues.size()-1; i++)
+                     ^
+../src/Screen/ScrImpGraph.cpp:91:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+   OLED.putString("No impedance");
+                                ^
+'Finished building: ../src/Screen/ScrImpGraph.cpp'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 581308	   3456	  32816	 617580	  96c6c	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+16:25:30 **** Incremental Build of configuration Debug for project fsbl ****
+make all 
+make: Nothing to be done for `all'.
+16:25:31 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+16:27:25 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrImpGraph.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrImpGraph.o" -MMD -MP -MF"src/Screen/ScrImpGraph.d" -MT"src/Screen/ScrImpGraph.d" -o "src/Screen/ScrImpGraph.o" "../src/Screen/ScrImpGraph.cpp"
+../src/Screen/ScrImpGraph.cpp:15:18: warning: extra tokens at end of #include directive
+ #include <vector>;
+                  ^
+../src/Screen/ScrImpGraph.cpp: In member function 'virtual void ScrImpGraph::printData()':
+../src/Screen/ScrImpGraph.cpp:69:36: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Error impedance");
+                                    ^
+../src/Screen/ScrImpGraph.cpp:71:37: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Check the sensor");
+                                     ^
+../src/Screen/ScrImpGraph.cpp:77:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i = 0; i < firstImpedanceValues.size()-1; i++)
+                     ^
+../src/Screen/ScrImpGraph.cpp:91:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+   OLED.putString("No impedance");
+                                ^
+'Finished building: ../src/Screen/ScrImpGraph.cpp'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 581244	   3456	  32816	 617516	  96c2c	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+16:27:31 **** Incremental Build of configuration Debug for project fsbl ****
+make all 
+make: Nothing to be done for `all'.
+16:27:32 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+16:31:21 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 581244	   3456	  32816	 617516	  96c2c	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+16:31:26 **** Incremental Build of configuration Debug for project fsbl ****
+make all 
+make: Nothing to be done for `all'.
+16:31:27 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+16:32:42 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+'Finished building: ../src/main.cc'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 581244	   3456	  32816	 617516	  96c2c	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+16:32:47 **** Incremental Build of configuration Debug for project fsbl ****
+make all 
+make: Nothing to be done for `all'.
+16:32:48 **** Incremental Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+20:20:39 **** Build of project fsbl_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_2/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/spi_v4_1/src"
+make -C ps7_cortexa9_0/libsrc/spi_v4_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v5_3/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v5_3/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/xilffs_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/xilffs_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/xilrsa_v1_1/src"
+make -C ps7_cortexa9_0/libsrc/xilrsa_v1_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling coresightps_dcc"
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling emacps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling gpio"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_2/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/spi_v4_1/src"
+make -C ps7_cortexa9_0/libsrc/spi_v4_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling spi"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v5_3/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v5_3/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling standalone"
+"Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling ttcps"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling xadcps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xilffs_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/xilffs_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling XilFFs Library"
+"Running Make libs in ps7_cortexa9_0/libsrc/xilrsa_v1_1/src"
+make -C ps7_cortexa9_0/libsrc/xilrsa_v1_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+'Finished building libraries'
+20:21:21 **** Build of configuration Debug for project fsbl ****
+make all 
+'Building file: ../src/fsbl_hooks.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/fsbl_hooks.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/fsbl_hooks.d" -MT"src/fsbl_hooks.d" -o "src/fsbl_hooks.o" "../src/fsbl_hooks.c"
+'Finished building: ../src/fsbl_hooks.c'
+' '
+'Building file: ../src/image_mover.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/image_mover.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/image_mover.d" -MT"src/image_mover.d" -o "src/image_mover.o" "../src/image_mover.c"
+'Finished building: ../src/image_mover.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/main.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/md5.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/md5.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/md5.d" -MT"src/md5.d" -o "src/md5.o" "../src/md5.c"
+'Finished building: ../src/md5.c'
+' '
+'Building file: ../src/nand.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/nand.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/nand.d" -MT"src/nand.d" -o "src/nand.o" "../src/nand.c"
+'Finished building: ../src/nand.c'
+' '
+'Building file: ../src/nor.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/nor.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/nor.d" -MT"src/nor.d" -o "src/nor.o" "../src/nor.c"
+'Finished building: ../src/nor.c'
+' '
+'Building file: ../src/pcap.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/pcap.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/pcap.d" -MT"src/pcap.d" -o "src/pcap.o" "../src/pcap.c"
+'Finished building: ../src/pcap.c'
+' '
+'Building file: F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper_hw_platform_0/ps7_init.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/ps7_init.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/ps7_init.d" -MT"src/ps7_init.d" -o "src/ps7_init.o" "F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper_hw_platform_0/ps7_init.c"
+'Finished building: F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper_hw_platform_0/ps7_init.c'
+' '
+'Building file: ../src/qspi.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/qspi.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/qspi.d" -MT"src/qspi.d" -o "src/qspi.o" "../src/qspi.c"
+'Finished building: ../src/qspi.c'
+' '
+'Building file: ../src/rsa.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/rsa.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/rsa.d" -MT"src/rsa.d" -o "src/rsa.o" "../src/rsa.c"
+'Finished building: ../src/rsa.c'
+' '
+'Building file: ../src/sd.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\design_hw_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/sd.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sd.d" -MT"src/sd.d" -o "src/sd.o" "../src/sd.c"
+'Finished building: ../src/sd.c'
+' '
+'Building target: fsbl.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -L"F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\fsbl\src" -Wl,-T -Wl,../src/lscript.ld -L../../fsbl_bsp/ps7_cortexa9_0/lib -o "fsbl.elf"  ./src/fsbl_handoff.o ./src/fsbl_hooks.o ./src/image_mover.o ./src/main.o ./src/md5.o ./src/nand.o ./src/nor.o ./src/pcap.o ./src/ps7_init.o ./src/qspi.o ./src/rsa.o ./src/sd.o   -lrsa -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lrsa,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fsbl.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size fsbl.elf  |tee "fsbl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  77120	  11860	  74308	 163288	  27dd8	fsbl.elf
+'Finished building: fsbl.elf.size'
+' '
+20:21:50 **** Build of project standalone_bsp_0 ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_2/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/spi_v4_1/src"
+make -C ps7_cortexa9_0/libsrc/spi_v4_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v5_3/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v5_3/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling coresightps_dcc"
+arm-xilinx-eabi-ar: creating ../../../lib/libxil.a
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling emacps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling gpio"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_2/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/spi_v4_1/src"
+make -C ps7_cortexa9_0/libsrc/spi_v4_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling spi"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v5_3/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v5_3/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling standalone"
+"Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling ttcps"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling xadcps"
+'Finished building libraries'
+20:22:20 **** Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrImpGraph.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrImpGraph.o" -MMD -MP -MF"src/Screen/ScrImpGraph.d" -MT"src/Screen/ScrImpGraph.d" -o "src/Screen/ScrImpGraph.o" "../src/Screen/ScrImpGraph.cpp"
+../src/Screen/ScrImpGraph.cpp:15:18: warning: extra tokens at end of #include directive
+ #include <vector>;
+                  ^
+../src/Screen/ScrImpGraph.cpp: In member function 'virtual void ScrImpGraph::printData()':
+../src/Screen/ScrImpGraph.cpp:69:36: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Error impedance");
+                                    ^
+../src/Screen/ScrImpGraph.cpp:71:37: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Check the sensor");
+                                     ^
+../src/Screen/ScrImpGraph.cpp:77:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i = 0; i < firstImpedanceValues.size()-1; i++)
+                     ^
+../src/Screen/ScrImpGraph.cpp:91:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+   OLED.putString("No impedance");
+                                ^
+'Finished building: ../src/Screen/ScrImpGraph.cpp'
+' '
+'Building file: ../src/RF/mrf24j.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/RF/mrf24j.o" -MMD -MP -MF"src/RF/mrf24j.d" -MT"src/RF/mrf24j.d" -o "src/RF/mrf24j.o" "../src/RF/mrf24j.cpp"
+../src/RF/mrf24j.cpp: In member function 'bool Mrf24j::checkIntFlag()':
+../src/RF/mrf24j.cpp:78:6: warning: unused variable 'gpioReg' [-Wunused-variable]
+  int gpioReg = XGpio_DiscreteRead(&gpioInstance, 1);
+      ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::write_short(uint8_t, uint8_t)':
+../src/RF/mrf24j.cpp:225:9: warning: unused variable 'status' [-Wunused-variable]
+     int status = XSpi_Transfer( &MSpiInstance, &data, &rgbRx, sizeof(uint8_t) );
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::init()':
+../src/RF/mrf24j.cpp:337:13: warning: unused variable 'regi' [-Wunused-variable]
+     uint8_t regi = read_long(MRF_SLPCON0);
+             ^
+'Finished building: ../src/RF/mrf24j.cpp'
+' '
+'Building file: ../src/OLED/OledDriver.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/OLED/OledDriver.o" -MMD -MP -MF"src/OLED/OledDriver.d" -MT"src/OLED/OledDriver.d" -o "src/OLED/OledDriver.o" "../src/OLED/OledDriver.cpp"
+../src/OLED/OledDriver.cpp:37:1: warning: "/*" within comment [-Wcomment]
+ /* 22/02/2016(EusebiuB): adapted library to work on Zybo    */
+ ^
+../src/OLED/OledDriver.cpp: In function 'void OledHostInit()':
+../src/OLED/OledDriver.cpp:282:6: warning: variable 'slaveReg' set but not used [-Wunused-but-set-variable]
+  u32 slaveReg = XSpi_GetSlaveSelectReg(&SpiInstance);
+      ^
+'Finished building: ../src/OLED/OledDriver.cpp'
+' '
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+'Finished building: ../src/main.cc'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/platform.o" -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 581244	   3472	  32816	 617532	  96c3c	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+20:38:44 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_2/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/spi_v4_1/src"
+make -C ps7_cortexa9_0/libsrc/spi_v4_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v5_3/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v5_3/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling coresightps_dcc"
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling emacps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling gpio"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_2/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/spi_v4_1/src"
+make -C ps7_cortexa9_0/libsrc/spi_v4_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling spi"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v5_3/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v5_3/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling standalone"
+"Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling ttcps"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling xadcps"
+'Finished building libraries'
+20:39:15 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrImpGraph.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/Screen/ScrImpGraph.o" -MMD -MP -MF"src/Screen/ScrImpGraph.d" -MT"src/Screen/ScrImpGraph.d" -o "src/Screen/ScrImpGraph.o" "../src/Screen/ScrImpGraph.cpp"
+../src/Screen/ScrImpGraph.cpp:15:18: warning: extra tokens at end of #include directive
+ #include <vector>;
+                  ^
+../src/Screen/ScrImpGraph.cpp: In member function 'virtual void ScrImpGraph::printData()':
+../src/Screen/ScrImpGraph.cpp:69:36: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Error impedance");
+                                    ^
+../src/Screen/ScrImpGraph.cpp:71:37: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Check the sensor");
+                                     ^
+../src/Screen/ScrImpGraph.cpp:77:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i = 0; i < firstImpedanceValues.size()-1; i++)
+                     ^
+../src/Screen/ScrImpGraph.cpp:91:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+   OLED.putString("No impedance");
+                                ^
+'Finished building: ../src/Screen/ScrImpGraph.cpp'
+' '
+'Building file: ../src/RF/mrf24j.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/RF/mrf24j.o" -MMD -MP -MF"src/RF/mrf24j.d" -MT"src/RF/mrf24j.d" -o "src/RF/mrf24j.o" "../src/RF/mrf24j.cpp"
+../src/RF/mrf24j.cpp: In member function 'bool Mrf24j::checkIntFlag()':
+../src/RF/mrf24j.cpp:78:6: warning: unused variable 'gpioReg' [-Wunused-variable]
+  int gpioReg = XGpio_DiscreteRead(&gpioInstance, 1);
+      ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::write_short(uint8_t, uint8_t)':
+../src/RF/mrf24j.cpp:225:9: warning: unused variable 'status' [-Wunused-variable]
+     int status = XSpi_Transfer( &MSpiInstance, &data, &rgbRx, sizeof(uint8_t) );
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::init()':
+../src/RF/mrf24j.cpp:337:13: warning: unused variable 'regi' [-Wunused-variable]
+     uint8_t regi = read_long(MRF_SLPCON0);
+             ^
+'Finished building: ../src/RF/mrf24j.cpp'
+' '
+'Building file: ../src/OLED/OledDriver.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/OLED/OledDriver.o" -MMD -MP -MF"src/OLED/OledDriver.d" -MT"src/OLED/OledDriver.d" -o "src/OLED/OledDriver.o" "../src/OLED/OledDriver.cpp"
+../src/OLED/OledDriver.cpp:37:1: warning: "/*" within comment [-Wcomment]
+ /* 22/02/2016(EusebiuB): adapted library to work on Zybo    */
+ ^
+../src/OLED/OledDriver.cpp: In function 'void OledHostInit()':
+../src/OLED/OledDriver.cpp:282:6: warning: variable 'slaveReg' set but not used [-Wunused-but-set-variable]
+  u32 slaveReg = XSpi_GetSlaveSelectReg(&SpiInstance);
+      ^
+'Finished building: ../src/OLED/OledDriver.cpp'
+' '
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+'Finished building: ../src/main.cc'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/platform.o" -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: zyboApp.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zyboApp.elf"  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: zyboApp.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zyboApp.elf  |tee "zyboApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 581244	   3472	  32816	 617532	  96c3c	zyboApp.elf
+'Finished building: zyboApp.elf.size'
+' '
+22:12:44 **** Auto Build of configuration Debug for project fsbl ****
+make all 
+make: Nothing to be done for `all'.
+22:13:05 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+make: Nothing to be done for `all'.
+22:13:47 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc:37:19: fatal error: SD/SD.h: No such file or directory
+ #include "SD/SD.h"
+                   ^
+compilation terminated.
+make: *** [src/main.o] Error 1
+22:14:13 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+In file included from ../src/main.cc:37:0:
+../src/../SD/SD.h:18:22: fatal error: WProgram.h: No such file or directory
+ #include <WProgram.h>
+                      ^
+compilation terminated.
+make: *** [src/main.o] Error 1
+22:14:28 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+In file included from ../src/main.cc:37:0:
+../src/../SD/SD.h:18:27: fatal error: utility/SdFat.h: No such file or directory
+ #include <utility/SdFat.h>
+                           ^
+compilation terminated.
+make: *** [src/main.o] Error 1
+22:17:14 **** Clean-only build of configuration Debug for project zyboApp ****
+make clean 
+rm -rf  ./src/main.d  ./src/Screen/ScrBatIntSett.o ./src/Screen/ScrImpCurSett.o ./src/Screen/ScrImpGraph.o ./src/Screen/ScrImpIntSett.o ./src/Screen/ScrIncFrecSett.o ./src/Screen/ScrIncNumSett.o ./src/Screen/ScrSettings.o ./src/Screen/ScrStartFreqSett.o ./src/Screen/ScrSweepSettings.o ./src/Screen/ScrTempHumBat.o ./src/Screen/ScrTempHumSett.o  ./src/RF/mrf24j.o  ./src/OLED/ChrFont0.o ./src/OLED/FillPat.o ./src/OLED/OLED.o ./src/OLED/OledChar.o ./src/OLED/OledDriver.o ./src/OLED/OledGrph.o  ./src/main.o ./src/platform.o  ./SD/utility/Sd2Card.o ./SD/utility/SdFile.o ./SD/utility/SdVolume.o  ./SD/File.o ./SD/SD.o  ./src/platform.d  ./src/Screen/ScrBatIntSett.d ./src/Screen/ScrImpCurSett.d ./src/Screen/ScrImpGraph.d ./src/Screen/ScrImpIntSett.d ./src/Screen/ScrIncFrecSett.d ./src/Screen/ScrIncNumSett.d ./src/Screen/ScrSettings.d ./src/Screen/ScrStartFreqSett.d ./src/Screen/ScrSweepSettings.d ./src/Screen/ScrTempHumBat.d ./src/Screen/ScrTempHumSett.d  ./src/RF/mrf24j.d  ./src/OLED/ChrFont0.d ./src/OLED/FillPat.d ./src/OLED/OLED.d ./src/OLED/OledChar.d ./src/OLED/OledDriver.d ./src/OLED/OledGrph.d  ./SD/utility/Sd2Card.d ./SD/utility/SdFile.d ./SD/utility/SdVolume.d  ./SD/File.d ./SD/SD.d  zyboApp.elf.size  zyboApp.elf
+' '
+22:17:16 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/Screen/ScrBatIntSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -I../SD -c -fmessage-length=0 -MT"src/Screen/ScrBatIntSett.o" -MMD -MP -MF"src/Screen/ScrBatIntSett.d" -MT"src/Screen/ScrBatIntSett.d" -o "src/Screen/ScrBatIntSett.o" "../src/Screen/ScrBatIntSett.cpp"
+'Finished building: ../src/Screen/ScrBatIntSett.cpp'
+' '
+'Building file: ../src/Screen/ScrImpCurSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -I../SD -c -fmessage-length=0 -MT"src/Screen/ScrImpCurSett.o" -MMD -MP -MF"src/Screen/ScrImpCurSett.d" -MT"src/Screen/ScrImpCurSett.d" -o "src/Screen/ScrImpCurSett.o" "../src/Screen/ScrImpCurSett.cpp"
+../src/Screen/ScrImpCurSett.cpp: In member function 'virtual void ScrImpCurSett::printData()':
+../src/Screen/ScrImpCurSett.cpp:42:27: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+  OLED.putString("Curr seT");
+                           ^
+'Finished building: ../src/Screen/ScrImpCurSett.cpp'
+' '
+'Building file: ../src/Screen/ScrImpGraph.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -I../SD -c -fmessage-length=0 -MT"src/Screen/ScrImpGraph.o" -MMD -MP -MF"src/Screen/ScrImpGraph.d" -MT"src/Screen/ScrImpGraph.d" -o "src/Screen/ScrImpGraph.o" "../src/Screen/ScrImpGraph.cpp"
+../src/Screen/ScrImpGraph.cpp:15:18: warning: extra tokens at end of #include directive
+ #include <vector>;
+                  ^
+../src/Screen/ScrImpGraph.cpp: In member function 'virtual void ScrImpGraph::printData()':
+../src/Screen/ScrImpGraph.cpp:69:36: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Error impedance");
+                                    ^
+../src/Screen/ScrImpGraph.cpp:71:37: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+    OLED.putString("Check the sensor");
+                                     ^
+../src/Screen/ScrImpGraph.cpp:77:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i = 0; i < firstImpedanceValues.size()-1; i++)
+                     ^
+../src/Screen/ScrImpGraph.cpp:91:32: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+   OLED.putString("No impedance");
+                                ^
+'Finished building: ../src/Screen/ScrImpGraph.cpp'
+' '
+'Building file: ../src/Screen/ScrImpIntSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -I../SD -c -fmessage-length=0 -MT"src/Screen/ScrImpIntSett.o" -MMD -MP -MF"src/Screen/ScrImpIntSett.d" -MT"src/Screen/ScrImpIntSett.d" -o "src/Screen/ScrImpIntSett.o" "../src/Screen/ScrImpIntSett.cpp"
+'Finished building: ../src/Screen/ScrImpIntSett.cpp'
+' '
+'Building file: ../src/Screen/ScrIncFrecSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -I../SD -c -fmessage-length=0 -MT"src/Screen/ScrIncFrecSett.o" -MMD -MP -MF"src/Screen/ScrIncFrecSett.d" -MT"src/Screen/ScrIncFrecSett.d" -o "src/Screen/ScrIncFrecSett.o" "../src/Screen/ScrIncFrecSett.cpp"
+'Finished building: ../src/Screen/ScrIncFrecSett.cpp'
+' '
+'Building file: ../src/Screen/ScrIncNumSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -I../SD -c -fmessage-length=0 -MT"src/Screen/ScrIncNumSett.o" -MMD -MP -MF"src/Screen/ScrIncNumSett.d" -MT"src/Screen/ScrIncNumSett.d" -o "src/Screen/ScrIncNumSett.o" "../src/Screen/ScrIncNumSett.cpp"
+'Finished building: ../src/Screen/ScrIncNumSett.cpp'
+' '
+'Building file: ../src/Screen/ScrSettings.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -I../SD -c -fmessage-length=0 -MT"src/Screen/ScrSettings.o" -MMD -MP -MF"src/Screen/ScrSettings.d" -MT"src/Screen/ScrSettings.d" -o "src/Screen/ScrSettings.o" "../src/Screen/ScrSettings.cpp"
+../src/Screen/ScrSettings.cpp: In member function 'virtual void ScrSettings::printData()':
+../src/Screen/ScrSettings.cpp:43:35: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+   OLED.putString("settings screen");
+                                   ^
+'Finished building: ../src/Screen/ScrSettings.cpp'
+' '
+'Building file: ../src/Screen/ScrStartFreqSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -I../SD -c -fmessage-length=0 -MT"src/Screen/ScrStartFreqSett.o" -MMD -MP -MF"src/Screen/ScrStartFreqSett.d" -MT"src/Screen/ScrStartFreqSett.d" -o "src/Screen/ScrStartFreqSett.o" "../src/Screen/ScrStartFreqSett.cpp"
+'Finished building: ../src/Screen/ScrStartFreqSett.cpp'
+' '
+'Building file: ../src/Screen/ScrSweepSettings.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -I../SD -c -fmessage-length=0 -MT"src/Screen/ScrSweepSettings.o" -MMD -MP -MF"src/Screen/ScrSweepSettings.d" -MT"src/Screen/ScrSweepSettings.d" -o "src/Screen/ScrSweepSettings.o" "../src/Screen/ScrSweepSettings.cpp"
+'Finished building: ../src/Screen/ScrSweepSettings.cpp'
+' '
+'Building file: ../src/Screen/ScrTempHumBat.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -I../SD -c -fmessage-length=0 -MT"src/Screen/ScrTempHumBat.o" -MMD -MP -MF"src/Screen/ScrTempHumBat.d" -MT"src/Screen/ScrTempHumBat.d" -o "src/Screen/ScrTempHumBat.o" "../src/Screen/ScrTempHumBat.cpp"
+../src/Screen/ScrTempHumBat.cpp: In member function 'virtual void ScrTempHumBat::printData()':
+../src/Screen/ScrTempHumBat.cpp:42:31: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+   OLED.putString("temp screen");
+                               ^
+'Finished building: ../src/Screen/ScrTempHumBat.cpp'
+' '
+'Building file: ../src/Screen/ScrTempHumSett.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -I../SD -c -fmessage-length=0 -MT"src/Screen/ScrTempHumSett.o" -MMD -MP -MF"src/Screen/ScrTempHumSett.d" -MT"src/Screen/ScrTempHumSett.d" -o "src/Screen/ScrTempHumSett.o" "../src/Screen/ScrTempHumSett.cpp"
+'Finished building: ../src/Screen/ScrTempHumSett.cpp'
+' '
+'Building file: ../src/RF/mrf24j.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -I../SD -c -fmessage-length=0 -MT"src/RF/mrf24j.o" -MMD -MP -MF"src/RF/mrf24j.d" -MT"src/RF/mrf24j.d" -o "src/RF/mrf24j.o" "../src/RF/mrf24j.cpp"
+../src/RF/mrf24j.cpp: In member function 'bool Mrf24j::checkIntFlag()':
+../src/RF/mrf24j.cpp:78:6: warning: unused variable 'gpioReg' [-Wunused-variable]
+  int gpioReg = XGpio_DiscreteRead(&gpioInstance, 1);
+      ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::write_short(uint8_t, uint8_t)':
+../src/RF/mrf24j.cpp:225:9: warning: unused variable 'status' [-Wunused-variable]
+     int status = XSpi_Transfer( &MSpiInstance, &data, &rgbRx, sizeof(uint8_t) );
+         ^
+../src/RF/mrf24j.cpp: In member function 'void Mrf24j::init()':
+../src/RF/mrf24j.cpp:337:13: warning: unused variable 'regi' [-Wunused-variable]
+     uint8_t regi = read_long(MRF_SLPCON0);
+             ^
+'Finished building: ../src/RF/mrf24j.cpp'
+' '
+'Building file: ../src/OLED/ChrFont0.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -I../SD -c -fmessage-length=0 -MT"src/OLED/ChrFont0.o" -MMD -MP -MF"src/OLED/ChrFont0.d" -MT"src/OLED/ChrFont0.d" -o "src/OLED/ChrFont0.o" "../src/OLED/ChrFont0.cpp"
+'Finished building: ../src/OLED/ChrFont0.cpp'
+' '
+'Building file: ../src/OLED/FillPat.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -I../SD -c -fmessage-length=0 -MT"src/OLED/FillPat.o" -MMD -MP -MF"src/OLED/FillPat.d" -MT"src/OLED/FillPat.d" -o "src/OLED/FillPat.o" "../src/OLED/FillPat.cpp"
+'Finished building: ../src/OLED/FillPat.cpp'
+' '
+'Building file: ../src/OLED/OLED.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -I../SD -c -fmessage-length=0 -MT"src/OLED/OLED.o" -MMD -MP -MF"src/OLED/OLED.d" -MT"src/OLED/OLED.d" -o "src/OLED/OLED.o" "../src/OLED/OLED.cpp"
+'Finished building: ../src/OLED/OLED.cpp'
+' '
+'Building file: ../src/OLED/OledChar.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -I../SD -c -fmessage-length=0 -MT"src/OLED/OledChar.o" -MMD -MP -MF"src/OLED/OledChar.d" -MT"src/OLED/OledChar.d" -o "src/OLED/OledChar.o" "../src/OLED/OledChar.cpp"
+'Finished building: ../src/OLED/OledChar.cpp'
+' '
+'Building file: ../src/OLED/OledDriver.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -I../SD -c -fmessage-length=0 -MT"src/OLED/OledDriver.o" -MMD -MP -MF"src/OLED/OledDriver.d" -MT"src/OLED/OledDriver.d" -o "src/OLED/OledDriver.o" "../src/OLED/OledDriver.cpp"
+../src/OLED/OledDriver.cpp:37:1: warning: "/*" within comment [-Wcomment]
+ /* 22/02/2016(EusebiuB): adapted library to work on Zybo    */
+ ^
+../src/OLED/OledDriver.cpp: In function 'void OledHostInit()':
+../src/OLED/OledDriver.cpp:282:6: warning: variable 'slaveReg' set but not used [-Wunused-but-set-variable]
+  u32 slaveReg = XSpi_GetSlaveSelectReg(&SpiInstance);
+      ^
+'Finished building: ../src/OLED/OledDriver.cpp'
+' '
+'Building file: ../src/OLED/OledGrph.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -I../SD -c -fmessage-length=0 -MT"src/OLED/OledGrph.o" -MMD -MP -MF"src/OLED/OledGrph.d" -MT"src/OLED/OledGrph.d" -o "src/OLED/OledGrph.o" "../src/OLED/OledGrph.cpp"
+../src/OLED/OledGrph.cpp: In function 'void OledFillRect(int, int)':
+../src/OLED/OledGrph.cpp:534:10: warning: unused variable 'bTmp' [-Wunused-variable]
+  uint8_t bTmp;
+          ^
+../src/OLED/OledGrph.cpp: In function 'void OledGetBmp(int, int, uint8_t*)':
+../src/OLED/OledGrph.cpp:643:10: warning: variable 'bTmp' set but not used [-Wunused-but-set-variable]
+  uint8_t bTmp;
+          ^
+../src/OLED/OledGrph.cpp: In function 'void OledPutBmp(int, int, uint8_t*)':
+../src/OLED/OledGrph.cpp:740:10: warning: unused variable 'bDsp' [-Wunused-variable]
+  uint8_t bDsp;
+          ^
+../src/OLED/OledGrph.cpp:747:10: warning: unused variable 'bTmp' [-Wunused-variable]
+  uint8_t bTmp;
+          ^
+../src/OLED/OledGrph.cpp: In function 'void OledDrawChar(char)':
+../src/OLED/OledGrph.cpp:847:12: warning: variable 'pbBmp' set but not used [-Wunused-but-set-variable]
+  uint8_t * pbBmp;
+            ^
+../src/OLED/OledGrph.cpp:848:7: warning: unused variable 'ib' [-Wunused-variable]
+  int  ib;
+       ^
+'Finished building: ../src/OLED/OledGrph.cpp'
+' '
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -I../SD -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+In file included from ../src/../SD/SD.h:18:0,
+                 from ../src/main.cc:37:
+../SD/utility/SdFat.h:28:19: fatal error: Print.h: No such file or directory
+ #include "Print.h"
+                   ^
+compilation terminated.
+make: *** [src/main.o] Error 1
+22:18:03 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -I../SD -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+In file included from ../src/../SD/SD.h:19:0,
+                 from ../src/main.cc:37:
+../SD/utility/SdFatUtil.h:26:22: fatal error: WProgram.h: No such file or directory
+ #include <WProgram.h>
+                      ^
+compilation terminated.
+make: *** [src/main.o] Error 1
+22:18:20 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -I../SD -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+In file included from ../src/main.cc:37:0:
+../src/../SD/SD.h:20:20: fatal error: Stream.h: No such file or directory
+ #include <Stream.h>
+                    ^
+compilation terminated.
+make: *** [src/main.o] Error 1
+22:18:32 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -I../SD -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+In file included from ../SD/utility/Sd2Card.h:27:0,
+                 from ../SD/utility/SdFat.h:26,
+                 from ../src/../SD/SD.h:18,
+                 from ../src/main.cc:37:
+../SD/utility/SdInfo.h:87:19: warning: malformed '#pragma pack(push[, id][, <n>])' - ignored [-Wpragmas]
+ #pragma pack(push 1)
+                   ^
+../SD/utility/SdInfo.h:230:17: warning: #pragma pack (pop) encountered without matching #pragma pack (push) [-Wpragmas]
+ #pragma pack(pop)
+                 ^
+In file included from ../src/../SD/SD.h:18:0,
+                 from ../src/main.cc:37:
+../SD/utility/SdFat.h:134:29: error: expected class-name before '{' token
+ class SdFile : public Print {
+                             ^
+In file included from ../src/../SD/SD.h:19:0,
+                 from ../src/main.cc:37:
+../SD/utility/SdFatUtil.h: In function 'void SerialPrint_P(char*)':
+../SD/utility/SdFatUtil.h:57:3: error: 'Serial' was not declared in this scope
+   Serial.print(str);
+   ^
+../SD/utility/SdFatUtil.h: In function 'void SerialPrintln_P(char*)':
+../SD/utility/SdFatUtil.h:67:3: error: 'Serial' was not declared in this scope
+   Serial.println();
+   ^
+In file included from ../src/main.cc:37:0:
+../src/../SD/SD.h: At global scope:
+../src/../SD/SD.h:25:28: error: expected class-name before '{' token
+ class File : public Stream {
+                            ^
+../src/../SD/SD.h:41:3: error: 'boolean' does not name a type
+   boolean seek(uint32_t pos);
+   ^
+../src/../SD/SD.h:48:3: error: 'boolean' does not name a type
+   boolean isDirectory(void);
+   ^
+../src/../SD/SD.h:52:9: error: 'Print' has not been declared
+   using Print::write;
+         ^
+../src/../SD/SD.h:68:3: error: 'boolean' does not name a type
+   boolean begin(uint8_t csPin = SD_CHIP_SELECT_PIN);
+   ^
+../src/../SD/SD.h:81:3: error: 'boolean' does not name a type
+   boolean exists(char *filepath);
+   ^
+../src/../SD/SD.h:85:3: error: 'boolean' does not name a type
+   boolean mkdir(char *filepath);
+   ^
+../src/../SD/SD.h:88:3: error: 'boolean' does not name a type
+   boolean remove(char *filepath);
+   ^
+../src/../SD/SD.h:90:3: error: 'boolean' does not name a type
+   boolean rmdir(char *filepath);
+   ^
+../src/../SD/SD.h:102:10: error: 'boolean' does not name a type
+   friend boolean callback_openPath(SdFile&, char *, boolean, void *); 
+          ^
+make: *** [src/main.o] Error 1
+22:36:47 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -I../SD -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+In file included from ../SD/utility/Sd2Card.h:27:0,
+                 from ../SD/utility/SdFat.h:26,
+                 from ../src/../SD/SD.h:18,
+                 from ../src/main.cc:37:
+../SD/utility/SdInfo.h:87:19: warning: malformed '#pragma pack(push[, id][, <n>])' - ignored [-Wpragmas]
+ #pragma pack(push 1)
+                   ^
+../SD/utility/SdInfo.h:230:17: warning: #pragma pack (pop) encountered without matching #pragma pack (push) [-Wpragmas]
+ #pragma pack(pop)
+                 ^
+In file included from ../src/../SD/SD.h:18:0,
+                 from ../src/main.cc:37:
+../SD/utility/SdFat.h:134:29: error: expected class-name before '{' token
+ class SdFile : public Print {
+                             ^
+In file included from ../src/../SD/SD.h:19:0,
+                 from ../src/main.cc:37:
+../SD/utility/SdFatUtil.h: In function 'void SerialPrint_P(char*)':
+../SD/utility/SdFatUtil.h:57:3: error: 'Serial' was not declared in this scope
+   Serial.print(str);
+   ^
+../SD/utility/SdFatUtil.h: In function 'void SerialPrintln_P(char*)':
+../SD/utility/SdFatUtil.h:67:3: error: 'Serial' was not declared in this scope
+   Serial.println();
+   ^
+In file included from ../src/main.cc:37:0:
+../src/../SD/SD.h: At global scope:
+../src/../SD/SD.h:25:28: error: expected class-name before '{' token
+ class File : public Stream {
+                            ^
+../src/../SD/SD.h:41:3: error: 'boolean' does not name a type
+   boolean seek(uint32_t pos);
+   ^
+../src/../SD/SD.h:48:3: error: 'boolean' does not name a type
+   boolean isDirectory(void);
+   ^
+../src/../SD/SD.h:52:9: error: 'Print' has not been declared
+   using Print::write;
+         ^
+../src/../SD/SD.h:68:3: error: 'boolean' does not name a type
+   boolean begin(uint8_t csPin = SD_CHIP_SELECT_PIN);
+   ^
+../src/../SD/SD.h:81:3: error: 'boolean' does not name a type
+   boolean exists(char *filepath);
+   ^
+../src/../SD/SD.h:85:3: error: 'boolean' does not name a type
+   boolean mkdir(char *filepath);
+   ^
+../src/../SD/SD.h:88:3: error: 'boolean' does not name a type
+   boolean remove(char *filepath);
+   ^
+../src/../SD/SD.h:90:3: error: 'boolean' does not name a type
+   boolean rmdir(char *filepath);
+   ^
+../src/../SD/SD.h:102:10: error: 'boolean' does not name a type
+   friend boolean callback_openPath(SdFile&, char *, boolean, void *); 
+          ^
+make: *** [src/main.o] Error 1
+22:39:23 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -I../SD -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+In file included from ../SD/utility/Sd2Card.h:27:0,
+                 from ../SD/utility/SdFat.h:26,
+                 from ../src/../SD/SD.h:18,
+                 from ../src/main.cc:37:
+../SD/utility/SdInfo.h:87:19: warning: malformed '#pragma pack(push[, id][, <n>])' - ignored [-Wpragmas]
+ #pragma pack(push 1)
+                   ^
+../SD/utility/SdInfo.h:230:17: warning: #pragma pack (pop) encountered without matching #pragma pack (push) [-Wpragmas]
+ #pragma pack(pop)
+                 ^
+In file included from ../src/../SD/SD.h:18:0,
+                 from ../src/main.cc:37:
+../SD/utility/SdFat.h:134:29: error: expected class-name before '{' token
+ class SdFile : public Print {
+                             ^
+In file included from ../src/../SD/SD.h:19:0,
+                 from ../src/main.cc:37:
+../SD/utility/SdFatUtil.h: In function 'void SerialPrint_P(char*)':
+../SD/utility/SdFatUtil.h:57:3: error: 'Serial' was not declared in this scope
+   Serial.print(str);
+   ^
+../SD/utility/SdFatUtil.h: In function 'void SerialPrintln_P(char*)':
+../SD/utility/SdFatUtil.h:67:3: error: 'Serial' was not declared in this scope
+   Serial.println();
+   ^
+In file included from ../src/main.cc:37:0:
+../src/../SD/SD.h: At global scope:
+../src/../SD/SD.h:25:28: error: expected class-name before '{' token
+ class File : public Stream {
+                            ^
+../src/../SD/SD.h:41:3: error: 'boolean' does not name a type
+   boolean seek(uint32_t pos);
+   ^
+../src/../SD/SD.h:48:3: error: 'boolean' does not name a type
+   boolean isDirectory(void);
+   ^
+../src/../SD/SD.h:52:9: error: 'Print' has not been declared
+   using Print::write;
+         ^
+../src/../SD/SD.h:68:3: error: 'boolean' does not name a type
+   boolean begin(uint8_t csPin = SD_CHIP_SELECT_PIN);
+   ^
+../src/../SD/SD.h:81:3: error: 'boolean' does not name a type
+   boolean exists(char *filepath);
+   ^
+../src/../SD/SD.h:85:3: error: 'boolean' does not name a type
+   boolean mkdir(char *filepath);
+   ^
+../src/../SD/SD.h:88:3: error: 'boolean' does not name a type
+   boolean remove(char *filepath);
+   ^
+../src/../SD/SD.h:90:3: error: 'boolean' does not name a type
+   boolean rmdir(char *filepath);
+   ^
+../src/../SD/SD.h:102:10: error: 'boolean' does not name a type
+   friend boolean callback_openPath(SdFile&, char *, boolean, void *); 
+          ^
+make: *** [src/main.o] Error 1
+22:39:51 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -I../SD -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+In file included from ../SD/utility/SdFat.h:28:0,
+                 from ../src/../SD/SD.h:18,
+                 from ../src/main.cc:37:
+../SD/utility/Print.h:30:21: fatal error: WString.h: No such file or directory
+ #include "WString.h"
+                     ^
+compilation terminated.
+make: *** [src/main.o] Error 1
+22:40:12 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -I../SD -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+In file included from ../SD/utility/SdFat.h:28:0,
+                 from ../src/../SD/SD.h:18,
+                 from ../src/main.cc:37:
+../SD/utility/Print.h:42:0: warning: "BYTE" redefined
+ #define BYTE 0
+ ^
+In file included from ../src/main.cc:26:0:
+../inc/OLED/OLED.h:49:0: note: this is the location of the previous definition
+ #define BYTE uint8_t
+ ^
+In file included from ../SD/utility/Sd2Card.h:27:0,
+                 from ../SD/utility/SdFat.h:26,
+                 from ../src/../SD/SD.h:18,
+                 from ../src/main.cc:37:
+../SD/utility/SdInfo.h:87:19: warning: malformed '#pragma pack(push[, id][, <n>])' - ignored [-Wpragmas]
+ #pragma pack(push 1)
+                   ^
+../SD/utility/SdInfo.h:230:17: warning: #pragma pack (pop) encountered without matching #pragma pack (push) [-Wpragmas]
+ #pragma pack(pop)
+                 ^
+In file included from ../SD/utility/SdFat.h:28:0,
+                 from ../src/../SD/SD.h:18,
+                 from ../src/main.cc:37:
+../SD/utility/Print.h:54:19: error: 'String' does not name a type
+  void print(const String &);
+                   ^
+../SD/utility/Print.h:64:21: error: 'String' does not name a type
+  void println(const String &s);
+                     ^
+In file included from ../src/../SD/SD.h:19:0,
+                 from ../src/main.cc:37:
+../SD/utility/SdFatUtil.h: In function 'void SerialPrint_P(char*)':
+../SD/utility/SdFatUtil.h:57:3: error: 'Serial' was not declared in this scope
+   Serial.print(str);
+   ^
+../SD/utility/SdFatUtil.h: In function 'void SerialPrintln_P(char*)':
+../SD/utility/SdFatUtil.h:67:3: error: 'Serial' was not declared in this scope
+   Serial.println();
+   ^
+In file included from ../src/main.cc:37:0:
+../src/../SD/SD.h: At global scope:
+../src/../SD/SD.h:25:28: error: expected class-name before '{' token
+ class File : public Stream {
+                            ^
+../src/../SD/SD.h:41:3: error: 'boolean' does not name a type
+   boolean seek(uint32_t pos);
+   ^
+../src/../SD/SD.h:48:3: error: 'boolean' does not name a type
+   boolean isDirectory(void);
+   ^
+../src/../SD/SD.h:52:16: error: type 'Print' is not a base type for type 'File'
+   using Print::write;
+                ^
+../src/../SD/SD.h:68:3: error: 'boolean' does not name a type
+   boolean begin(uint8_t csPin = SD_CHIP_SELECT_PIN);
+   ^
+../src/../SD/SD.h:81:3: error: 'boolean' does not name a type
+   boolean exists(char *filepath);
+   ^
+../src/../SD/SD.h:85:3: error: 'boolean' does not name a type
+   boolean mkdir(char *filepath);
+   ^
+../src/../SD/SD.h:88:3: error: 'boolean' does not name a type
+   boolean remove(char *filepath);
+   ^
+../src/../SD/SD.h:90:3: error: 'boolean' does not name a type
+   boolean rmdir(char *filepath);
+   ^
+../src/../SD/SD.h:102:10: error: 'boolean' does not name a type
+   friend boolean callback_openPath(SdFile&, char *, boolean, void *); 
+          ^
+make: *** [src/main.o] Error 1
+22:40:40 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -I../SD -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+In file included from ../SD/utility/SdFat.h:28:0,
+                 from ../src/../SD/SD.h:18,
+                 from ../src/main.cc:37:
+../SD/utility/Print.h:42:0: warning: "BYTE" redefined
+ #define BYTE 0
+ ^
+In file included from ../src/main.cc:26:0:
+../inc/OLED/OLED.h:49:0: note: this is the location of the previous definition
+ #define BYTE uint8_t
+ ^
+In file included from ../src/main.cc:37:0:
+../src/../SD/SD.h:20:20: fatal error: Stream.h: No such file or directory
+ #include "Stream.h"
+                    ^
+compilation terminated.
+make: *** [src/main.o] Error 1
+22:40:54 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -I../SD -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+In file included from ../SD/utility/SdFat.h:28:0,
+                 from ../src/../SD/SD.h:18,
+                 from ../src/main.cc:37:
+../SD/utility/Print.h:42:0: warning: "BYTE" redefined
+ #define BYTE 0
+ ^
+In file included from ../src/main.cc:26:0:
+../inc/OLED/OLED.h:49:0: note: this is the location of the previous definition
+ #define BYTE uint8_t
+ ^
+In file included from ../SD/utility/Sd2Card.h:27:0,
+                 from ../SD/utility/SdFat.h:26,
+                 from ../src/../SD/SD.h:18,
+                 from ../src/main.cc:37:
+../SD/utility/SdInfo.h:87:19: warning: malformed '#pragma pack(push[, id][, <n>])' - ignored [-Wpragmas]
+ #pragma pack(push 1)
+                   ^
+../SD/utility/SdInfo.h:230:17: warning: #pragma pack (pop) encountered without matching #pragma pack (push) [-Wpragmas]
+ #pragma pack(pop)
+                 ^
+In file included from ../SD/utility/SdFat.h:28:0,
+                 from ../src/../SD/SD.h:18,
+                 from ../src/main.cc:37:
+../SD/utility/Print.h:54:19: error: 'String' does not name a type
+  void print(const String &);
+                   ^
+../SD/utility/Print.h:64:21: error: 'String' does not name a type
+  void println(const String &s);
+                     ^
+In file included from ../src/../SD/SD.h:19:0,
+                 from ../src/main.cc:37:
+../SD/utility/SdFatUtil.h: In function 'void SerialPrint_P(char*)':
+../SD/utility/SdFatUtil.h:57:3: error: 'Serial' was not declared in this scope
+   Serial.print(str);
+   ^
+../SD/utility/SdFatUtil.h: In function 'void SerialPrintln_P(char*)':
+../SD/utility/SdFatUtil.h:67:3: error: 'Serial' was not declared in this scope
+   Serial.println();
+   ^
+In file included from ../src/../SD/SD.h:20:0,
+                 from ../src/main.cc:37:
+../src/../SD/utility/Stream.h: At global scope:
+../src/../SD/utility/Stream.h:91:3: error: 'String' does not name a type
+   String readString();
+   ^
+../src/../SD/utility/Stream.h:92:3: error: 'String' does not name a type
+   String readStringUntil(char terminator);
+   ^
+In file included from ../src/main.cc:37:0:
+../src/../SD/SD.h:41:3: error: 'boolean' does not name a type
+   boolean seek(uint32_t pos);
+   ^
+../src/../SD/SD.h:48:3: error: 'boolean' does not name a type
+   boolean isDirectory(void);
+   ^
+../src/../SD/SD.h:68:3: error: 'boolean' does not name a type
+   boolean begin(uint8_t csPin = SD_CHIP_SELECT_PIN);
+   ^
+../src/../SD/SD.h:81:3: error: 'boolean' does not name a type
+   boolean exists(char *filepath);
+   ^
+../src/../SD/SD.h:85:3: error: 'boolean' does not name a type
+   boolean mkdir(char *filepath);
+   ^
+../src/../SD/SD.h:88:3: error: 'boolean' does not name a type
+   boolean remove(char *filepath);
+   ^
+../src/../SD/SD.h:90:3: error: 'boolean' does not name a type
+   boolean rmdir(char *filepath);
+   ^
+../src/../SD/SD.h:102:10: error: 'boolean' does not name a type
+   friend boolean callback_openPath(SdFile&, char *, boolean, void *); 
+          ^
+make: *** [src/main.o] Error 1
+22:41:06 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -I../SD -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+In file included from ../SD/utility/SdFat.h:28:0,
+                 from ../src/../SD/SD.h:18,
+                 from ../src/main.cc:37:
+../SD/utility/Print.h:42:0: warning: "BYTE" redefined
+ #define BYTE 0
+ ^
+In file included from ../src/main.cc:26:0:
+../inc/OLED/OLED.h:49:0: note: this is the location of the previous definition
+ #define BYTE uint8_t
+ ^
+In file included from ../SD/utility/Sd2Card.h:27:0,
+                 from ../SD/utility/SdFat.h:26,
+                 from ../src/../SD/SD.h:18,
+                 from ../src/main.cc:37:
+../SD/utility/SdInfo.h:87:19: warning: malformed '#pragma pack(push[, id][, <n>])' - ignored [-Wpragmas]
+ #pragma pack(push 1)
+                   ^
+../SD/utility/SdInfo.h:230:17: warning: #pragma pack (pop) encountered without matching #pragma pack (push) [-Wpragmas]
+ #pragma pack(pop)
+                 ^
+In file included from ../SD/utility/SdFat.h:28:0,
+                 from ../src/../SD/SD.h:18,
+                 from ../src/main.cc:37:
+../SD/utility/Print.h:54:19: error: 'String' does not name a type
+  void print(const String &);
+                   ^
+../SD/utility/Print.h:64:21: error: 'String' does not name a type
+  void println(const String &s);
+                     ^
+In file included from ../src/../SD/SD.h:19:0,
+                 from ../src/main.cc:37:
+../SD/utility/SdFatUtil.h: In function 'void SerialPrint_P(char*)':
+../SD/utility/SdFatUtil.h:57:3: error: 'Serial' was not declared in this scope
+   Serial.print(str);
+   ^
+../SD/utility/SdFatUtil.h: In function 'void SerialPrintln_P(char*)':
+../SD/utility/SdFatUtil.h:67:3: error: 'Serial' was not declared in this scope
+   Serial.println();
+   ^
+In file included from ../src/../SD/SD.h:20:0,
+                 from ../src/main.cc:37:
+../src/../SD/utility/Stream.h: At global scope:
+../src/../SD/utility/Stream.h:91:3: error: 'String' does not name a type
+   String readString();
+   ^
+../src/../SD/utility/Stream.h:92:3: error: 'String' does not name a type
+   String readStringUntil(char terminator);
+   ^
+In file included from ../src/main.cc:37:0:
+../src/../SD/SD.h:48:3: error: 'boolean' does not name a type
+   boolean isDirectory(void);
+   ^
+../src/../SD/SD.h:68:3: error: 'boolean' does not name a type
+   boolean begin(uint8_t csPin = SD_CHIP_SELECT_PIN);
+   ^
+../src/../SD/SD.h:81:3: error: 'boolean' does not name a type
+   boolean exists(char *filepath);
+   ^
+../src/../SD/SD.h:85:3: error: 'boolean' does not name a type
+   boolean mkdir(char *filepath);
+   ^
+../src/../SD/SD.h:88:3: error: 'boolean' does not name a type
+   boolean remove(char *filepath);
+   ^
+../src/../SD/SD.h:90:3: error: 'boolean' does not name a type
+   boolean rmdir(char *filepath);
+   ^
+../src/../SD/SD.h:102:10: error: 'boolean' does not name a type
+   friend boolean callback_openPath(SdFile&, char *, boolean, void *); 
+          ^
+make: *** [src/main.o] Error 1
+22:41:35 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -I../SD -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+In file included from ../SD/utility/SdFat.h:28:0,
+                 from ../src/../SD/SD.h:18,
+                 from ../src/main.cc:37:
+../SD/utility/Print.h:42:0: warning: "BYTE" redefined
+ #define BYTE 0
+ ^
+In file included from ../src/main.cc:26:0:
+../inc/OLED/OLED.h:49:0: note: this is the location of the previous definition
+ #define BYTE uint8_t
+ ^
+In file included from ../SD/utility/Sd2Card.h:27:0,
+                 from ../SD/utility/SdFat.h:26,
+                 from ../src/../SD/SD.h:18,
+                 from ../src/main.cc:37:
+../SD/utility/SdInfo.h:87:19: warning: malformed '#pragma pack(push[, id][, <n>])' - ignored [-Wpragmas]
+ #pragma pack(push 1)
+                   ^
+../SD/utility/SdInfo.h:230:17: warning: #pragma pack (pop) encountered without matching #pragma pack (push) [-Wpragmas]
+ #pragma pack(pop)
+                 ^
+In file included from ../SD/utility/SdFat.h:28:0,
+                 from ../src/../SD/SD.h:18,
+                 from ../src/main.cc:37:
+../SD/utility/Print.h:54:19: error: 'String' does not name a type
+  void print(const String &);
+                   ^
+../SD/utility/Print.h:64:21: error: 'String' does not name a type
+  void println(const String &s);
+                     ^
+In file included from ../src/../SD/SD.h:19:0,
+                 from ../src/main.cc:37:
+../SD/utility/SdFatUtil.h: In function 'void SerialPrint_P(char*)':
+../SD/utility/SdFatUtil.h:57:3: error: 'Serial' was not declared in this scope
+   Serial.print(str);
+   ^
+../SD/utility/SdFatUtil.h: In function 'void SerialPrintln_P(char*)':
+../SD/utility/SdFatUtil.h:67:3: error: 'Serial' was not declared in this scope
+   Serial.println();
+   ^
+In file included from ../src/../SD/SD.h:20:0,
+                 from ../src/main.cc:37:
+../src/../SD/utility/Stream.h: At global scope:
+../src/../SD/utility/Stream.h:91:3: error: 'String' does not name a type
+   String readString();
+   ^
+../src/../SD/utility/Stream.h:92:3: error: 'String' does not name a type
+   String readStringUntil(char terminator);
+   ^
+In file included from ../src/main.cc:37:0:
+../src/../SD/SD.h:48:3: error: 'boolean' does not name a type
+   boolean isDirectory(void);
+   ^
+make: *** [src/main.o] Error 1
+22:41:41 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -I../SD -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+In file included from ../SD/utility/SdFat.h:28:0,
+                 from ../src/../SD/SD.h:18,
+                 from ../src/main.cc:37:
+../SD/utility/Print.h:42:0: warning: "BYTE" redefined
+ #define BYTE 0
+ ^
+In file included from ../src/main.cc:26:0:
+../inc/OLED/OLED.h:49:0: note: this is the location of the previous definition
+ #define BYTE uint8_t
+ ^
+In file included from ../SD/utility/Sd2Card.h:27:0,
+                 from ../SD/utility/SdFat.h:26,
+                 from ../src/../SD/SD.h:18,
+                 from ../src/main.cc:37:
+../SD/utility/SdInfo.h:87:19: warning: malformed '#pragma pack(push[, id][, <n>])' - ignored [-Wpragmas]
+ #pragma pack(push 1)
+                   ^
+../SD/utility/SdInfo.h:230:17: warning: #pragma pack (pop) encountered without matching #pragma pack (push) [-Wpragmas]
+ #pragma pack(pop)
+                 ^
+In file included from ../SD/utility/SdFat.h:28:0,
+                 from ../src/../SD/SD.h:18,
+                 from ../src/main.cc:37:
+../SD/utility/Print.h:54:19: error: 'String' does not name a type
+  void print(const String &);
+                   ^
+../SD/utility/Print.h:64:21: error: 'String' does not name a type
+  void println(const String &s);
+                     ^
+In file included from ../src/../SD/SD.h:19:0,
+                 from ../src/main.cc:37:
+../SD/utility/SdFatUtil.h: In function 'void SerialPrint_P(char*)':
+../SD/utility/SdFatUtil.h:57:3: error: 'Serial' was not declared in this scope
+   Serial.print(str);
+   ^
+../SD/utility/SdFatUtil.h: In function 'void SerialPrintln_P(char*)':
+../SD/utility/SdFatUtil.h:67:3: error: 'Serial' was not declared in this scope
+   Serial.println();
+   ^
+In file included from ../src/../SD/SD.h:20:0,
+                 from ../src/main.cc:37:
+../src/../SD/utility/Stream.h: At global scope:
+../src/../SD/utility/Stream.h:91:3: error: 'String' does not name a type
+   String readString();
+   ^
+../src/../SD/utility/Stream.h:92:3: error: 'String' does not name a type
+   String readStringUntil(char terminator);
+   ^
+make: *** [src/main.o] Error 1
+22:42:06 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -I../SD -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+In file included from ../SD/utility/SdFat.h:28:0,
+                 from ../src/../SD/SD.h:18,
+                 from ../src/main.cc:37:
+../SD/utility/Print.h:42:0: warning: "BYTE" redefined
+ #define BYTE 0
+ ^
+In file included from ../src/main.cc:26:0:
+../inc/OLED/OLED.h:49:0: note: this is the location of the previous definition
+ #define BYTE uint8_t
+ ^
+In file included from ../SD/utility/Sd2Card.h:27:0,
+                 from ../SD/utility/SdFat.h:26,
+                 from ../src/../SD/SD.h:18,
+                 from ../src/main.cc:37:
+../SD/utility/SdInfo.h:87:19: warning: malformed '#pragma pack(push[, id][, <n>])' - ignored [-Wpragmas]
+ #pragma pack(push 1)
+                   ^
+../SD/utility/SdInfo.h:230:17: warning: #pragma pack (pop) encountered without matching #pragma pack (push) [-Wpragmas]
+ #pragma pack(pop)
+                 ^
+In file included from ../src/../SD/SD.h:19:0,
+                 from ../src/main.cc:37:
+../SD/utility/SdFatUtil.h: In function 'void SerialPrint_P(char*)':
+../SD/utility/SdFatUtil.h:57:3: error: 'Serial' was not declared in this scope
+   Serial.print(str);
+   ^
+../SD/utility/SdFatUtil.h: In function 'void SerialPrintln_P(char*)':
+../SD/utility/SdFatUtil.h:67:3: error: 'Serial' was not declared in this scope
+   Serial.println();
+   ^
+In file included from ../src/../SD/SD.h:20:0,
+                 from ../src/main.cc:37:
+../src/../SD/utility/Stream.h: At global scope:
+../src/../SD/utility/Stream.h:91:3: error: 'String' does not name a type
+   String readString();
+   ^
+../src/../SD/utility/Stream.h:92:3: error: 'String' does not name a type
+   String readStringUntil(char terminator);
+   ^
+make: *** [src/main.o] Error 1
+22:42:26 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -I../SD -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+In file included from ../SD/utility/SdFat.h:28:0,
+                 from ../src/../SD/SD.h:18,
+                 from ../src/main.cc:37:
+../SD/utility/Print.h:42:0: warning: "BYTE" redefined
+ #define BYTE 0
+ ^
+In file included from ../src/main.cc:26:0:
+../inc/OLED/OLED.h:49:0: note: this is the location of the previous definition
+ #define BYTE uint8_t
+ ^
+In file included from ../SD/utility/Sd2Card.h:27:0,
+                 from ../SD/utility/SdFat.h:26,
+                 from ../src/../SD/SD.h:18,
+                 from ../src/main.cc:37:
+../SD/utility/SdInfo.h:87:19: warning: malformed '#pragma pack(push[, id][, <n>])' - ignored [-Wpragmas]
+ #pragma pack(push 1)
+                   ^
+../SD/utility/SdInfo.h:230:17: warning: #pragma pack (pop) encountered without matching #pragma pack (push) [-Wpragmas]
+ #pragma pack(pop)
+                 ^
+In file included from ../src/../SD/SD.h:19:0,
+                 from ../src/main.cc:37:
+../SD/utility/SdFatUtil.h: In function 'void SerialPrint_P(char*)':
+../SD/utility/SdFatUtil.h:57:3: error: 'Serial' was not declared in this scope
+   Serial.print(str);
+   ^
+../SD/utility/SdFatUtil.h: In function 'void SerialPrintln_P(char*)':
+../SD/utility/SdFatUtil.h:67:3: error: 'Serial' was not declared in this scope
+   Serial.println();
+   ^
+make: *** [src/main.o] Error 1
+22:42:41 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -I../SD -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+In file included from ../SD/utility/SdFat.h:28:0,
+                 from ../src/../SD/SD.h:18,
+                 from ../src/main.cc:37:
+../SD/utility/Print.h:42:0: warning: "BYTE" redefined
+ #define BYTE 0
+ ^
+In file included from ../src/main.cc:26:0:
+../inc/OLED/OLED.h:49:0: note: this is the location of the previous definition
+ #define BYTE uint8_t
+ ^
+In file included from ../SD/utility/Sd2Card.h:27:0,
+                 from ../SD/utility/SdFat.h:26,
+                 from ../src/../SD/SD.h:18,
+                 from ../src/main.cc:37:
+../SD/utility/SdInfo.h:87:19: warning: malformed '#pragma pack(push[, id][, <n>])' - ignored [-Wpragmas]
+ #pragma pack(push 1)
+                   ^
+../SD/utility/SdInfo.h:230:17: warning: #pragma pack (pop) encountered without matching #pragma pack (push) [-Wpragmas]
+ #pragma pack(pop)
+                 ^
+'Finished building: ../src/main.cc'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -I../SD -c -fmessage-length=0 -MT"src/platform.o" -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building file: ../SD/utility/Print.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -I../SD -c -fmessage-length=0 -MT"SD/utility/Print.o" -MMD -MP -MF"SD/utility/Print.d" -MT"SD/utility/Print.d" -o "SD/utility/Print.o" "../SD/utility/Print.cpp"
+../SD/utility/Print.cpp:36:20: fatal error: wiring.h: No such file or directory
+ #include "wiring.h"
+                    ^
+compilation terminated.
+make: *** [SD/utility/Print.o] Error 1
+22:42:52 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../SD/utility/Print.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -I../SD -c -fmessage-length=0 -MT"SD/utility/Print.o" -MMD -MP -MF"SD/utility/Print.d" -MT"SD/utility/Print.d" -o "SD/utility/Print.o" "../SD/utility/Print.cpp"
+../SD/utility/Print.cpp:64:25: error: 'String' does not name a type
+ void Print::print(const String &argString)
+                         ^
+../SD/utility/Print.cpp:64:6: error: prototype for 'void Print::print(const int&)' does not match any in class 'Print'
+ void Print::print(const String &argString)
+      ^
+In file included from ../SD/utility/Print.cpp:38:0:
+../SD/utility/Print.h:62:7: error: candidates are: void Print::print(double, int)
+  void print(double, int = 2);
+       ^
+../SD/utility/Print.h:61:7: error:                 void Print::print(long unsigned int, int)
+  void print(unsigned long, int = PRINT_DEC);
+       ^
+../SD/utility/Print.h:60:7: error:                 void Print::print(long int, int)
+  void print(long, int = PRINT_DEC);
+       ^
+../SD/utility/Print.h:59:7: error:                 void Print::print(unsigned int, int)
+  void print(unsigned int, int = PRINT_DEC);
+       ^
+../SD/utility/Print.h:58:7: error:                 void Print::print(int, int)
+  void print(int, int = PRINT_DEC);
+       ^
+../SD/utility/Print.h:57:7: error:                 void Print::print(unsigned char, int)
+  void print(unsigned char, int = PRINT_BYTE);
+       ^
+../SD/utility/Print.h:56:7: error:                 void Print::print(char, int)
+  void print(char, int = PRINT_BYTE);
+       ^
+../SD/utility/Print.h:55:7: error:                 void Print::print(const char*)
+  void print(const char[]);
+       ^
+../SD/utility/Print.cpp:149:27: error: 'String' does not name a type
+ void Print::println(const String &argString)
+                           ^
+../SD/utility/Print.cpp:149:6: error: prototype for 'void Print::println(const int&)' does not match any in class 'Print'
+ void Print::println(const String &argString)
+      ^
+../SD/utility/Print.cpp:143:6: error: candidates are: void Print::println()
+ void Print::println(void)
+      ^
+In file included from ../SD/utility/Print.cpp:38:0:
+../SD/utility/Print.h:72:7: error:                 void Print::println(double, int)
+  void println(double, int = 2);
+       ^
+../SD/utility/Print.h:71:7: error:                 void Print::println(long unsigned int, int)
+  void println(unsigned long, int = PRINT_DEC);
+       ^
+../SD/utility/Print.h:70:7: error:                 void Print::println(long int, int)
+  void println(long, int = PRINT_DEC);
+       ^
+../SD/utility/Print.h:69:7: error:                 void Print::println(unsigned int, int)
+  void println(unsigned int, int = PRINT_DEC);
+       ^
+../SD/utility/Print.h:68:7: error:                 void Print::println(int, int)
+  void println(int, int = PRINT_DEC);
+       ^
+../SD/utility/Print.h:67:7: error:                 void Print::println(unsigned char, int)
+  void println(unsigned char, int = PRINT_BYTE);
+       ^
+../SD/utility/Print.h:66:7: error:                 void Print::println(char, int)
+  void println(char, int = PRINT_BYTE);
+       ^
+../SD/utility/Print.h:65:7: error:                 void Print::println(const char*)
+  void println(const char[]);
+       ^
+make: *** [SD/utility/Print.o] Error 1
+22:46:31 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -I../SD -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+In file included from ../SD/utility/SdFat.h:28:0,
+                 from ../src/../SD/SD.h:18,
+                 from ../src/main.cc:37:
+../SD/utility/Print.h:42:0: warning: "BYTE" redefined
+ #define BYTE 0
+ ^
+In file included from ../src/main.cc:26:0:
+../inc/OLED/OLED.h:49:0: note: this is the location of the previous definition
+ #define BYTE uint8_t
+ ^
+In file included from ../SD/utility/Sd2Card.h:27:0,
+                 from ../SD/utility/SdFat.h:26,
+                 from ../src/../SD/SD.h:18,
+                 from ../src/main.cc:37:
+../SD/utility/SdInfo.h:87:19: warning: malformed '#pragma pack(push[, id][, <n>])' - ignored [-Wpragmas]
+ #pragma pack(push 1)
+                   ^
+../SD/utility/SdInfo.h:230:17: warning: #pragma pack (pop) encountered without matching #pragma pack (push) [-Wpragmas]
+ #pragma pack(pop)
+                 ^
+In file included from ../SD/utility/SdFat.h:28:0,
+                 from ../src/../SD/SD.h:18,
+                 from ../src/main.cc:37:
+../SD/utility/Print.h:54:19: error: 'String' does not name a type
+  void print(const String &); todo
+                   ^
+../SD/utility/Print.h:54:30: error: 'todo' does not name a type
+  void print(const String &); todo
+                              ^
+../SD/utility/Print.h:64:21: error: 'String' does not name a type
+  void println(const String &s); todo
+                     ^
+../SD/utility/Print.h:64:33: error: 'todo' does not name a type
+  void println(const String &s); todo
+                                 ^
+make: *** [src/main.o] Error 1
+22:46:47 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -I../SD -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+In file included from ../SD/utility/SdFat.h:28:0,
+                 from ../src/../SD/SD.h:18,
+                 from ../src/main.cc:37:
+../SD/utility/Print.h:42:0: warning: "BYTE" redefined
+ #define BYTE 0
+ ^
+In file included from ../src/main.cc:26:0:
+../inc/OLED/OLED.h:49:0: note: this is the location of the previous definition
+ #define BYTE uint8_t
+ ^
+In file included from ../SD/utility/Sd2Card.h:27:0,
+                 from ../SD/utility/SdFat.h:26,
+                 from ../src/../SD/SD.h:18,
+                 from ../src/main.cc:37:
+../SD/utility/SdInfo.h:87:19: warning: malformed '#pragma pack(push[, id][, <n>])' - ignored [-Wpragmas]
+ #pragma pack(push 1)
+                   ^
+../SD/utility/SdInfo.h:230:17: warning: #pragma pack (pop) encountered without matching #pragma pack (push) [-Wpragmas]
+ #pragma pack(pop)
+                 ^
+In file included from ../SD/utility/SdFat.h:28:0,
+                 from ../src/../SD/SD.h:18,
+                 from ../src/main.cc:37:
+../SD/utility/Print.h:54:19: error: 'String' does not name a type
+  void print(const String &);
+                   ^
+../SD/utility/Print.h:64:21: error: 'String' does not name a type
+  void println(const String &s);
+                     ^
+make: *** [src/main.o] Error 1
+22:47:26 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -I../SD -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+In file included from ../SD/utility/SdFat.h:28:0,
+                 from ../src/../SD/SD.h:18,
+                 from ../src/main.cc:37:
+../SD/utility/Print.h:44:0: warning: "BYTE" redefined
+ #define BYTE 0
+ ^
+In file included from ../src/main.cc:26:0:
+../inc/OLED/OLED.h:49:0: note: this is the location of the previous definition
+ #define BYTE uint8_t
+ ^
+In file included from ../SD/utility/Sd2Card.h:27:0,
+                 from ../SD/utility/SdFat.h:26,
+                 from ../src/../SD/SD.h:18,
+                 from ../src/main.cc:37:
+../SD/utility/SdInfo.h:87:19: warning: malformed '#pragma pack(push[, id][, <n>])' - ignored [-Wpragmas]
+ #pragma pack(push 1)
+                   ^
+../SD/utility/SdInfo.h:230:17: warning: #pragma pack (pop) encountered without matching #pragma pack (push) [-Wpragmas]
+ #pragma pack(pop)
+                 ^
+In file included from ../SD/utility/SdFat.h:28:0,
+                 from ../src/../SD/SD.h:18,
+                 from ../src/main.cc:37:
+../SD/utility/Print.h:57:19: error: 'String' does not name a type
+  void print(const String &);
+                   ^
+../SD/utility/Print.h:67:21: error: 'String' does not name a type
+  void println(const String &s);
+                     ^
+make: *** [src/main.o] Error 1
+22:47:37 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -I../SD -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+In file included from ../SD/utility/SdFat.h:28:0,
+                 from ../src/../SD/SD.h:18,
+                 from ../src/main.cc:37:
+../SD/utility/Print.h:44:0: warning: "BYTE" redefined
+ #define BYTE 0
+ ^
+In file included from ../src/main.cc:26:0:
+../inc/OLED/OLED.h:49:0: note: this is the location of the previous definition
+ #define BYTE uint8_t
+ ^
+In file included from ../SD/utility/Sd2Card.h:27:0,
+                 from ../SD/utility/SdFat.h:26,
+                 from ../src/../SD/SD.h:18,
+                 from ../src/main.cc:37:
+../SD/utility/SdInfo.h:87:19: warning: malformed '#pragma pack(push[, id][, <n>])' - ignored [-Wpragmas]
+ #pragma pack(push 1)
+                   ^
+../SD/utility/SdInfo.h:230:17: warning: #pragma pack (pop) encountered without matching #pragma pack (push) [-Wpragmas]
+ #pragma pack(pop)
+                 ^
+In file included from ../SD/utility/SdFat.h:28:0,
+                 from ../src/../SD/SD.h:18,
+                 from ../src/main.cc:37:
+../SD/utility/Print.h:57:19: error: 'String' does not name a type
+  void print(const String &);
+                   ^
+../SD/utility/Print.h:67:21: error: 'String' does not name a type
+  void println(const String &s);
+                     ^
+make: *** [src/main.o] Error 1
+22:48:28 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -I../SD -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+In file included from ../SD/utility/SdFat.h:28:0,
+                 from ../src/../SD/SD.h:18,
+                 from ../src/main.cc:37:
+../SD/utility/Print.h:44:0: warning: "BYTE" redefined
+ #define BYTE 0
+ ^
+In file included from ../src/main.cc:26:0:
+../inc/OLED/OLED.h:49:0: note: this is the location of the previous definition
+ #define BYTE uint8_t
+ ^
+In file included from ../SD/utility/Sd2Card.h:27:0,
+                 from ../SD/utility/SdFat.h:26,
+                 from ../src/../SD/SD.h:18,
+                 from ../src/main.cc:37:
+../SD/utility/SdInfo.h:87:19: warning: malformed '#pragma pack(push[, id][, <n>])' - ignored [-Wpragmas]
+ #pragma pack(push 1)
+                   ^
+../SD/utility/SdInfo.h:230:17: warning: #pragma pack (pop) encountered without matching #pragma pack (push) [-Wpragmas]
+ #pragma pack(pop)
+                 ^
+In file included from ../SD/utility/SdFat.h:28:0,
+                 from ../src/../SD/SD.h:18,
+                 from ../src/main.cc:37:
+../SD/utility/Print.h:57:19: error: 'String' does not name a type
+  void print(const String &);
+                   ^
+../SD/utility/Print.h:67:21: error: 'String' does not name a type
+  void println(const String &s);
+                     ^
+make: *** [src/main.o] Error 1
+22:48:37 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -I../SD -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+In file included from ../SD/utility/SdFat.h:28:0,
+                 from ../src/../SD/SD.h:18,
+                 from ../src/main.cc:37:
+../SD/utility/Print.h:44:0: warning: "BYTE" redefined
+ #define BYTE 0
+ ^
+In file included from ../src/main.cc:26:0:
+../inc/OLED/OLED.h:49:0: note: this is the location of the previous definition
+ #define BYTE uint8_t
+ ^
+In file included from ../SD/utility/Sd2Card.h:27:0,
+                 from ../SD/utility/SdFat.h:26,
+                 from ../src/../SD/SD.h:18,
+                 from ../src/main.cc:37:
+../SD/utility/SdInfo.h:87:19: warning: malformed '#pragma pack(push[, id][, <n>])' - ignored [-Wpragmas]
+ #pragma pack(push 1)
+                   ^
+../SD/utility/SdInfo.h:230:17: warning: #pragma pack (pop) encountered without matching #pragma pack (push) [-Wpragmas]
+ #pragma pack(pop)
+                 ^
+In file included from ../SD/utility/SdFat.h:28:0,
+                 from ../src/../SD/SD.h:18,
+                 from ../src/main.cc:37:
+../SD/utility/Print.h:67:21: error: 'String' does not name a type
+  void println(const String &s);
+                     ^
+make: *** [src/main.o] Error 1
+22:48:43 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -I../SD -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+In file included from ../SD/utility/SdFat.h:28:0,
+                 from ../src/../SD/SD.h:18,
+                 from ../src/main.cc:37:
+../SD/utility/Print.h:44:0: warning: "BYTE" redefined
+ #define BYTE 0
+ ^
+In file included from ../src/main.cc:26:0:
+../inc/OLED/OLED.h:49:0: note: this is the location of the previous definition
+ #define BYTE uint8_t
+ ^
+In file included from ../SD/utility/Sd2Card.h:27:0,
+                 from ../SD/utility/SdFat.h:26,
+                 from ../src/../SD/SD.h:18,
+                 from ../src/main.cc:37:
+../SD/utility/SdInfo.h:87:19: warning: malformed '#pragma pack(push[, id][, <n>])' - ignored [-Wpragmas]
+ #pragma pack(push 1)
+                   ^
+../SD/utility/SdInfo.h:230:17: warning: #pragma pack (pop) encountered without matching #pragma pack (push) [-Wpragmas]
+ #pragma pack(pop)
+                 ^
+'Finished building: ../src/main.cc'
+' '
+'Building file: ../SD/utility/Print.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -I../SD -c -fmessage-length=0 -MT"SD/utility/Print.o" -MMD -MP -MF"SD/utility/Print.d" -MT"SD/utility/Print.d" -o "SD/utility/Print.o" "../SD/utility/Print.cpp"
+../SD/utility/Print.cpp:64:25: error: 'String' does not name a type
+ void Print::print(const String &argString)
+                         ^
+../SD/utility/Print.cpp:64:6: error: prototype for 'void Print::print(const int&)' does not match any in class 'Print'
+ void Print::print(const String &argString)
+      ^
+In file included from ../SD/utility/Print.cpp:38:0:
+../SD/utility/Print.h:65:7: error: candidates are: void Print::print(double, int)
+  void print(double, int = 2);
+       ^
+../SD/utility/Print.h:64:7: error:                 void Print::print(long unsigned int, int)
+  void print(unsigned long, int = PRINT_DEC);
+       ^
+../SD/utility/Print.h:63:7: error:                 void Print::print(long int, int)
+  void print(long, int = PRINT_DEC);
+       ^
+../SD/utility/Print.h:62:7: error:                 void Print::print(unsigned int, int)
+  void print(unsigned int, int = PRINT_DEC);
+       ^
+../SD/utility/Print.h:61:7: error:                 void Print::print(int, int)
+  void print(int, int = PRINT_DEC);
+       ^
+../SD/utility/Print.h:60:7: error:                 void Print::print(unsigned char, int)
+  void print(unsigned char, int = PRINT_BYTE);
+       ^
+../SD/utility/Print.h:59:7: error:                 void Print::print(char, int)
+  void print(char, int = PRINT_BYTE);
+       ^
+../SD/utility/Print.h:58:7: error:                 void Print::print(const char*)
+  void print(const char[]);
+       ^
+../SD/utility/Print.h:57:7: error:                 void Print::print(const string&)
+  void print(const string &);
+       ^
+../SD/utility/Print.cpp:149:27: error: 'String' does not name a type
+ void Print::println(const String &argString)
+                           ^
+../SD/utility/Print.cpp:149:6: error: prototype for 'void Print::println(const int&)' does not match any in class 'Print'
+ void Print::println(const String &argString)
+      ^
+../SD/utility/Print.cpp:143:6: error: candidates are: void Print::println()
+ void Print::println(void)
+      ^
+In file included from ../SD/utility/Print.cpp:38:0:
+../SD/utility/Print.h:75:7: error:                 void Print::println(double, int)
+  void println(double, int = 2);
+       ^
+../SD/utility/Print.h:74:7: error:                 void Print::println(long unsigned int, int)
+  void println(unsigned long, int = PRINT_DEC);
+       ^
+../SD/utility/Print.h:73:7: error:                 void Print::println(long int, int)
+  void println(long, int = PRINT_DEC);
+       ^
+../SD/utility/Print.h:72:7: error:                 void Print::println(unsigned int, int)
+  void println(unsigned int, int = PRINT_DEC);
+       ^
+../SD/utility/Print.h:71:7: error:                 void Print::println(int, int)
+  void println(int, int = PRINT_DEC);
+       ^
+../SD/utility/Print.h:70:7: error:                 void Print::println(unsigned char, int)
+  void println(unsigned char, int = PRINT_BYTE);
+       ^
+../SD/utility/Print.h:69:7: error:                 void Print::println(char, int)
+  void println(char, int = PRINT_BYTE);
+       ^
+../SD/utility/Print.h:68:7: error:                 void Print::println(const char*)
+  void println(const char[]);
+       ^
+../SD/utility/Print.h:67:7: error:                 void Print::println(const string&)
+  void println(const string &s);
+       ^
+make: *** [SD/utility/Print.o] Error 1
+22:49:33 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../SD/utility/Print.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -I../SD -c -fmessage-length=0 -MT"SD/utility/Print.o" -MMD -MP -MF"SD/utility/Print.d" -MT"SD/utility/Print.d" -o "SD/utility/Print.o" "../SD/utility/Print.cpp"
+../SD/utility/Print.cpp:149:27: error: 'String' does not name a type
+ void Print::println(const String &argString)
+                           ^
+../SD/utility/Print.cpp:149:6: error: prototype for 'void Print::println(const int&)' does not match any in class 'Print'
+ void Print::println(const String &argString)
+      ^
+../SD/utility/Print.cpp:143:6: error: candidates are: void Print::println()
+ void Print::println(void)
+      ^
+In file included from ../SD/utility/Print.cpp:38:0:
+../SD/utility/Print.h:75:7: error:                 void Print::println(double, int)
+  void println(double, int = 2);
+       ^
+../SD/utility/Print.h:74:7: error:                 void Print::println(long unsigned int, int)
+  void println(unsigned long, int = PRINT_DEC);
+       ^
+../SD/utility/Print.h:73:7: error:                 void Print::println(long int, int)
+  void println(long, int = PRINT_DEC);
+       ^
+../SD/utility/Print.h:72:7: error:                 void Print::println(unsigned int, int)
+  void println(unsigned int, int = PRINT_DEC);
+       ^
+../SD/utility/Print.h:71:7: error:                 void Print::println(int, int)
+  void println(int, int = PRINT_DEC);
+       ^
+../SD/utility/Print.h:70:7: error:                 void Print::println(unsigned char, int)
+  void println(unsigned char, int = PRINT_BYTE);
+       ^
+../SD/utility/Print.h:69:7: error:                 void Print::println(char, int)
+  void println(char, int = PRINT_BYTE);
+       ^
+../SD/utility/Print.h:68:7: error:                 void Print::println(const char*)
+  void println(const char[]);
+       ^
+../SD/utility/Print.h:67:7: error:                 void Print::println(const string&)
+  void println(const string &s);
+       ^
+make: *** [SD/utility/Print.o] Error 1
+22:49:59 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../SD/utility/Print.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -I../SD -c -fmessage-length=0 -MT"SD/utility/Print.o" -MMD -MP -MF"SD/utility/Print.d" -MT"SD/utility/Print.d" -o "SD/utility/Print.o" "../SD/utility/Print.cpp"
+'Finished building: ../SD/utility/Print.cpp'
+' '
+'Building file: ../SD/utility/Sd2Card.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -I../SD -c -fmessage-length=0 -MT"SD/utility/Sd2Card.o" -MMD -MP -MF"SD/utility/Sd2Card.d" -MT"SD/utility/Sd2Card.d" -o "SD/utility/Sd2Card.o" "../SD/utility/Sd2Card.cpp"
+../SD/utility/Sd2Card.cpp:20:21: fatal error: p32xxxx.h: No such file or directory
+ #include <p32xxxx.h>
+                     ^
+compilation terminated.
+make: *** [SD/utility/Sd2Card.o] Error 1
+22:50:20 **** Auto Build of configuration Debug for project zyboApp ****
+make all 
+'Building file: ../SD/utility/Sd2Card.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -I../SD -c -fmessage-length=0 -MT"SD/utility/Sd2Card.o" -MMD -MP -MF"SD/utility/Sd2Card.d" -MT"SD/utility/Sd2Card.d" -o "SD/utility/Sd2Card.o" "../SD/utility/Sd2Card.cpp"
+In file included from ../SD/utility/Sd2Card.h:27:0,
+                 from ../SD/utility/Sd2Card.cpp:21:
+../SD/utility/SdInfo.h:87:19: warning: malformed '#pragma pack(push[, id][, <n>])' - ignored [-Wpragmas]
+ #pragma pack(push 1)
+                   ^
+../SD/utility/SdInfo.h:230:17: warning: #pragma pack (pop) encountered without matching #pragma pack (push) [-Wpragmas]
+ #pragma pack(pop)
+                 ^
+In file included from ../SD/utility/Sd2Card.h:26:0,
+                 from ../SD/utility/Sd2Card.cpp:21:
+../SD/utility/Sd2Card.cpp: In function 'uint8_t spiRec()':
+../SD/utility/Sd2PinMap.h:53:35: error: 'LATGSET' was not declared in this scope
+ #define PORTSetBitsX(PORTx, BITS) LAT##PORTx##SET = BITS
+                                   ^
+../SD/utility/Sd2PinMap.h:54:34: note: in expansion of macro 'PORTSetBitsX'
+ #define PORTSetBits(PORTx, BITS) PORTSetBitsX(PORTx, BITS)
+                                  ^
+../SD/utility/Sd2Card.cpp:48:3: note: in expansion of macro 'PORTSetBits'
+   PORTSetBits(prtSDO, bnSDO);
+   ^
+../SD/utility/Sd2PinMap.h:59:37: error: 'PORTG' was not declared in this scope
+ #define PORTReadBitsX(PORTx, BITS) (PORT##PORTx & BITS)
+                                     ^
+../SD/utility/Sd2PinMap.h:60:35: note: in expansion of macro 'PORTReadBitsX'
+ #define PORTReadBits(PORTx, BITS) PORTReadBitsX(PORTx, BITS)
+                                   ^
+../SD/utility/Sd2Card.cpp:59:9: note: in expansion of macro 'PORTReadBits'
+     if (PORTReadBits(prtSDI,bnSDI)) data |= 1;
+         ^
+../SD/utility/Sd2PinMap.h:56:37: error: 'LATGCLR' was not declared in this scope
+ #define PORTClearBitsX(PORTx, BITS) LAT##PORTx##CLR = BITS
+                                     ^
+../SD/utility/Sd2PinMap.h:57:36: note: in expansion of macro 'PORTClearBitsX'
+ #define PORTClearBits(PORTx, BITS) PORTClearBitsX(PORTx, BITS)
+                                    ^
+../SD/utility/Sd2Card.cpp:62:5: note: in expansion of macro 'PORTClearBits'
+     PORTClearBits(prtSCK, bnSCK);
+     ^
+../SD/utility/Sd2Card.cpp: In function 'void spiSend(uint8_t)':
+../SD/utility/Sd2PinMap.h:53:35: error: 'LATGSET' was not declared in this scope
+ #define PORTSetBitsX(PORTx, BITS) LAT##PORTx##SET = BITS
+                                   ^
+../SD/utility/Sd2PinMap.h:54:34: note: in expansion of macro 'PORTSetBitsX'
+ #define PORTSetBits(PORTx, BITS) PORTSetBitsX(PORTx, BITS)
+                                  ^
+../SD/utility/Sd2Card.cpp:74:3: note: in expansion of macro 'PORTSetBits'
+   PORTSetBits(prtSDO, bnSDO);
+   ^
+../SD/utility/Sd2PinMap.h:56:37: error: 'LATGCLR' was not declared in this scope
+ #define PORTClearBitsX(PORTx, BITS) LAT##PORTx##CLR = BITS
+                                     ^
+../SD/utility/Sd2PinMap.h:57:36: note: in expansion of macro 'PORTClearBitsX'
+ #define PORTClearBits(PORTx, BITS) PORTClearBitsX(PORTx, BITS)
+                                    ^
+../SD/utility/Sd2Card.cpp:78:3: note: in expansion of macro 'PORTClearBits'
+   PORTClearBits(prtSDO, bnSDO);
+   ^
+../SD/utility/Sd2PinMap.h:56:37: error: 'LATGCLR' was not declared in this scope
+ #define PORTClearBitsX(PORTx, BITS) LAT##PORTx##CLR = BITS
+                                     ^
+../SD/utility/Sd2PinMap.h:57:36: note: in expansion of macro 'PORTClearBitsX'
+ #define PORTClearBits(PORTx, BITS) PORTClearBitsX(PORTx, BITS)
+                                    ^
+../SD/utility/Sd2Card.cpp:81:2: note: in expansion of macro 'PORTClearBits'
+  PORTClearBits(prtSCK, bnSCK);
+  ^
+../SD/utility/Sd2PinMap.h:53:35: error: 'LATGSET' was not declared in this scope
+ #define PORTSetBitsX(PORTx, BITS) LAT##PORTx##SET = BITS
+                                   ^
+../SD/utility/Sd2PinMap.h:54:34: note: in expansion of macro 'PORTSetBitsX'
+ #define PORTSetBits(PORTx, BITS) PORTSetBitsX(PORTx, BITS)
+                                  ^
+../SD/utility/Sd2Card.cpp:89:2: note: in expansion of macro 'PORTSetBits'
+  PORTSetBits(prtSCK, bnSCK);
+  ^
+../SD/utility/Sd2PinMap.h:56:37: error: 'LATGCLR' was not declared in this scope
+ #define PORTClearBitsX(PORTx, BITS) LAT##PORTx##CLR = BITS
+                                     ^
+../SD/utility/Sd2PinMap.h:57:36: note: in expansion of macro 'PORTClearBitsX'
+ #define PORTClearBits(PORTx, BITS) PORTClearBitsX(PORTx, BITS)
+                                    ^
+../SD/utility/Sd2Card.cpp:98:3: note: in expansion of macro 'PORTClearBits'
+   PORTClearBits(prtSCK, bnSCK);
+   ^
+../SD/utility/Sd2Card.cpp: In member function 'void Sd2Card::chipSelectHigh()':
+../SD/utility/Sd2Card.cpp:157:32: error: 'HIGH' was not declared in this scope
+   digitalWrite(chipSelectPin_, HIGH);
+                                ^
+../SD/utility/Sd2Card.cpp:157:36: error: 'digitalWrite' was not declared in this scope
+   digitalWrite(chipSelectPin_, HIGH);
+                                    ^
+../SD/utility/Sd2Card.cpp: In member function 'void Sd2Card::chipSelectLow()':
+../SD/utility/Sd2Card.cpp:178:32: error: 'LOW' was not declared in this scope
+   digitalWrite(chipSelectPin_, LOW);
+                                ^
+../SD/utility/Sd2Card.cpp:178:35: error: 'digitalWrite' was not declared in this scope
+   digitalWrite(chipSelectPin_, LOW);
+                                   ^
+../SD/utility/Sd2Card.cpp: In member function 'uint8_t Sd2Card::init(uint8_t, uint8_t)':
+../SD/utility/Sd2Card.cpp:245:34: error: 'millis' was not declared in this scope
+   uint16_t t0 = (uint16_t)millis();
+                                  ^
+../SD/utility/Sd2Card.cpp:248:3: error: 'SPI2CON' was not declared in this scope
+   SPI2CON = 0;
+   ^
+../SD/utility/Sd2Card.cpp:263:5: error: 'AD1PCFG' was not declared in this scope
+     AD1PCFG = 0xFFFF;
+     ^
+../SD/utility/Sd2Card.cpp:269:27: error: 'OUTPUT' was not declared in this scope
+   pinMode(chipSelectPin_, OUTPUT);
+                           ^
+../SD/utility/Sd2Card.cpp:269:33: error: 'pinMode' was not declared in this scope
+   pinMode(chipSelectPin_, OUTPUT);
+                                 ^
+In file included from ../SD/utility/Sd2Card.h:26:0,
+                 from ../SD/utility/Sd2Card.cpp:21:
+../SD/utility/Sd2PinMap.h:62:45: error: 'TRISGCLR' was not declared in this scope
+ #define PORTSetPinsDigitalOutX(PORTx, BITS) TRIS##PORTx##CLR = BITS
+                                             ^
+../SD/utility/Sd2PinMap.h:63:44: note: in expansion of macro 'PORTSetPinsDigitalOutX'
+ #define PORTSetPinsDigitalOut(PORTx, BITS) PORTSetPinsDigitalOutX(PORTx, BITS)
+                                            ^
+../SD/utility/Sd2Card.cpp:271:3: note: in expansion of macro 'PORTSetPinsDigitalOut'
+   PORTSetPinsDigitalOut(prtSCK, bnSCK);
+   ^
+../SD/utility/Sd2PinMap.h:65:44: error: 'TRISGSET' was not declared in this scope
+ #define PORTSetPinsDigitalInX(PORTx, BITS) TRIS##PORTx##SET = BITS
+                                            ^
+../SD/utility/Sd2PinMap.h:66:43: note: in expansion of macro 'PORTSetPinsDigitalInX'
+ #define PORTSetPinsDigitalIn(PORTx, BITS) PORTSetPinsDigitalInX(PORTx, BITS)
+                                           ^
+../SD/utility/Sd2Card.cpp:273:3: note: in expansion of macro 'PORTSetPinsDigitalIn'
+   PORTSetPinsDigitalIn(prtSDI, bnSDI);
+   ^
+../SD/utility/Sd2Card.cpp: In member function 'uint8_t Sd2Card::readData(uint32_t, uint16_t, uint16_t, uint8_t*)':
+../SD/utility/Sd2Card.cpp:378:12: warning: unused variable 'n' [-Wunused-variable]
+   uint16_t n;
+            ^
+../SD/utility/Sd2Card.cpp: In member function 'uint8_t Sd2Card::waitNotBusy(uint16_t)':
+../SD/utility/Sd2Card.cpp:483:24: error: 'millis' was not declared in this scope
+   uint16_t t0 = millis();
+                        ^
+../SD/utility/Sd2Card.cpp: In member function 'uint8_t Sd2Card::waitStartBlock()':
+../SD/utility/Sd2Card.cpp:493:24: error: 'millis' was not declared in this scope
+   uint16_t t0 = millis();
+                        ^
+make: *** [SD/utility/Sd2Card.o] Error 1

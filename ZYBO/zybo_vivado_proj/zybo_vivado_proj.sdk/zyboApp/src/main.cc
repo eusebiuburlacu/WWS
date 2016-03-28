@@ -34,6 +34,7 @@
 #include "xparameters.h"
 #include <xgpio.h>
 #include <xscugic.h>
+#include "../SD/SD.h"
 
 /************************** Object Definitions *****************************/
 OledClass OLED;
@@ -67,6 +68,7 @@ typedef enum
 } RF_MESSAGE_TYPES;
 
 vector<float> impedanceArray;
+vector<float> firstImpedanceValues;
 vector<float> phaseArray;
 vector<IScreen*> screens;
 
@@ -95,6 +97,7 @@ void rxCallback()
 		{
 			xil_printf("RF_MESSAGE_IMPEDANCE\n");
 			impedanceUpdated = true;
+			impedanceArray.clear();
 			for(; i < dataLen; i+=4)
 			{
 				float val;
@@ -103,15 +106,18 @@ void rxCallback()
 				*valPtr++ = RXInfo->rx_data[i+1];
 				*valPtr++ = RXInfo->rx_data[i+2];
 				*valPtr++ = RXInfo->rx_data[i+3];
-				if(impedanceArray.size() >= 128 )
-				{
-					impedanceArray.erase(impedanceArray.begin());
-				}
+
 				impedanceArray.push_back(val);
 				char data[5];
 				sprintf(data, "%.2f\n", val);
 				xil_printf("%s", data);
 			}
+
+			if(firstImpedanceValues.size() >= 128 )
+			{
+				firstImpedanceValues.erase(firstImpedanceValues.begin());
+			}
+			firstImpedanceValues.push_back(impedanceArray[0]);
 
 			break;
 		}
@@ -230,17 +236,7 @@ volatile int gpioReg = 0;
 
 void bgpioInterruptHandler(void *CallBackRef)
 {
-	/*XGpio_InterruptDisable(&bGpioInstance, XGPIO_IR_CH1_MASK);
-	XGpio *gpio = (XGpio *) CallBackRef;
-	int status = XGpio_InterruptGetStatus(gpio);
-	if( status & XGPIO_IR_CH1_MASK )
-	{
-		XGpio_InterruptClear(&bGpioInstance, XGPIO_IR_CH1_MASK);
-		int gpioReg = XGpio_DiscreteRead(&bGpioInstance, 1);
-		if((gpioReg & 0x01) == 1)
-			bool dataRec = true;
-	}
-	XGpio_InterruptEnable(&bGpioInstance, XGPIO_IR_CH1_MASK);*/
+
 	XGpio_InterruptClear(&bGpioInstance, XGPIO_IR_CH1_MASK);
 	gpioReg = XGpio_DiscreteRead(&bGpioInstance, 1);
 

@@ -1,6 +1,155 @@
-23:03:58 **** Incremental Build of configuration Debug for project zyboApp ****
+22:50:20 **** Auto Build of configuration Debug for project zyboApp ****
 make all 
-make: Nothing to be done for `all'.
+'Building file: ../SD/utility/Sd2Card.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -I../inc -I../SD -c -fmessage-length=0 -MT"SD/utility/Sd2Card.o" -MMD -MP -MF"SD/utility/Sd2Card.d" -MT"SD/utility/Sd2Card.d" -o "SD/utility/Sd2Card.o" "../SD/utility/Sd2Card.cpp"
+In file included from ../SD/utility/Sd2Card.h:27:0,
+                 from ../SD/utility/Sd2Card.cpp:21:
+../SD/utility/SdInfo.h:87:19: warning: malformed '#pragma pack(push[, id][, <n>])' - ignored [-Wpragmas]
+ #pragma pack(push 1)
+                   ^
+../SD/utility/SdInfo.h:230:17: warning: #pragma pack (pop) encountered without matching #pragma pack (push) [-Wpragmas]
+ #pragma pack(pop)
+                 ^
+In file included from ../SD/utility/Sd2Card.h:26:0,
+                 from ../SD/utility/Sd2Card.cpp:21:
+../SD/utility/Sd2Card.cpp: In function 'uint8_t spiRec()':
+../SD/utility/Sd2PinMap.h:53:35: error: 'LATGSET' was not declared in this scope
+ #define PORTSetBitsX(PORTx, BITS) LAT##PORTx##SET = BITS
+                                   ^
+../SD/utility/Sd2PinMap.h:54:34: note: in expansion of macro 'PORTSetBitsX'
+ #define PORTSetBits(PORTx, BITS) PORTSetBitsX(PORTx, BITS)
+                                  ^
+../SD/utility/Sd2Card.cpp:48:3: note: in expansion of macro 'PORTSetBits'
+   PORTSetBits(prtSDO, bnSDO);
+   ^
+../SD/utility/Sd2PinMap.h:59:37: error: 'PORTG' was not declared in this scope
+ #define PORTReadBitsX(PORTx, BITS) (PORT##PORTx & BITS)
+                                     ^
+../SD/utility/Sd2PinMap.h:60:35: note: in expansion of macro 'PORTReadBitsX'
+ #define PORTReadBits(PORTx, BITS) PORTReadBitsX(PORTx, BITS)
+                                   ^
+../SD/utility/Sd2Card.cpp:59:9: note: in expansion of macro 'PORTReadBits'
+     if (PORTReadBits(prtSDI,bnSDI)) data |= 1;
+         ^
+../SD/utility/Sd2PinMap.h:56:37: error: 'LATGCLR' was not declared in this scope
+ #define PORTClearBitsX(PORTx, BITS) LAT##PORTx##CLR = BITS
+                                     ^
+../SD/utility/Sd2PinMap.h:57:36: note: in expansion of macro 'PORTClearBitsX'
+ #define PORTClearBits(PORTx, BITS) PORTClearBitsX(PORTx, BITS)
+                                    ^
+../SD/utility/Sd2Card.cpp:62:5: note: in expansion of macro 'PORTClearBits'
+     PORTClearBits(prtSCK, bnSCK);
+     ^
+../SD/utility/Sd2Card.cpp: In function 'void spiSend(uint8_t)':
+../SD/utility/Sd2PinMap.h:53:35: error: 'LATGSET' was not declared in this scope
+ #define PORTSetBitsX(PORTx, BITS) LAT##PORTx##SET = BITS
+                                   ^
+../SD/utility/Sd2PinMap.h:54:34: note: in expansion of macro 'PORTSetBitsX'
+ #define PORTSetBits(PORTx, BITS) PORTSetBitsX(PORTx, BITS)
+                                  ^
+../SD/utility/Sd2Card.cpp:74:3: note: in expansion of macro 'PORTSetBits'
+   PORTSetBits(prtSDO, bnSDO);
+   ^
+../SD/utility/Sd2PinMap.h:56:37: error: 'LATGCLR' was not declared in this scope
+ #define PORTClearBitsX(PORTx, BITS) LAT##PORTx##CLR = BITS
+                                     ^
+../SD/utility/Sd2PinMap.h:57:36: note: in expansion of macro 'PORTClearBitsX'
+ #define PORTClearBits(PORTx, BITS) PORTClearBitsX(PORTx, BITS)
+                                    ^
+../SD/utility/Sd2Card.cpp:78:3: note: in expansion of macro 'PORTClearBits'
+   PORTClearBits(prtSDO, bnSDO);
+   ^
+../SD/utility/Sd2PinMap.h:56:37: error: 'LATGCLR' was not declared in this scope
+ #define PORTClearBitsX(PORTx, BITS) LAT##PORTx##CLR = BITS
+                                     ^
+../SD/utility/Sd2PinMap.h:57:36: note: in expansion of macro 'PORTClearBitsX'
+ #define PORTClearBits(PORTx, BITS) PORTClearBitsX(PORTx, BITS)
+                                    ^
+../SD/utility/Sd2Card.cpp:81:2: note: in expansion of macro 'PORTClearBits'
+  PORTClearBits(prtSCK, bnSCK);
+  ^
+../SD/utility/Sd2PinMap.h:53:35: error: 'LATGSET' was not declared in this scope
+ #define PORTSetBitsX(PORTx, BITS) LAT##PORTx##SET = BITS
+                                   ^
+../SD/utility/Sd2PinMap.h:54:34: note: in expansion of macro 'PORTSetBitsX'
+ #define PORTSetBits(PORTx, BITS) PORTSetBitsX(PORTx, BITS)
+                                  ^
+../SD/utility/Sd2Card.cpp:89:2: note: in expansion of macro 'PORTSetBits'
+  PORTSetBits(prtSCK, bnSCK);
+  ^
+../SD/utility/Sd2PinMap.h:56:37: error: 'LATGCLR' was not declared in this scope
+ #define PORTClearBitsX(PORTx, BITS) LAT##PORTx##CLR = BITS
+                                     ^
+../SD/utility/Sd2PinMap.h:57:36: note: in expansion of macro 'PORTClearBitsX'
+ #define PORTClearBits(PORTx, BITS) PORTClearBitsX(PORTx, BITS)
+                                    ^
+../SD/utility/Sd2Card.cpp:98:3: note: in expansion of macro 'PORTClearBits'
+   PORTClearBits(prtSCK, bnSCK);
+   ^
+../SD/utility/Sd2Card.cpp: In member function 'void Sd2Card::chipSelectHigh()':
+../SD/utility/Sd2Card.cpp:157:32: error: 'HIGH' was not declared in this scope
+   digitalWrite(chipSelectPin_, HIGH);
+                                ^
+../SD/utility/Sd2Card.cpp:157:36: error: 'digitalWrite' was not declared in this scope
+   digitalWrite(chipSelectPin_, HIGH);
+                                    ^
+../SD/utility/Sd2Card.cpp: In member function 'void Sd2Card::chipSelectLow()':
+../SD/utility/Sd2Card.cpp:178:32: error: 'LOW' was not declared in this scope
+   digitalWrite(chipSelectPin_, LOW);
+                                ^
+../SD/utility/Sd2Card.cpp:178:35: error: 'digitalWrite' was not declared in this scope
+   digitalWrite(chipSelectPin_, LOW);
+                                   ^
+../SD/utility/Sd2Card.cpp: In member function 'uint8_t Sd2Card::init(uint8_t, uint8_t)':
+../SD/utility/Sd2Card.cpp:245:34: error: 'millis' was not declared in this scope
+   uint16_t t0 = (uint16_t)millis();
+                                  ^
+../SD/utility/Sd2Card.cpp:248:3: error: 'SPI2CON' was not declared in this scope
+   SPI2CON = 0;
+   ^
+../SD/utility/Sd2Card.cpp:263:5: error: 'AD1PCFG' was not declared in this scope
+     AD1PCFG = 0xFFFF;
+     ^
+../SD/utility/Sd2Card.cpp:269:27: error: 'OUTPUT' was not declared in this scope
+   pinMode(chipSelectPin_, OUTPUT);
+                           ^
+../SD/utility/Sd2Card.cpp:269:33: error: 'pinMode' was not declared in this scope
+   pinMode(chipSelectPin_, OUTPUT);
+                                 ^
+In file included from ../SD/utility/Sd2Card.h:26:0,
+                 from ../SD/utility/Sd2Card.cpp:21:
+../SD/utility/Sd2PinMap.h:62:45: error: 'TRISGCLR' was not declared in this scope
+ #define PORTSetPinsDigitalOutX(PORTx, BITS) TRIS##PORTx##CLR = BITS
+                                             ^
+../SD/utility/Sd2PinMap.h:63:44: note: in expansion of macro 'PORTSetPinsDigitalOutX'
+ #define PORTSetPinsDigitalOut(PORTx, BITS) PORTSetPinsDigitalOutX(PORTx, BITS)
+                                            ^
+../SD/utility/Sd2Card.cpp:271:3: note: in expansion of macro 'PORTSetPinsDigitalOut'
+   PORTSetPinsDigitalOut(prtSCK, bnSCK);
+   ^
+../SD/utility/Sd2PinMap.h:65:44: error: 'TRISGSET' was not declared in this scope
+ #define PORTSetPinsDigitalInX(PORTx, BITS) TRIS##PORTx##SET = BITS
+                                            ^
+../SD/utility/Sd2PinMap.h:66:43: note: in expansion of macro 'PORTSetPinsDigitalInX'
+ #define PORTSetPinsDigitalIn(PORTx, BITS) PORTSetPinsDigitalInX(PORTx, BITS)
+                                           ^
+../SD/utility/Sd2Card.cpp:273:3: note: in expansion of macro 'PORTSetPinsDigitalIn'
+   PORTSetPinsDigitalIn(prtSDI, bnSDI);
+   ^
+../SD/utility/Sd2Card.cpp: In member function 'uint8_t Sd2Card::readData(uint32_t, uint16_t, uint16_t, uint8_t*)':
+../SD/utility/Sd2Card.cpp:378:12: warning: unused variable 'n' [-Wunused-variable]
+   uint16_t n;
+            ^
+../SD/utility/Sd2Card.cpp: In member function 'uint8_t Sd2Card::waitNotBusy(uint16_t)':
+../SD/utility/Sd2Card.cpp:483:24: error: 'millis' was not declared in this scope
+   uint16_t t0 = millis();
+                        ^
+../SD/utility/Sd2Card.cpp: In member function 'uint8_t Sd2Card::waitStartBlock()':
+../SD/utility/Sd2Card.cpp:493:24: error: 'millis' was not declared in this scope
+   uint16_t t0 = millis();
+                        ^
+make: *** [SD/utility/Sd2Card.o] Error 1
 
-23:03:58 Build Finished (took 334ms)
+22:50:21 Build Finished (took 724ms)
 
