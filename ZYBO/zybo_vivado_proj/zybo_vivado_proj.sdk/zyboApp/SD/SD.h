@@ -18,6 +18,7 @@
 #include <utility/SdFat.h>
 #include <utility/SdFatUtil.h>
 #include "utility/Stream.h"
+#include <malloc.h>
 
 #define FILE_READ O_READ
 #define FILE_WRITE (O_READ | O_WRITE | O_CREAT)

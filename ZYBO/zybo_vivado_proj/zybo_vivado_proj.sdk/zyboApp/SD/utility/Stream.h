@@ -23,8 +23,9 @@
 #define Stream_h
 
 #include <inttypes.h>
+#include <string>
 #include "Print.h"
-
+using namespace std;
 // compatability macros for testing
 /*
 #define   getInt()            parseInt()
@@ -88,8 +89,8 @@ class Stream : public Print
   // returns the number of characters placed in the buffer (0 means no valid data found)
 
   // Arduino String functions to be added here
-  //String readString(); todo
-  //String readStringUntil(char terminator); todo
+  string readString();
+  string readStringUntil(char terminator);
 
   protected:
   long parseInt(char skipChar); // as above but the given skipChar is ignored

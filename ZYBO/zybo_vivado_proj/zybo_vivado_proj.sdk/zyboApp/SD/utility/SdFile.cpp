@@ -17,7 +17,8 @@
  * along with the Arduino SdFat Library.  If not, see
  * <http://www.gnu.org/licenses/>.
  */
-#include <SdFat.h>
+#include "SdFat.h"
+#include <string.h>
 
 //------------------------------------------------------------------------------
 // callback function for date/time
@@ -212,7 +213,8 @@ void SdFile::ls(uint8_t flags, uint8_t indent) {
     if (!DIR_IS_FILE_OR_SUBDIR(p)) continue;
 
     // print any indent spaces
-    for (int8_t i = 0; i < indent; i++) Serial.print(' ');
+    /*for (int8_t i = 0; i < indent; i++)
+    	Serial.print(' ');*/ //todo
 
     // print file name with possible blank fill
     printDirName(*p, flags & (LS_DATE | LS_SIZE) ? 14 : 0);
@@ -220,15 +222,15 @@ void SdFile::ls(uint8_t flags, uint8_t indent) {
     // print modify date/time if requested
     if (flags & LS_DATE) {
        printFatDate(p->lastWriteDate);
-       Serial.print(' ');
+       //Serial.print(' '); todo
        printFatTime(p->lastWriteTime);
     }
     // print size if requested
     if (!DIR_IS_SUBDIR(p) && (flags & LS_SIZE)) {
-      Serial.print(' ');
-      Serial.print(p->fileSize);
+      //Serial.print(' '); todo
+      //Serial.print(p->fileSize);
     }
-    Serial.println();
+    //Serial.println(); todo
 
     // list subdirectory content if requested
     if ((flags & LS_R) && DIR_IS_SUBDIR(p)) {
@@ -257,7 +259,7 @@ uint8_t SdFile::make83Name(const char* str, uint8_t* name) {
       // illegal FAT characters
       char* p = "|<>^+=?/[];,*\"\\";
       uint8_t b;
-      while ((b = pgm_read_byte(p++))) if (b == c) return false;
+      //while ((b = pgm_read_byte(p++))) if (b == c) return false; todo
       // check size and only allow ASCII printable characters
       if (i > n || c < 0X21 || c > 0X7E)return false;
       // only upper case allowed in 8.3 names - convert lower to upper
@@ -586,18 +588,18 @@ void SdFile::printDirName(const dir_t& dir, uint8_t width) {
   for (uint8_t i = 0; i < 11; i++) {
     if (dir.name[i] == ' ')continue;
     if (i == 8) {
-      Serial.print('.');
+      //Serial.print('.'); todo
       w++;
     }
-    Serial.write(dir.name[i]);
+    //Serial.write(dir.name[i]);
     w++;
   }
   if (DIR_IS_SUBDIR(&dir)) {
-    Serial.print('/');
+    //Serial.print('/');
     w++;
   }
   while (w < width) {
-    Serial.print(' ');
+    //Serial.print(' ');
     w++;
   }
 }
@@ -609,10 +611,10 @@ void SdFile::printDirName(const dir_t& dir, uint8_t width) {
  * \param[in] fatDate The date field from a directory entry.
  */
 void SdFile::printFatDate(uint16_t fatDate) {
-  Serial.print(FAT_YEAR(fatDate));
-  Serial.print('-');
+  //Serial.print(FAT_YEAR(fatDate)); todo
+  //Serial.print('-');
   printTwoDigits(FAT_MONTH(fatDate));
-  Serial.print('-');
+  //Serial.print('-');
   printTwoDigits(FAT_DAY(fatDate));
 }
 //------------------------------------------------------------------------------
@@ -624,9 +626,9 @@ void SdFile::printFatDate(uint16_t fatDate) {
  */
 void SdFile::printFatTime(uint16_t fatTime) {
   printTwoDigits(FAT_HOUR(fatTime));
-  Serial.print(':');
+  //Serial.print(':'); todo
   printTwoDigits(FAT_MINUTE(fatTime));
-  Serial.print(':');
+  //Serial.print(':');
   printTwoDigits(FAT_SECOND(fatTime));
 }
 //------------------------------------------------------------------------------
@@ -639,7 +641,7 @@ void SdFile::printTwoDigits(uint8_t v) {
   str[0] = '0' + v/10;
   str[1] = '0' + v % 10;
   str[2] = 0;
-  Serial.print(str);
+  //Serial.print(str); todo
 }
 //------------------------------------------------------------------------------
 /**

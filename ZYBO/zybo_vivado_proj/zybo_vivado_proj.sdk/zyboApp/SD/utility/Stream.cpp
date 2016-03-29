@@ -20,8 +20,9 @@
  parsing functions based on TextFinder library by Michael Margolis
  */
 
-#include "Arduino.h"
 #include "Stream.h"
+
+#include "string.h"
 
 #define PARSE_TIMEOUT 1000  // default number of milli-seconds to wait
 #define NO_SKIP_CHAR  1  // a magic char not found in a valid ASCII numeric field
@@ -29,24 +30,24 @@
 // private method to read stream with timeout
 int Stream::timedRead()
 {
-  int c;
+  /*int c;
   _startMillis = millis();
   do {
     c = read();
     if (c >= 0) return c;
-  } while(millis() - _startMillis < _timeout);
+  } while(millis() - _startMillis < _timeout);*/ //todo
   return -1;     // -1 indicates timeout
 }
 
 // private method to peek stream with timeout
 int Stream::timedPeek()
 {
-  int c;
+  /*int c;
   _startMillis = millis();
   do {
     c = peek();
     if (c >= 0) return c;
-  } while(millis() - _startMillis < _timeout);
+  } while(millis() - _startMillis < _timeout);*/ //todo
   return -1;     // -1 indicates timeout
 }
 
@@ -137,7 +138,7 @@ long Stream::parseInt()
 // this allows format characters (typically commas) in values to be ignored
 long Stream::parseInt(char skipChar)
 {
-  boolean isNegative = false;
+  bool isNegative = false;
   long value = 0;
   int c;
 
@@ -173,8 +174,8 @@ float Stream::parseFloat()
 // as above but the given skipChar is ignored
 // this allows format characters (typically commas) in values to be ignored
 float Stream::parseFloat(char skipChar){
-  boolean isNegative = false;
-  boolean isFraction = false;
+  bool isNegative = false;
+  bool isFraction = false;
   long value = 0;
   char c;
   float fraction = 1.0;
@@ -244,9 +245,9 @@ size_t Stream::readBytesUntil(char terminator, char *buffer, size_t length)
   return index; // return number of characters, not including null terminator
 }
 
-String Stream::readString()
+string Stream::readString()
 {
-  String ret;
+  string ret;
   int c = timedRead();
   while (c >= 0)
   {
@@ -256,9 +257,9 @@ String Stream::readString()
   return ret;
 }
 
-String Stream::readStringUntil(char terminator)
+string Stream::readStringUntil(char terminator)
 {
-  String ret;
+  string ret;
   int c = timedRead();
   while (c >= 0 && c != terminator)
   {

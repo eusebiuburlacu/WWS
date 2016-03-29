@@ -13,6 +13,7 @@
  */
 
 #include <SD.h>
+#include <string.h>
 
 /* for debugging file open/close leaks
    uint8_t nfilecount=0;
@@ -53,7 +54,7 @@ char *File::name(void) {
 }
 
 // a directory is a special type of file
-boolean File::isDirectory(void) {
+bool File::isDirectory(void) {
   return (_file && _file->isDir());
 }
 
@@ -113,7 +114,7 @@ void File::flush() {
     _file->sync();
 }
 
-boolean File::seek(uint32_t pos) {
+bool File::seek(uint32_t pos) {
   if (! _file) return false;
 
   return _file->seekSet(pos);

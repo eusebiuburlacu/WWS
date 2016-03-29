@@ -45,25 +45,25 @@
 #define IOPORT_D    D
 #define IOPORT_E    E
 #define IOPORT_F    F
-#define IOPORT_G    G
+//#define IOPORT_G    G todo
 #define IOPORT_H    H
 #define IOPORT_J    J
 #define IOPORT_K    K
 
-#define PORTSetBitsX(PORTx, BITS) LAT##PORTx##SET = BITS
-#define PORTSetBits(PORTx, BITS) PORTSetBitsX(PORTx, BITS)
+//#define PORTSetBitsX(PORTx, BITS) LAT##PORTx##SET = BITS todo
+//#define PORTSetBits(PORTx, BITS) PORTSetBitsX(PORTx, BITS)
 
-#define PORTClearBitsX(PORTx, BITS) LAT##PORTx##CLR = BITS
-#define PORTClearBits(PORTx, BITS) PORTClearBitsX(PORTx, BITS)
+//#define PORTClearBitsX(PORTx, BITS) LAT##PORTx##CLR = BITS
+//#define PORTClearBits(PORTx, BITS) PORTClearBitsX(PORTx, BITS)
 
-#define PORTReadBitsX(PORTx, BITS) (PORT##PORTx & BITS)
-#define PORTReadBits(PORTx, BITS) PORTReadBitsX(PORTx, BITS)
+//#define PORTReadBitsX(PORTx, BITS) (PORT##PORTx & BITS)
+//#define PORTReadBits(PORTx, BITS) PORTReadBitsX(PORTx, BITS)
 
-#define PORTSetPinsDigitalOutX(PORTx, BITS) TRIS##PORTx##CLR = BITS
-#define PORTSetPinsDigitalOut(PORTx, BITS) PORTSetPinsDigitalOutX(PORTx, BITS)
+//#define PORTSetPinsDigitalOutX(PORTx, BITS) TRIS##PORTx##CLR = BITS
+//#define PORTSetPinsDigitalOut(PORTx, BITS) PORTSetPinsDigitalOutX(PORTx, BITS)
 
-#define PORTSetPinsDigitalInX(PORTx, BITS) TRIS##PORTx##SET = BITS
-#define PORTSetPinsDigitalIn(PORTx, BITS) PORTSetPinsDigitalInX(PORTx, BITS)
+//#define PORTSetPinsDigitalInX(PORTx, BITS) TRIS##PORTx##SET = BITS
+//#define PORTSetPinsDigitalIn(PORTx, BITS) PORTSetPinsDigitalInX(PORTx, BITS)
 
 #if defined(__PIC32MX1XX__) || defined(__PIC32MX2XX__) || defined(__PIC32MZXX__)
     #define PORTSetAsDigitalPinX(PORTx, BITS) ANSEL##PORTx##CLR = BITS
@@ -168,16 +168,16 @@
 //*	Dec 14, 2011	<MLS>	Issue #160 this is the same, but we have to have a default, this still needs work
 
 	//Pin 11
-	#define prtSDO				IOPORT_G
-	#define	bnSDO				BIT_8
+	//#define prtSDO				IOPORT_G
+	//#define	bnSDO				BIT_8
 
 	//Pin 12
-	#define prtSDI				IOPORT_G
-	#define bnSDI				BIT_7
+	//#define prtSDI				IOPORT_G
+	//#define bnSDI				BIT_7
 
 	//Pin 13
-	#define prtSCK				IOPORT_G
-	#define bnSCK				BIT_6
+	//#define prtSCK				IOPORT_G
+	//#define bnSCK				BIT_6 todo
 
 #endif
 

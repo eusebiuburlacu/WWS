@@ -45,10 +45,11 @@ uint32_t    interrupt_state = 0;
 uint8_t spiRec(void) {
   uint8_t data = 0;
   // output pin high - like sending 0XFF
-  PORTSetBits(prtSDO, bnSDO);
+  //todo
+  //PORTSetBits(prtSDO, bnSDO);
 
   for (uint8_t i = 0; i < 8; i++) {
-	PORTSetBits(prtSCK, bnSCK);
+	//PORTSetBits(prtSCK, bnSCK);
 
     data <<= 1;
 
@@ -56,10 +57,10 @@ uint8_t spiRec(void) {
     asm("nop");
     asm("nop");
 
-    if (PORTReadBits(prtSDI,bnSDI)) data |= 1;
+    //if (PORTReadBits(prtSDI,bnSDI)) data |= 1;
 
 
-    PORTClearBits(prtSCK, bnSCK);
+    //PORTClearBits(prtSCK, bnSCK);
   }
 
   return data;
@@ -67,18 +68,18 @@ uint8_t spiRec(void) {
 //------------------------------------------------------------------------------
 /** Soft SPI send */
 void spiSend(uint8_t data) {
-
+//todo
   for (uint8_t i = 0; i < 8; i++) {
     
 	if(data & 0X80) {
-		PORTSetBits(prtSDO, bnSDO);
+		//PORTSetBits(prtSDO, bnSDO);
 	}
 	else
 	{
-		PORTClearBits(prtSDO, bnSDO);
+		//PORTClearBits(prtSDO, bnSDO);
 	}
 
-	PORTClearBits(prtSCK, bnSCK);
+	//PORTClearBits(prtSCK, bnSCK);
 
     asm("nop");
 	asm("nop");
@@ -86,7 +87,7 @@ void spiSend(uint8_t data) {
 
     data <<= 1;
 
-	PORTSetBits(prtSCK, bnSCK);
+	//PORTSetBits(prtSCK, bnSCK);
 
   }
   // hold SCK high for a few ns
@@ -95,7 +96,7 @@ void spiSend(uint8_t data) {
    asm("nop");
    asm("nop");
 
-  PORTClearBits(prtSCK, bnSCK);
+  //PORTClearBits(prtSCK, bnSCK);
 }
 //------------------------------------------------------------------------------
 // send command and return error code.  Return zero for OK
@@ -154,7 +155,7 @@ uint32_t Sd2Card::cardSize(void) {
 
 //------------------------------------------------------------------------------
 void Sd2Card::chipSelectHigh(void) {
-  digitalWrite(chipSelectPin_, HIGH);
+  //digitalWrite(chipSelectPin_, HIGH); todo
 #if defined(_BOARD_MEGA_) || defined(_BOARD_UNO_) || defined(_BOARD_UC32_)
   if(fspi_state_saved)
   {
@@ -175,7 +176,7 @@ void Sd2Card::chipSelectLow(void) {
         fspi_state_saved = true;
     }
 #endif
-  digitalWrite(chipSelectPin_, LOW);
+  //digitalWrite(chipSelectPin_, LOW); todo
 }
 //------------------------------------------------------------------------------
 /** Erase a range of blocks.
@@ -242,7 +243,7 @@ uint8_t Sd2Card::init(uint8_t sckRateID, uint8_t chipSelectPin) {
   errorCode_ = inBlock_ = partialBlockRead_ = type_ = 0;
 
   // 16-bit init start time allows over a minute
-  uint16_t t0 = (uint16_t)millis();
+  /*uint16_t t0 = (uint16_t)millis();
   uint32_t arg;
 
   SPI2CON = 0;
@@ -328,7 +329,7 @@ uint8_t Sd2Card::init(uint8_t sckRateID, uint8_t chipSelectPin) {
 #endif  // SOFTWARE_SPI
 
  fail:
-  chipSelectHigh();
+  chipSelectHigh(); */ //todo
   return false;
 }
 //------------------------------------------------------------------------------
@@ -480,17 +481,17 @@ uint8_t Sd2Card::setSckRate(uint8_t sckRateID) {
 //------------------------------------------------------------------------------
 // wait for card to go not busy
 uint8_t Sd2Card::waitNotBusy(uint16_t timeoutMillis) {
-  uint16_t t0 = millis();
+  /*uint16_t t0 = millis();
   do {
     if (spiRec() == 0XFF) return true;
   }
-  while (((uint16_t)millis() - t0) < timeoutMillis);
+  while (((uint16_t)millis() - t0) < timeoutMillis);*/
   return false;
 }
 //------------------------------------------------------------------------------
 /** Wait for start block token */
 uint8_t Sd2Card::waitStartBlock(void) {
-  uint16_t t0 = millis();
+  /*uint16_t t0 = millis();
   while ((status_ = spiRec()) == 0XFF) {
     if (((uint16_t)millis() - t0) > SD_READ_TIMEOUT) {
       error(SD_CARD_ERROR_READ_TIMEOUT);
@@ -500,7 +501,7 @@ uint8_t Sd2Card::waitStartBlock(void) {
   if (status_ != DATA_START_BLOCK) {
     error(SD_CARD_ERROR_READ);
     goto fail;
-  }
+  }*/
   return true;
 
  fail:

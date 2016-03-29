@@ -3809,3 +3809,7 @@ java.net.SocketException: Connection reset
 20:22:20 INFO  : Updating hardware inferred compiler options for zyboApp.
 20:22:20 INFO  : Clearing existing target manager status.
 22:50:46 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+21:37:02 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+21:37:15 INFO  : XSDB server has started successfully.
+21:37:19 INFO  : Processing command line option -hwspec F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper.hdf.
+21:37:19 INFO  : Checking for hwspec changes in the project design_hw_wrapper_hw_platform_0.
