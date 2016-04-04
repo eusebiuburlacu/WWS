@@ -5,7 +5,9 @@
  *      Author: Sebi
  */
 #include "Screen/ScrTempHumBat.h"
-
+#include "stdio.h"
+extern float temperature;
+extern unsigned char humidity;
 ScrTempHumBat::ScrTempHumBat()
 {
 
@@ -38,7 +40,12 @@ void ScrTempHumBat::sendConfirmCmd()
 
 void ScrTempHumBat::printData()
 {
-	OLED.setCursor(4, 12);
-		OLED.putString("temp screen");
-		OLED.updateDisplay();
+	OLED.setCursor(0, 0);
+	char data[20];
+	sprintf(data, "temp: %.2f *C", temperature);
+	OLED.putString(data);
+	OLED.setCursor(0, 2);
+	sprintf(data, "hum: %d %%", humidity);
+	OLED.putString(data);
+	OLED.updateDisplay();
 }

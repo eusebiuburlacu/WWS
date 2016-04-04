@@ -1,0 +1,55 @@
+/*
+ * ScrImpCurSett.cpp
+ *
+ *  Created on: 12.03.2016
+ *      Author: Sebi
+ */
+#include "Screen/ScrImpCurSett.h"
+#include <vector>
+
+extern unsigned long measuringFreq;
+extern std::vector<float> impedanceArray;
+
+
+ScrImpCurSett::ScrImpCurSett()
+{
+
+}
+
+ScrImpCurSett::~ScrImpCurSett()
+{
+
+}
+
+void ScrImpCurSett::sendIncCmd()
+{
+
+}
+
+void ScrImpCurSett::sendDecrCmd()
+{
+
+}
+
+void ScrImpCurSett::sendChScrCmd()
+{
+
+}
+
+void ScrImpCurSett::sendConfirmCmd()
+{
+
+}
+
+void ScrImpCurSett::printData()
+{
+	OLED.setCursor(0, 0);
+	char data[20];
+	sprintf(data, "imped: %.2f", impedanceArray[0]);
+	OLED.putString(data);
+	OLED.setCursor(0, 2);
+	sprintf(data, "imped: %.2f", impedanceArray[0]);
+	OLED.putString(data);
+
+	OLED.updateDisplay();
+}

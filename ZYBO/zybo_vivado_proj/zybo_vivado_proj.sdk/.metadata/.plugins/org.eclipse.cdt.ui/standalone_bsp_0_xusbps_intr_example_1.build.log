@@ -1,0 +1,6 @@
+15:24:09 **** Incremental Build of configuration Debug for project standalone_bsp_0_xusbps_intr_example_1 ****
+make all 
+make: Nothing to be done for `all'.
+
+15:24:09 Build Finished (took 218ms)
+

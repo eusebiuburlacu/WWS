@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
-| Date         : Mon Mar 28 20:14:44 2016
+| Date         : Sat Apr 02 15:44:22 2016
 | Host         :  running 64-bit major release  (build 9200)
 | Command      : report_utilization -file design_hw_wrapper_utilization_synth.rpt -pb design_hw_wrapper_utilization_synth.pb
 | Design       : design_hw_wrapper
@@ -30,13 +30,13 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                | 1773 |     0 |     17600 | 10.07 |
-|   LUT as Logic             | 1669 |     0 |     17600 |  9.48 |
+| Slice LUTs*                | 1740 |     0 |     17600 |  9.89 |
+|   LUT as Logic             | 1636 |     0 |     17600 |  9.30 |
 |   LUT as Memory            |  104 |     0 |      6000 |  1.73 |
 |     LUT as Distributed RAM |   32 |     0 |           |       |
 |     LUT as Shift Register  |   72 |     0 |           |       |
-| Slice Registers            | 2253 |     2 |     35200 |  6.40 |
-|   Register as Flip Flop    | 2253 |     2 |     35200 |  6.40 |
+| Slice Registers            | 2151 |     2 |     35200 |  6.11 |
+|   Register as Flip Flop    | 2151 |     2 |     35200 |  6.11 |
 |   Register as Latch        |    0 |     0 |     35200 |  0.00 |
 | F7 Muxes                   |    0 |     0 |      8800 |  0.00 |
 | F8 Muxes                   |    0 |     0 |      4400 |  0.00 |
@@ -58,8 +58,8 @@ Table of Contents
 | 0     |          Yes |           - |            - |
 | 128   |          Yes |           - |          Set |
 | 288   |          Yes |           - |        Reset |
-| 98    |          Yes |         Set |            - |
-| 1739  |          Yes |       Reset |            - |
+| 90    |          Yes |         Set |            - |
+| 1645  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -92,7 +92,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+--------+
 |          Site Type          | Used | Fixed | Available |  Util% |
 +-----------------------------+------+-------+-----------+--------+
-| Bonded IOB                  |   27 |     0 |       100 |  27.00 |
+| Bonded IOB                  |   19 |     0 |       100 |  19.00 |
 | Bonded IPADs                |    0 |     0 |         2 |   0.00 |
 | Bonded IOPADs               |  130 |     0 |       130 | 100.00 |
 | PHY_CONTROL                 |    0 |     0 |         2 |   0.00 |
@@ -148,22 +148,22 @@ Table of Contents
 +----------+------+----------------------+
 | Ref Name | Used |  Functional Category |
 +----------+------+----------------------+
-| FDRE     | 1739 |         Flop & Latch |
-| LUT6     |  566 |                  LUT |
-| LUT3     |  395 |                  LUT |
-| LUT5     |  346 |                  LUT |
-| LUT4     |  289 |                  LUT |
+| FDRE     | 1645 |         Flop & Latch |
+| LUT6     |  552 |                  LUT |
+| LUT3     |  358 |                  LUT |
+| LUT4     |  311 |                  LUT |
+| LUT5     |  293 |                  LUT |
 | FDCE     |  288 |         Flop & Latch |
-| LUT2     |  227 |                  LUT |
-| LUT1     |  180 |                  LUT |
+| LUT2     |  255 |                  LUT |
+| LUT1     |  178 |                  LUT |
 | BIBUF    |  130 |                   IO |
 | FDPE     |  128 |         Flop & Latch |
-| FDSE     |   98 |         Flop & Latch |
+| FDSE     |   90 |         Flop & Latch |
 | RAMD32   |   48 |   Distributed Memory |
 | SRLC32E  |   47 |   Distributed Memory |
-| OBUFT    |   27 |                   IO |
-| IBUF     |   27 |                   IO |
 | SRL16E   |   25 |   Distributed Memory |
+| OBUFT    |   19 |                   IO |
+| IBUF     |   19 |                   IO |
 | CARRY4   |   18 |           CarryLogic |
 | RAMS32   |   16 |   Distributed Memory |
 | PS7      |    1 | Specialized Resource |

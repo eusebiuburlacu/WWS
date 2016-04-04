@@ -19,6 +19,7 @@ using namespace std;
 
 extern bool impedanceUpdated;
 extern vector<float> firstImpedanceValues;
+extern vector<float> impedanceArray;
 
 long map(long x, long in_min, long in_max, long out_min, long out_max)
 {
@@ -85,7 +86,7 @@ void ScrImpGraph::printData()
 		OLED.updateDisplay();
 	}
 
-	if(firstImpedanceValues.size() == 0)
+	if(impedanceArray.size() == 0)
 	{
 		OLED.setCursor(0, 1);
 		OLED.putString("No impedance");

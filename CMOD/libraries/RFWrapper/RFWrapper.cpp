@@ -24,15 +24,16 @@ RFWrapper::~RFWrapper()
 	
 }
 
-bool RFWrapper::sendImpedance( float *samples, unsigned char numOfValues, ACKCallback callback )
+bool RFWrapper::sendImpedance( float *samples, unsigned long startFreq, unsigned char numOfValues, ACKCallback callback )
 {
 	bool result = false;
 	if( samples != 0 && callback != 0 )
 	{
 		registerACKCallback(callback);
 		byte *data = (byte *)(void *)samples;
+		byte *freq = (byte*)(void *)&startFreq;
 		int dataLen = numOfValues * sizeof(float);
-		sendData( dest, (byte)RF_MESSAGE_IMPEDANCE, data, dataLen );
+		sendData( dest, (byte)RF_MESSAGE_IMPEDANCE, freq, data, dataLen );
 		Serial.println("RFWrapper::sendImpedance");
 		result = true;
 	}
@@ -51,7 +52,7 @@ bool RFWrapper::sendPhase( float *samples, unsigned char numOfValues, ACKCallbac
 		registerACKCallback(callback);
 		byte *data = (byte *)(void *)samples;
 		int dataLen = numOfValues * sizeof(float);
-		sendData( dest, (byte)RF_MESSAGE_PHASE, data, dataLen );
+		sendData( dest, (byte)RF_MESSAGE_PHASE, 0, data, dataLen );
 		Serial.println("RFWrapper::sendPhase");
 		result = true;
 	}
@@ -70,7 +71,7 @@ bool RFWrapper::sendTemperature( float temperature, ACKCallback callback )
 		registerACKCallback(callback);
 		byte *data = (byte *)(void *)&temperature;
 		int dataLen = sizeof(float);
-		sendData( dest, (byte)RF_MESSAGE_TEMPERATURE, data, dataLen );
+		sendData( dest, (byte)RF_MESSAGE_TEMPERATURE, 0, data, dataLen );
 		Serial.println("RFWrapper::sendTemperature");
 		result = true;
 	}
@@ -91,7 +92,7 @@ bool RFWrapper::sendHumidity( unsigned char humidity, ACKCallback callback )
 		registerACKCallback(callback);
 		byte *data = (byte *)(void *)&humidity;
 		int dataLen = sizeof(unsigned char);
-		sendData( dest, (byte)RF_MESSAGE_HUMIDITY, data, dataLen );
+		sendData( dest, (byte)RF_MESSAGE_HUMIDITY, 0, data, dataLen );
 		Serial.println("RFWrapper::sendHumidity");
 		result = true;
 	}
@@ -112,7 +113,7 @@ bool RFWrapper::sendBatteryVoltage( float batteryVoltage, ACKCallback callback )
 		registerACKCallback(callback);
 		byte *data = (byte *)(void *)&batteryVoltage;
 		int dataLen = sizeof(float);
-		sendData( dest, (byte)RF_MESSAGE_BATTERY, data, dataLen );
+		sendData( dest, (byte)RF_MESSAGE_BATTERY, 0, data, dataLen );
 		Serial.println("RFWrapper::sendBatteryVoltage");
 		result = true;
 	}

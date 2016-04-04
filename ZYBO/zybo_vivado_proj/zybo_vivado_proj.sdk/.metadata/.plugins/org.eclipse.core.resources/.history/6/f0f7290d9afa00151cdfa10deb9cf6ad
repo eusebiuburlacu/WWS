@@ -1,0 +1,55 @@
+/*
+ * ScrSettings.h
+ *
+ *  Created on: 12.03.2016
+ *      Author: Sebi
+ */
+
+#include "Screen/ScrSettings.h"
+#include "Screen/Screens.h"
+#include <vector>
+
+std::vector<IScreen*> settScreens;
+IScreen* currentScr;
+static int arrayIdx = -1;
+
+ScrSettings::ScrSettings()
+{
+	settScreens = getSettingsScreens();
+	currentScr = settScreens[0];
+}
+
+ScrSettings::~ScrSettings()
+{
+
+}
+
+void ScrSettings::sendIncCmd()
+{
+
+}
+
+void ScrSettings::sendDecrCmd()
+{
+
+}
+
+void ScrSettings::sendChScrCmd()
+{
+
+}
+
+void ScrSettings::sendConfirmCmd()
+{
+
+}
+
+void ScrSettings::printData()
+{
+	if(-1 == arrayIdx)
+	{
+		OLED.setCursor(0, 1);
+		OLED.putString("Settings");
+		OLED.updateDisplay();
+	}
+}

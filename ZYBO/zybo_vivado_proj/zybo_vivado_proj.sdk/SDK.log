@@ -3813,3 +3813,840 @@ java.net.SocketException: Connection reset
 21:37:15 INFO  : XSDB server has started successfully.
 21:37:19 INFO  : Processing command line option -hwspec F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper.hdf.
 21:37:19 INFO  : Checking for hwspec changes in the project design_hw_wrapper_hw_platform_0.
+20:52:35 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+20:52:42 INFO  : XSDB server has started successfully.
+20:52:58 INFO  : Processing command line option -hwspec F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper.hdf.
+20:52:58 INFO  : Checking for hwspec changes in the project design_hw_wrapper_hw_platform_0.
+22:34:38 INFO  : Example project standalone_bsp_0_xusbps_intr_example_1 has been created successfully.
+22:57:35 INFO  : Example project standalone_bsp_1_xilffs_polled_example_1 has been created successfully.
+22:20:40 INFO  : ps7_init is completed.
+22:20:40 INFO  : ps7_post_config is completed.
+22:20:40 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:21:44 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:21:49 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+22:21:58 ERROR : Unexpected error while launching program.
+java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.TM.terminateCurrentLaunch(TM.java:819)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:596)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:309)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+22:23:25 INFO  : ps7_init is completed.
+22:23:25 INFO  : ps7_post_config is completed.
+22:23:25 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:26:29 INFO  : FPGA Cable Disconnected. All active launches will be terminated.
+22:30:12 INFO  : ps7_init is completed.
+22:30:12 INFO  : ps7_post_config is completed.
+22:30:13 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:42:19 INFO  : ps7_init is completed.
+22:42:19 INFO  : ps7_post_config is completed.
+22:42:19 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:45:24 ERROR : Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Unknown Error Occured
+    Cable is not connected to the host
+
+22:45:24 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Connection to Board Failed
+
+
+    Unknown Error Occured
+    Cable is not connected to the host
+
+	at com.xilinx.sdk.targetmanager.internal.TM.isFPGAConfigured(TM.java:374)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.isFpgaConfigured(XilinxAppLaunchConfigurationDelegate.java:409)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:303)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+22:45:34 INFO  : ps7_init is completed.
+22:45:35 INFO  : ps7_post_config is completed.
+22:45:35 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:46:19 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:46:45 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:47:51 INFO  : ps7_init is completed.
+22:47:51 INFO  : ps7_post_config is completed.
+22:47:52 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:50:12 INFO  : ps7_init is completed.
+22:50:12 INFO  : ps7_post_config is completed.
+22:50:13 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:52:40 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:54:22 ERROR : Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Unknown Error Occured
+    Cable is not connected to the host
+
+22:54:22 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Connection to Board Failed
+
+
+    Unknown Error Occured
+    Cable is not connected to the host
+
+	at com.xilinx.sdk.targetmanager.internal.TM.isFPGAConfigured(TM.java:374)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.isFpgaConfigured(XilinxAppLaunchConfigurationDelegate.java:409)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:303)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+22:54:34 INFO  : ps7_init is completed.
+22:54:34 INFO  : ps7_post_config is completed.
+22:54:34 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:55:31 ERROR : Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Unknown Error Occured
+    Cable is not connected to the host
+
+22:55:31 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Connection to Board Failed
+
+
+    Unknown Error Occured
+    Cable is not connected to the host
+
+	at com.xilinx.sdk.targetmanager.internal.TM.isFPGAConfigured(TM.java:374)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.isFpgaConfigured(XilinxAppLaunchConfigurationDelegate.java:409)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:303)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+22:55:41 INFO  : ps7_init is completed.
+22:55:41 INFO  : ps7_post_config is completed.
+22:55:41 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:59:02 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:00:21 ERROR : Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Unknown Error Occured
+    Cable is not connected to the host
+
+23:00:21 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Connection to Board Failed
+
+
+    Unknown Error Occured
+    Cable is not connected to the host
+
+	at com.xilinx.sdk.targetmanager.internal.TM.isFPGAConfigured(TM.java:374)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.isFpgaConfigured(XilinxAppLaunchConfigurationDelegate.java:409)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:303)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+23:00:31 INFO  : ps7_init is completed.
+23:00:31 INFO  : ps7_post_config is completed.
+23:00:31 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:02:29 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:04:27 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:05:10 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Target selection failed.
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(XilinxAppLaunchConfigurationDelegate.java:806)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:311)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+23:05:10 INFO  : FPGA Cable Disconnected. All active launches will be terminated.
+23:05:26 INFO  : ps7_init is completed.
+23:05:26 INFO  : ps7_post_config is completed.
+23:05:26 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:07:44 ERROR : Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Unknown Error Occured
+    Cable is not connected to the host
+
+23:07:44 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Connection to Board Failed
+
+
+    Unknown Error Occured
+    Cable is not connected to the host
+
+	at com.xilinx.sdk.targetmanager.internal.TM.isFPGAConfigured(TM.java:374)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.isFpgaConfigured(XilinxAppLaunchConfigurationDelegate.java:409)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:303)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+23:07:53 INFO  : ps7_init is completed.
+23:07:53 INFO  : ps7_post_config is completed.
+23:07:54 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:08:05 INFO  : FPGA Cable Disconnected. All active launches will be terminated.
+23:08:05 WARN  : Terminating existing sessions on processor ps7_cortexa9_0
+23:10:06 INFO  : ps7_init is completed.
+23:10:06 INFO  : ps7_post_config is completed.
+23:10:06 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:11:40 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:12:56 INFO  : ps7_init is completed.
+23:12:56 INFO  : ps7_post_config is completed.
+23:12:56 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:13:53 ERROR : Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Unknown Error Occured
+    Cable is not connected to the host
+
+23:13:53 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Connection to Board Failed
+
+
+    Unknown Error Occured
+    Cable is not connected to the host
+
+	at com.xilinx.sdk.targetmanager.internal.TM.isFPGAConfigured(TM.java:374)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.isFpgaConfigured(XilinxAppLaunchConfigurationDelegate.java:409)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:303)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+23:14:00 INFO  : ps7_init is completed.
+23:14:00 INFO  : ps7_post_config is completed.
+23:14:00 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:15:30 ERROR : Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Unknown Error Occured
+    Cable is not connected to the host
+
+23:15:30 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Connection to Board Failed
+
+
+    Unknown Error Occured
+    Cable is not connected to the host
+
+	at com.xilinx.sdk.targetmanager.internal.TM.isFPGAConfigured(TM.java:374)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.isFpgaConfigured(XilinxAppLaunchConfigurationDelegate.java:409)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:303)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+23:15:37 INFO  : ps7_init is completed.
+23:15:37 INFO  : ps7_post_config is completed.
+23:15:37 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:15:59 INFO  : FPGA Cable Disconnected. All active launches will be terminated.
+23:15:59 WARN  : Terminating existing sessions on processor ps7_cortexa9_0
+23:17:15 INFO  : ps7_init is completed.
+23:17:15 INFO  : ps7_post_config is completed.
+23:17:15 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:17:26 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:17:48 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:18:41 INFO  : ps7_init is completed.
+23:18:41 INFO  : ps7_post_config is completed.
+23:18:42 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:19:33 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:20:54 ERROR : Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Unknown Error Occured
+    Cable is not connected to the host
+
+23:20:54 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Connection to Board Failed
+
+
+    Unknown Error Occured
+    Cable is not connected to the host
+
+	at com.xilinx.sdk.targetmanager.internal.TM.isFPGAConfigured(TM.java:374)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.isFpgaConfigured(XilinxAppLaunchConfigurationDelegate.java:409)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:303)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+23:24:33 ERROR : Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Unknown Error Occured
+    Cable is not connected to the host
+
+23:24:33 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Connection to Board Failed
+
+
+    Unknown Error Occured
+    Cable is not connected to the host
+
+	at com.xilinx.sdk.targetmanager.internal.TM.isFPGAConfigured(TM.java:374)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.isFpgaConfigured(XilinxAppLaunchConfigurationDelegate.java:409)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:303)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+23:24:42 INFO  : ps7_init is completed.
+23:24:42 INFO  : ps7_post_config is completed.
+23:24:42 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:24:44 ERROR : Port COM21 is already in use.
+23:26:19 INFO  : ps7_init is completed.
+23:26:19 INFO  : ps7_post_config is completed.
+23:26:19 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:28:21 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:32:14 ERROR : Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Unknown Error Occured
+    Cable is not connected to the host
+
+23:32:14 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Connection to Board Failed
+
+
+    Unknown Error Occured
+    Cable is not connected to the host
+
+	at com.xilinx.sdk.targetmanager.internal.TM.isFPGAConfigured(TM.java:374)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.isFpgaConfigured(XilinxAppLaunchConfigurationDelegate.java:409)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:303)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+23:32:28 INFO  : ps7_init is completed.
+23:32:28 INFO  : ps7_post_config is completed.
+23:32:28 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:32:28 ERROR : No such port: COM21
+23:33:23 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+23:34:02 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+23:34:07 INFO  : XSDB server has started successfully.
+23:34:11 INFO  : Processing command line option -hwspec F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper.hdf.
+23:34:17 INFO  : Checking for hwspec changes in the project design_hw_wrapper_hw_platform_0.
+23:34:36 INFO  : ps7_init is completed.
+23:34:36 INFO  : ps7_post_config is completed.
+23:34:37 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:35:26 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:35:43 INFO  : ps7_init is completed.
+23:35:43 INFO  : ps7_post_config is completed.
+23:35:44 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:42:54 INFO  : Invoking Bootgen: bootgen -image boot.bif -o F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\boot\BOOT.bin
+23:42:54 INFO  : Creating new bif file F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\boot\boot.bif
+23:42:55 INFO  : Bootgen command execution is done.
+23:47:22 INFO  : ps7_init is completed.
+23:47:22 INFO  : ps7_post_config is completed.
+23:47:22 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:47:22 ERROR : No such port: COM19
+23:48:38 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:49:55 ERROR : Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Unknown Error Occured
+    Cable is not connected to the host
+
+23:49:55 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Connection to Board Failed
+
+
+    Unknown Error Occured
+    Cable is not connected to the host
+
+	at com.xilinx.sdk.targetmanager.internal.TM.isFPGAConfigured(TM.java:374)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.isFpgaConfigured(XilinxAppLaunchConfigurationDelegate.java:409)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:303)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+23:50:04 INFO  : ps7_init is completed.
+23:50:04 INFO  : ps7_post_config is completed.
+23:50:04 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:51:58 ERROR : Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Unknown Error Occured
+    Cable is not connected to the host
+
+23:51:58 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Connection to Board Failed
+
+
+    Unknown Error Occured
+    Cable is not connected to the host
+
+	at com.xilinx.sdk.targetmanager.internal.TM.isFPGAConfigured(TM.java:374)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.isFpgaConfigured(XilinxAppLaunchConfigurationDelegate.java:409)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:303)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+23:52:07 INFO  : ps7_init is completed.
+23:52:07 INFO  : ps7_post_config is completed.
+23:52:07 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:54:20 ERROR : Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Unknown Error Occured
+    Cable is not connected to the host
+
+23:54:20 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Connection to Board Failed
+
+
+    Unknown Error Occured
+    Cable is not connected to the host
+
+	at com.xilinx.sdk.targetmanager.internal.TM.isFPGAConfigured(TM.java:374)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.isFpgaConfigured(XilinxAppLaunchConfigurationDelegate.java:409)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:303)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+23:54:27 INFO  : ps7_init is completed.
+23:54:27 INFO  : ps7_post_config is completed.
+23:54:27 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:59:30 INFO  : ps7_init is completed.
+23:59:30 INFO  : ps7_post_config is completed.
+23:59:31 INFO  : Processor reset is completed for ps7_cortexa9_0
+00:01:29 INFO  : ps7_init is completed.
+00:01:29 INFO  : ps7_post_config is completed.
+00:01:29 INFO  : Processor reset is completed for ps7_cortexa9_0
+00:11:42 ERROR : Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Unknown Error Occured
+    Cable is not connected to the host
+
+00:11:42 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Connection to Board Failed
+
+
+    Unknown Error Occured
+    Cable is not connected to the host
+
+	at com.xilinx.sdk.targetmanager.internal.TM.isFPGAConfigured(TM.java:374)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.isFpgaConfigured(XilinxAppLaunchConfigurationDelegate.java:409)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:303)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+00:11:49 INFO  : ps7_init is completed.
+00:11:49 INFO  : ps7_post_config is completed.
+00:11:49 INFO  : Processor reset is completed for ps7_cortexa9_0
+00:12:51 INFO  : Processor reset is completed for ps7_cortexa9_0
+00:12:53 ERROR : Port COM21 is already in use.
+00:20:44 INFO  : FPGA Cable Disconnected. All active launches will be terminated.
+00:20:44 WARN  : Terminating existing sessions on processor ps7_cortexa9_0
+00:22:42 INFO  : ps7_init is completed.
+00:22:42 INFO  : ps7_post_config is completed.
+00:22:43 INFO  : Processor reset is completed for ps7_cortexa9_0
+00:25:59 INFO  : ps7_init is completed.
+00:25:59 INFO  : ps7_post_config is completed.
+00:25:59 INFO  : Processor reset is completed for ps7_cortexa9_0
+00:27:38 INFO  : ps7_init is completed.
+00:27:38 INFO  : ps7_post_config is completed.
+00:27:38 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:02:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:02:11 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279760164A" && level==0} -index 1' command is executed.
+15:02:12 INFO  : FPGA configured successfully with bitstream "F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper_hw_platform_0/design_hw_wrapper.bit"
+15:02:23 INFO  : ps7_init is completed.
+15:02:23 INFO  : ps7_post_config is completed.
+15:02:23 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:03:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:03:48 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279760164A" && level==0} -index 1' command is executed.
+15:03:50 INFO  : FPGA configured successfully with bitstream "F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper_hw_platform_0/design_hw_wrapper.bit"
+15:03:56 INFO  : ps7_init is completed.
+15:03:56 INFO  : ps7_post_config is completed.
+15:03:56 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:06:09 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+15:06:11 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:06:33 INFO  : ps7_init is completed.
+15:06:33 INFO  : ps7_post_config is completed.
+15:06:34 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:07:26 INFO  : ps7_init is completed.
+15:07:26 INFO  : ps7_post_config is completed.
+15:07:26 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:16:45 INFO  : ps7_init is completed.
+15:16:45 INFO  : ps7_post_config is completed.
+15:16:45 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:17:27 ERROR : Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Failed to open Cable Node jsn-Zybo-210279760164A on TCP:127.0.0.1:3121
+
+
+15:17:27 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Connection to Board Failed
+
+
+    Failed to open Cable Node jsn-Zybo-210279760164A on TCP:127.0.0.1:3121
+
+
+	at com.xilinx.sdk.targetmanager.internal.TM.isFPGAConfigured(TM.java:374)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.isFpgaConfigured(XilinxAppLaunchConfigurationDelegate.java:409)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:303)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+15:17:34 INFO  : ps7_init is completed.
+15:17:34 INFO  : ps7_post_config is completed.
+15:17:34 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:18:15 INFO  : ps7_init is completed.
+15:18:15 INFO  : ps7_post_config is completed.
+15:18:15 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:19:08 ERROR : Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Failed to open Cable Node jsn-Zybo-210279760164A on TCP:127.0.0.1:3121
+
+
+15:19:08 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Connection to Board Failed
+
+
+    Failed to open Cable Node jsn-Zybo-210279760164A on TCP:127.0.0.1:3121
+
+
+	at com.xilinx.sdk.targetmanager.internal.TM.isFPGAConfigured(TM.java:374)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.isFpgaConfigured(XilinxAppLaunchConfigurationDelegate.java:409)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:303)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+15:19:19 INFO  : ps7_init is completed.
+15:19:19 INFO  : ps7_post_config is completed.
+15:19:19 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:19:19 ERROR : Port COM21 is already in use.
+15:19:31 INFO  : ps7_init is completed.
+15:19:31 INFO  : ps7_post_config is completed.
+15:19:32 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:19:53 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:20:20 INFO  : ps7_init is completed.
+15:20:20 INFO  : ps7_post_config is completed.
+15:20:20 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:22:23 ERROR : Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Unknown Error Occured
+    Cable is not powered-on
+
+15:22:23 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Connection to Board Failed
+
+
+    Unknown Error Occured
+    Cable is not powered-on
+
+	at com.xilinx.sdk.targetmanager.internal.TM.isFPGAConfigured(TM.java:374)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.isFpgaConfigured(XilinxAppLaunchConfigurationDelegate.java:409)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:303)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+15:22:30 INFO  : ps7_init is completed.
+15:22:30 INFO  : ps7_post_config is completed.
+15:22:30 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:24:05 ERROR : Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Failed to open Cable Node jsn-Zybo-210279760164A on TCP:127.0.0.1:3121
+
+
+15:24:05 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Connection to Board Failed
+
+
+    Failed to open Cable Node jsn-Zybo-210279760164A on TCP:127.0.0.1:3121
+
+
+	at com.xilinx.sdk.targetmanager.internal.TM.isFPGAConfigured(TM.java:374)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.isFpgaConfigured(XilinxAppLaunchConfigurationDelegate.java:409)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:303)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+15:24:12 INFO  : ps7_init is completed.
+15:24:12 INFO  : ps7_post_config is completed.
+15:24:12 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:38:21 INFO  : Refreshed build settings on project zyboApp
+15:39:11 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+15:59:56 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+15:59:58 INFO  : XSDB server has started successfully.
+16:00:09 INFO  : Processing command line option -hwspec F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper.hdf.
+16:00:11 INFO  : Checking for hwspec changes in the project design_hw_wrapper_hw_platform_0.
+16:00:11 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1459601219635,  Project:1459185468910
+16:00:11 INFO  : The hardware specification for project 'design_hw_wrapper_hw_platform_0' is different from F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper.hdf.
+16:00:12 INFO  : Copied contents of F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper.hdf into \design_hw_wrapper_hw_platform_0\system.hdf.
+16:00:20 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+16:00:24 INFO  : 
+16:00:26 INFO  : Updating hardware inferred compiler options for zyboApp.
+16:00:26 INFO  : Clearing existing target manager status.
+16:00:28 INFO  : Closing and re-opening the MSS file of ther project standalone_bsp_0
+16:54:37 INFO  : Refreshed build settings on project zyboApp
+17:11:16 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:11:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279760164A" && level==0} -index 1' command is executed.
+17:11:18 INFO  : FPGA configured successfully with bitstream "F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper_hw_platform_0/design_hw_wrapper.bit"
+17:11:30 INFO  : ps7_init is completed.
+17:11:30 INFO  : ps7_post_config is completed.
+17:11:30 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:12:57 INFO  : ps7_init is completed.
+17:12:57 INFO  : ps7_post_config is completed.
+17:12:57 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:14:52 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+17:14:55 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:16:54 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+17:16:55 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:18:06 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+17:18:08 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:18:32 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+17:18:33 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:20:08 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+17:20:11 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:23:30 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+17:23:32 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:25:34 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+17:25:35 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:29:52 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+17:29:54 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:32:01 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+17:32:03 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:32:52 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+17:32:54 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:33:41 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+17:33:42 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:44:43 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+17:44:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:44:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279760164A" && level==0} -index 1' command is executed.
+17:44:51 INFO  : FPGA configured successfully with bitstream "F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper_hw_platform_0/design_hw_wrapper.bit"
+17:44:54 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+17:45:12 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Error in Resetting Target
+
+    Could not stop the processor after reset
+
+
+	at com.xilinx.sdk.targetmanager.internal.TM.doProcessorReset(TM.java:1011)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runTargetSetup(XilinxAppLaunchConfigurationDelegate.java:534)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:616)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:309)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+17:45:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:45:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279760164A" && level==0} -index 1' command is executed.
+17:45:25 INFO  : FPGA configured successfully with bitstream "F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper_hw_platform_0/design_hw_wrapper.bit"
+17:45:31 INFO  : ps7_init is completed.
+17:45:31 INFO  : ps7_post_config is completed.
+17:45:31 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:46:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:46:15 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279760164A" && level==0} -index 1' command is executed.
+17:46:16 INFO  : FPGA configured successfully with bitstream "F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper_hw_platform_0/design_hw_wrapper.bit"
+17:46:21 INFO  : ps7_init is completed.
+17:46:21 INFO  : ps7_post_config is completed.
+17:46:21 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:49:36 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+17:49:38 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:50:11 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+17:50:15 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:54:22 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:57:06 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:01:42 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:10:45 ERROR : Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Unknown Error Occured
+    Cable is not powered-on
+
+18:10:45 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Connection to Board Failed
+
+
+    Unknown Error Occured
+    Cable is not powered-on
+
+	at com.xilinx.sdk.targetmanager.internal.TM.isFPGAConfigured(TM.java:374)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.isFpgaConfigured(XilinxAppLaunchConfigurationDelegate.java:409)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:303)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+18:10:53 INFO  : ps7_init is completed.
+18:10:53 INFO  : ps7_post_config is completed.
+18:10:53 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:16:46 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+18:16:51 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:40:59 INFO  : ps7_init is completed.
+19:40:59 INFO  : ps7_post_config is completed.
+19:41:00 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:44:05 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+19:44:07 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:49:54 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+19:50:13 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:51:30 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+19:51:33 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:55:39 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+19:55:41 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:57:16 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+19:57:19 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:58:23 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+19:58:25 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:59:41 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+19:59:44 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:01:50 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+20:01:53 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:08:16 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+20:08:18 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:08:59 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+20:09:10 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:10:33 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+20:10:37 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:11:04 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+20:11:07 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:12:23 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+20:12:25 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:13:32 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+20:13:34 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:14:15 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+20:14:16 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:21:09 INFO  : ps7_init is completed.
+22:21:10 INFO  : ps7_post_config is completed.
+22:21:10 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:24:15 ERROR : Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Failed to open Cable Node jsn-Zybo-210279760164A on TCP:127.0.0.1:3121
+
+
+22:24:15 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Connection to Board Failed
+
+
+    Failed to open Cable Node jsn-Zybo-210279760164A on TCP:127.0.0.1:3121
+
+
+	at com.xilinx.sdk.targetmanager.internal.TM.isFPGAConfigured(TM.java:374)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.isFpgaConfigured(XilinxAppLaunchConfigurationDelegate.java:409)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:303)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+22:24:22 INFO  : ps7_init is completed.
+22:24:22 INFO  : ps7_post_config is completed.
+22:24:22 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:27:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:27:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:27:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279760164A" && level==0} -index 1' command is executed.
+22:27:24 INFO  : FPGA configured successfully with bitstream "F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper_hw_platform_0/design_hw_wrapper.bit"
+22:27:31 INFO  : ps7_init is completed.
+22:27:31 INFO  : ps7_post_config is completed.
+22:27:31 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:06:55 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+23:06:58 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:08:35 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:32:34 ERROR : Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Failed to open Cable Node jsn-Zybo-210279760164A on TCP:127.0.0.1:3121
+
+
+18:32:34 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Connection to Board Failed
+
+
+    Failed to open Cable Node jsn-Zybo-210279760164A on TCP:127.0.0.1:3121
+
+
+	at com.xilinx.sdk.targetmanager.internal.TM.isFPGAConfigured(TM.java:374)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.isFpgaConfigured(XilinxAppLaunchConfigurationDelegate.java:409)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:303)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+18:32:48 INFO  : ps7_init is completed.
+18:32:48 INFO  : ps7_post_config is completed.
+18:32:48 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:28:16 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:28:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279760164A" && level==0} -index 1' command is executed.
+22:28:17 INFO  : FPGA configured successfully with bitstream "F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper_hw_platform_0/design_hw_wrapper.bit"
+22:28:21 INFO  : ps7_init is completed.
+22:28:21 INFO  : ps7_post_config is completed.
+22:28:22 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:30:48 INFO  : ps7_init is completed.
+22:30:48 INFO  : ps7_post_config is completed.
+22:30:48 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:34:22 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+22:34:23 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:34:59 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+22:35:00 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:35:15 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+22:35:17 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:44:32 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+22:44:34 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:51:02 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+22:51:17 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:54:05 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+22:54:07 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:58:31 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:03:43 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+23:03:45 INFO  : Processor reset is completed for ps7_cortexa9_0

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;zyboApp/src/sd&apos; to &apos;sd.h&apos;" description="Rename resource &apos;sd&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/sd" name="sd.h" stamp="1459602310823" updateReferences="true"/>
+</session>

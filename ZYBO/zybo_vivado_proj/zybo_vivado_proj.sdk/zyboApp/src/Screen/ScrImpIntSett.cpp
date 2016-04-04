@@ -39,5 +39,10 @@ void ScrImpIntSett::sendConfirmCmd()
 
 void ScrImpIntSett::printData()
 {
+	OLED.setCursor(0, 1);
+	//char data[20];
+	//sprintf(data, "imped: %.2f K", impedanceArray[0]);
+	OLED.putString("set update Int");
 
+	OLED.updateDisplay();
 }

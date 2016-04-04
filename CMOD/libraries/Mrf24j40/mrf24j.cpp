@@ -152,7 +152,7 @@ void Mrf24j::send16(word dest16, char * data) {
     write_short(MRF_TXNCON, (1<<MRF_TXNACKREQ | 1<<MRF_TXNTRIG));
 }
 
-void Mrf24j::sendData( word dest16, byte msgType, byte *data, int dataLen )
+void Mrf24j::sendData( word dest16, byte msgType, byte *startFreq, byte *data, int dataLen )
 {
     int i = 0;
     write_long(i++, bytes_MHR); // header length
@@ -182,6 +182,13 @@ void Mrf24j::sendData( word dest16, byte msgType, byte *data, int dataLen )
     i+=ignoreBytes;
 	
 	write_long(i++, msgType);
+	if(1 == msgType)
+	{
+		write_long(i++, startFreq[0]);
+		write_long(i++, startFreq[1]);
+		write_long(i++, startFreq[2]);
+		write_long(i++, startFreq[3]);
+	}
 	
     for (int q = 0; q < dataLen; q++) {
         write_long(i++, data[q]);

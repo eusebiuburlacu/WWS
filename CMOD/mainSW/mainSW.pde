@@ -50,5 +50,5 @@ void loop()
   Serial.println(humidity);
   sendHumidity((unsigned char)humidity, callback);
 
-  delay(1000);
+  delay(200);
 }

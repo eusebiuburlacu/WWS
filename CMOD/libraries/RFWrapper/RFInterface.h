@@ -37,7 +37,7 @@ typedef void(*RXCallback)(); //who receive a notification with this callback, ha
 
 void initRF();
 
-bool sendImpedance( float *samples, unsigned char numOfValues, ACKCallback callback );
+bool sendImpedance( float *samples, unsigned long startFreq, unsigned char numOfValues, ACKCallback callback );
 
 bool sendPhase( float *samples, unsigned char numOfValues, ACKCallback callback );
 

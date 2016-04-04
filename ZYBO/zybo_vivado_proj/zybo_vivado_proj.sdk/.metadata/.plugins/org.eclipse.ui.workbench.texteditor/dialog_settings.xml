@@ -2,18 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="bool" key="selection"/>
+		<item value="SD_SDO_PPS" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
-		<item value="true" key="wrap"/>
+		<item value="false" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="SD_SDO_PPS"/>
+			<item value="SPI_MOSI_PIN"/>
+			<item value="PORTSetBits"/>
 			<item value="boolean"/>
 			<item value="ScrBatIntSett::ScrBatIntSett()"/>
 			<item value="SpiInstance"/>
 			<item value="INTR"/>
 			<item value="GPIO"/>
-			<item value="OledClass::"/>
 		</list>
 		<list key="replacehistory">
 			<item value="bool"/>

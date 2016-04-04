@@ -106,5 +106,5 @@ void IA::readImpedanceSamples()
     }
 	while((status & AD5933_STAT_SWEEP_DONE) == 0 && idx < MAX_IMPEDANCE_SAMPLES);
 	
-	sendImpedance( m_impedanceArray, m_incNum, ackCallback );
+	sendImpedance( m_impedanceArray, (unsigned long)m_startFreq, m_incNum, ackCallback );
 }

@@ -37,7 +37,7 @@
 								<option id="xilinx.gnu.compiler.dircategory.includes.1776372511" name="Include Paths" superClass="xilinx.gnu.compiler.dircategory.includes" valueType="includePath">
 									<listOptionValue builtIn="false" value="../../standalone_bsp_0/ps7_cortexa9_0/include"/>
 									<listOptionValue builtIn="false" value="../inc"/>
-									<listOptionValue builtIn="false" value="../SD"/>
+									<listOptionValue builtIn="false" value="../../standalone_bsp_0/ps7_cortexa9_0/libsrc/xilffs_v3_1/src/include"/>
 								</option>
 								<inputType id="xilinx.gnu.arm.cxx.compiler.input.887026181" name="C++ source files" superClass="xilinx.gnu.arm.cxx.compiler.input"/>
 							</tool>
@@ -109,11 +109,11 @@
 							<tool id="xilinx.gnu.arm.cxx.toolchain.compiler.release.1356150781" name="ARM g++ compiler" superClass="xilinx.gnu.arm.cxx.toolchain.compiler.release">
 								<option defaultValue="gnu.c.optimization.level.more" id="xilinx.gnu.compiler.option.optimization.level.807620576" name="Optimization Level" superClass="xilinx.gnu.compiler.option.optimization.level" valueType="enumerated"/>
 								<option id="xilinx.gnu.compiler.option.debugging.level.1835368298" name="Debug Level" superClass="xilinx.gnu.compiler.option.debugging.level" value="gnu.c.debugging.level.none" valueType="enumerated"/>
-								<option id="xilinx.gnu.compiler.inferred.swplatform.includes.421634976" name="Software Platform Include Path" superClass="xilinx.gnu.compiler.inferred.swplatform.includes" valueType="includePath"/>
-								<option id="xilinx.gnu.compiler.dircategory.includes.1372447835" superClass="xilinx.gnu.compiler.dircategory.includes" valueType="includePath">
+								<option id="xilinx.gnu.compiler.inferred.swplatform.includes.421634976" name="Software Platform Include Path" superClass="xilinx.gnu.compiler.inferred.swplatform.includes"/>
+								<option id="xilinx.gnu.compiler.dircategory.includes.1372447835" name="Include Paths" superClass="xilinx.gnu.compiler.dircategory.includes" valueType="includePath">
 									<listOptionValue builtIn="false" value="../../standalone_bsp_0/ps7_cortexa9_0/include"/>
 									<listOptionValue builtIn="false" value="../inc"/>
-									<listOptionValue builtIn="false" value="../SD"/>
+									<listOptionValue builtIn="false" value="../../standalone_bsp_0/ps7_cortexa9_0/libsrc/xilffs_v3_1/src/include"/>
 								</option>
 								<inputType id="xilinx.gnu.arm.cxx.compiler.input.1662917089" name="C++ source files" superClass="xilinx.gnu.arm.cxx.compiler.input"/>
 							</tool>
@@ -158,7 +158,14 @@
 	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
 		<project id="zyboApp.xilinx.gnu.arm.exe.1355659804" name="Xilinx ARM Executable" projectType="xilinx.gnu.arm.exe"/>
 	</storageModule>
-	<storageModule moduleId="refreshScope"/>
+	<storageModule moduleId="refreshScope" versionNumber="2">
+		<configuration configurationName="Debug">
+			<resource resourceType="PROJECT" workspacePath="/zyboApp"/>
+		</configuration>
+		<configuration configurationName="Release">
+			<resource resourceType="PROJECT" workspacePath="/zyboApp"/>
+		</configuration>
+	</storageModule>
 	<storageModule moduleId="scannerConfiguration">
 		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
 		<scannerConfigBuildInfo instanceId="xilinx.gnu.arm.exe.debug.167283542;xilinx.gnu.arm.exe.debug.167283542.;xilinx.gnu.arm.cxx.toolchain.compiler.debug.1630186836;xilinx.gnu.arm.cxx.compiler.input.887026181">

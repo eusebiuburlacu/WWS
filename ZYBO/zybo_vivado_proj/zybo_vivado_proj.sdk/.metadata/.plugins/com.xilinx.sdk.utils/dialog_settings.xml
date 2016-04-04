@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item value="F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\zyboApp\Debug" key="bootgen_files_selection"/>
+	<item value="F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\standalone_bsp_1_xilffs_polled_example_1\Debug" key="bootgen_files_selection"/>
 	<item value="F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\boot" key="zynq_flash_files_selection"/>
-	<item value="F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\zyboApp\Debug" key="last_stored_selection"/>
+	<item value="F:\Proiecte_si_concursuri\WWS\WWS\ZYBO\zybo_vivado_proj\zybo_vivado_proj.sdk\standalone_bsp_1_xilffs_polled_example_1\Debug" key="last_stored_selection"/>
 </section>

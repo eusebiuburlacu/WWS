@@ -29,7 +29,7 @@ public:
 	/*
 	*
 	*/
-	bool sendImpedance( float *samples, unsigned char numOfValues, ACKCallback callback );
+	bool sendImpedance( float *samples, unsigned long startFreq, unsigned char numOfValues, ACKCallback callback );
 
 	bool sendPhase( float *samples, unsigned char numOfValues, ACKCallback callback );
 

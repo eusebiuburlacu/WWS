@@ -27,12 +27,12 @@ void initRF()
 	Serial.println("initRF");
 }
 
-bool sendImpedance( float *samples, unsigned char numOfValues, ACKCallback callback  )
+bool sendImpedance( float *samples,  unsigned long startFreq, unsigned char numOfValues, ACKCallback callback  )
 {
 	bool result = false;
 	if( m_rfWrapper != 0 )
 	{
-		result = m_rfWrapper->sendImpedance( samples, numOfValues, callback );
+		result = m_rfWrapper->sendImpedance( samples, startFreq, numOfValues, callback );
 	}
 	return result;
 }

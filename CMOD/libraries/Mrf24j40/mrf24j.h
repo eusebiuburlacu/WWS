@@ -226,7 +226,7 @@ class Mrf24j
 
         void send16(word dest16, char * data);
 
-		void sendData( word dest16, byte msgType, byte *data, int dataLen );
+		void sendData( word dest16, byte msgType, byte *startFreq, byte *data, int dataLen );
 
         void interrupt_handler(void);
 

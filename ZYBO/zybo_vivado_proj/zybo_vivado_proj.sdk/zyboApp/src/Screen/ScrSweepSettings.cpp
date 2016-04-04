@@ -38,5 +38,10 @@ void ScrSweepSettings::sendConfirmCmd()
 
 void ScrSweepSettings::printData()
 {
+	OLED.setCursor(0, 1);
+	//char data[20];
+	//sprintf(data, "imped: %.2f K", impedanceArray[0]);
+	OLED.putString("setFreq");
 
+	OLED.updateDisplay();
 }

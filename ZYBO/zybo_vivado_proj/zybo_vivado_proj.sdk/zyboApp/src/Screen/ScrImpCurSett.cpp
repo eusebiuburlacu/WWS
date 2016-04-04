@@ -5,6 +5,12 @@
  *      Author: Sebi
  */
 #include "Screen/ScrImpCurSett.h"
+#include <vector>
+#include "stdio.h"
+
+extern unsigned long measuringFreq;
+extern std::vector<float> impedanceArray;
+
 
 ScrImpCurSett::ScrImpCurSett()
 {
@@ -38,7 +44,26 @@ void ScrImpCurSett::sendConfirmCmd()
 
 void ScrImpCurSett::printData()
 {
-	OLED.setCursor(4, 12);
-	OLED.putString("Curr seT");
-	OLED.updateDisplay();
+	if( 0 != impedanceArray.size() )
+	{
+		OLED.setCursor(0, 0);
+		char data[20];
+		sprintf(data, "imped: %.2f K", impedanceArray[0]);
+		OLED.putString(data);
+		OLED.setCursor(0, 2);
+		sprintf(data, "freq: %d Hz", measuringFreq);
+		OLED.putString(data);
+		OLED.updateDisplay();
+	}
+	else
+	{
+		OLED.setCursor(0, 0);
+		char data[20];
+		sprintf(data, "imped: %.2f K", 0.00);
+		OLED.putString(data);
+		OLED.setCursor(0, 2);
+		sprintf(data, "freq: %d Hz", 0);
+		OLED.putString(data);
+		OLED.updateDisplay();
+	}
 }
