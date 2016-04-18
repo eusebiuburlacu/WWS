@@ -220,6 +220,8 @@ class Mrf24j
 
         void send16(word dest16, char * data);
 
+        void sendData( word dest16, uint8_t msgType, long data );
+
         void interrupt_handler(void);
 
         bool registerRXCallback(RXCallback callback);

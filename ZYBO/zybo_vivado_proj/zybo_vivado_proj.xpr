@@ -34,22 +34,6 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="design_hw.bd" FileRelPathName="design_hw_ooc.xdc"/>
-        <CompFileExtendedInfo CompFileName="design_hw.bd" FileRelPathName="ip/design_hw_auto_pc_0/design_hw_auto_pc_0.xci"/>
-        <CompFileExtendedInfo CompFileName="design_hw.bd" FileRelPathName="hw_handoff/design_hw.hwh"/>
-        <CompFileExtendedInfo CompFileName="design_hw.bd" FileRelPathName="hdl/design_hw.hwdef"/>
-        <CompFileExtendedInfo CompFileName="design_hw.bd" FileRelPathName="hw_handoff/design_hw_bd.tcl"/>
-        <CompFileExtendedInfo CompFileName="design_hw.bd" FileRelPathName="ip/design_hw_axi_gpio_1_0/design_hw_axi_gpio_1_0.xci"/>
-        <CompFileExtendedInfo CompFileName="design_hw.bd" FileRelPathName="ip/design_hw_axi_quad_spi_1_0/design_hw_axi_quad_spi_1_0.xci"/>
-        <CompFileExtendedInfo CompFileName="design_hw.bd" FileRelPathName="hdl/design_hw.vhd"/>
-        <CompFileExtendedInfo CompFileName="design_hw.bd" FileRelPathName="ip/design_hw_axi_gpio_2_2/design_hw_axi_gpio_2_2.xci"/>
-        <CompFileExtendedInfo CompFileName="design_hw.bd" FileRelPathName="ip/design_hw_xbar_0/design_hw_xbar_0.xci"/>
-        <CompFileExtendedInfo CompFileName="design_hw.bd" FileRelPathName="ip/design_hw_axi_gpio_0_0/design_hw_axi_gpio_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="design_hw.bd" FileRelPathName="ip/design_hw_processing_system7_0_0/design_hw_processing_system7_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="design_hw.bd" FileRelPathName="ip/design_hw_xlconcat_0_0/design_hw_xlconcat_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="design_hw.bd" FileRelPathName="ip/design_hw_rst_processing_system7_0_100M_0/design_hw_rst_processing_system7_0_100M_0.xci"/>
-        <CompFileExtendedInfo CompFileName="design_hw.bd" FileRelPathName="ip/design_hw_processing_system7_0_axi_periph_0/design_hw_processing_system7_0_axi_periph_0.xci"/>
-        <CompFileExtendedInfo CompFileName="design_hw.bd" FileRelPathName="ip/design_hw_axi_quad_spi_0_0/design_hw_axi_quad_spi_0_0.xci"/>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/design_hw/hdl/design_hw_wrapper.vhd">
         <FileInfo>

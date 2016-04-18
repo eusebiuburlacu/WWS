@@ -4650,3 +4650,114 @@ com.xilinx.sdk.targetmanager.TMException: Connection to Board Failed
 22:58:31 INFO  : Processor reset is completed for ps7_cortexa9_0
 23:03:43 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
 23:03:45 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:29:27 ERROR : Unexpected error while fetching XMD's response: 
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:209)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+	at java.io.InputStreamReader.read(InputStreamReader.java:184)
+	at java.io.BufferedReader.fill(BufferedReader.java:161)
+	at java.io.BufferedReader.read(BufferedReader.java:182)
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess$CommandResultsReader.run(XMDJSONProcess.java:332)
+	at java.lang.Thread.run(Thread.java:745)
+23:29:27 ERROR : Zero sized response read from XMD. This indicates a communication error or a programming error.
+22:46:34 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+22:46:40 INFO  : XSDB server has started successfully.
+22:46:43 INFO  : Processing command line option -hwspec F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper.hdf.
+22:46:43 INFO  : Checking for hwspec changes in the project design_hw_wrapper_hw_platform_0.
+22:51:55 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+22:51:58 INFO  : XSDB server has started successfully.
+22:51:58 INFO  : Processing command line option -hwspec F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper.hdf.
+22:51:59 INFO  : Checking for hwspec changes in the project design_hw_wrapper_hw_platform_0.
+13:34:21 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+13:34:27 INFO  : XSDB server has started successfully.
+13:34:38 INFO  : Processing command line option -hwspec F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper.hdf.
+13:34:39 INFO  : Checking for hwspec changes in the project design_hw_wrapper_hw_platform_0.
+13:36:28 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:36:30 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279760164A" && level==0} -index 1' command is executed.
+13:36:31 INFO  : FPGA configured successfully with bitstream "F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper_hw_platform_0/design_hw_wrapper.bit"
+13:37:38 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: The program file specified in the launch configuration does not exist
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:580)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:309)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+13:40:41 INFO  : Refreshed build settings on project zyboApp
+13:43:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:43:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279760164A" && level==0} -index 1' command is executed.
+13:43:10 INFO  : FPGA configured successfully with bitstream "F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper_hw_platform_0/design_hw_wrapper.bit"
+13:43:18 INFO  : ps7_init is completed.
+13:43:18 INFO  : ps7_post_config is completed.
+13:43:19 INFO  : Processor reset is completed for ps7_cortexa9_0
+13:47:51 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+13:47:53 INFO  : Processor reset is completed for ps7_cortexa9_0
+14:01:30 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+14:01:34 INFO  : Processor reset is completed for ps7_cortexa9_0
+13:39:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:39:10 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279760164A" && level==0} -index 1' command is executed.
+13:39:12 INFO  : FPGA configured successfully with bitstream "F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper_hw_platform_0/design_hw_wrapper.bit"
+13:39:43 INFO  : ps7_init is completed.
+13:39:43 INFO  : ps7_post_config is completed.
+13:39:43 INFO  : Processor reset is completed for ps7_cortexa9_0
+11:15:38 ERROR : Unexpected error while fetching XMD's response: 
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:209)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+	at java.io.InputStreamReader.read(InputStreamReader.java:184)
+	at java.io.BufferedReader.fill(BufferedReader.java:161)
+	at java.io.BufferedReader.read(BufferedReader.java:182)
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess$CommandResultsReader.run(XMDJSONProcess.java:332)
+	at java.lang.Thread.run(Thread.java:745)
+11:15:38 ERROR : Zero sized response read from XMD. This indicates a communication error or a programming error.
+11:15:40 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+12:39:58 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+12:40:04 INFO  : XSDB server has started successfully.
+12:40:10 INFO  : Processing command line option -hwspec F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper.hdf.
+12:40:11 INFO  : Checking for hwspec changes in the project design_hw_wrapper_hw_platform_0.
+13:45:16 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+13:45:22 INFO  : XSDB server has started successfully.
+13:45:31 INFO  : Processing command line option -hwspec F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper.hdf.
+13:45:32 INFO  : Checking for hwspec changes in the project design_hw_wrapper_hw_platform_0.
+13:53:12 INFO  : Refreshed build settings on project zyboApp
+22:53:04 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+22:53:10 INFO  : XSDB server has started successfully.
+22:53:16 INFO  : Processing command line option -hwspec F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper.hdf.
+22:53:17 INFO  : Checking for hwspec changes in the project design_hw_wrapper_hw_platform_0.
+22:53:51 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+22:53:53 INFO  : XSDB server has started successfully.
+22:53:53 INFO  : Processing command line option -hwspec F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper.hdf.
+22:53:54 INFO  : Checking for hwspec changes in the project design_hw_wrapper_hw_platform_0.
+22:54:41 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+22:54:44 INFO  : XSDB server has started successfully.
+22:54:44 INFO  : Processing command line option -hwspec F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper.hdf.
+22:54:45 INFO  : Checking for hwspec changes in the project design_hw_wrapper_hw_platform_0.
+22:56:00 INFO  : Refreshed build settings on project zyboApp
+23:02:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:02:59 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279760164A" && level==0} -index 1' command is executed.
+23:03:00 INFO  : FPGA configured successfully with bitstream "F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper_hw_platform_0/design_hw_wrapper.bit"
+23:03:15 INFO  : ps7_init is completed.
+23:03:15 INFO  : ps7_post_config is completed.
+23:03:15 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:04:13 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+23:04:15 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:04:52 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+23:04:58 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:11:50 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+23:11:53 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:13:20 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+23:13:23 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:20:13 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+23:20:16 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:23:50 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+23:23:52 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:40:25 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+23:40:27 INFO  : Processor reset is completed for ps7_cortexa9_0

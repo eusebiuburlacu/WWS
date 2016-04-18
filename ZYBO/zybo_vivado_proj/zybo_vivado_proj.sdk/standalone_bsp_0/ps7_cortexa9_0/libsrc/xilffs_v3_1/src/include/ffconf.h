@@ -65,7 +65,8 @@ extern "C" {
 / Locale and Namespace Configurations
 /---------------------------------------------------------------------------*/
 
-#define _CODE_PAGE	1/* The _CODE_PAGE specifies the OEM code page to be used on the target system.
+#define _CODE_PAGE	932
+/* The _CODE_PAGE specifies the OEM code page to be used on the target system.
 /  Incorrect setting of the code page can cause a file open failure.
 /
 /   932  - Japanese Shift_JIS (DBCS, OEM, Windows)

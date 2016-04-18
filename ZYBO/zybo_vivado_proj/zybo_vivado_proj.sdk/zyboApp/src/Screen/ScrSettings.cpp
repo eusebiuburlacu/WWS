@@ -11,7 +11,7 @@
 
 std::vector<IScreen*> settScreens;
 IScreen* currentScr;
-static int arrayIdx = -1;
+int arrayIdx = -1;
 extern bool isInSettings;
 
 ScrSettings::ScrSettings()

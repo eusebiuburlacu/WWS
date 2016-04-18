@@ -380,6 +380,47 @@ void Mrf24j::init(void) {
     	Xil_ExceptionEnable();
 }
 
+void Mrf24j::sendData( word dest16, uint8_t msgType, long data )
+{
+    int i = 0;
+    write_long(i++, bytes_MHR); // header length
+    // +ignoreBytes is because some module seems to ignore 2 bytes after the header?!.
+    // default: ignoreBytes = 0;
+    write_long(i++, bytes_MHR+ignoreBytes+4+1);
+
+    // 0 | pan compression | ack | no security | no data pending | data frame[3 bits]
+    write_long(i++, 0b01100001); // first byte of Frame Control
+    // 16 bit source, 802.15.4 (2003), 16 bit dest,
+    write_long(i++, 0b10001000); // second byte of frame control
+    write_long(i++, 1);  // sequence number 1
+
+    word panid = get_pan();
+
+    write_long(i++, panid & 0xff);  // dest panid
+    write_long(i++, panid >> 8);
+    write_long(i++, dest16 & 0xff);  // dest16 low
+    write_long(i++, dest16 >> 8); // dest16 high
+
+    word src16 = address16_read();
+    write_long(i++, src16 & 0xff); // src16 low
+    write_long(i++, src16 >> 8); // src16 high
+
+    // All testing seems to indicate that the next two bytes are ignored.
+    //2 bytes on FCS appended by TXMAC
+    i+=ignoreBytes;
+
+	write_long(i++, msgType);
+
+	uint8_t *dataBytes = (uint8_t*)(void*)&data;
+	write_long(i++, dataBytes[0]);
+	write_long(i++, dataBytes[1]);
+	write_long(i++, dataBytes[2]);
+	write_long(i++, dataBytes[3]);
+
+    // ack on, and go!
+    write_short(MRF_TXNCON, (1<<MRF_TXNACKREQ | 1<<MRF_TXNTRIG));
+}
+
 /**
  * Call this from within an interrupt handler connected to the MRFs output
  * interrupt pin.  It handles reading in any data from the module, and letting it
