@@ -35,6 +35,8 @@ typedef void(*ACKCallback)(); //this callback is called when a message is succes
 
 typedef void(*RXCallback)(); //who receive a notification with this callback, have to call getRXData to receive the data buffer.
 
+void interruptRoutine();
+
 void initRF();
 
 bool sendImpedance( float *samples, unsigned long startFreq, unsigned char numOfValues, ACKCallback callback );

@@ -68,6 +68,11 @@ void IA::configIA(double startFreq, double incFreq, short incNum)
 	m_incNum = incNum;
 }
 
+void IA::setFreq(double startFreq)
+{
+	m_startFreq = startFreq;
+}
+
 void IA::readImpedanceSamples()
 {
 	// read sweep samples

@@ -22,8 +22,8 @@ void interruptRoutine()
 void initRF()
 {
 	m_rfWrapper = new RFWrapper();
-	attachInterrupt(3, interruptRoutine, FALLING); // interrupt 3 equivalent to chipKIT_CMOD pin 7(INT3) 
-	interrupts();
+	//attachInterrupt(3, interruptRoutine, FALLING); // interrupt 3 equivalent to chipKIT_CMOD pin 7(INT3) 
+	//interrupts();
 	Serial.println("initRF");
 }
 

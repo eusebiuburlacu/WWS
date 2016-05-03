@@ -23,6 +23,8 @@ public:
 	
 	void readImpedanceSamples();
 	
+	void setFreq(double startFreq);
+	
 private:
 
 	double m_startFreq;

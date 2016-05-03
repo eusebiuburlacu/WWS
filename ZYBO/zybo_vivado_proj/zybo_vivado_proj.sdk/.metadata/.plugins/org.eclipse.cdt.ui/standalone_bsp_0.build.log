@@ -1,4 +1,4 @@
-22:58:30 **** Auto Build of project standalone_bsp_0 ****
+14:46:01 **** Auto Build of project standalone_bsp_0 ****
 make -k all 
 "Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src"
 make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
@@ -102,5 +102,5 @@ make -C ps7_cortexa9_0/libsrc/xilffs_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm
 "Compiling XilFFs Library"
 'Finished building libraries'
 
-22:58:57 Build Finished (took 26s.466ms)
+14:46:33 Build Finished (took 32s.226ms)
 

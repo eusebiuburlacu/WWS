@@ -49,7 +49,7 @@ void ScrImpIntSett::sendChScrCmd()
 void ScrImpIntSett::sendConfirmCmd()
 {
 	arrayIdx = -1;
-	RF.sendData( 0x2342, 1, updateInt );
+	RF.sendData( 0x6001, 1, updateInt );
 }
 
 void ScrImpIntSett::printData()

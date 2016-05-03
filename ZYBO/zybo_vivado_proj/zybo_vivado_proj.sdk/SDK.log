@@ -4761,3 +4761,116 @@ java.net.SocketException: Connection reset
 23:23:52 INFO  : Processor reset is completed for ps7_cortexa9_0
 23:40:25 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
 23:40:27 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:26:06 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+22:26:14 INFO  : XSDB server has started successfully.
+22:26:17 INFO  : Processing command line option -hwspec F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper.hdf.
+22:26:18 INFO  : Checking for hwspec changes in the project design_hw_wrapper_hw_platform_0.
+22:43:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:43:26 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279760164A" && level==0} -index 1' command is executed.
+22:43:28 INFO  : FPGA configured successfully with bitstream "F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper_hw_platform_0/design_hw_wrapper.bit"
+22:44:24 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: The program file specified in the launch configuration does not exist
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:580)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:309)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+22:45:09 INFO  : Refreshed build settings on project zyboApp
+22:49:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:49:57 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279760164A" && level==0} -index 1' command is executed.
+22:49:59 INFO  : FPGA configured successfully with bitstream "F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper_hw_platform_0/design_hw_wrapper.bit"
+22:50:24 INFO  : ps7_init is completed.
+22:50:24 INFO  : ps7_post_config is completed.
+22:50:24 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:09:15 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:11:58 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:58:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:58:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279760164A" && level==0} -index 1' command is executed.
+21:58:23 INFO  : FPGA configured successfully with bitstream "F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper_hw_platform_0/design_hw_wrapper.bit"
+21:58:32 INFO  : ps7_init is completed.
+21:58:32 INFO  : ps7_post_config is completed.
+21:58:32 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:27:32 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+21:27:36 INFO  : XSDB server has started successfully.
+21:27:46 INFO  : Processing command line option -hwspec F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper.hdf.
+21:27:47 INFO  : Checking for hwspec changes in the project design_hw_wrapper_hw_platform_0.
+21:28:32 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+21:28:41 INFO  : XSDB server has started successfully.
+21:28:44 INFO  : Processing command line option -hwspec F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper.hdf.
+21:28:45 INFO  : Checking for hwspec changes in the project design_hw_wrapper_hw_platform_0.
+15:18:30 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+15:18:35 INFO  : XSDB server has started successfully.
+15:18:47 INFO  : Processing command line option -hwspec F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper.hdf.
+15:18:54 INFO  : Checking for hwspec changes in the project design_hw_wrapper_hw_platform_0.
+15:18:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:19:00 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279760164A" && level==0} -index 1' command is executed.
+15:19:01 INFO  : FPGA configured successfully with bitstream "F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper_hw_platform_0/design_hw_wrapper.bit"
+15:19:22 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: The program file specified in the launch configuration does not exist
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:580)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:309)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+15:22:14 INFO  : Refreshed build settings on project zyboApp
+15:25:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:25:21 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279760164A" && level==0} -index 1' command is executed.
+15:25:22 INFO  : FPGA configured successfully with bitstream "F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper_hw_platform_0/design_hw_wrapper.bit"
+15:25:27 INFO  : ps7_init is completed.
+15:25:27 INFO  : ps7_post_config is completed.
+15:25:27 INFO  : Processor reset is completed for ps7_cortexa9_0
+13:44:41 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+13:44:47 INFO  : XSDB server has started successfully.
+13:44:53 INFO  : Processing command line option -hwspec F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper.hdf.
+13:44:54 INFO  : Checking for hwspec changes in the project design_hw_wrapper_hw_platform_0.
+13:45:52 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+13:45:57 INFO  : XSDB server has started successfully.
+13:45:58 INFO  : Processing command line option -hwspec F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper.hdf.
+13:45:58 INFO  : Checking for hwspec changes in the project design_hw_wrapper_hw_platform_0.
+14:34:22 INFO  : Refreshed build settings on project zyboApp
+14:46:52 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:46:53 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279760164A" && level==0} -index 1' command is executed.
+14:46:55 INFO  : FPGA configured successfully with bitstream "F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper_hw_platform_0/design_hw_wrapper.bit"
+14:47:20 INFO  : ps7_init is completed.
+14:47:20 INFO  : ps7_post_config is completed.
+14:47:20 INFO  : Processor reset is completed for ps7_cortexa9_0
+14:54:52 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:54:52 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279760164A" && level==0} -index 1' command is executed.
+14:54:53 INFO  : FPGA configured successfully with bitstream "F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper_hw_platform_0/design_hw_wrapper.bit"
+14:54:59 INFO  : ps7_init is completed.
+14:54:59 INFO  : ps7_post_config is completed.
+14:54:59 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:05:01 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:05:02 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279760164A" && level==0} -index 1' command is executed.
+15:05:04 INFO  : FPGA configured successfully with bitstream "F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper_hw_platform_0/design_hw_wrapper.bit"
+15:05:11 INFO  : ps7_init is completed.
+15:05:11 INFO  : ps7_post_config is completed.
+15:05:11 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:09:03 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:09:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:09:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:09:43 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279760164A" && level==0} -index 1' command is executed.
+15:09:45 INFO  : FPGA configured successfully with bitstream "F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper_hw_platform_0/design_hw_wrapper.bit"
+15:09:53 INFO  : ps7_init is completed.
+15:09:53 INFO  : ps7_post_config is completed.
+15:09:53 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:12:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:12:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279760164A" && level==0} -index 1' command is executed.
+15:12:15 INFO  : FPGA configured successfully with bitstream "F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper_hw_platform_0/design_hw_wrapper.bit"
+15:12:19 INFO  : ps7_init is completed.
+15:12:19 INFO  : ps7_post_config is completed.
+15:12:20 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:51:30 INFO  : Invoking Bootgen: bootgen -image output.bif -o F:\Proiecte_si_concursuri\WWS\WWS\boot\BOOT.bin
+21:51:30 INFO  : Creating new bif file F:\Proiecte_si_concursuri\WWS\WWS\boot\output.bif
+21:51:31 INFO  : Bootgen command execution is done.
+21:54:54 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+21:55:44 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+21:55:47 INFO  : XSDB server has started successfully.
+21:55:58 INFO  : Processing command line option -hwspec F:/Proiecte_si_concursuri/WWS/WWS/ZYBO/zybo_vivado_proj/zybo_vivado_proj.sdk/design_hw_wrapper.hdf.
+21:56:02 INFO  : Checking for hwspec changes in the project design_hw_wrapper_hw_platform_0.

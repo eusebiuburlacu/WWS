@@ -47,7 +47,7 @@ void ScrSweepSettings::sendChScrCmd()
 void ScrSweepSettings::sendConfirmCmd()
 {
 	arrayIdx = -1;
-	RF.sendData( 0x2342, 2, freqSet );
+	RF.sendData( 0x6001, 2, freqSet );
 }
 
 void ScrSweepSettings::printData()

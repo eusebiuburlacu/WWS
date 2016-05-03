@@ -37,10 +37,11 @@ Mrf24j::Mrf24j(int pin_reset, int pin_chip_select, int pin_interrupt) {
 	m_ackCallback = 0;
 	
 	m_rxCallback = 0;
-	
+
     pinMode(_pin_reset, OUTPUT);
     pinMode(_pin_cs, OUTPUT);
     pinMode(_pin_int, INPUT);
+	Serial.println(_pin_int);
 
     SPI.setBitOrder(MSBFIRST) ;
     SPI.setDataMode(SPI_MODE0);
@@ -283,7 +284,8 @@ void Mrf24j::interrupt_handler(void) {
         rx_info.rssi = read_long(0x301 + frame_length + 1);
 		
         rx_enable();
-		m_rxCallback();
+		if(0 != m_rxCallback)
+			m_rxCallback();
         interrupts();
     }
     if (last_interrupt & MRF_I_TXNIF) {

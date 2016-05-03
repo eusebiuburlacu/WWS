@@ -12,6 +12,44 @@
 #include <SHT2x.h>
 
 IA ia;
+unsigned long updateInt = 100;
+unsigned long freqSet = 5000;
+
+void RxCallback()
+{
+  int dataLen;
+  rx_info *RXInfo =  getRXData(dataLen);
+  if(0==RXInfo)
+    Serial.println(0);
+    else
+     Serial.println(1);
+    
+  uint8_t msgType = RXInfo->rx_data[0];
+  
+  if(1 == msgType)
+  {
+    uint8_t *valFPtr = (uint8_t*)(void *)&updateInt;
+    *valFPtr++ = RXInfo->rx_data[1];
+    *valFPtr++ = RXInfo->rx_data[2];
+    *valFPtr++ = RXInfo->rx_data[3];
+    *valFPtr++ = RXInfo->rx_data[4];
+    
+    Serial.print("update Int");
+    Serial.println(updateInt);
+  }
+  else if(2 == msgType)
+  {
+    uint8_t *valFPtr = (uint8_t*)(void *)&freqSet;
+    *valFPtr++ = RXInfo->rx_data[1];
+    *valFPtr++ = RXInfo->rx_data[2];
+    *valFPtr++ = RXInfo->rx_data[3];
+    *valFPtr++ = RXInfo->rx_data[4];
+    
+    ia.setFreq(freqSet);
+    Serial.print("Frequ SET:");
+    Serial.println(freqSet);
+  }
+}
 
 void setup()
 {
@@ -21,6 +59,9 @@ void setup()
     digitalWrite(10, LOW);
     initRF();
     ia.initIA();
+    Serial.println("InitIA");
+    registerRXCallback(RxCallback);
+    Serial.println("registerRX");
 }
 
 float imp[] = {11.1, 23.2, 23.3, 24.45};
@@ -37,18 +78,22 @@ void callback()
 
 void loop()
 {
+  if(0==digitalRead(7))
+    interruptRoutine();
+  //Serial.println("Test");
   ia.readImpedanceSamples();
-  
+  //void interruptRoutine();
   delay(2);
-  float temperature = SHT2x.GetTemperature();
-  Serial.print("Temperature(C): ");
-  Serial.println(temperature);
-  sendTemperature(temperature, callback);
+  //float temperature = SHT2x.GetTemperature();
+  //Serial.print("Temperature(C): ");
+  //Serial.println(temperature);
+  //sendTemperature(temperature, callback);
   delay(2);
-  float humidity = SHT2x.GetHumidity();
-  Serial.print("Humidity(%RH): ");
-  Serial.println(humidity);
-  sendHumidity((unsigned char)humidity, callback);
-
+  //void interruptRoutine();
+  //float humidity = SHT2x.GetHumidity();
+  //Serial.print("Humidity(%RH): ");
+  //Serial.println(humidity);
+  //sendHumidity((unsigned char)humidity, callback);
+  //void interruptRoutine();
   delay(200);
 }

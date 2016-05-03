@@ -47,6 +47,7 @@
 #include "AD5933.h"
 #include <Wire.h>
 #include <math.h>
+#include "WProgram.h"
 
 /******************************************************************************/
 /************************ Functions Definitions *******************************/
@@ -225,9 +226,11 @@ void AD5933::ConfigSweep(double startFreq,
 	
 	startFreqReg = (unsigned long)((startFreq / MHZ_4) * POW_2_27);
 	incFreqReg = (unsigned long)((incFreq / MHZ_4) * POW_2_27);
+	Serial.println("Freq Start");
     SetRegisterValue(AD5933_REG_FREQ_START,
                      startFreqReg,
                      3);
+	Serial.println("Freq inc");
     SetRegisterValue(AD5933_REG_FREQ_INC,
                      incFreqReg,
                      3);
